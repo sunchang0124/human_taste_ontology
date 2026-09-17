@@ -86,3 +86,21 @@ def test_no_owl_equivalence_asserted_on_pato_bitter():
 def test_chemesthetic_qualities_are_annotated_as_trigeminal():
     obo = (ROOT / "hto.obo").read_text()
     assert "id: HTO:0000141" in obo and "astringency" in obo
+
+def test_intensity_and_hedonic_rating_share_a_common_rating_superclass():
+    # HTO:0000070 rating value applies to any rating, but intensity rating
+    # (HTO:0000006) and hedonic rating (HTO:0000007) are siblings, not one a
+    # subclass of the other, so the property's domain had to name a common
+    # parent rather than either sibling directly (see fix round 3).
+    obo = (ROOT / "hto.obo").read_text()
+    assert "id: HTO:0000026" in obo, "HTO:0000026 rating must exist"
+    assert "name: rating" in obo.split("id: HTO:0000026")[1][:200], \
+        "HTO:0000026 must be labelled 'rating'"
+
+    def stanza(cid: str) -> str:
+        return obo.split(f"id: {cid}\n")[1].split("\n\n")[0]
+
+    assert "is_a: HTO:0000026" in stanza("HTO:0000006"), \
+        "HTO:0000006 intensity rating must be a subclass of HTO:0000026 rating"
+    assert "is_a: HTO:0000026" in stanza("HTO:0000007"), \
+        "HTO:0000007 hedonic rating must be a subclass of HTO:0000026 rating"

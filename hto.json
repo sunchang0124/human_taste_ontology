@@ -651,6 +651,19 @@
         } ]
       }
     }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000026",
+      "lbl" : "rating",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A scalar measurement datum recording a value a taster reported on a stated scale, whether of a perceived quality's intensity or of liking."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
+    }, {
       "id" : "http://purl.obolibrary.org/obo/HTO_0000100",
       "lbl" : "perceptual taste quality",
       "type" : "CLASS",
@@ -1907,11 +1920,11 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/HTO_0000006",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/IAO_0000032"
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000026"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/HTO_0000007",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/IAO_0000032"
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000026"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/HTO_0000008",
       "pred" : "is_a",
@@ -1984,6 +1997,10 @@
       "sub" : "http://purl.obolibrary.org/obo/HTO_0000025",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/HTO_0000021"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000026",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000032"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/HTO_0000100",
       "pred" : "is_a",
@@ -2265,6 +2282,10 @@
       "domainClassIds" : [ "http://purl.obolibrary.org/obo/HTO_0000005" ],
       "rangeClassIds" : [ "http://purl.obolibrary.org/obo/HTO_0000006" ]
     }, {
+      "predicateId" : "http://purl.obolibrary.org/obo/HTO_0000054",
+      "domainClassIds" : [ "http://purl.obolibrary.org/obo/HTO_0000026" ],
+      "rangeClassIds" : [ "http://purl.obolibrary.org/obo/HTO_0000008" ]
+    }, {
       "predicateId" : "http://purl.obolibrary.org/obo/HTO_0000055",
       "domainClassIds" : [ "http://purl.obolibrary.org/obo/HTO_0000001" ],
       "rangeClassIds" : [ "http://purl.obolibrary.org/obo/HTO_0000007" ]
@@ -2297,9 +2318,6 @@
       "predicateId" : "http://purl.obolibrary.org/obo/HTO_0000066",
       "domainClassIds" : [ "http://purl.obolibrary.org/obo/HTO_0000009" ],
       "rangeClassIds" : [ "http://purl.obolibrary.org/obo/HTO_0000100" ]
-    }, {
-      "predicateId" : "http://purl.obolibrary.org/obo/HTO_0000054",
-      "rangeClassIds" : [ "http://purl.obolibrary.org/obo/HTO_0000008" ]
     }, {
       "predicateId" : "http://purl.obolibrary.org/obo/HTO_0000057",
       "rangeClassIds" : [ "http://purl.obolibrary.org/obo/HTO_0000011" ]

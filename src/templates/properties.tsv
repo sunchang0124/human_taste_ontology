@@ -4,7 +4,7 @@ HTO:0000050	has taster	owl:ObjectProperty	HTO:0000001		Relates a tasting event t
 HTO:0000051	has stimulus	owl:ObjectProperty	HTO:0000001	HTO:0000003	Relates a tasting event to the material that was tasted.	HTO:0000000
 HTO:0000052	asserts quality	owl:ObjectProperty	HTO:0000005	HTO:0000100	Relates a taste percept assertion to the perceptual taste quality it reports.	HTO:0000000
 HTO:0000053	has intensity rating	owl:ObjectProperty	HTO:0000005	HTO:0000006	Relates a taste percept assertion to the intensity value reported for it.	HTO:0000000
-HTO:0000054	on scale	owl:ObjectProperty		HTO:0000008	Relates a rating to the scale on which it was recorded.	HTO:0000000
+HTO:0000054	on scale	owl:ObjectProperty	HTO:0000026	HTO:0000008	Relates a rating to the scale on which it was recorded.	HTO:0000000
 HTO:0000055	has hedonic rating	owl:ObjectProperty	HTO:0000001	HTO:0000007	Relates a tasting event to the liking score the taster gave the sample.	HTO:0000000
 HTO:0000056	part of session	owl:ObjectProperty	HTO:0000001	HTO:0000017	Relates a tasting event to the session in which it took place.	HTO:0000000
 HTO:0000057	has taster status	owl:ObjectProperty		HTO:0000011	Relates a person to their assessed taster status.	HTO:0000000
@@ -17,7 +17,7 @@ HTO:0000063	has output assertion	owl:ObjectProperty	HTO:0000001	HTO:0000005	Rela
 HTO:0000064	typically associated with diplotype	owl:ObjectProperty	HTO:0000011	HTO:0000015	Relates a taster status to a diplotype that commonly but not invariably produces it. This is a statistical association and deliberately not an equivalence.	HTO:0000000
 HTO:0000065	has diplotype	owl:ObjectProperty		HTO:0000015	Relates a person or a study group to the diplotype they carry, or that characterises them.	HTO:0000000
 HTO:0000066	threshold for quality	owl:ObjectProperty	HTO:0000009	HTO:0000100	Relates a threshold datum to the perceptual taste quality whose detection or recognition it measures.	HTO:0000000
-HTO:0000070	rating value	owl:DataProperty	HTO:0000006		The numeric value of a rating on its stated scale.	HTO:0000000
+HTO:0000070	rating value	owl:DataProperty	HTO:0000026		The numeric value of a rating on its stated scale.	HTO:0000000
 HTO:0000071	scale minimum	owl:DataProperty	HTO:0000008		The lowest value the scale admits.	HTO:0000000
 HTO:0000072	scale maximum	owl:DataProperty	HTO:0000008		The highest value the scale admits.	HTO:0000000
 HTO:0000073	sample order	owl:DataProperty	HTO:0000001		The position of this sample in the order presented to the taster, counting from one.	HTO:0000000

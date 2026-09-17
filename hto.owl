@@ -179,6 +179,7 @@
     <!-- http://purl.obolibrary.org/obo/HTO_0000054 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/HTO_0000054">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/HTO_0000026"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/HTO_0000008"/>
         <obo:IAO_0000115>Relates a rating to the scale on which it was recorded.</obo:IAO_0000115>
         <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
@@ -342,7 +343,7 @@
     <!-- http://purl.obolibrary.org/obo/HTO_0000070 -->
 
     <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/HTO_0000070">
-        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/HTO_0000006"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/HTO_0000026"/>
         <obo:IAO_0000115>The numeric value of a rating on its stated scale.</obo:IAO_0000115>
         <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
         <rdfs:label>rating value</rdfs:label>
@@ -823,7 +824,7 @@
     <!-- http://purl.obolibrary.org/obo/HTO_0000006 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000006">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000032"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HTO_0000026"/>
         <obo:IAO_0000115>A scalar measurement datum recording how strong a perceived taste quality was, on a stated scale.</obo:IAO_0000115>
         <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
         <rdfs:label>intensity rating</rdfs:label>
@@ -834,7 +835,7 @@
     <!-- http://purl.obolibrary.org/obo/HTO_0000007 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000007">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000032"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HTO_0000026"/>
         <obo:IAO_0000115>A scalar measurement datum recording how much a taster liked or disliked a stimulus, on a stated scale.</obo:IAO_0000115>
         <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
         <rdfs:label>hedonic rating</rdfs:label>
@@ -1036,6 +1037,17 @@
         <obo:IAO_0000115>A taste confounder recording that the taster takes a medication with a documented taste-distortion side effect.</obo:IAO_0000115>
         <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
         <rdfs:label>dysgeusia-associated medication confounder</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000026 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000026">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000032"/>
+        <obo:IAO_0000115>A scalar measurement datum recording a value a taster reported on a stated scale, whether of a perceived quality&apos;s intensity or of liking.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:label>rating</rdfs:label>
     </owl:Class>
     
 
