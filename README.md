@@ -76,7 +76,8 @@ scale, and the PROP filter-paper strip protocol).
 `data/tasting_sheet.csv` is the blank collection template; `scripts/sheet2rdf.py`
 converts a filled sheet to validated RDF instance data. This is the consent
 and safety text that goes at the head of the printed sheet handed to
-participants, copied from the design spec §8:
+participants, adapted from the design spec §8 (which states the
+requirement in prose rather than giving fixed wording):
 
 > Participants are identified only by an anonymous code they choose. No
 > names, no identifiers that could re-identify anyone. This is a
@@ -102,9 +103,12 @@ this gate, and no assertions are produced for them.
   HTO needs only 56 terms out of them; `scripts/build_imports.py` resolves
   each identifier live via OLS4 and writes a minimal module instead of
   running a MIREOT/SLME extraction over multi-gigabyte source files.
-- **No DOSDP tooling dependency**, only a DOSDP-*shaped* pattern for
-  bitterness subtypes (`src/patterns/`) expressed directly as ROBOT template
-  rows, so the pipeline has one fewer moving part during a two-day build.
+- **No DOSDP tooling dependency.** The bitterness-subtype pattern
+  (`HTO:0000130`–`HTO:0000135` in `src/templates/qualities.tsv`) is
+  DOSDP-*shaped* — one row per subtype, sharing a common structure — but is
+  expressed inline as ordinary ROBOT template rows rather than run through
+  DOSDP tooling, so the pipeline has one fewer moving part during a two-day
+  build.
 - **Chemesthesis is included but flagged.** Astringency, pungency, cooling,
   tingling and carbonation bite are marked explicitly as trigeminal, not
   gustatory (`HTO:0000140 chemesthetic quality`, not a subclass of basic
@@ -112,10 +116,11 @@ this gate, and no assertions are produced for them.
   sensory panels, but asserting they are taste would be wrong.
 - **Candidate tastes are kept under a separate parent.** Fattiness
   (oleogustus), kokumi, metallic, calcium taste and starchy taste sit under
-  `HTO:0000120 candidate taste quality`, disjoint in the hierarchy from
-  `HTO:0000110 basic taste quality`, with the controversy recorded in each
-  definition, so the ontology does not assert a scientific consensus that
-  does not exist.
+  `HTO:0000120 candidate taste quality`, a separate parent class from
+  `HTO:0000110 basic taste quality`, so using HTO does not commit you to
+  treating them as basic tastes. The controversy is recorded in each
+  definition instead: the ontology does not assert a scientific consensus
+  that does not exist.
 - **A common `rating` superclass was added.** `HTO:0000026 rating` was
   introduced above intensity rating and hedonic rating so that the data
   property `rating value` (`HTO:0000070`) has one domain that legitimately
@@ -130,9 +135,9 @@ this gate, and no assertions are produced for them.
 
 ## Licence
 
-- The ontology content (`src/templates/`, `src/imports/`, `src/patterns/`,
-  `src/metadata.ttl`, and the generated `hto.owl`, `hto.obo`, `hto.json`) is
-  licensed under **CC BY 4.0**.
+- The ontology content (`src/templates/`, `src/imports/`, `src/metadata.ttl`,
+  and the generated `hto.owl`, `hto.obo`, `hto.json`) is licensed under
+  **CC BY 4.0**.
 - Everything under `scripts/` and `tests/` is licensed under the **MIT
   License**.
 - See `LICENSE` for the full text of both.

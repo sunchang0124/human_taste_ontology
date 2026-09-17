@@ -106,15 +106,24 @@ mappings instead.
 written to exercise the pipeline end to end (converter, competency
 questions, QC), not a real tasting. It must never be cited as evidence about
 anyone's actual taste perception. It contains six participant codes (P01–P05
-consenting, P99 declining consent), three citrus samples per consenting
-participant, and two elapsed-time readings per sample (5 minutes and 90
-minutes after opening), which is enough to exercise:
+consenting, P99 declining consent) and three citrus samples per consenting
+participant (A, B, C), which is enough to exercise:
 
 - the `consent` gate in `scripts/sheet2rdf.py` (P99's row produces no
   percept assertions because `consent` is `no`);
-- the temporal-quality model, since the same sample's bitterness/astringency
-  ratings differ between the 5-minute and 90-minute readings, consistent
-  with `HTO:0000154 delayed bitterness`;
+- the temporal-quality model's *mechanics*: each row carries a
+  `minutes_since_opening` value, and sample C is consistently recorded at
+  90 minutes while samples A and B are consistently recorded at 5 minutes,
+  so `cq06.rq` can group ratings by sample and elapsed time and show sample
+  C's mean bitterness is higher than A's or B's, exercising
+  `HTO:0000154 delayed bitterness` and the `minutes since preparation`
+  property end to end. **This is not a within-sample time series**: no
+  single sample is ever rated at two different elapsed times by the same
+  taster, so the data cannot and does not show any one sample's bitterness
+  actually rising over time — only that a later-tasted, different sample
+  happens to be rated more bitter. A genuine test of the delayed-bitterness
+  claim needs a repeated-measures sheet, tasting the *same* poured sample
+  again after a delay;
 - confounders (a current smoker, a participant with recent smell loss);
   and
 - all eight competency questions and the two QC queries.
