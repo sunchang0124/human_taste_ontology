@@ -1,0 +1,8 @@
+ID	LABEL	TYPE	SC %	A IAO:0000115	A IAO:0000119
+ID	LABEL	TYPE	SC %	A IAO:0000115	A IAO:0000119
+HTO:0000300	general Labelled Magnitude Scale	owl:Class	HTO:0000008	A rating scale running from zero to one hundred with quasi-logarithmically spaced verbal anchors from barely detectable to strongest imaginable sensation of any kind, permitting comparison of intensities across people.	HTO:0000000
+HTO:0000301	Labelled Magnitude Scale	owl:Class	HTO:0000008	A rating scale running from zero to one hundred with verbal anchors referring to the strongest imaginable taste sensation rather than to any sensation.	HTO:0000000
+HTO:0000302	nine-point hedonic scale	owl:Class	HTO:0000008	A rating scale with nine categories running from dislike extremely to like extremely, used to record liking.	HTO:0000000
+HTO:0000303	visual analogue scale	owl:Class	HTO:0000008	A rating scale on which the taster marks a point on an unstructured line of stated length, conventionally one hundred millimetres.	HTO:0000000
+HTO:0000304	just-about-right scale	owl:Class	HTO:0000008	A rating scale with categories running from far too little to far too much about a stated attribute, centred on just about right.	HTO:0000000
+HTO:0000305	PROP filter paper strip protocol	owl:Class	HTO:0000008	A protocol in which a taster places a filter paper impregnated with propylthiouracil on the tongue and reports the bitterness, used to assign taster status.	HTO:0000000

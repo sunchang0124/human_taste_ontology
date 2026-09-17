@@ -339,35 +339,398 @@
         } ]
       }
     }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000002",
+      "lbl" : "taster role",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A role borne by a person in virtue of taking part in a tasting event as the person doing the tasting."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
+    }, {
       "id" : "http://purl.obolibrary.org/obo/HTO_0000003",
-      "type" : "CLASS"
+      "lbl" : "taste stimulus",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A material entity presented to a taster to be tasted."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000004",
+      "lbl" : "reference tastant",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A taste stimulus consisting of a single chemical compound presented at a stated concentration in order to calibrate or classify a taster."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
     }, {
       "id" : "http://purl.obolibrary.org/obo/HTO_0000005",
-      "type" : "CLASS"
+      "lbl" : "taste percept assertion",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "An information content entity recording that one taster perceived one perceptual taste quality in one stimulus on one occasion."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
     }, {
       "id" : "http://purl.obolibrary.org/obo/HTO_0000006",
-      "type" : "CLASS"
+      "lbl" : "intensity rating",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A scalar measurement datum recording how strong a perceived taste quality was, on a stated scale."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
     }, {
       "id" : "http://purl.obolibrary.org/obo/HTO_0000007",
-      "type" : "CLASS"
+      "lbl" : "hedonic rating",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A scalar measurement datum recording how much a taster liked or disliked a stimulus, on a stated scale."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
     }, {
       "id" : "http://purl.obolibrary.org/obo/HTO_0000008",
-      "type" : "CLASS"
+      "lbl" : "rating scale",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "An information content entity specifying the permitted values and anchors used to record a rating."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000009",
+      "lbl" : "detection threshold datum",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A scalar measurement datum recording the lowest concentration of a tastant at which a taster reliably detects that something differs from the blank."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000010",
+      "lbl" : "recognition threshold datum",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A scalar measurement datum recording the lowest concentration of a tastant at which a taster reliably names the quality correctly."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
     }, {
       "id" : "http://purl.obolibrary.org/obo/HTO_0000011",
-      "type" : "CLASS"
+      "lbl" : "taster status",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "An organism trait classifying a person by their sensitivity to a reference bitter tastant, conventionally propylthiouracil."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000012",
+      "lbl" : "PROP non-taster",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A taster status in which the person reports no bitterness from a propylthiouracil test strip."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000013",
+      "lbl" : "PROP medium taster",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A taster status in which the person reports moderate bitterness from a propylthiouracil test strip."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000014",
+      "lbl" : "PROP super-taster",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A taster status in which the person reports intense bitterness from a propylthiouracil test strip."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
     }, {
       "id" : "http://purl.obolibrary.org/obo/HTO_0000015",
-      "type" : "CLASS"
+      "lbl" : "TAS2R38 diplotype",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "An information content entity recording the pair of TAS2R38 haplotypes carried by a person, each haplotype being the combination of the amino acid states at positions 49, 262 and 296."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
     }, {
       "id" : "http://purl.obolibrary.org/obo/HTO_0000016",
-      "type" : "CLASS"
+      "lbl" : "taste genotype assertion",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "An information content entity recording an assertion about a person's genotype at a locus relevant to taste perception."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
     }, {
       "id" : "http://purl.obolibrary.org/obo/HTO_0000017",
-      "type" : "CLASS"
+      "lbl" : "tasting session",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A planned process comprising the tasting events performed by one or more tasters on one occasion under one protocol."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000018",
+      "lbl" : "palate cleansing process",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A process performed between tasting events in order to reduce carry-over of taste from the previous stimulus."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000019",
+      "lbl" : "blinding condition",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "An information content entity stating what the taster was able to know about the identity of the stimulus at the time of tasting."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000020",
+      "lbl" : "time-intensity profile datum",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A scalar measurement datum recording perceived intensity as a function of time since the stimulus entered the mouth."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000021",
+      "lbl" : "taste confounder",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "An information content entity recording a property of a taster that is known to alter taste perception and that should be accounted for when analysing their ratings."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000022",
+      "lbl" : "tobacco use confounder",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A taste confounder recording that the taster currently uses tobacco."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000023",
+      "lbl" : "recent upper respiratory infection confounder",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A taste confounder recording that the taster recently had an upper respiratory infection, including a recent loss of smell."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000024",
+      "lbl" : "xerostomia confounder",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A taste confounder recording that the taster has reduced salivary flow."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000025",
+      "lbl" : "dysgeusia-associated medication confounder",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A taste confounder recording that the taster takes a medication with a documented taste-distortion side effect."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
     }, {
       "id" : "http://purl.obolibrary.org/obo/HTO_0000100",
       "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000300",
+      "lbl" : "general Labelled Magnitude Scale",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A rating scale running from zero to one hundred with quasi-logarithmically spaced verbal anchors from barely detectable to strongest imaginable sensation of any kind, permitting comparison of intensities across people."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000301",
+      "lbl" : "Labelled Magnitude Scale",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A rating scale running from zero to one hundred with verbal anchors referring to the strongest imaginable taste sensation rather than to any sensation."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000302",
+      "lbl" : "nine-point hedonic scale",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A rating scale with nine categories running from dislike extremely to like extremely, used to record liking."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000303",
+      "lbl" : "visual analogue scale",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A rating scale on which the taster marks a point on an unstructured line of stated length, conventionally one hundred millimetres."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000304",
+      "lbl" : "just-about-right scale",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A rating scale with categories running from far too little to far too much about a stated attribute, centred on just about right."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000305",
+      "lbl" : "PROP filter paper strip protocol",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A protocol in which a taster places a filter paper impregnated with propylthiouracil on the tongue and reports the bitterness, used to assign taster status."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
     }, {
       "id" : "http://purl.obolibrary.org/obo/IAO_0000030",
       "lbl" : "information content entity",
@@ -1049,45 +1412,129 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/OBI_0000070"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000002",
+      "pred" : "is_a",
+      "obj" : "http://www.w3.org/2002/07/owl#Thing"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/HTO_0000003",
       "pred" : "is_a",
       "obj" : "http://www.w3.org/2002/07/owl#Thing"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000004",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000003"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/HTO_0000005",
       "pred" : "is_a",
-      "obj" : "http://www.w3.org/2002/07/owl#Thing"
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/HTO_0000006",
       "pred" : "is_a",
-      "obj" : "http://www.w3.org/2002/07/owl#Thing"
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000032"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/HTO_0000007",
       "pred" : "is_a",
-      "obj" : "http://www.w3.org/2002/07/owl#Thing"
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000032"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/HTO_0000008",
       "pred" : "is_a",
-      "obj" : "http://www.w3.org/2002/07/owl#Thing"
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000009",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000032"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000010",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000032"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/HTO_0000011",
       "pred" : "is_a",
-      "obj" : "http://www.w3.org/2002/07/owl#Thing"
+      "obj" : "http://purl.obolibrary.org/obo/OBA_VT0001986"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000012",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000011"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000013",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000011"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000014",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000011"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/HTO_0000015",
       "pred" : "is_a",
-      "obj" : "http://www.w3.org/2002/07/owl#Thing"
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/HTO_0000016",
       "pred" : "is_a",
-      "obj" : "http://www.w3.org/2002/07/owl#Thing"
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/HTO_0000017",
       "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/OBI_0000070"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000018",
+      "pred" : "is_a",
       "obj" : "http://www.w3.org/2002/07/owl#Thing"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000019",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000020",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000032"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000021",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000022",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000021"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000023",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000021"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000024",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000021"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000025",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000021"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/HTO_0000100",
       "pred" : "is_a",
       "obj" : "http://www.w3.org/2002/07/owl#Thing"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000300",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000008"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000301",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000008"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000302",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000008"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000303",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000008"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000304",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000008"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000305",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000008"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/IAO_0000030",
       "pred" : "is_a",

@@ -40,3 +40,22 @@ def test_perceived_via_has_domain_and_range():
     text = (ROOT / "hto.owl").read_text()
     assert "HTO_0000061" in text
     assert "ObjectPropertyDomain" in text or "rdfs:domain" in text
+
+CORE_EXPECTED = {
+    "HTO:0000001": "tasting event",
+    "HTO:0000005": "taste percept assertion",
+    "HTO:0000011": "taster status",
+    "HTO:0000014": "PROP super-taster",
+    "HTO:0000021": "taste confounder",
+    "HTO:0000300": "general Labelled Magnitude Scale",
+}
+
+def test_core_classes_present_with_labels():
+    text = (ROOT / "hto.obo").read_text()
+    for cid, label in CORE_EXPECTED.items():
+        assert f"id: {cid}" in text, f"{cid} missing"
+        assert f"name: {label}" in text, f"{cid} has the wrong label"
+
+def test_taster_status_is_under_oba_trait():
+    text = (ROOT / "hto.owl").read_text()
+    assert "OBA_VT0001986" in text, "taster status must reuse the OBA sensitivity trait"

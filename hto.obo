@@ -8,7 +8,7 @@ property_value: dc:description "An ontology of human taste perception: the quali
 property_value: dc:license https://creativecommons.org/licenses/by/4.0/
 property_value: dc:title "Human Taste Ontology" xsd:string
 property_value: dcterms:creator "Chang Sun" xsd:string
-owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\nDeclaration(Class(<http://purl.obolibrary.org/obo/CHEBI_15854>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CHEBI_16015>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CHEBI_16226>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CHEBI_17992>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CHEBI_26710>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CHEBI_27732>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CHEBI_28775>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CHEBI_28819>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CHEBI_30769>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CHEBI_46261>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CHEBI_8502>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CL_0000209>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/FOODON_00003027>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/FOODON_00003324>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/FOODON_00003554>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/FOODON_00003555>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/FOODON_00003732>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/FOODON_03301103>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/FOODON_03305428>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/FOODON_03305742>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/GO_0001580>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/GO_0008150>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/GO_0008527>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/GO_0033038>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/GO_0050909>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/GO_0050913>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/GO_0050914>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/GO_0050915>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/GO_0050916>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/GO_0050917>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/GO_0090682>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/HP_0000223>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/HP_0000224>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/HP_0031249>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/HP_0041051>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/HTO_0000001>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/HTO_0000003>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/HTO_0000005>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/HTO_0000006>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/HTO_0000007>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/HTO_0000008>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/HTO_0000011>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/HTO_0000015>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/HTO_0000016>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/HTO_0000017>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/HTO_0000100>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/IAO_0000030>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/IAO_0000032>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/IAO_0000109>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/OBA_VT0001986>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/OBA_VT0004209>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/OBA_VT0004210>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/OBA_VT0004211>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/OBA_VT0004212>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/OBA_VT0004213>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/OBI_0000070>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/OBI_0001000>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PATO_0000001>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PATO_0000049>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PATO_0001241>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PATO_0001309>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PATO_0002325>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PATO_0002474>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/UBERON_0000167>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/UBERON_0001723>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/UBERON_0001727>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/UBERON_0002448>))\nDeclaration(DataProperty(<http://purl.obolibrary.org/obo/HTO_0000070>))\nDeclaration(DataProperty(<http://purl.obolibrary.org/obo/HTO_0000071>))\nDeclaration(DataProperty(<http://purl.obolibrary.org/obo/HTO_0000072>))\nDeclaration(DataProperty(<http://purl.obolibrary.org/obo/HTO_0000073>))\nDeclaration(DataProperty(<http://purl.obolibrary.org/obo/HTO_0000074>))\nDeclaration(DataProperty(<http://purl.obolibrary.org/obo/HTO_0000075>))\nDeclaration(DataProperty(<http://purl.obolibrary.org/obo/HTO_0000076>))\n############################\n#   Data Properties\n############################\n\n# Data Property: <http://purl.obolibrary.org/obo/HTO_0000070> (<http://purl.obolibrary.org/obo/HTO_0000070>)\n\nDataPropertyDomain(<http://purl.obolibrary.org/obo/HTO_0000070> <http://purl.obolibrary.org/obo/HTO_0000006>)\n\n# Data Property: <http://purl.obolibrary.org/obo/HTO_0000071> (<http://purl.obolibrary.org/obo/HTO_0000071>)\n\nDataPropertyDomain(<http://purl.obolibrary.org/obo/HTO_0000071> <http://purl.obolibrary.org/obo/HTO_0000008>)\n\n# Data Property: <http://purl.obolibrary.org/obo/HTO_0000072> (<http://purl.obolibrary.org/obo/HTO_0000072>)\n\nDataPropertyDomain(<http://purl.obolibrary.org/obo/HTO_0000072> <http://purl.obolibrary.org/obo/HTO_0000008>)\n\n# Data Property: <http://purl.obolibrary.org/obo/HTO_0000073> (<http://purl.obolibrary.org/obo/HTO_0000073>)\n\nDataPropertyDomain(<http://purl.obolibrary.org/obo/HTO_0000073> <http://purl.obolibrary.org/obo/HTO_0000001>)\n\n# Data Property: <http://purl.obolibrary.org/obo/HTO_0000074> (<http://purl.obolibrary.org/obo/HTO_0000074>)\n\nDataPropertyDomain(<http://purl.obolibrary.org/obo/HTO_0000074> <http://purl.obolibrary.org/obo/HTO_0000001>)\n\n# Data Property: <http://purl.obolibrary.org/obo/HTO_0000075> (<http://purl.obolibrary.org/obo/HTO_0000075>)\n\nDataPropertyDomain(<http://purl.obolibrary.org/obo/HTO_0000075> <http://purl.obolibrary.org/obo/HTO_0000017>)\n\n# Data Property: <http://purl.obolibrary.org/obo/HTO_0000076> (<http://purl.obolibrary.org/obo/HTO_0000076>)\n\nDataPropertyDomain(<http://purl.obolibrary.org/obo/HTO_0000076> <http://purl.obolibrary.org/obo/HTO_0000001>)\n\n\n############################\n#   Classes\n############################\n\n# Class: <http://purl.obolibrary.org/obo/CHEBI_15854> (<http://purl.obolibrary.org/obo/CHEBI_15854>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/CHEBI_15854> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/CHEBI_16015> (<http://purl.obolibrary.org/obo/CHEBI_16015>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/CHEBI_16015> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/CHEBI_16226> (<http://purl.obolibrary.org/obo/CHEBI_16226>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/CHEBI_16226> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/CHEBI_17992> (<http://purl.obolibrary.org/obo/CHEBI_17992>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/CHEBI_17992> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/CHEBI_26710> (<http://purl.obolibrary.org/obo/CHEBI_26710>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/CHEBI_26710> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/CHEBI_27732> (<http://purl.obolibrary.org/obo/CHEBI_27732>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/CHEBI_27732> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/CHEBI_28775> (<http://purl.obolibrary.org/obo/CHEBI_28775>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/CHEBI_28775> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/CHEBI_28819> (<http://purl.obolibrary.org/obo/CHEBI_28819>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/CHEBI_28819> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/CHEBI_30769> (<http://purl.obolibrary.org/obo/CHEBI_30769>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/CHEBI_30769> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/CHEBI_46261> (<http://purl.obolibrary.org/obo/CHEBI_46261>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/CHEBI_46261> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/CHEBI_8502> (<http://purl.obolibrary.org/obo/CHEBI_8502>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/CHEBI_8502> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/CL_0000209> (<http://purl.obolibrary.org/obo/CL_0000209>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/CL_0000209> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/FOODON_00003027> (<http://purl.obolibrary.org/obo/FOODON_00003027>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/FOODON_00003027> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/FOODON_00003324> (<http://purl.obolibrary.org/obo/FOODON_00003324>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/FOODON_00003324> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/FOODON_00003554> (<http://purl.obolibrary.org/obo/FOODON_00003554>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/FOODON_00003554> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/FOODON_00003555> (<http://purl.obolibrary.org/obo/FOODON_00003555>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/FOODON_00003555> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/FOODON_00003732> (<http://purl.obolibrary.org/obo/FOODON_00003732>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/FOODON_00003732> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/FOODON_03301103> (<http://purl.obolibrary.org/obo/FOODON_03301103>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/FOODON_03301103> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/FOODON_03305428> (<http://purl.obolibrary.org/obo/FOODON_03305428>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/FOODON_03305428> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/FOODON_03305742> (<http://purl.obolibrary.org/obo/FOODON_03305742>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/FOODON_03305742> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/GO_0001580> (<http://purl.obolibrary.org/obo/GO_0001580>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/GO_0001580> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/GO_0008150> (<http://purl.obolibrary.org/obo/GO_0008150>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/GO_0008150> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/GO_0008527> (<http://purl.obolibrary.org/obo/GO_0008527>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/GO_0008527> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/GO_0033038> (<http://purl.obolibrary.org/obo/GO_0033038>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/GO_0033038> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/GO_0050909> (<http://purl.obolibrary.org/obo/GO_0050909>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/GO_0050909> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/GO_0050913> (<http://purl.obolibrary.org/obo/GO_0050913>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/GO_0050913> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/GO_0050914> (<http://purl.obolibrary.org/obo/GO_0050914>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/GO_0050914> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/GO_0050915> (<http://purl.obolibrary.org/obo/GO_0050915>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/GO_0050915> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/GO_0050916> (<http://purl.obolibrary.org/obo/GO_0050916>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/GO_0050916> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/GO_0050917> (<http://purl.obolibrary.org/obo/GO_0050917>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/GO_0050917> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/GO_0090682> (<http://purl.obolibrary.org/obo/GO_0090682>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/GO_0090682> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/HP_0000223> (<http://purl.obolibrary.org/obo/HP_0000223>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/HP_0000223> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/HP_0000224> (<http://purl.obolibrary.org/obo/HP_0000224>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/HP_0000224> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/HP_0031249> (<http://purl.obolibrary.org/obo/HP_0031249>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/HP_0031249> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/HP_0041051> (<http://purl.obolibrary.org/obo/HP_0041051>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/HP_0041051> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/HTO_0000003> (<http://purl.obolibrary.org/obo/HTO_0000003>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/HTO_0000003> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/HTO_0000005> (<http://purl.obolibrary.org/obo/HTO_0000005>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/HTO_0000005> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/HTO_0000006> (<http://purl.obolibrary.org/obo/HTO_0000006>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/HTO_0000006> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/HTO_0000007> (<http://purl.obolibrary.org/obo/HTO_0000007>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/HTO_0000007> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/HTO_0000008> (<http://purl.obolibrary.org/obo/HTO_0000008>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/HTO_0000008> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/HTO_0000011> (<http://purl.obolibrary.org/obo/HTO_0000011>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/HTO_0000011> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/HTO_0000015> (<http://purl.obolibrary.org/obo/HTO_0000015>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/HTO_0000015> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/HTO_0000016> (<http://purl.obolibrary.org/obo/HTO_0000016>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/HTO_0000016> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/HTO_0000017> (<http://purl.obolibrary.org/obo/HTO_0000017>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/HTO_0000017> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/HTO_0000100> (<http://purl.obolibrary.org/obo/HTO_0000100>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/HTO_0000100> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/IAO_0000030> (<http://purl.obolibrary.org/obo/IAO_0000030>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/IAO_0000030> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/IAO_0000032> (<http://purl.obolibrary.org/obo/IAO_0000032>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/IAO_0000032> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/IAO_0000109> (<http://purl.obolibrary.org/obo/IAO_0000109>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/IAO_0000109> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/OBA_VT0001986> (<http://purl.obolibrary.org/obo/OBA_VT0001986>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/OBA_VT0001986> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/OBA_VT0004209> (<http://purl.obolibrary.org/obo/OBA_VT0004209>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/OBA_VT0004209> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/OBA_VT0004210> (<http://purl.obolibrary.org/obo/OBA_VT0004210>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/OBA_VT0004210> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/OBA_VT0004211> (<http://purl.obolibrary.org/obo/OBA_VT0004211>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/OBA_VT0004211> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/OBA_VT0004212> (<http://purl.obolibrary.org/obo/OBA_VT0004212>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/OBA_VT0004212> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/OBA_VT0004213> (<http://purl.obolibrary.org/obo/OBA_VT0004213>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/OBA_VT0004213> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/OBI_0000070> (<http://purl.obolibrary.org/obo/OBI_0000070>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/OBI_0000070> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/OBI_0001000> (<http://purl.obolibrary.org/obo/OBI_0001000>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/OBI_0001000> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/PATO_0000001> (<http://purl.obolibrary.org/obo/PATO_0000001>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/PATO_0000001> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/PATO_0000049> (<http://purl.obolibrary.org/obo/PATO_0000049>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/PATO_0000049> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/PATO_0001241> (<http://purl.obolibrary.org/obo/PATO_0001241>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/PATO_0001241> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/PATO_0001309> (<http://purl.obolibrary.org/obo/PATO_0001309>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/PATO_0001309> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/PATO_0002325> (<http://purl.obolibrary.org/obo/PATO_0002325>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/PATO_0002325> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/PATO_0002474> (<http://purl.obolibrary.org/obo/PATO_0002474>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/PATO_0002474> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/UBERON_0000167> (<http://purl.obolibrary.org/obo/UBERON_0000167>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/UBERON_0000167> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/UBERON_0001723> (<http://purl.obolibrary.org/obo/UBERON_0001723>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/UBERON_0001723> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/UBERON_0001727> (<http://purl.obolibrary.org/obo/UBERON_0001727>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/UBERON_0001727> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/UBERON_0002448> (<http://purl.obolibrary.org/obo/UBERON_0002448>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/UBERON_0002448> owl:Thing)\n\n\n)
+owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\nDeclaration(Class(<http://purl.obolibrary.org/obo/CHEBI_15854>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CHEBI_16015>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CHEBI_16226>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CHEBI_17992>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CHEBI_26710>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CHEBI_27732>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CHEBI_28775>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CHEBI_28819>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CHEBI_30769>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CHEBI_46261>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CHEBI_8502>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CL_0000209>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/FOODON_00003027>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/FOODON_00003324>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/FOODON_00003554>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/FOODON_00003555>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/FOODON_00003732>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/FOODON_03301103>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/FOODON_03305428>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/FOODON_03305742>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/GO_0001580>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/GO_0008150>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/GO_0008527>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/GO_0033038>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/GO_0050909>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/GO_0050913>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/GO_0050914>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/GO_0050915>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/GO_0050916>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/GO_0050917>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/GO_0090682>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/HP_0000223>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/HP_0000224>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/HP_0031249>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/HP_0041051>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/HTO_0000001>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/HTO_0000002>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/HTO_0000003>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/HTO_0000006>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/HTO_0000008>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/HTO_0000017>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/HTO_0000018>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/HTO_0000100>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/IAO_0000030>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/IAO_0000032>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/IAO_0000109>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/OBA_VT0001986>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/OBA_VT0004209>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/OBA_VT0004210>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/OBA_VT0004211>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/OBA_VT0004212>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/OBA_VT0004213>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/OBI_0000070>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/OBI_0001000>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PATO_0000001>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PATO_0000049>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PATO_0001241>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PATO_0001309>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PATO_0002325>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PATO_0002474>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/UBERON_0000167>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/UBERON_0001723>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/UBERON_0001727>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/UBERON_0002448>))\nDeclaration(DataProperty(<http://purl.obolibrary.org/obo/HTO_0000070>))\nDeclaration(DataProperty(<http://purl.obolibrary.org/obo/HTO_0000071>))\nDeclaration(DataProperty(<http://purl.obolibrary.org/obo/HTO_0000072>))\nDeclaration(DataProperty(<http://purl.obolibrary.org/obo/HTO_0000073>))\nDeclaration(DataProperty(<http://purl.obolibrary.org/obo/HTO_0000074>))\nDeclaration(DataProperty(<http://purl.obolibrary.org/obo/HTO_0000075>))\nDeclaration(DataProperty(<http://purl.obolibrary.org/obo/HTO_0000076>))\n############################\n#   Data Properties\n############################\n\n# Data Property: <http://purl.obolibrary.org/obo/HTO_0000070> (<http://purl.obolibrary.org/obo/HTO_0000070>)\n\nDataPropertyDomain(<http://purl.obolibrary.org/obo/HTO_0000070> <http://purl.obolibrary.org/obo/HTO_0000006>)\n\n# Data Property: <http://purl.obolibrary.org/obo/HTO_0000071> (<http://purl.obolibrary.org/obo/HTO_0000071>)\n\nDataPropertyDomain(<http://purl.obolibrary.org/obo/HTO_0000071> <http://purl.obolibrary.org/obo/HTO_0000008>)\n\n# Data Property: <http://purl.obolibrary.org/obo/HTO_0000072> (<http://purl.obolibrary.org/obo/HTO_0000072>)\n\nDataPropertyDomain(<http://purl.obolibrary.org/obo/HTO_0000072> <http://purl.obolibrary.org/obo/HTO_0000008>)\n\n# Data Property: <http://purl.obolibrary.org/obo/HTO_0000073> (<http://purl.obolibrary.org/obo/HTO_0000073>)\n\nDataPropertyDomain(<http://purl.obolibrary.org/obo/HTO_0000073> <http://purl.obolibrary.org/obo/HTO_0000001>)\n\n# Data Property: <http://purl.obolibrary.org/obo/HTO_0000074> (<http://purl.obolibrary.org/obo/HTO_0000074>)\n\nDataPropertyDomain(<http://purl.obolibrary.org/obo/HTO_0000074> <http://purl.obolibrary.org/obo/HTO_0000001>)\n\n# Data Property: <http://purl.obolibrary.org/obo/HTO_0000075> (<http://purl.obolibrary.org/obo/HTO_0000075>)\n\nDataPropertyDomain(<http://purl.obolibrary.org/obo/HTO_0000075> <http://purl.obolibrary.org/obo/HTO_0000017>)\n\n# Data Property: <http://purl.obolibrary.org/obo/HTO_0000076> (<http://purl.obolibrary.org/obo/HTO_0000076>)\n\nDataPropertyDomain(<http://purl.obolibrary.org/obo/HTO_0000076> <http://purl.obolibrary.org/obo/HTO_0000001>)\n\n\n############################\n#   Classes\n############################\n\n# Class: <http://purl.obolibrary.org/obo/CHEBI_15854> (<http://purl.obolibrary.org/obo/CHEBI_15854>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/CHEBI_15854> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/CHEBI_16015> (<http://purl.obolibrary.org/obo/CHEBI_16015>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/CHEBI_16015> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/CHEBI_16226> (<http://purl.obolibrary.org/obo/CHEBI_16226>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/CHEBI_16226> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/CHEBI_17992> (<http://purl.obolibrary.org/obo/CHEBI_17992>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/CHEBI_17992> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/CHEBI_26710> (<http://purl.obolibrary.org/obo/CHEBI_26710>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/CHEBI_26710> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/CHEBI_27732> (<http://purl.obolibrary.org/obo/CHEBI_27732>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/CHEBI_27732> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/CHEBI_28775> (<http://purl.obolibrary.org/obo/CHEBI_28775>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/CHEBI_28775> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/CHEBI_28819> (<http://purl.obolibrary.org/obo/CHEBI_28819>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/CHEBI_28819> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/CHEBI_30769> (<http://purl.obolibrary.org/obo/CHEBI_30769>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/CHEBI_30769> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/CHEBI_46261> (<http://purl.obolibrary.org/obo/CHEBI_46261>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/CHEBI_46261> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/CHEBI_8502> (<http://purl.obolibrary.org/obo/CHEBI_8502>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/CHEBI_8502> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/CL_0000209> (<http://purl.obolibrary.org/obo/CL_0000209>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/CL_0000209> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/FOODON_00003027> (<http://purl.obolibrary.org/obo/FOODON_00003027>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/FOODON_00003027> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/FOODON_00003324> (<http://purl.obolibrary.org/obo/FOODON_00003324>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/FOODON_00003324> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/FOODON_00003554> (<http://purl.obolibrary.org/obo/FOODON_00003554>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/FOODON_00003554> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/FOODON_00003555> (<http://purl.obolibrary.org/obo/FOODON_00003555>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/FOODON_00003555> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/FOODON_00003732> (<http://purl.obolibrary.org/obo/FOODON_00003732>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/FOODON_00003732> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/FOODON_03301103> (<http://purl.obolibrary.org/obo/FOODON_03301103>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/FOODON_03301103> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/FOODON_03305428> (<http://purl.obolibrary.org/obo/FOODON_03305428>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/FOODON_03305428> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/FOODON_03305742> (<http://purl.obolibrary.org/obo/FOODON_03305742>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/FOODON_03305742> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/GO_0001580> (<http://purl.obolibrary.org/obo/GO_0001580>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/GO_0001580> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/GO_0008150> (<http://purl.obolibrary.org/obo/GO_0008150>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/GO_0008150> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/GO_0008527> (<http://purl.obolibrary.org/obo/GO_0008527>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/GO_0008527> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/GO_0033038> (<http://purl.obolibrary.org/obo/GO_0033038>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/GO_0033038> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/GO_0050909> (<http://purl.obolibrary.org/obo/GO_0050909>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/GO_0050909> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/GO_0050913> (<http://purl.obolibrary.org/obo/GO_0050913>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/GO_0050913> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/GO_0050914> (<http://purl.obolibrary.org/obo/GO_0050914>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/GO_0050914> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/GO_0050915> (<http://purl.obolibrary.org/obo/GO_0050915>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/GO_0050915> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/GO_0050916> (<http://purl.obolibrary.org/obo/GO_0050916>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/GO_0050916> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/GO_0050917> (<http://purl.obolibrary.org/obo/GO_0050917>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/GO_0050917> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/GO_0090682> (<http://purl.obolibrary.org/obo/GO_0090682>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/GO_0090682> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/HP_0000223> (<http://purl.obolibrary.org/obo/HP_0000223>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/HP_0000223> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/HP_0000224> (<http://purl.obolibrary.org/obo/HP_0000224>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/HP_0000224> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/HP_0031249> (<http://purl.obolibrary.org/obo/HP_0031249>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/HP_0031249> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/HP_0041051> (<http://purl.obolibrary.org/obo/HP_0041051>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/HP_0041051> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/HTO_0000002> (<http://purl.obolibrary.org/obo/HTO_0000002>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/HTO_0000002> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/HTO_0000003> (<http://purl.obolibrary.org/obo/HTO_0000003>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/HTO_0000003> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/HTO_0000018> (<http://purl.obolibrary.org/obo/HTO_0000018>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/HTO_0000018> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/HTO_0000100> (<http://purl.obolibrary.org/obo/HTO_0000100>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/HTO_0000100> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/IAO_0000030> (<http://purl.obolibrary.org/obo/IAO_0000030>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/IAO_0000030> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/IAO_0000032> (<http://purl.obolibrary.org/obo/IAO_0000032>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/IAO_0000032> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/IAO_0000109> (<http://purl.obolibrary.org/obo/IAO_0000109>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/IAO_0000109> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/OBA_VT0001986> (<http://purl.obolibrary.org/obo/OBA_VT0001986>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/OBA_VT0001986> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/OBA_VT0004209> (<http://purl.obolibrary.org/obo/OBA_VT0004209>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/OBA_VT0004209> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/OBA_VT0004210> (<http://purl.obolibrary.org/obo/OBA_VT0004210>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/OBA_VT0004210> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/OBA_VT0004211> (<http://purl.obolibrary.org/obo/OBA_VT0004211>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/OBA_VT0004211> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/OBA_VT0004212> (<http://purl.obolibrary.org/obo/OBA_VT0004212>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/OBA_VT0004212> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/OBA_VT0004213> (<http://purl.obolibrary.org/obo/OBA_VT0004213>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/OBA_VT0004213> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/OBI_0000070> (<http://purl.obolibrary.org/obo/OBI_0000070>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/OBI_0000070> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/OBI_0001000> (<http://purl.obolibrary.org/obo/OBI_0001000>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/OBI_0001000> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/PATO_0000001> (<http://purl.obolibrary.org/obo/PATO_0000001>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/PATO_0000001> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/PATO_0000049> (<http://purl.obolibrary.org/obo/PATO_0000049>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/PATO_0000049> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/PATO_0001241> (<http://purl.obolibrary.org/obo/PATO_0001241>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/PATO_0001241> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/PATO_0001309> (<http://purl.obolibrary.org/obo/PATO_0001309>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/PATO_0001309> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/PATO_0002325> (<http://purl.obolibrary.org/obo/PATO_0002325>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/PATO_0002325> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/PATO_0002474> (<http://purl.obolibrary.org/obo/PATO_0002474>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/PATO_0002474> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/UBERON_0000167> (<http://purl.obolibrary.org/obo/UBERON_0000167>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/UBERON_0000167> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/UBERON_0001723> (<http://purl.obolibrary.org/obo/UBERON_0001723>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/UBERON_0001723> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/UBERON_0001727> (<http://purl.obolibrary.org/obo/UBERON_0001727>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/UBERON_0001727> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/UBERON_0002448> (<http://purl.obolibrary.org/obo/UBERON_0002448>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/UBERON_0002448> owl:Thing)\n\n\n)
 
 [Term]
 id: CHEBI:15854
@@ -191,6 +191,213 @@ is_a: OBI:0000070 ! assay
 property_value: IAO:0000119 "HTO:0000000" xsd:string
 
 [Term]
+id: HTO:0000002
+name: taster role
+def: "A role borne by a person in virtue of taking part in a tasting event as the person doing the tasting." []
+property_value: IAO:0000119 "HTO:0000000" xsd:string
+
+[Term]
+id: HTO:0000003
+name: taste stimulus
+def: "A material entity presented to a taster to be tasted." []
+property_value: IAO:0000119 "HTO:0000000" xsd:string
+
+[Term]
+id: HTO:0000004
+name: reference tastant
+def: "A taste stimulus consisting of a single chemical compound presented at a stated concentration in order to calibrate or classify a taster." []
+is_a: HTO:0000003 ! taste stimulus
+property_value: IAO:0000119 "HTO:0000000" xsd:string
+
+[Term]
+id: HTO:0000005
+name: taste percept assertion
+def: "An information content entity recording that one taster perceived one perceptual taste quality in one stimulus on one occasion." []
+is_a: IAO:0000030 ! information content entity
+property_value: IAO:0000119 "HTO:0000000" xsd:string
+
+[Term]
+id: HTO:0000006
+name: intensity rating
+def: "A scalar measurement datum recording how strong a perceived taste quality was, on a stated scale." []
+is_a: IAO:0000032 ! scalar measurement datum
+property_value: IAO:0000119 "HTO:0000000" xsd:string
+
+[Term]
+id: HTO:0000007
+name: hedonic rating
+def: "A scalar measurement datum recording how much a taster liked or disliked a stimulus, on a stated scale." []
+is_a: IAO:0000032 ! scalar measurement datum
+property_value: IAO:0000119 "HTO:0000000" xsd:string
+
+[Term]
+id: HTO:0000008
+name: rating scale
+def: "An information content entity specifying the permitted values and anchors used to record a rating." []
+is_a: IAO:0000030 ! information content entity
+property_value: IAO:0000119 "HTO:0000000" xsd:string
+
+[Term]
+id: HTO:0000009
+name: detection threshold datum
+def: "A scalar measurement datum recording the lowest concentration of a tastant at which a taster reliably detects that something differs from the blank." []
+is_a: IAO:0000032 ! scalar measurement datum
+property_value: IAO:0000119 "HTO:0000000" xsd:string
+
+[Term]
+id: HTO:0000010
+name: recognition threshold datum
+def: "A scalar measurement datum recording the lowest concentration of a tastant at which a taster reliably names the quality correctly." []
+is_a: IAO:0000032 ! scalar measurement datum
+property_value: IAO:0000119 "HTO:0000000" xsd:string
+
+[Term]
+id: HTO:0000011
+name: taster status
+def: "An organism trait classifying a person by their sensitivity to a reference bitter tastant, conventionally propylthiouracil." []
+is_a: OBA:VT0001986 ! taste sensitivity trait
+property_value: IAO:0000119 "HTO:0000000" xsd:string
+
+[Term]
+id: HTO:0000012
+name: PROP non-taster
+def: "A taster status in which the person reports no bitterness from a propylthiouracil test strip." []
+is_a: HTO:0000011 ! taster status
+property_value: IAO:0000119 "HTO:0000000" xsd:string
+
+[Term]
+id: HTO:0000013
+name: PROP medium taster
+def: "A taster status in which the person reports moderate bitterness from a propylthiouracil test strip." []
+is_a: HTO:0000011 ! taster status
+property_value: IAO:0000119 "HTO:0000000" xsd:string
+
+[Term]
+id: HTO:0000014
+name: PROP super-taster
+def: "A taster status in which the person reports intense bitterness from a propylthiouracil test strip." []
+is_a: HTO:0000011 ! taster status
+property_value: IAO:0000119 "HTO:0000000" xsd:string
+
+[Term]
+id: HTO:0000015
+name: TAS2R38 diplotype
+def: "An information content entity recording the pair of TAS2R38 haplotypes carried by a person, each haplotype being the combination of the amino acid states at positions 49, 262 and 296." []
+is_a: IAO:0000030 ! information content entity
+property_value: IAO:0000119 "HTO:0000000" xsd:string
+
+[Term]
+id: HTO:0000016
+name: taste genotype assertion
+def: "An information content entity recording an assertion about a person's genotype at a locus relevant to taste perception." []
+is_a: IAO:0000030 ! information content entity
+property_value: IAO:0000119 "HTO:0000000" xsd:string
+
+[Term]
+id: HTO:0000017
+name: tasting session
+def: "A planned process comprising the tasting events performed by one or more tasters on one occasion under one protocol." []
+is_a: OBI:0000070 ! assay
+property_value: IAO:0000119 "HTO:0000000" xsd:string
+
+[Term]
+id: HTO:0000018
+name: palate cleansing process
+def: "A process performed between tasting events in order to reduce carry-over of taste from the previous stimulus." []
+property_value: IAO:0000119 "HTO:0000000" xsd:string
+
+[Term]
+id: HTO:0000019
+name: blinding condition
+def: "An information content entity stating what the taster was able to know about the identity of the stimulus at the time of tasting." []
+is_a: IAO:0000030 ! information content entity
+property_value: IAO:0000119 "HTO:0000000" xsd:string
+
+[Term]
+id: HTO:0000020
+name: time-intensity profile datum
+def: "A scalar measurement datum recording perceived intensity as a function of time since the stimulus entered the mouth." []
+is_a: IAO:0000032 ! scalar measurement datum
+property_value: IAO:0000119 "HTO:0000000" xsd:string
+
+[Term]
+id: HTO:0000021
+name: taste confounder
+def: "An information content entity recording a property of a taster that is known to alter taste perception and that should be accounted for when analysing their ratings." []
+is_a: IAO:0000030 ! information content entity
+property_value: IAO:0000119 "HTO:0000000" xsd:string
+
+[Term]
+id: HTO:0000022
+name: tobacco use confounder
+def: "A taste confounder recording that the taster currently uses tobacco." []
+is_a: HTO:0000021 ! taste confounder
+property_value: IAO:0000119 "HTO:0000000" xsd:string
+
+[Term]
+id: HTO:0000023
+name: recent upper respiratory infection confounder
+def: "A taste confounder recording that the taster recently had an upper respiratory infection, including a recent loss of smell." []
+is_a: HTO:0000021 ! taste confounder
+property_value: IAO:0000119 "HTO:0000000" xsd:string
+
+[Term]
+id: HTO:0000024
+name: xerostomia confounder
+def: "A taste confounder recording that the taster has reduced salivary flow." []
+is_a: HTO:0000021 ! taste confounder
+property_value: IAO:0000119 "HTO:0000000" xsd:string
+
+[Term]
+id: HTO:0000025
+name: dysgeusia-associated medication confounder
+def: "A taste confounder recording that the taster takes a medication with a documented taste-distortion side effect." []
+is_a: HTO:0000021 ! taste confounder
+property_value: IAO:0000119 "HTO:0000000" xsd:string
+
+[Term]
+id: HTO:0000300
+name: general Labelled Magnitude Scale
+def: "A rating scale running from zero to one hundred with quasi-logarithmically spaced verbal anchors from barely detectable to strongest imaginable sensation of any kind, permitting comparison of intensities across people." []
+is_a: HTO:0000008 ! rating scale
+property_value: IAO:0000119 "HTO:0000000" xsd:string
+
+[Term]
+id: HTO:0000301
+name: Labelled Magnitude Scale
+def: "A rating scale running from zero to one hundred with verbal anchors referring to the strongest imaginable taste sensation rather than to any sensation." []
+is_a: HTO:0000008 ! rating scale
+property_value: IAO:0000119 "HTO:0000000" xsd:string
+
+[Term]
+id: HTO:0000302
+name: nine-point hedonic scale
+def: "A rating scale with nine categories running from dislike extremely to like extremely, used to record liking." []
+is_a: HTO:0000008 ! rating scale
+property_value: IAO:0000119 "HTO:0000000" xsd:string
+
+[Term]
+id: HTO:0000303
+name: visual analogue scale
+def: "A rating scale on which the taster marks a point on an unstructured line of stated length, conventionally one hundred millimetres." []
+is_a: HTO:0000008 ! rating scale
+property_value: IAO:0000119 "HTO:0000000" xsd:string
+
+[Term]
+id: HTO:0000304
+name: just-about-right scale
+def: "A rating scale with categories running from far too little to far too much about a stated attribute, centred on just about right." []
+is_a: HTO:0000008 ! rating scale
+property_value: IAO:0000119 "HTO:0000000" xsd:string
+
+[Term]
+id: HTO:0000305
+name: PROP filter paper strip protocol
+def: "A protocol in which a taster places a filter paper impregnated with propylthiouracil on the tongue and reports the bitterness, used to assign taster status." []
+is_a: HTO:0000008 ! rating scale
+property_value: IAO:0000119 "HTO:0000000" xsd:string
+
+[Term]
 id: IAO:0000030
 name: information content entity
 def: "A generically dependent continuant that is about some thing." []
@@ -308,14 +515,14 @@ name: has stimulus
 def: "Relates a tasting event to the material that was tasted." []
 property_value: IAO:0000119 "HTO:0000000" xsd:string
 domain: HTO:0000001 ! tasting event
-range: HTO:0000003
+range: HTO:0000003 ! taste stimulus
 
 [Typedef]
 id: HTO:0000052
 name: asserts quality
 def: "Relates a taste percept assertion to the perceptual taste quality it reports." []
 property_value: IAO:0000119 "HTO:0000000" xsd:string
-domain: HTO:0000005
+domain: HTO:0000005 ! taste percept assertion
 range: HTO:0000100
 
 [Typedef]
@@ -323,15 +530,15 @@ id: HTO:0000053
 name: has intensity rating
 def: "Relates a taste percept assertion to the intensity value reported for it." []
 property_value: IAO:0000119 "HTO:0000000" xsd:string
-domain: HTO:0000005
-range: HTO:0000006
+domain: HTO:0000005 ! taste percept assertion
+range: HTO:0000006 ! intensity rating
 
 [Typedef]
 id: HTO:0000054
 name: on scale
 def: "Relates a rating to the scale on which it was recorded." []
 property_value: IAO:0000119 "HTO:0000000" xsd:string
-range: HTO:0000008
+range: HTO:0000008 ! rating scale
 
 [Typedef]
 id: HTO:0000055
@@ -339,7 +546,7 @@ name: has hedonic rating
 def: "Relates a tasting event to the liking score the taster gave the sample." []
 property_value: IAO:0000119 "HTO:0000000" xsd:string
 domain: HTO:0000001 ! tasting event
-range: HTO:0000007
+range: HTO:0000007 ! hedonic rating
 
 [Typedef]
 id: HTO:0000056
@@ -347,35 +554,35 @@ name: part of session
 def: "Relates a tasting event to the session in which it took place." []
 property_value: IAO:0000119 "HTO:0000000" xsd:string
 domain: HTO:0000001 ! tasting event
-range: HTO:0000017
+range: HTO:0000017 ! tasting session
 
 [Typedef]
 id: HTO:0000057
 name: has taster status
 def: "Relates a person to their assessed taster status." []
 property_value: IAO:0000119 "HTO:0000000" xsd:string
-range: HTO:0000011
+range: HTO:0000011 ! taster status
 
 [Typedef]
 id: HTO:0000058
 name: has genotype assertion
 def: "Relates a person to a recorded assertion about their taste-related genotype." []
 property_value: IAO:0000119 "HTO:0000000" xsd:string
-range: HTO:0000016
+range: HTO:0000016 ! taste genotype assertion
 
 [Typedef]
 id: HTO:0000059
 name: stimulus derived from
 def: "Relates a taste stimulus to the food or beverage class it was prepared from." []
 property_value: IAO:0000119 "HTO:0000000" xsd:string
-domain: HTO:0000003
+domain: HTO:0000003 ! taste stimulus
 
 [Typedef]
 id: HTO:0000060
 name: stimulus contains tastant
 def: "Relates a taste stimulus to a chemical entity present in it that bears a taste quality." []
 property_value: IAO:0000119 "HTO:0000000" xsd:string
-domain: HTO:0000003
+domain: HTO:0000003 ! taste stimulus
 
 [Typedef]
 id: HTO:0000061
@@ -398,13 +605,13 @@ name: has output assertion
 def: "Relates a tasting event to a taste percept assertion produced in it." []
 property_value: IAO:0000119 "HTO:0000000" xsd:string
 domain: HTO:0000001 ! tasting event
-range: HTO:0000005
+range: HTO:0000005 ! taste percept assertion
 
 [Typedef]
 id: HTO:0000064
 name: typically associated with diplotype
 def: "Relates a taster status to a diplotype that commonly but not invariably produces it. This is a statistical association and deliberately not an equivalence." []
 property_value: IAO:0000119 "HTO:0000000" xsd:string
-domain: HTO:0000011
-range: HTO:0000015
+domain: HTO:0000011 ! taster status
+range: HTO:0000015 ! TAS2R38 diplotype
 

@@ -719,10 +719,35 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/HTO_0000002 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000002">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <obo:IAO_0000115>A role borne by a person in virtue of taking part in a tasting event as the person doing the tasting.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:label>taster role</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/HTO_0000003 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000003">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <obo:IAO_0000115>A material entity presented to a taster to be tasted.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:label>taste stimulus</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000004 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000004">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HTO_0000003"/>
+        <obo:IAO_0000115>A taste stimulus consisting of a single chemical compound presented at a stated concentration in order to calibrate or classify a taster.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:label>reference tastant</rdfs:label>
     </owl:Class>
     
 
@@ -730,7 +755,10 @@
     <!-- http://purl.obolibrary.org/obo/HTO_0000005 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000005">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <obo:IAO_0000115>An information content entity recording that one taster perceived one perceptual taste quality in one stimulus on one occasion.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:label>taste percept assertion</rdfs:label>
     </owl:Class>
     
 
@@ -738,7 +766,10 @@
     <!-- http://purl.obolibrary.org/obo/HTO_0000006 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000006">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000032"/>
+        <obo:IAO_0000115>A scalar measurement datum recording how strong a perceived taste quality was, on a stated scale.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:label>intensity rating</rdfs:label>
     </owl:Class>
     
 
@@ -746,7 +777,10 @@
     <!-- http://purl.obolibrary.org/obo/HTO_0000007 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000007">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000032"/>
+        <obo:IAO_0000115>A scalar measurement datum recording how much a taster liked or disliked a stimulus, on a stated scale.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:label>hedonic rating</rdfs:label>
     </owl:Class>
     
 
@@ -754,7 +788,32 @@
     <!-- http://purl.obolibrary.org/obo/HTO_0000008 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000008">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <obo:IAO_0000115>An information content entity specifying the permitted values and anchors used to record a rating.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:label>rating scale</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000009 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000009">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000032"/>
+        <obo:IAO_0000115>A scalar measurement datum recording the lowest concentration of a tastant at which a taster reliably detects that something differs from the blank.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:label>detection threshold datum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000010 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000010">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000032"/>
+        <obo:IAO_0000115>A scalar measurement datum recording the lowest concentration of a tastant at which a taster reliably names the quality correctly.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:label>recognition threshold datum</rdfs:label>
     </owl:Class>
     
 
@@ -762,7 +821,43 @@
     <!-- http://purl.obolibrary.org/obo/HTO_0000011 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000011">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBA_VT0001986"/>
+        <obo:IAO_0000115>An organism trait classifying a person by their sensitivity to a reference bitter tastant, conventionally propylthiouracil.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:label>taster status</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000012 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000012">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HTO_0000011"/>
+        <obo:IAO_0000115>A taster status in which the person reports no bitterness from a propylthiouracil test strip.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:label>PROP non-taster</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000013 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000013">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HTO_0000011"/>
+        <obo:IAO_0000115>A taster status in which the person reports moderate bitterness from a propylthiouracil test strip.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:label>PROP medium taster</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000014 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000014">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HTO_0000011"/>
+        <obo:IAO_0000115>A taster status in which the person reports intense bitterness from a propylthiouracil test strip.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:label>PROP super-taster</rdfs:label>
     </owl:Class>
     
 
@@ -770,7 +865,10 @@
     <!-- http://purl.obolibrary.org/obo/HTO_0000015 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000015">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <obo:IAO_0000115>An information content entity recording the pair of TAS2R38 haplotypes carried by a person, each haplotype being the combination of the amino acid states at positions 49, 262 and 296.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:label>TAS2R38 diplotype</rdfs:label>
     </owl:Class>
     
 
@@ -778,7 +876,10 @@
     <!-- http://purl.obolibrary.org/obo/HTO_0000016 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000016">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <obo:IAO_0000115>An information content entity recording an assertion about a person&apos;s genotype at a locus relevant to taste perception.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:label>taste genotype assertion</rdfs:label>
     </owl:Class>
     
 
@@ -786,7 +887,98 @@
     <!-- http://purl.obolibrary.org/obo/HTO_0000017 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000017">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000070"/>
+        <obo:IAO_0000115>A planned process comprising the tasting events performed by one or more tasters on one occasion under one protocol.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:label>tasting session</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000018 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000018">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <obo:IAO_0000115>A process performed between tasting events in order to reduce carry-over of taste from the previous stimulus.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:label>palate cleansing process</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000019 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000019">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <obo:IAO_0000115>An information content entity stating what the taster was able to know about the identity of the stimulus at the time of tasting.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:label>blinding condition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000020 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000020">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000032"/>
+        <obo:IAO_0000115>A scalar measurement datum recording perceived intensity as a function of time since the stimulus entered the mouth.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:label>time-intensity profile datum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000021 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000021">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <obo:IAO_0000115>An information content entity recording a property of a taster that is known to alter taste perception and that should be accounted for when analysing their ratings.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:label>taste confounder</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000022 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000022">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HTO_0000021"/>
+        <obo:IAO_0000115>A taste confounder recording that the taster currently uses tobacco.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:label>tobacco use confounder</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000023 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000023">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HTO_0000021"/>
+        <obo:IAO_0000115>A taste confounder recording that the taster recently had an upper respiratory infection, including a recent loss of smell.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:label>recent upper respiratory infection confounder</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000024 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000024">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HTO_0000021"/>
+        <obo:IAO_0000115>A taste confounder recording that the taster has reduced salivary flow.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:label>xerostomia confounder</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000025 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000025">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HTO_0000021"/>
+        <obo:IAO_0000115>A taste confounder recording that the taster takes a medication with a documented taste-distortion side effect.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:label>dysgeusia-associated medication confounder</rdfs:label>
     </owl:Class>
     
 
@@ -795,6 +987,72 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000100">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000300 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000300">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HTO_0000008"/>
+        <obo:IAO_0000115>A rating scale running from zero to one hundred with quasi-logarithmically spaced verbal anchors from barely detectable to strongest imaginable sensation of any kind, permitting comparison of intensities across people.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:label>general Labelled Magnitude Scale</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000301 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000301">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HTO_0000008"/>
+        <obo:IAO_0000115>A rating scale running from zero to one hundred with verbal anchors referring to the strongest imaginable taste sensation rather than to any sensation.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:label>Labelled Magnitude Scale</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000302 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000302">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HTO_0000008"/>
+        <obo:IAO_0000115>A rating scale with nine categories running from dislike extremely to like extremely, used to record liking.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:label>nine-point hedonic scale</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000303 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000303">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HTO_0000008"/>
+        <obo:IAO_0000115>A rating scale on which the taster marks a point on an unstructured line of stated length, conventionally one hundred millimetres.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:label>visual analogue scale</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000304 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000304">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HTO_0000008"/>
+        <obo:IAO_0000115>A rating scale with categories running from far too little to far too much about a stated attribute, centred on just about right.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:label>just-about-right scale</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000305 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000305">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HTO_0000008"/>
+        <obo:IAO_0000115>A protocol in which a taster places a filter paper impregnated with propylthiouracil on the tongue and reports the bitterness, used to assign taster status.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:label>PROP filter paper strip protocol</rdfs:label>
     </owl:Class>
     
 

@@ -2,3 +2,27 @@ ID	LABEL	TYPE	SC %	A IAO:0000115	A IAO:0000119
 ID	LABEL	TYPE	SC %	A IAO:0000115	A IAO:0000119
 HTO:0000000	HTO editors	owl:AnnotationProperty		Definition source denoting a term authored by the HTO editors for this release rather than taken from a cited publication.	HTO:0000000
 HTO:0000001	tasting event	owl:Class	OBI:0000070	A planned process in which a human taster orally samples a stimulus and reports one or more perceived taste qualities.	HTO:0000000
+HTO:0000002	taster role	owl:Class		A role borne by a person in virtue of taking part in a tasting event as the person doing the tasting.	HTO:0000000
+HTO:0000003	taste stimulus	owl:Class		A material entity presented to a taster to be tasted.	HTO:0000000
+HTO:0000004	reference tastant	owl:Class	HTO:0000003	A taste stimulus consisting of a single chemical compound presented at a stated concentration in order to calibrate or classify a taster.	HTO:0000000
+HTO:0000005	taste percept assertion	owl:Class	IAO:0000030	An information content entity recording that one taster perceived one perceptual taste quality in one stimulus on one occasion.	HTO:0000000
+HTO:0000006	intensity rating	owl:Class	IAO:0000032	A scalar measurement datum recording how strong a perceived taste quality was, on a stated scale.	HTO:0000000
+HTO:0000007	hedonic rating	owl:Class	IAO:0000032	A scalar measurement datum recording how much a taster liked or disliked a stimulus, on a stated scale.	HTO:0000000
+HTO:0000008	rating scale	owl:Class	IAO:0000030	An information content entity specifying the permitted values and anchors used to record a rating.	HTO:0000000
+HTO:0000009	detection threshold datum	owl:Class	IAO:0000032	A scalar measurement datum recording the lowest concentration of a tastant at which a taster reliably detects that something differs from the blank.	HTO:0000000
+HTO:0000010	recognition threshold datum	owl:Class	IAO:0000032	A scalar measurement datum recording the lowest concentration of a tastant at which a taster reliably names the quality correctly.	HTO:0000000
+HTO:0000011	taster status	owl:Class	OBA:VT0001986	An organism trait classifying a person by their sensitivity to a reference bitter tastant, conventionally propylthiouracil.	HTO:0000000
+HTO:0000012	PROP non-taster	owl:Class	HTO:0000011	A taster status in which the person reports no bitterness from a propylthiouracil test strip.	HTO:0000000
+HTO:0000013	PROP medium taster	owl:Class	HTO:0000011	A taster status in which the person reports moderate bitterness from a propylthiouracil test strip.	HTO:0000000
+HTO:0000014	PROP super-taster	owl:Class	HTO:0000011	A taster status in which the person reports intense bitterness from a propylthiouracil test strip.	HTO:0000000
+HTO:0000015	TAS2R38 diplotype	owl:Class	IAO:0000030	An information content entity recording the pair of TAS2R38 haplotypes carried by a person, each haplotype being the combination of the amino acid states at positions 49, 262 and 296.	HTO:0000000
+HTO:0000016	taste genotype assertion	owl:Class	IAO:0000030	An information content entity recording an assertion about a person's genotype at a locus relevant to taste perception.	HTO:0000000
+HTO:0000017	tasting session	owl:Class	OBI:0000070	A planned process comprising the tasting events performed by one or more tasters on one occasion under one protocol.	HTO:0000000
+HTO:0000018	palate cleansing process	owl:Class		A process performed between tasting events in order to reduce carry-over of taste from the previous stimulus.	HTO:0000000
+HTO:0000019	blinding condition	owl:Class	IAO:0000030	An information content entity stating what the taster was able to know about the identity of the stimulus at the time of tasting.	HTO:0000000
+HTO:0000020	time-intensity profile datum	owl:Class	IAO:0000032	A scalar measurement datum recording perceived intensity as a function of time since the stimulus entered the mouth.	HTO:0000000
+HTO:0000021	taste confounder	owl:Class	IAO:0000030	An information content entity recording a property of a taster that is known to alter taste perception and that should be accounted for when analysing their ratings.	HTO:0000000
+HTO:0000022	tobacco use confounder	owl:Class	HTO:0000021	A taste confounder recording that the taster currently uses tobacco.	HTO:0000000
+HTO:0000023	recent upper respiratory infection confounder	owl:Class	HTO:0000021	A taste confounder recording that the taster recently had an upper respiratory infection, including a recent loss of smell.	HTO:0000000
+HTO:0000024	xerostomia confounder	owl:Class	HTO:0000021	A taste confounder recording that the taster has reduced salivary flow.	HTO:0000000
+HTO:0000025	dysgeusia-associated medication confounder	owl:Class	HTO:0000021	A taste confounder recording that the taster takes a medication with a documented taste-distortion side effect.	HTO:0000000
