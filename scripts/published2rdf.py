@@ -6,9 +6,13 @@ Each row becomes a detection threshold datum attached to a diplotype group --
 unless the row carries no sourced numeric value, in which case the diplotype
 group and its provenance are still recorded but no threshold datum is
 fabricated. See data/raw/published_tas2r38_prop.csv for why the TAS2R38/PROP
-rows currently have no sourced value: the cited study groups subjects by
-diplotype but its abstract does not state per-diplotype numeric thresholds,
-and its full text is not open access.
+rows currently have no sourced value: the cited study (PMID:37242298, Aoki
+et al. 2023, Nutrients 15(10):2415, PMC10222862 -- open access, full text
+read) groups subjects by TAS2R38 diplotype and reports significant
+between-group differences in PROP threshold, but its full text states no
+numeric per-diplotype threshold value anywhere -- those values appear only
+in log-scale figure images that could not be fetched from this environment.
+Real per-diplotype sample sizes (n) from the paper's Table 2 are recorded.
 """
 from __future__ import annotations
 import argparse, csv, pathlib
@@ -31,7 +35,11 @@ def convert(csv_path: pathlib.Path, out_path: pathlib.Path) -> int:
 
         g.add((diplotype, RDF.type, OBO["HTO_0000015"]))
         g.add((diplotype, RDFS.label, Literal(row["diplotype"])))
-        g.add((group, RDFS.label, Literal(f'{row["population"]}, TAS2R38 {row["diplotype"]}')))
+        group_n = (row.get("n") or "").strip()
+        group_label = f'{row["population"]}, TAS2R38 {row["diplotype"]}'
+        if group_n:
+            group_label += f' (n={group_n})'
+        g.add((group, RDFS.label, Literal(group_label)))
         g.add((group, OBO["HTO_0000058"], diplotype))
         g.add((group, DCTERMS.source, Literal(row["citation"])))
 
