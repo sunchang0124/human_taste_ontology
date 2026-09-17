@@ -1,0 +1,17 @@
+participant_id,consent,age_band,current_smoker,recent_smell_loss,prop_strip,sample_id,sample_order,minutes_since_opening,sweetness,sourness,bitterness,astringency,liking,aftertaste_present,notes
+P01,yes,25-39,no,no,strong,A,1,5,42,55,38,20,6,yes,fresh mikan
+P01,yes,25-39,no,no,strong,B,2,5,30,62,61,35,4,yes,grapefruit-like
+P01,yes,25-39,no,no,strong,C,3,90,28,58,74,41,3,yes,got bitter over time
+P02,yes,under25,no,no,none,A,1,5,55,40,9,8,8,no,
+P02,yes,under25,no,no,none,B,2,5,48,45,14,12,7,no,
+P02,yes,under25,no,no,none,C,3,90,45,44,18,15,7,no,barely bitter
+P03,yes,40-59,yes,no,medium,A,1,5,38,52,25,18,6,no,
+P03,yes,40-59,yes,no,medium,B,2,5,33,58,44,28,5,yes,
+P03,yes,40-59,yes,no,medium,C,3,90,31,55,52,30,4,yes,
+P04,yes,60plus,no,yes,medium,A,1,5,40,48,22,14,7,no,recent cold
+P04,yes,60plus,no,yes,medium,B,2,5,35,50,40,25,5,yes,
+P04,yes,60plus,no,yes,medium,C,3,90,34,49,47,27,5,yes,
+P05,yes,25-39,no,no,strong,A,1,5,44,53,35,22,6,yes,
+P05,yes,25-39,no,no,strong,B,2,5,29,60,66,38,3,yes,very bitter
+P05,yes,25-39,no,no,strong,C,3,90,27,57,79,44,2,yes,
+P99,no,25-39,no,no,none,A,1,5,50,50,50,50,5,no,declined consent

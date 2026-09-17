@@ -1,0 +1,2 @@
+participant_id,consent,age_band,current_smoker,recent_smell_loss,prop_strip,sample_id,sample_order,minutes_since_opening,sweetness,sourness,bitterness,astringency,liking,aftertaste_present,notes
+# anonymous code you choose,yes or no,under25/25-39/40-59/60plus,yes or no,yes or no,none/medium/strong,sample letter A-F,1-6,minutes since the bottle was opened,0-100,0-100,0-100,0-100,1-9,yes or no,free text
