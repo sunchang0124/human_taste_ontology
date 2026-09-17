@@ -723,7 +723,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "The basic taste quality typically elicited by sodium chloride, transduced principally by the epithelial sodium channel."
+          "val" : "The basic taste quality typically elicited by sodium chloride. The epithelial sodium channel is implicated in its transduction, and is well supported in rodents, but a substantial part of human salt taste is amiloride-insensitive and the channel's role in humans remains contested."
         },
         "comments" : [ "PATO has no term for this quality as of 2026-09-17; proposed to PATO." ],
         "basicPropertyValues" : [ {
@@ -990,7 +990,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "The chemesthetic quality elicited by dissolved carbon dioxide, mediated in part by carbonic anhydrase on trigeminal fibres."
+          "val" : "The chemesthetic quality elicited by dissolved carbon dioxide, arising from two distinct routes: conversion of carbon dioxide by carbonic anhydrase 4 on sour-sensing taste cells, and a separate trigeminal contribution."
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
@@ -1186,7 +1186,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A protocol in which a taster places a filter paper impregnated with propylthiouracil on the tongue and reports the bitterness, used to assign taster status."
+          "val" : "An assay in which a taster places a filter paper impregnated with propylthiouracil on the tongue and reports the bitterness, used to assign taster status."
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
@@ -2180,7 +2180,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/HTO_0000305",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/HTO_0000008"
+      "obj" : "http://purl.obolibrary.org/obo/OBI_0000070"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/IAO_0000030",
       "pred" : "is_a",

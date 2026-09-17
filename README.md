@@ -69,9 +69,12 @@ Measured directly from the ROBOT template TSVs and the released `hto.obo`
   below).
 
 Supporting modules: `src/templates/properties.tsv` (24 object/data
-properties) and `src/templates/scales.tsv` (6 rating-scale classes: general
-LMS, LMS, 9-point hedonic scale, visual analogue scale, just-about-right
-scale, and the PROP filter-paper strip protocol).
+properties) and `src/templates/scales.tsv` (6 classes: five rating scales —
+general LMS, LMS, 9-point hedonic scale, visual analogue scale and
+just-about-right scale — plus `HTO:0000305 PROP filter paper strip protocol`,
+which is not a rating scale at all and is parented at `OBI:0000070 assay`: a
+procedure for eliciting a response is not a specification of permitted values
+and anchors).
 
 ## The tasting sheet
 

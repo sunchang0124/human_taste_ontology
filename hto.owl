@@ -1120,7 +1120,7 @@
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0050914"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115>The basic taste quality typically elicited by sodium chloride, transduced principally by the epithelial sodium channel.</obo:IAO_0000115>
+        <obo:IAO_0000115>The basic taste quality typically elicited by sodium chloride. The epithelial sodium channel is implicated in its transduction, and is well supported in rodents, but a substantial part of human salt taste is amiloride-insensitive and the channel&apos;s role in humans remains contested.</obo:IAO_0000115>
         <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
         <rdfs:comment>PATO has no term for this quality as of 2026-09-17; proposed to PATO.</rdfs:comment>
         <rdfs:label>saltiness</rdfs:label>
@@ -1359,7 +1359,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000145">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HTO_0000140"/>
-        <obo:IAO_0000115>The chemesthetic quality elicited by dissolved carbon dioxide, mediated in part by carbonic anhydrase on trigeminal fibres.</obo:IAO_0000115>
+        <obo:IAO_0000115>The chemesthetic quality elicited by dissolved carbon dioxide, arising from two distinct routes: conversion of carbon dioxide by carbonic anhydrase 4 on sour-sensing taste cells, and a separate trigeminal contribution.</obo:IAO_0000115>
         <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
         <rdfs:label>carbonation bite</rdfs:label>
     </owl:Class>
@@ -1524,8 +1524,8 @@
     <!-- http://purl.obolibrary.org/obo/HTO_0000305 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000305">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HTO_0000008"/>
-        <obo:IAO_0000115>A protocol in which a taster places a filter paper impregnated with propylthiouracil on the tongue and reports the bitterness, used to assign taster status.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000070"/>
+        <obo:IAO_0000115>An assay in which a taster places a filter paper impregnated with propylthiouracil on the tongue and reports the bitterness, used to assign taster status.</obo:IAO_0000115>
         <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
         <rdfs:label>PROP filter paper strip protocol</rdfs:label>
     </owl:Class>

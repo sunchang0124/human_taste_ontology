@@ -28,9 +28,14 @@ subtypes or contested candidate tastes — they are the remaining three
 Definitions below are copied verbatim from HTO's quality lexicon
 (`src/templates/qualities.tsv`), where they are asserted as subclasses of
 `HTO:0000110 basic taste quality`, itself a subclass of
-`PATO:0001241 physical object quality` (until/unless PATO accepts these
-terms, at which point HTO would switch its own bitterness axiom's pattern —
-`owl:equivalentClass` — to these as well).
+`PATO:0001241 physical object quality`.
+
+HTO asserts no `owl:equivalentClass` axiom to any PATO term, deliberately: its
+one exact correspondence, `HTO:0000114 bitterness` to `PATO:0002474 bitter`, is
+recorded as a `skos:exactMatch` row in `mappings/hto-pato.sssom.tsv` rather
+than as a logical equivalence in the ontology. If these four terms are
+accepted, HTO would add four `skos:exactMatch` rows in the same mapping file,
+in the same style.
 
 ### 1. sweetness
 
@@ -48,8 +53,10 @@ GO process reference: `GO:0050915` sensory perception of sour taste.
 
 ### 3. saltiness
 
-> The basic taste quality typically elicited by sodium chloride, transduced
-> principally by the epithelial sodium channel.
+> The basic taste quality typically elicited by sodium chloride. The
+> epithelial sodium channel is implicated in its transduction, and is well
+> supported in rodents, but a substantial part of human salt taste is
+> amiloride-insensitive and the channel's role in humans remains contested.
 
 GO process reference: `GO:0050914` sensory perception of salty taste.
 
@@ -59,6 +66,28 @@ GO process reference: `GO:0050914` sensory perception of salty taste.
 > ribonucleotides, transduced by the TAS1R1 and TAS1R3 receptor pair.
 
 GO process reference: `GO:0050917` sensory perception of umami taste.
+
+## Where in PATO these should sit
+
+`PATO:0002474 bitter` is not a direct child of a generic quality: it sits under
+`PATO:0001329 flavourful`, which in turn sits under `PATO:0000043 flavor`. If
+these four terms are meant to be siblings of `bitter` — and the request is that
+they should be — then the parent asked for is `PATO:0001329 flavourful`, and
+the branch they join is the one rooted at `PATO:0000043 flavor`. Raising this
+explicitly rather than leaving it to be asked:
+
+- `PATO:0000043 flavor` — the branch these terms belong in.
+- `PATO:0001329 flavourful` — the requested direct parent, matching `bitter`.
+
+A question for PATO maintainers that follows from this: HTO currently parents
+its own quality root `HTO:0000100 perceptual taste quality` at
+`PATO:0001241 physical object quality`, which was chosen before the
+`flavor`/`flavourful` branch was traced. `PATO:0001329 flavourful` may be the
+better parent, and HTO would be glad of a ruling either way. The one hesitation
+is direction of attribution: `flavourful` reads as a quality borne by the
+substance, whereas HTO's root is explicitly defined as realised when a human
+perceiver tastes the entity. If PATO considers those the same thing, HTO will
+re-parent.
 
 ## Why PATO and not elsewhere
 
@@ -80,3 +109,5 @@ checking this request against the source:
   mappings from these HTO terms to PATO
 - `mappings/hto-go.sssom.tsv` — mappings to the four GO processes above
 - `docs/pato-gap-report.md` — the full gap analysis
+- `PATO:0000043 flavor`, `PATO:0001329 flavourful`, `PATO:0002474 bitter` —
+  the existing PATO branch this request extends

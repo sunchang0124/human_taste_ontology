@@ -5,4 +5,4 @@ HTO:0000301	Labelled Magnitude Scale	owl:Class	HTO:0000008	A rating scale runnin
 HTO:0000302	nine-point hedonic scale	owl:Class	HTO:0000008	A rating scale with nine categories running from dislike extremely to like extremely, used to record liking.	HTO:0000000
 HTO:0000303	visual analogue scale	owl:Class	HTO:0000008	A rating scale on which the taster marks a point on an unstructured line of stated length, conventionally one hundred millimetres.	HTO:0000000
 HTO:0000304	just-about-right scale	owl:Class	HTO:0000008	A rating scale with categories running from far too little to far too much about a stated attribute, centred on just about right.	HTO:0000000
-HTO:0000305	PROP filter paper strip protocol	owl:Class	HTO:0000008	A protocol in which a taster places a filter paper impregnated with propylthiouracil on the tongue and reports the bitterness, used to assign taster status.	HTO:0000000
+HTO:0000305	PROP filter paper strip protocol	owl:Class	OBI:0000070	An assay in which a taster places a filter paper impregnated with propylthiouracil on the tongue and reports the bitterness, used to assign taster status.	HTO:0000000
