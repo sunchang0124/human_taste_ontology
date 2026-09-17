@@ -1,0 +1,9 @@
+# ROBOT jar (82 MB, downloaded by scripts/setup.sh)
+bin/robot.jar
+# generated import modules and build products are committed; scratch is not
+tmp/
+*.tmp
+__pycache__/
+.venv/
+.ipynb_checkpoints/
+.DS_Store
