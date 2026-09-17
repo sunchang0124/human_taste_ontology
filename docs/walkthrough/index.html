@@ -83,7 +83,7 @@ footer{border-top:1px solid var(--rule);padding-top:18px;margin-top:34px;font-si
 <header>
   <div class="kicker">BioHackathon 2026 · Matsuyama, Ehime</div>
   <h1>The taste words that no ontology had</h1>
-  <p class="standfirst">Every glass of citrus juice in Ehime tastes different to the person next to you. That variation has no standard way to be written down. HTO is a first attempt at one, built in two days from clinical guidelines and public knowledge bases.</p>
+  <p class="standfirst">Every glass of citrus juice in Ehime tastes different to the person next to you. That variation has no standard way to be written down. HTO is a first attempt at one, built in two days on top of the ontologies the field already agrees on.</p>
   <p class="byline">Chang Sun, Maastricht University · 17 September 2026 · <span class="cur">hto.owl</span>, CC BY 4.0 · code MIT</p>
 </header>
 
@@ -91,7 +91,7 @@ footer{border-top:1px solid var(--rule);padding-top:18px;margin-top:34px;font-si
   <div class="stat"><b>122</b><span>terms in the released ontology</span></div>
   <div class="stat"><b>56</b><span>external terms reused, not redefined</span></div>
   <div class="stat"><b style="color:var(--peel)">33/34</b><span>taste qualities with no PATO equivalent</span></div>
-  <div class="stat"><b>8</b><span>competency questions, all passing</span></div>
+  <div class="stat"><b>8</b><span>competency questions passing, 5 of them against real instance data</span></div>
   <div class="stat"><b>30</b><span>tests green</span></div>
 </div>
 
@@ -120,7 +120,7 @@ footer{border-top:1px solid var(--rule);padding-top:18px;margin-top:34px;font-si
 <section>
   <div class="sec-n">02 — WHAT IT IS</div>
   <h2>Three layers, and a rule about reuse</h2>
-  <p>HTO defines only what is genuinely missing. Everything else is imported: the perception processes from Gene Ontology, the anatomy from Uberon, the tastants from ChEBI, the foods from FoodOn, the taste disorders from the Human Phenotype Ontology, and, importantly, the per-modality <em>sensitivity traits</em> from the Ontology of Biological Attributes, which already existed and would have been wasteful to reinvent.</p>
+  <p>HTO defines only what is genuinely missing. Everything else is imported. Twelve of the 56 imported terms carry an HTO axiom today and three more are used by the example data; the rest are staged for the Matsuyama tasting and the bridge axioms, declared but not yet referenced. The sources are: the perception processes from Gene Ontology, the anatomy from Uberon, the tastants from ChEBI, the foods from FoodOn, the taste disorders from the Human Phenotype Ontology, and, importantly, the per-modality <em>sensitivity traits</em> from the Ontology of Biological Attributes, which already existed and would have been wasteful to reinvent.</p>
 
   <div class="layers">
     <div class="layer p"><h5>Quality lexicon</h5><p>The descriptors themselves: five basic tastes, contested ones, bitterness subtypes, chemesthesis, temporal qualities, hedonics.</p><span class="c">34 classes · HTO:0000100–0000162</span></div>
@@ -155,9 +155,15 @@ ex:rating/P01/C/bitterness
     <span class="k">hto:0000070</span>  <span class="p">74</span> ;                      <span class="c"># rating value</span>
     <span class="k">hto:0000054</span>  hto:0000300 .            <span class="c"># on the gLMS</span>
 
+ex:participant/P01
+    <span class="k">hto:0000057</span>  hto:0000014 .            <span class="c"># this taster is a PROP super-taster</span>
+
 ex:event/P01/C
-    <span class="k">hto:0000057</span>  hto:0000014 ;            <span class="c"># taster is a PROP super-taster</span>
-    <span class="k">hto:0000076</span>  <span class="k">90</span> .                      <span class="c"># minutes since opening</span></pre>
+    <span class="k">hto:0000051</span>  ex:sample/C ;            <span class="c"># which sample was tasted</span>
+    <span class="k">hto:0000076</span>  <span class="k">90</span> .                      <span class="c"># minutes since opening</span>
+
+ex:sample/C
+    <span class="k">hto:0000059</span>  obo:FOODON_03301103 .    <span class="c"># stimulus derived from orange juice</span></pre>
 
   <p>Because the assertion is a thing in its own right, you can ask which people disagreed, or whether bitterness tracks taster status, without flattening anyone's rating into an average first.</p>
 </section>
@@ -224,11 +230,12 @@ ex:event/P01/C
 make build                 <span class="c"># templates → reason → hto.owl / .obo / .json</span>
 make report                <span class="c"># OBO quality checks, must be 0 errors</span>
 make validate              <span class="c"># 8 competency questions + 2 QC queries</span>
-python3 -m pytest tests/   <span class="c"># 30 tests, 1 network test deselected</span></pre>
+python3 -m pytest tests/   <span class="c"># 27 tests</span></pre>
   <p>The competency questions are the real specification. They ask things like which qualities were reported for a given citrus juice, whether bitterness ratings differ by taster status, which tasters disagreed most about the same sample, and which participants carry a confounder that should exclude them from a bitterness analysis. If one returns nothing, the ontology has failed at a job it was built for, and <span class="cur">make validate</span> exits non-zero.</p>
 
   <h3>Known limits, stated plainly</h3>
   <ul>
+    <li>Three of the eight competency questions query the ontology alone and so cannot fail when instance data is missing. The other five genuinely depend on it: delete the tasting graph and they return nothing. The repository marks which is which.</li>
     <li>The HTO prefix is not registered with the OBO Foundry, so its PURLs do not resolve yet.</li>
     <li>Imports carry each external term with its label and definition, not its full ancestor chain. This is MIREOT-style, not a full extraction.</li>
     <li>Chemesthetic qualities are included because panels record them, but flagged as trigeminal rather than gustatory.</li>
@@ -239,7 +246,7 @@ python3 -m pytest tests/   <span class="c"># 30 tests, 1 network test deselected
 </section>
 
 <footer>
-  Built at BioHackathon 2026, Matsuyama. Reuses CPIC and ClinPGx conventions for genotype, and terms from GO, PATO, OBA, Uberon, CL, ChEBI, FoodOn, HPO, OBI and IAO. Ontology CC BY 4.0; scripts MIT. The figures on this page are generated from the committed build artefacts; the tasting figures use clearly-labelled synthetic data.
+  Built at BioHackathon 2026, Matsuyama. Reuses terms from GO, PATO, OBA, Uberon, CL, ChEBI, FoodOn, HPO, OBI and IAO. Ontology CC BY 4.0; scripts MIT. The figures on this page are generated from the committed build artefacts; the tasting figures use clearly-labelled synthetic data.
 </footer>
 </div>
 
