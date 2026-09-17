@@ -1,0 +1,88 @@
+{
+  "graphs" : [ {
+    "id" : "http://purl.obolibrary.org/obo/hto.owl",
+    "meta" : {
+      "basicPropertyValues" : [ {
+        "pred" : "http://purl.org/dc/elements/1.1/description",
+        "val" : "An ontology of human taste perception: the qualities people perceive when they taste, and the tasting events in which they report them."
+      }, {
+        "pred" : "http://purl.org/dc/elements/1.1/license",
+        "val" : "https://creativecommons.org/licenses/by/4.0/"
+      }, {
+        "pred" : "http://purl.org/dc/elements/1.1/title",
+        "val" : "Human Taste Ontology"
+      }, {
+        "pred" : "http://purl.org/dc/terms/creator",
+        "val" : "Chang Sun"
+      }, {
+        "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
+        "val" : "Developed at BioHackathon 2026, Matsuyama, Japan. The HTO prefix is not yet registered with the OBO Foundry, so HTO PURLs do not resolve."
+      } ],
+      "version" : "http://purl.obolibrary.org/obo/hto/2026-09-17/hto.owl"
+    },
+    "nodes" : [ {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000001",
+      "lbl" : "tasting event",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A planned process in which a human taster orally samples a stimulus and reports one or more perceived taste qualities."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/OBI_0000070",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000000",
+      "lbl" : "HTO editors",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION",
+      "meta" : {
+        "definition" : {
+          "val" : "Definition source denoting a term authored by the HTO editors for this release rather than taken from a cited publication."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000115",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000119",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://purl.org/dc/elements/1.1/description",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://purl.org/dc/elements/1.1/license",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://purl.org/dc/elements/1.1/title",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://purl.org/dc/terms/creator",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    } ],
+    "edges" : [ {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000001",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/OBI_0000070"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/OBI_0000070",
+      "pred" : "is_a",
+      "obj" : "http://www.w3.org/2002/07/owl#Thing"
+    } ]
+  } ]
+}

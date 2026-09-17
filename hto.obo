@@ -1,0 +1,19 @@
+format-version: 1.2
+data-version: 2026-09-17
+idspace: dc http://purl.org/dc/elements/1.1/ 
+idspace: dcterms http://purl.org/dc/terms/ 
+remark: Developed at BioHackathon 2026, Matsuyama, Japan. The HTO prefix is not yet registered with the OBO Foundry, so HTO PURLs do not resolve.
+ontology: hto
+property_value: dc:description "An ontology of human taste perception: the qualities people perceive when they taste, and the tasting events in which they report them." xsd:string
+property_value: dc:license https://creativecommons.org/licenses/by/4.0/
+property_value: dc:title "Human Taste Ontology" xsd:string
+property_value: dcterms:creator "Chang Sun" xsd:string
+owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\nDeclaration(Class(<http://purl.obolibrary.org/obo/OBI_0000070>))\n############################\n#   Classes\n############################\n\n# Class: <http://purl.obolibrary.org/obo/OBI_0000070> (<http://purl.obolibrary.org/obo/OBI_0000070>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/OBI_0000070> owl:Thing)\n\n\n)
+
+[Term]
+id: HTO:0000001
+name: tasting event
+def: "A planned process in which a human taster orally samples a stimulus and reports one or more perceived taste qualities." []
+is_a: OBI:0000070
+property_value: IAO:0000119 "HTO:0000000" xsd:string
+

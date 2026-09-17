@@ -1,0 +1,11 @@
+ERROR	missing_definition
+ERROR	missing_label
+ERROR	duplicate_label
+ERROR	duplicate_definition
+ERROR	missing_ontology_license
+ERROR	missing_ontology_title
+ERROR	missing_ontology_description
+ERROR	invalid_xref
+WARN	missing_superclass
+WARN	lowercase_definition
+INFO	multiple_labels
