@@ -3,7 +3,7 @@ Copyright 2026 Chang Sun and the HTO editors
 
 The ontology content of this project (all files that describe or comprise the
 ontology, including but not limited to files under src/templates/, src/imports/,
-src/patterns/, src/metadata.ttl, and the generated hto.owl, hto.obo, and
+src/metadata.ttl, and the generated hto.owl, hto.obo, and
 hto.json) is licensed under the Creative Commons Attribution 4.0 International
 License (CC BY 4.0).
 
