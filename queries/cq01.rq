@@ -4,10 +4,15 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX ex:   <https://w3id.org/hto/data/>
 
-SELECT ?sample ?qualityLabel (COUNT(DISTINCT ?person) AS ?tasters)
+# Which perceived qualities were reported for a given FoodOn food class, and by
+# how many distinct tasters? Grouping by the FoodOn class the sample was
+# prepared from, rather than by the opaque per-session sample URI, is what makes
+# this answerable across sessions and joinable with the wider food ecosystem.
+SELECT ?foodon ?qualityLabel (COUNT(DISTINCT ?person) AS ?tasters)
 WHERE {
   ?event rdf:type hto:0000001 ; hto:0000051 ?sample ; hto:0000050 ?person ;
          hto:0000063 ?assertion .
+  ?sample hto:0000059 ?foodon .
   ?assertion hto:0000052 ?quality .
   OPTIONAL { ?quality rdfs:label ?qualityLabel }
-} GROUP BY ?sample ?qualityLabel ORDER BY ?sample
+} GROUP BY ?foodon ?qualityLabel ORDER BY ?foodon ?qualityLabel

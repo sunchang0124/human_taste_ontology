@@ -30,6 +30,7 @@ report: build
 	$(ROBOT) report --input hto.owl --profile src/report_profile.txt --base-iri "http://purl.obolibrary.org/obo/HTO_" --output tmp/report.tsv --fail-on ERROR
 
 validate: build
+	python3 scripts/mappings2rdf.py
 	python3 scripts/sheet2rdf.py data/raw/example_tasting.csv data/rdf/example.ttl --session example
 	python3 scripts/published2rdf.py data/raw/published_tas2r38_prop.csv data/rdf/published.ttl
 	python3 scripts/validate.py

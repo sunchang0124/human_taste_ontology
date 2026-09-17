@@ -1,10 +1,25 @@
 PREFIX hto:  <http://purl.obolibrary.org/obo/HTO_>
 PREFIX obo:  <http://purl.obolibrary.org/obo/>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX ex:   <https://w3id.org/hto/data/>
 
-SELECT ?taste ?label WHERE {
+# For each basic taste, which GO perception process (from the HTO:0000061
+# restriction in the ontology) and which OBA sensitivity trait (from the SSSOM
+# bridge) does it link to? Both sides are OPTIONAL so a basic taste missing one
+# of them shows up with an unbound column rather than dropping out of the
+# answer entirely. TBox only.
+SELECT ?taste ?label ?goProcess ?obaTrait WHERE {
   ?taste rdfs:subClassOf hto:0000110 .
   OPTIONAL { ?taste rdfs:label ?label }
-}
+  OPTIONAL {
+    ?taste rdfs:subClassOf ?r .
+    ?r owl:onProperty hto:0000061 ; owl:someValuesFrom ?goProcess .
+  }
+  OPTIONAL {
+    ?taste skos:relatedMatch ?obaTrait .
+    FILTER(STRSTARTS(STR(?obaTrait), "http://purl.obolibrary.org/obo/OBA_"))
+  }
+} ORDER BY ?taste

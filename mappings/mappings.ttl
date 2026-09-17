@@ -1,0 +1,46 @@
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+obo:HTO_0000011 skos:broadMatch obo:OBA_VT0001986 .
+
+obo:HTO_0000100 skos:broadMatch obo:PATO_0001241 .
+
+obo:HTO_0000111 skos:closeMatch obo:NCIT_C62182 ;
+    skos:relatedMatch obo:CHEBI_17992,
+        obo:GO_0050916,
+        obo:OBA_VT0004209 .
+
+obo:HTO_0000112 skos:closeMatch obo:NCIT_C150482 ;
+    skos:relatedMatch obo:CHEBI_30769,
+        obo:GO_0050915,
+        obo:OBA_VT0004211 .
+
+obo:HTO_0000113 skos:closeMatch obo:NCIT_C150480 ;
+    skos:relatedMatch obo:CHEBI_26710,
+        obo:GO_0050914,
+        obo:OBA_VT0004212 .
+
+obo:HTO_0000114 skos:closeMatch obo:NCIT_C150481 ;
+    skos:exactMatch obo:PATO_0002474 ;
+    skos:relatedMatch obo:CHEBI_15854,
+        obo:GO_0050913,
+        obo:OBA_VT0004210 .
+
+obo:HTO_0000115 skos:closeMatch obo:NCIT_C150484 ;
+    skos:relatedMatch obo:CHEBI_16015,
+        obo:GO_0050917,
+        obo:OBA_VT0004213 .
+
+obo:HTO_0000131 skos:relatedMatch obo:CHEBI_46261,
+        obo:CHEBI_8502 .
+
+obo:HTO_0000132 skos:relatedMatch obo:CHEBI_16226 .
+
+obo:HTO_0000133 skos:relatedMatch obo:CHEBI_28819 .
+
+obo:HTO_0000134 skos:relatedMatch obo:CHEBI_27732 .
+
+obo:HTO_0000151 skos:relatedMatch obo:PATO_0002325 .
+
+obo:HTO_0000152 skos:relatedMatch obo:PATO_0001309 .
+

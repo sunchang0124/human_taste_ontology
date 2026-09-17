@@ -12,6 +12,7 @@ from rdflib import Graph
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 ONTOLOGY = ROOT / "hto.owl"
 DATA = ROOT / "data" / "rdf" / "example.ttl"
+MAPPINGS = ROOT / "mappings" / "mappings.ttl"
 
 
 def main() -> int:
@@ -25,6 +26,13 @@ def main() -> int:
     published = ROOT / "data" / "rdf" / "published.ttl"
     if published.exists():
         g.parse(published, format="turtle")
+
+    # The SSSOM bridge layer, converted by scripts/mappings2rdf.py. cq04, cq05
+    # and cq08 join against it; without it they answer a different question.
+    if MAPPINGS.exists():
+        g.parse(MAPPINGS, format="turtle")
+    else:
+        print(f"note: {MAPPINGS} absent; run scripts/mappings2rdf.py first")
 
     failures = 0
     for path in sorted((ROOT / "queries").glob("*.rq")):

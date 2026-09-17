@@ -2,9 +2,16 @@ PREFIX hto:  <http://purl.obolibrary.org/obo/HTO_>
 PREFIX obo:  <http://purl.obolibrary.org/obo/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX ex:   <https://w3id.org/hto/data/>
 
-SELECT ?subtype ?subtypeLabel WHERE {
+# Which tastants are associated with the bitterness subtypes HTO distinguishes?
+# The subtype axis comes from the ontology, the tastants from the ChEBI SSSOM
+# bridge (mappings/mappings.ttl, built by scripts/mappings2rdf.py). TBox only:
+# this asks what the ontology says, not what anyone tasted.
+SELECT ?subtype ?subtypeLabel ?tastant WHERE {
   ?subtype rdfs:subClassOf hto:0000130 .
+  ?subtype skos:relatedMatch ?tastant .
+  FILTER(STRSTARTS(STR(?tastant), "http://purl.obolibrary.org/obo/CHEBI_"))
   OPTIONAL { ?subtype rdfs:label ?subtypeLabel }
-}
+} ORDER BY ?subtype ?tastant

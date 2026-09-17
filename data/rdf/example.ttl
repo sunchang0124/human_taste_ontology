@@ -1,4 +1,5 @@
 @prefix hto: <http://purl.obolibrary.org/obo/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://w3id.org/hto/data/event/example/P01/A> a hto:HTO_0000001 ;
@@ -6,7 +7,8 @@
     hto:HTO_0000051 <https://w3id.org/hto/data/sample/example/A> ;
     hto:HTO_0000055 <https://w3id.org/hto/data/liking/example/P01/A> ;
     hto:HTO_0000056 <https://w3id.org/hto/data/session/example> ;
-    hto:HTO_0000063 <https://w3id.org/hto/data/assertion/example/P01/A/astringency>,
+    hto:HTO_0000063 <https://w3id.org/hto/data/assertion/example/P01/A/aftertaste>,
+        <https://w3id.org/hto/data/assertion/example/P01/A/astringency>,
         <https://w3id.org/hto/data/assertion/example/P01/A/bitterness>,
         <https://w3id.org/hto/data/assertion/example/P01/A/sourness>,
         <https://w3id.org/hto/data/assertion/example/P01/A/sweetness> ;
@@ -18,7 +20,8 @@
     hto:HTO_0000051 <https://w3id.org/hto/data/sample/example/B> ;
     hto:HTO_0000055 <https://w3id.org/hto/data/liking/example/P01/B> ;
     hto:HTO_0000056 <https://w3id.org/hto/data/session/example> ;
-    hto:HTO_0000063 <https://w3id.org/hto/data/assertion/example/P01/B/astringency>,
+    hto:HTO_0000063 <https://w3id.org/hto/data/assertion/example/P01/B/aftertaste>,
+        <https://w3id.org/hto/data/assertion/example/P01/B/astringency>,
         <https://w3id.org/hto/data/assertion/example/P01/B/bitterness>,
         <https://w3id.org/hto/data/assertion/example/P01/B/sourness>,
         <https://w3id.org/hto/data/assertion/example/P01/B/sweetness> ;
@@ -30,7 +33,8 @@
     hto:HTO_0000051 <https://w3id.org/hto/data/sample/example/C> ;
     hto:HTO_0000055 <https://w3id.org/hto/data/liking/example/P01/C> ;
     hto:HTO_0000056 <https://w3id.org/hto/data/session/example> ;
-    hto:HTO_0000063 <https://w3id.org/hto/data/assertion/example/P01/C/astringency>,
+    hto:HTO_0000063 <https://w3id.org/hto/data/assertion/example/P01/C/aftertaste>,
+        <https://w3id.org/hto/data/assertion/example/P01/C/astringency>,
         <https://w3id.org/hto/data/assertion/example/P01/C/bitterness>,
         <https://w3id.org/hto/data/assertion/example/P01/C/sourness>,
         <https://w3id.org/hto/data/assertion/example/P01/C/sweetness> ;
@@ -90,7 +94,8 @@
     hto:HTO_0000051 <https://w3id.org/hto/data/sample/example/B> ;
     hto:HTO_0000055 <https://w3id.org/hto/data/liking/example/P03/B> ;
     hto:HTO_0000056 <https://w3id.org/hto/data/session/example> ;
-    hto:HTO_0000063 <https://w3id.org/hto/data/assertion/example/P03/B/astringency>,
+    hto:HTO_0000063 <https://w3id.org/hto/data/assertion/example/P03/B/aftertaste>,
+        <https://w3id.org/hto/data/assertion/example/P03/B/astringency>,
         <https://w3id.org/hto/data/assertion/example/P03/B/bitterness>,
         <https://w3id.org/hto/data/assertion/example/P03/B/sourness>,
         <https://w3id.org/hto/data/assertion/example/P03/B/sweetness> ;
@@ -102,7 +107,8 @@
     hto:HTO_0000051 <https://w3id.org/hto/data/sample/example/C> ;
     hto:HTO_0000055 <https://w3id.org/hto/data/liking/example/P03/C> ;
     hto:HTO_0000056 <https://w3id.org/hto/data/session/example> ;
-    hto:HTO_0000063 <https://w3id.org/hto/data/assertion/example/P03/C/astringency>,
+    hto:HTO_0000063 <https://w3id.org/hto/data/assertion/example/P03/C/aftertaste>,
+        <https://w3id.org/hto/data/assertion/example/P03/C/astringency>,
         <https://w3id.org/hto/data/assertion/example/P03/C/bitterness>,
         <https://w3id.org/hto/data/assertion/example/P03/C/sourness>,
         <https://w3id.org/hto/data/assertion/example/P03/C/sweetness> ;
@@ -126,7 +132,8 @@
     hto:HTO_0000051 <https://w3id.org/hto/data/sample/example/B> ;
     hto:HTO_0000055 <https://w3id.org/hto/data/liking/example/P04/B> ;
     hto:HTO_0000056 <https://w3id.org/hto/data/session/example> ;
-    hto:HTO_0000063 <https://w3id.org/hto/data/assertion/example/P04/B/astringency>,
+    hto:HTO_0000063 <https://w3id.org/hto/data/assertion/example/P04/B/aftertaste>,
+        <https://w3id.org/hto/data/assertion/example/P04/B/astringency>,
         <https://w3id.org/hto/data/assertion/example/P04/B/bitterness>,
         <https://w3id.org/hto/data/assertion/example/P04/B/sourness>,
         <https://w3id.org/hto/data/assertion/example/P04/B/sweetness> ;
@@ -138,7 +145,8 @@
     hto:HTO_0000051 <https://w3id.org/hto/data/sample/example/C> ;
     hto:HTO_0000055 <https://w3id.org/hto/data/liking/example/P04/C> ;
     hto:HTO_0000056 <https://w3id.org/hto/data/session/example> ;
-    hto:HTO_0000063 <https://w3id.org/hto/data/assertion/example/P04/C/astringency>,
+    hto:HTO_0000063 <https://w3id.org/hto/data/assertion/example/P04/C/aftertaste>,
+        <https://w3id.org/hto/data/assertion/example/P04/C/astringency>,
         <https://w3id.org/hto/data/assertion/example/P04/C/bitterness>,
         <https://w3id.org/hto/data/assertion/example/P04/C/sourness>,
         <https://w3id.org/hto/data/assertion/example/P04/C/sweetness> ;
@@ -150,7 +158,8 @@
     hto:HTO_0000051 <https://w3id.org/hto/data/sample/example/A> ;
     hto:HTO_0000055 <https://w3id.org/hto/data/liking/example/P05/A> ;
     hto:HTO_0000056 <https://w3id.org/hto/data/session/example> ;
-    hto:HTO_0000063 <https://w3id.org/hto/data/assertion/example/P05/A/astringency>,
+    hto:HTO_0000063 <https://w3id.org/hto/data/assertion/example/P05/A/aftertaste>,
+        <https://w3id.org/hto/data/assertion/example/P05/A/astringency>,
         <https://w3id.org/hto/data/assertion/example/P05/A/bitterness>,
         <https://w3id.org/hto/data/assertion/example/P05/A/sourness>,
         <https://w3id.org/hto/data/assertion/example/P05/A/sweetness> ;
@@ -162,7 +171,8 @@
     hto:HTO_0000051 <https://w3id.org/hto/data/sample/example/B> ;
     hto:HTO_0000055 <https://w3id.org/hto/data/liking/example/P05/B> ;
     hto:HTO_0000056 <https://w3id.org/hto/data/session/example> ;
-    hto:HTO_0000063 <https://w3id.org/hto/data/assertion/example/P05/B/astringency>,
+    hto:HTO_0000063 <https://w3id.org/hto/data/assertion/example/P05/B/aftertaste>,
+        <https://w3id.org/hto/data/assertion/example/P05/B/astringency>,
         <https://w3id.org/hto/data/assertion/example/P05/B/bitterness>,
         <https://w3id.org/hto/data/assertion/example/P05/B/sourness>,
         <https://w3id.org/hto/data/assertion/example/P05/B/sweetness> ;
@@ -174,12 +184,16 @@
     hto:HTO_0000051 <https://w3id.org/hto/data/sample/example/C> ;
     hto:HTO_0000055 <https://w3id.org/hto/data/liking/example/P05/C> ;
     hto:HTO_0000056 <https://w3id.org/hto/data/session/example> ;
-    hto:HTO_0000063 <https://w3id.org/hto/data/assertion/example/P05/C/astringency>,
+    hto:HTO_0000063 <https://w3id.org/hto/data/assertion/example/P05/C/aftertaste>,
+        <https://w3id.org/hto/data/assertion/example/P05/C/astringency>,
         <https://w3id.org/hto/data/assertion/example/P05/C/bitterness>,
         <https://w3id.org/hto/data/assertion/example/P05/C/sourness>,
         <https://w3id.org/hto/data/assertion/example/P05/C/sweetness> ;
     hto:HTO_0000073 3 ;
     hto:HTO_0000076 90.0 .
+
+<https://w3id.org/hto/data/assertion/example/P01/A/aftertaste> a hto:HTO_0000005 ;
+    hto:HTO_0000052 hto:HTO_0000152 .
 
 <https://w3id.org/hto/data/assertion/example/P01/A/astringency> a hto:HTO_0000005 ;
     hto:HTO_0000052 hto:HTO_0000141 ;
@@ -197,6 +211,9 @@
     hto:HTO_0000052 hto:HTO_0000111 ;
     hto:HTO_0000053 <https://w3id.org/hto/data/rating/example/P01/A/sweetness> .
 
+<https://w3id.org/hto/data/assertion/example/P01/B/aftertaste> a hto:HTO_0000005 ;
+    hto:HTO_0000052 hto:HTO_0000152 .
+
 <https://w3id.org/hto/data/assertion/example/P01/B/astringency> a hto:HTO_0000005 ;
     hto:HTO_0000052 hto:HTO_0000141 ;
     hto:HTO_0000053 <https://w3id.org/hto/data/rating/example/P01/B/astringency> .
@@ -212,6 +229,9 @@
 <https://w3id.org/hto/data/assertion/example/P01/B/sweetness> a hto:HTO_0000005 ;
     hto:HTO_0000052 hto:HTO_0000111 ;
     hto:HTO_0000053 <https://w3id.org/hto/data/rating/example/P01/B/sweetness> .
+
+<https://w3id.org/hto/data/assertion/example/P01/C/aftertaste> a hto:HTO_0000005 ;
+    hto:HTO_0000052 hto:HTO_0000152 .
 
 <https://w3id.org/hto/data/assertion/example/P01/C/astringency> a hto:HTO_0000005 ;
     hto:HTO_0000052 hto:HTO_0000141 ;
@@ -293,6 +313,9 @@
     hto:HTO_0000052 hto:HTO_0000111 ;
     hto:HTO_0000053 <https://w3id.org/hto/data/rating/example/P03/A/sweetness> .
 
+<https://w3id.org/hto/data/assertion/example/P03/B/aftertaste> a hto:HTO_0000005 ;
+    hto:HTO_0000052 hto:HTO_0000152 .
+
 <https://w3id.org/hto/data/assertion/example/P03/B/astringency> a hto:HTO_0000005 ;
     hto:HTO_0000052 hto:HTO_0000141 ;
     hto:HTO_0000053 <https://w3id.org/hto/data/rating/example/P03/B/astringency> .
@@ -308,6 +331,9 @@
 <https://w3id.org/hto/data/assertion/example/P03/B/sweetness> a hto:HTO_0000005 ;
     hto:HTO_0000052 hto:HTO_0000111 ;
     hto:HTO_0000053 <https://w3id.org/hto/data/rating/example/P03/B/sweetness> .
+
+<https://w3id.org/hto/data/assertion/example/P03/C/aftertaste> a hto:HTO_0000005 ;
+    hto:HTO_0000052 hto:HTO_0000152 .
 
 <https://w3id.org/hto/data/assertion/example/P03/C/astringency> a hto:HTO_0000005 ;
     hto:HTO_0000052 hto:HTO_0000141 ;
@@ -341,6 +367,9 @@
     hto:HTO_0000052 hto:HTO_0000111 ;
     hto:HTO_0000053 <https://w3id.org/hto/data/rating/example/P04/A/sweetness> .
 
+<https://w3id.org/hto/data/assertion/example/P04/B/aftertaste> a hto:HTO_0000005 ;
+    hto:HTO_0000052 hto:HTO_0000152 .
+
 <https://w3id.org/hto/data/assertion/example/P04/B/astringency> a hto:HTO_0000005 ;
     hto:HTO_0000052 hto:HTO_0000141 ;
     hto:HTO_0000053 <https://w3id.org/hto/data/rating/example/P04/B/astringency> .
@@ -356,6 +385,9 @@
 <https://w3id.org/hto/data/assertion/example/P04/B/sweetness> a hto:HTO_0000005 ;
     hto:HTO_0000052 hto:HTO_0000111 ;
     hto:HTO_0000053 <https://w3id.org/hto/data/rating/example/P04/B/sweetness> .
+
+<https://w3id.org/hto/data/assertion/example/P04/C/aftertaste> a hto:HTO_0000005 ;
+    hto:HTO_0000052 hto:HTO_0000152 .
 
 <https://w3id.org/hto/data/assertion/example/P04/C/astringency> a hto:HTO_0000005 ;
     hto:HTO_0000052 hto:HTO_0000141 ;
@@ -373,6 +405,9 @@
     hto:HTO_0000052 hto:HTO_0000111 ;
     hto:HTO_0000053 <https://w3id.org/hto/data/rating/example/P04/C/sweetness> .
 
+<https://w3id.org/hto/data/assertion/example/P05/A/aftertaste> a hto:HTO_0000005 ;
+    hto:HTO_0000052 hto:HTO_0000152 .
+
 <https://w3id.org/hto/data/assertion/example/P05/A/astringency> a hto:HTO_0000005 ;
     hto:HTO_0000052 hto:HTO_0000141 ;
     hto:HTO_0000053 <https://w3id.org/hto/data/rating/example/P05/A/astringency> .
@@ -389,6 +424,9 @@
     hto:HTO_0000052 hto:HTO_0000111 ;
     hto:HTO_0000053 <https://w3id.org/hto/data/rating/example/P05/A/sweetness> .
 
+<https://w3id.org/hto/data/assertion/example/P05/B/aftertaste> a hto:HTO_0000005 ;
+    hto:HTO_0000052 hto:HTO_0000152 .
+
 <https://w3id.org/hto/data/assertion/example/P05/B/astringency> a hto:HTO_0000005 ;
     hto:HTO_0000052 hto:HTO_0000141 ;
     hto:HTO_0000053 <https://w3id.org/hto/data/rating/example/P05/B/astringency> .
@@ -404,6 +442,9 @@
 <https://w3id.org/hto/data/assertion/example/P05/B/sweetness> a hto:HTO_0000005 ;
     hto:HTO_0000052 hto:HTO_0000111 ;
     hto:HTO_0000053 <https://w3id.org/hto/data/rating/example/P05/B/sweetness> .
+
+<https://w3id.org/hto/data/assertion/example/P05/C/aftertaste> a hto:HTO_0000005 ;
+    hto:HTO_0000052 hto:HTO_0000152 .
 
 <https://w3id.org/hto/data/assertion/example/P05/C/astringency> a hto:HTO_0000005 ;
     hto:HTO_0000052 hto:HTO_0000141 ;
@@ -732,6 +773,18 @@
     hto:HTO_0000057 hto:HTO_0000013 .
 
 <https://w3id.org/hto/data/participant/example/P05> hto:HTO_0000057 hto:HTO_0000014 .
+
+<https://w3id.org/hto/data/sample/example/A> a hto:HTO_0000003 ;
+    rdfs:label "mandarin orange (mikan) juice, pressed on site" ;
+    hto:HTO_0000059 hto:FOODON_00003555 .
+
+<https://w3id.org/hto/data/sample/example/B> a hto:HTO_0000003 ;
+    rdfs:label "grapefruit juice" ;
+    hto:HTO_0000059 hto:FOODON_00003554 .
+
+<https://w3id.org/hto/data/sample/example/C> a hto:HTO_0000003 ;
+    rdfs:label "orange juice" ;
+    hto:HTO_0000059 hto:FOODON_03301103 .
 
 <https://w3id.org/hto/data/session/example> a hto:HTO_0000017 .
 

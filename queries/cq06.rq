@@ -4,9 +4,13 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX ex:   <https://w3id.org/hto/data/>
 
-SELECT ?sample ?minutes (AVG(?value) AS ?meanBitterness)
-WHERE {
-  ?event hto:0000051 ?sample ; hto:0000076 ?minutes ; hto:0000063 ?assertion .
-  ?assertion hto:0000052 hto:0000114 ; hto:0000053 ?rating .
-  ?rating hto:0000070 ?value .
-} GROUP BY ?sample ?minutes ORDER BY ?minutes
+# Retrieve every assertion of a temporal taste quality (anything under
+# HTO:0000150), with the sample it was made about and the minutes elapsed since
+# the stimulus was prepared. The example sheet's aftertaste column is the only
+# temporal quality currently collected.
+SELECT ?assertion ?sample ?qualityLabel ?minutes WHERE {
+  ?assertion rdf:type hto:0000005 ; hto:0000052 ?quality .
+  ?quality rdfs:subClassOf* hto:0000150 .
+  ?event hto:0000063 ?assertion ; hto:0000051 ?sample ; hto:0000076 ?minutes .
+  OPTIONAL { ?quality rdfs:label ?qualityLabel }
+} ORDER BY ?minutes ?sample ?assertion

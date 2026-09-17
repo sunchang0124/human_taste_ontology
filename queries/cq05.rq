@@ -2,10 +2,18 @@ PREFIX hto:  <http://purl.obolibrary.org/obo/HTO_>
 PREFIX obo:  <http://purl.obolibrary.org/obo/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX ex:   <https://w3id.org/hto/data/>
 
+# Which HTO qualities have no exact match in PATO? The PATO mappings live in
+# mappings/mappings.ttl; only HTO:0000114 bitterness has a skos:exactMatch, so
+# this returns 33 of the 34 quality-lexicon terms. TBox only.
 SELECT ?quality ?label WHERE {
   ?quality rdfs:subClassOf* hto:0000100 .
   OPTIONAL { ?quality rdfs:label ?label }
   FILTER(STRSTARTS(STR(?quality), "http://purl.obolibrary.org/obo/HTO_"))
-}
+  FILTER NOT EXISTS {
+    ?quality skos:exactMatch ?p .
+    FILTER(STRSTARTS(STR(?p), "http://purl.obolibrary.org/obo/PATO_"))
+  }
+} ORDER BY ?quality

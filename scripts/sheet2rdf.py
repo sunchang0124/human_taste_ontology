@@ -3,18 +3,24 @@
 
 Every rated quality becomes one HTO:0000005 taste percept assertion so that a
 single person's single perception of a single sample is addressable.
+
+Two collected columns are deliberately not emitted. `age_band` is a
+quasi-identifier that adds nothing to any competency question, and `notes` is
+unstructured free text with no HTO property that would carry it honestly; both
+stay in the CSV and neither reaches the RDF.
 """
 from __future__ import annotations
 import argparse, csv, pathlib, sys
-from rdflib import Graph, Literal, Namespace, RDF, URIRef, XSD
+from rdflib import Graph, Literal, Namespace, RDF, RDFS, URIRef, XSD
 
 OBO = Namespace("http://purl.obolibrary.org/obo/")
 EX = Namespace("https://w3id.org/hto/data/")
 HTO = {n: OBO[f"HTO_{n}"] for n in (
-    "0000001", "0000005", "0000006", "0000007", "0000011", "0000012", "0000013",
-    "0000014", "0000017", "0000021", "0000022", "0000023", "0000050", "0000051",
-    "0000052", "0000053", "0000054", "0000055", "0000056", "0000057", "0000063",
-    "0000070", "0000073", "0000076", "0000300", "0000302")}
+    "0000001", "0000003", "0000005", "0000006", "0000007", "0000011", "0000012",
+    "0000013", "0000014", "0000017", "0000021", "0000022", "0000023", "0000050",
+    "0000051", "0000052", "0000053", "0000054", "0000055", "0000056", "0000057",
+    "0000059", "0000063", "0000070", "0000073", "0000076", "0000152", "0000300",
+    "0000302")}
 
 QUALITY_COLUMNS = {
     "sweetness":   OBO["HTO_0000111"],
@@ -27,6 +33,40 @@ PROP_STATUS = {"none": HTO["0000012"], "medium": HTO["0000013"], "strong": HTO["
 
 class SheetError(Exception):
     pass
+
+
+def default_samples_path(csv_path: pathlib.Path) -> pathlib.Path:
+    """The sample manifest that sits beside a tasting sheet.
+
+    `..._tasting.csv` pairs with `..._samples.csv`; anything else pairs with
+    `samples.csv` in the same directory. The manifest is optional.
+    """
+    if "_tasting" in csv_path.name:
+        return csv_path.with_name(csv_path.name.replace("_tasting", "_samples"))
+    return csv_path.with_name("samples.csv")
+
+
+def load_samples(path: pathlib.Path) -> dict:
+    """Read sample_id -> (FoodOn IRI, label) from an optional sample manifest.
+
+    Without this, a sample node is an opaque URI that nothing in the wider
+    ontology ecosystem can be joined against; with it, cq01 can group perceived
+    qualities by the FoodOn food class actually tasted.
+    """
+    samples: dict = {}
+    if not path.exists():
+        return samples
+    with open(path) as fh:
+        for row in csv.DictReader(l for l in fh if not l.lstrip().startswith("#")):
+            curie = (row.get("foodon_id") or "").strip()
+            sid = (row.get("sample_id") or "").strip()
+            if not sid or not curie:
+                continue
+            if ":" not in curie:
+                raise SheetError(f"sample {sid}: foodon_id {curie!r} is not a CURIE")
+            prefix, local = curie.split(":", 1)
+            samples[sid] = (OBO[f"{prefix}_{local}"], (row.get("label") or "").strip())
+    return samples
 
 
 def check_range(row: dict, col: str, lo: float, hi: float) -> float:
@@ -42,7 +82,9 @@ def check_range(row: dict, col: str, lo: float, hi: float) -> float:
     return val
 
 
-def convert(csv_path: pathlib.Path, out_path: pathlib.Path, session_id: str) -> int:
+def convert(csv_path: pathlib.Path, out_path: pathlib.Path, session_id: str,
+            samples_path: pathlib.Path | None = None) -> int:
+    samples = load_samples(samples_path or default_samples_path(csv_path))
     g = Graph()
     g.bind("hto", OBO)
     g.bind("ex", EX)
@@ -61,6 +103,12 @@ def convert(csv_path: pathlib.Path, out_path: pathlib.Path, session_id: str) -> 
             sample = EX[f"sample/{session_id}/{sid}"]
 
             g.add((event, RDF.type, HTO["0000001"]))
+            g.add((sample, RDF.type, HTO["0000003"]))
+            food = samples.get(sid)
+            if food is not None:
+                g.add((sample, HTO["0000059"], food[0]))
+                if food[1]:
+                    g.add((sample, RDFS.label, Literal(food[1])))
             g.add((event, HTO["0000050"], person))
             g.add((event, HTO["0000051"], sample))
             g.add((event, HTO["0000056"], session))
@@ -90,6 +138,16 @@ def convert(csv_path: pathlib.Path, out_path: pathlib.Path, session_id: str) -> 
                 g.add((event, HTO["0000063"], assertion))
                 written += 1
 
+            # Aftertaste is collected as a yes/no presence, not a magnitude,
+            # so it gets a percept assertion with no intensity rating hung off
+            # it. Emitting it with a rating would invent a number nobody gave.
+            if (row.get("aftertaste_present") or "").strip().lower() == "yes":
+                assertion = EX[f"assertion/{session_id}/{pid}/{sid}/aftertaste"]
+                g.add((assertion, RDF.type, HTO["0000005"]))
+                g.add((assertion, HTO["0000052"], HTO["0000152"]))
+                g.add((event, HTO["0000063"], assertion))
+                written += 1
+
             liking = EX[f"liking/{session_id}/{pid}/{sid}"]
             g.add((liking, RDF.type, HTO["0000007"]))
             g.add((liking, HTO["0000070"],
@@ -107,9 +165,12 @@ def main() -> int:
     ap.add_argument("csv_path", type=pathlib.Path)
     ap.add_argument("out_path", type=pathlib.Path)
     ap.add_argument("--session", required=True)
+    ap.add_argument("--samples", type=pathlib.Path, default=None,
+                    help="sample manifest mapping sample_id to a FoodOn class; "
+                         "defaults to the *_samples.csv beside the tasting sheet")
     args = ap.parse_args()
     try:
-        n = convert(args.csv_path, args.out_path, args.session)
+        n = convert(args.csv_path, args.out_path, args.session, args.samples)
     except SheetError as exc:
         print(f"error: {exc}", file=sys.stderr)
         return 1

@@ -5,6 +5,11 @@ sys.path.insert(0, str(ROOT / "scripts"))
 
 HTO = "http://purl.obolibrary.org/obo/HTO_"
 
+def consenting_rows():
+    with open(ROOT / "data/raw/example_tasting.csv") as fh:
+        return [r for r in csv.DictReader(fh)
+                if (r.get("consent") or "").strip().lower() == "yes"]
+
 def convert_example(tmp_path):
     out = tmp_path / "out.ttl"
     r = subprocess.run([sys.executable, "scripts/sheet2rdf.py",
@@ -17,10 +22,30 @@ def convert_example(tmp_path):
 def test_emits_one_assertion_per_rated_quality(tmp_path):
     g = convert_example(tmp_path)
     assertions = set(g.subjects(rdflib.RDF.type, rdflib.URIRef(HTO + "0000005")))
-    with open(ROOT / "data/raw/example_tasting.csv") as fh:
-        rows = [r for r in csv.DictReader(fh) if r["consent"].strip().lower() == "yes"]
-    # four rated qualities per row: sweetness, sourness, bitterness, astringency
-    assert len(assertions) == 4 * len(rows)
+    rows = consenting_rows()
+    aftertastes = [r for r in rows
+                   if (r.get("aftertaste_present") or "").strip().lower() == "yes"]
+    # Four rated qualities per row (sweetness, sourness, bitterness,
+    # astringency) plus one unrated aftertaste-presence assertion for each row
+    # that reported one.
+    assert len(assertions) == 4 * len(rows) + len(aftertastes)
+
+
+def test_aftertaste_is_emitted_as_a_presence_without_an_intensity_rating(tmp_path):
+    """`aftertaste_present` is a yes/no column: it must produce an
+    HTO:0000152 aftertaste percept assertion, and that assertion must carry no
+    HTO:0000053 intensity rating, because no magnitude was collected."""
+    g = convert_example(tmp_path)
+    asserts_quality = rdflib.URIRef(HTO + "0000052")
+    has_intensity = rdflib.URIRef(HTO + "0000053")
+    aftertaste = rdflib.URIRef(HTO + "0000152")
+    emitted = set(g.subjects(asserts_quality, aftertaste))
+    expected = [r for r in consenting_rows()
+                if (r.get("aftertaste_present") or "").strip().lower() == "yes"]
+    assert len(emitted) == len(expected) > 0
+    for a in emitted:
+        assert list(g.objects(a, has_intensity)) == [], \
+            "an aftertaste presence must not carry an intensity rating"
 
 def test_ratings_round_trip(tmp_path):
     g = convert_example(tmp_path)
