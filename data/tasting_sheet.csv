@@ -1,2 +1,19 @@
+# HTO tasting sheet -- consent and safety
+#
+# You are identified only by an anonymous code you choose yourself. No names
+# and no identifiers that could re-identify anyone are collected.
+#
+# Taking part is voluntary. You may decline, or stop at any point, with no
+# consequence; write "no" in the consent column and nothing from your sheet is
+# recorded.
+#
+# This is a food-preference exercise using commercially available juices and
+# taste strips, not a clinical investigation.
+#
+# Anyone with a citrus allergy, or a sensitivity to the taste strips, should
+# not take part.
+#
+# Lines beginning with # are notes for the person filling the sheet in and are
+# ignored by scripts/sheet2rdf.py.
 participant_id,consent,age_band,current_smoker,recent_smell_loss,prop_strip,sample_id,sample_order,minutes_since_opening,sweetness,sourness,bitterness,astringency,liking,aftertaste_present,notes
 # anonymous code you choose,yes or no,under25/25-39/40-59/60plus,yes or no,yes or no,none/medium/strong,sample letter A-F,1-6,minutes since the bottle was opened,0-100,0-100,0-100,0-100,1-9,yes or no,free text

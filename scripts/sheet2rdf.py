@@ -30,6 +30,14 @@ QUALITY_COLUMNS = {
 }
 PROP_STATUS = {"none": HTO["0000012"], "medium": HTO["0000013"], "strong": HTO["0000014"]}
 
+# Columns without which the sheet cannot be converted correctly. `consent` is
+# the critical one: if it is missing or misspelled, every row silently fails
+# the consent test and the converter writes an empty graph and exits 0, which
+# reads as success and is in fact a silent consent bypass.
+REQUIRED_COLUMNS = ("participant_id", "consent", "sample_id", "sample_order",
+                    "minutes_since_opening", "sweetness", "sourness",
+                    "bitterness", "astringency", "liking")
+
 
 class SheetError(Exception):
     pass
@@ -94,10 +102,25 @@ def convert(csv_path: pathlib.Path, out_path: pathlib.Path, session_id: str,
     written = 0
     with open(csv_path) as fh:
         reader = csv.DictReader(l for l in fh if not l.lstrip().startswith("#"))
+        missing = [c for c in REQUIRED_COLUMNS if c not in (reader.fieldnames or ())]
+        if missing:
+            raise SheetError(f"{csv_path}: missing required column(s): "
+                             f"{', '.join(missing)}")
+
+        seen: set = set()
         for row in reader:
+            pid, sid = row["participant_id"].strip(), row["sample_id"].strip()
+            # One participant tastes one sample once. Two rows for the same
+            # pair would otherwise merge into a single event node carrying two
+            # conflicting values for every rating.
+            if (pid, sid) in seen:
+                raise SheetError(f"duplicate row for participant {pid}, "
+                                 f"sample {sid}: each participant may appear "
+                                 f"once per sample")
+            seen.add((pid, sid))
+
             if (row.get("consent") or "").strip().lower() != "yes":
                 continue
-            pid, sid = row["participant_id"].strip(), row["sample_id"].strip()
             person = EX[f"participant/{session_id}/{pid}"]
             event = EX[f"event/{session_id}/{pid}/{sid}"]
             sample = EX[f"sample/{session_id}/{sid}"]

@@ -76,16 +76,19 @@ scale, and the PROP filter-paper strip protocol).
 ## The tasting sheet
 
 `data/tasting_sheet.csv` is the blank collection template; `scripts/sheet2rdf.py`
-converts a filled sheet to validated RDF instance data. This is the consent
-and safety text that goes at the head of the printed sheet handed to
-participants, adapted from the design spec §8 (which states the
-requirement in prose rather than giving fixed wording):
+converts a filled sheet to validated RDF instance data. The consent and safety
+text now lives at the head of `data/tasting_sheet.csv` itself, as `#` comment
+lines that the converter skips, so it travels with the sheet handed to
+participants instead of only with this README. It is adapted from the design
+spec §8 (which states the requirement in prose rather than giving fixed
+wording), and reads:
 
-> Participants are identified only by an anonymous code they choose. No
-> names, no identifiers that could re-identify anyone. This is a
-> food-preference exercise with commercially available juices and taste
-> strips, not a clinical investigation. Anyone with a citrus allergy or a
-> latex/strip sensitivity simply does not take part.
+> You are identified only by an anonymous code you choose yourself. No names
+> and no identifiers that could re-identify anyone are collected. Taking part
+> is voluntary: you may decline, or stop at any point, with no consequence.
+> This is a food-preference exercise using commercially available juices and
+> taste strips, not a clinical investigation. Anyone with a citrus allergy, or
+> a sensitivity to the taste strips, should not take part.
 
 The sheet has a `consent` column, and `sheet2rdf.py` refuses to emit any row
 for a participant unless that column reads `yes`: `data/raw/example_tasting.csv`

@@ -68,3 +68,30 @@ def test_out_of_range_rating_is_rejected(tmp_path):
                         str(tmp_path / "x.ttl"), "--session", "t"],
                        cwd=ROOT, capture_output=True, text=True)
     assert r.returncode != 0 and "555" in (r.stdout + r.stderr)
+
+
+def test_missing_required_column_is_rejected(tmp_path):
+    """Renaming `consent` used to be a silent consent bypass: every row failed
+    the `yes` test, the converter wrote an empty graph and exited 0."""
+    bad = tmp_path / "no_consent_column.csv"
+    src = (ROOT / "data/raw/example_tasting.csv").read_text().splitlines()
+    bad.write_text("\n".join([src[0].replace("consent", "consnt", 1)] + src[1:]))
+    r = subprocess.run([sys.executable, "scripts/sheet2rdf.py", str(bad),
+                        str(tmp_path / "x.ttl"), "--session", "t"],
+                       cwd=ROOT, capture_output=True, text=True)
+    assert r.returncode != 0, r.stdout + r.stderr
+    assert "consent" in (r.stdout + r.stderr)
+
+
+def test_duplicate_participant_sample_row_is_rejected(tmp_path):
+    """Two rows for the same (participant_id, sample_id) used to merge into one
+    event node carrying two conflicting values for every rating."""
+    dup = tmp_path / "duplicate.csv"
+    src = (ROOT / "data/raw/example_tasting.csv").read_text().splitlines()
+    dup.write_text("\n".join([src[0], src[1], src[1]]))
+    r = subprocess.run([sys.executable, "scripts/sheet2rdf.py", str(dup),
+                        str(tmp_path / "x.ttl"), "--session", "t"],
+                       cwd=ROOT, capture_output=True, text=True)
+    assert r.returncode != 0, r.stdout + r.stderr
+    out = r.stdout + r.stderr
+    assert "P01" in out and "duplicate" in out.lower()
