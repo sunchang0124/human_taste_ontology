@@ -1,0 +1,11 @@
+# mapping_set_id: https://w3id.org/hto/mappings/hto-ncit
+# mapping_set_title: HTO to NCIT
+# license: https://creativecommons.org/licenses/by/4.0/
+# creator_id: "orcid:0000-0000-0000-0000"
+# mapping_date: "2026-09-17"
+subject_id	subject_label	predicate_id	object_id	object_label	mapping_justification
+HTO:0000111	sweetness	skos:closeMatch	NCIT:C62182	Sweet	semapv:ManualMappingCuration
+HTO:0000112	sourness	skos:closeMatch	NCIT:C150482	Sour	semapv:ManualMappingCuration
+HTO:0000113	saltiness	skos:closeMatch	NCIT:C150480	Salty	semapv:ManualMappingCuration
+HTO:0000114	bitterness	skos:closeMatch	NCIT:C150481	Bitter	semapv:ManualMappingCuration
+HTO:0000115	umami	skos:closeMatch	NCIT:C150484	Umami	semapv:ManualMappingCuration

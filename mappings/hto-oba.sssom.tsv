@@ -1,0 +1,12 @@
+# mapping_set_id: https://w3id.org/hto/mappings/hto-oba
+# mapping_set_title: HTO to OBA
+# license: https://creativecommons.org/licenses/by/4.0/
+# creator_id: "orcid:0000-0000-0000-0000"
+# mapping_date: "2026-09-17"
+subject_id	subject_label	predicate_id	object_id	object_label	mapping_justification
+HTO:0000011	taster status	skos:broadMatch	OBA:VT0001986	taste sensitivity trait	semapv:ManualMappingCuration
+HTO:0000111	sweetness	skos:relatedMatch	OBA:VT0004209	sweet taste sensitivity trait	semapv:ManualMappingCuration
+HTO:0000112	sourness	skos:relatedMatch	OBA:VT0004211	sour taste sensitivity trait	semapv:ManualMappingCuration
+HTO:0000113	saltiness	skos:relatedMatch	OBA:VT0004212	salty taste sensitivity trait	semapv:ManualMappingCuration
+HTO:0000114	bitterness	skos:relatedMatch	OBA:VT0004210	bitter taste sensitivity trait	semapv:ManualMappingCuration
+HTO:0000115	umami	skos:relatedMatch	OBA:VT0004213	umami taste sensitivity trait	semapv:ManualMappingCuration

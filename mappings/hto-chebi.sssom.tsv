@@ -1,0 +1,16 @@
+# mapping_set_id: https://w3id.org/hto/mappings/hto-chebi
+# mapping_set_title: HTO to ChEBI
+# license: https://creativecommons.org/licenses/by/4.0/
+# creator_id: "orcid:0000-0000-0000-0000"
+# mapping_date: "2026-09-17"
+subject_id	subject_label	predicate_id	object_id	object_label	mapping_justification	comment
+HTO:0000111	sweetness	skos:relatedMatch	CHEBI:17992	sucrose	semapv:ManualMappingCuration	reference sweet stimulus
+HTO:0000112	sourness	skos:relatedMatch	CHEBI:30769	citric acid	semapv:ManualMappingCuration	reference sour stimulus
+HTO:0000113	saltiness	skos:relatedMatch	CHEBI:26710	sodium chloride	semapv:ManualMappingCuration	reference salty stimulus
+HTO:0000114	bitterness	skos:relatedMatch	CHEBI:15854	quinine	semapv:ManualMappingCuration	reference bitter stimulus
+HTO:0000115	umami	skos:relatedMatch	CHEBI:16015	L-glutamic acid	semapv:ManualMappingCuration	reference umami stimulus
+HTO:0000131	thiourea bitterness	skos:relatedMatch	CHEBI:8502	6-propyl-2-thiouracil	semapv:ManualMappingCuration	PROP, used for taster status
+HTO:0000131	thiourea bitterness	skos:relatedMatch	CHEBI:46261	N-phenylthiourea	semapv:ManualMappingCuration	PTC
+HTO:0000132	limonoid bitterness	skos:relatedMatch	CHEBI:16226	limonin	semapv:ManualMappingCuration	citrus delayed bitterness
+HTO:0000133	flavanone bitterness	skos:relatedMatch	CHEBI:28819	naringin	semapv:ManualMappingCuration	grapefruit bitterness
+HTO:0000134	alkaloid bitterness	skos:relatedMatch	CHEBI:27732	caffeine	semapv:ManualMappingCuration

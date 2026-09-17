@@ -1,0 +1,11 @@
+# mapping_set_id: https://w3id.org/hto/mappings/hto-go
+# mapping_set_title: HTO to GO
+# license: https://creativecommons.org/licenses/by/4.0/
+# creator_id: "orcid:0000-0000-0000-0000"
+# mapping_date: "2026-09-17"
+subject_id	subject_label	predicate_id	object_id	object_label	mapping_justification
+HTO:0000111	sweetness	skos:relatedMatch	GO:0050916	sensory perception of sweet taste	semapv:ManualMappingCuration
+HTO:0000112	sourness	skos:relatedMatch	GO:0050915	sensory perception of sour taste	semapv:ManualMappingCuration
+HTO:0000113	saltiness	skos:relatedMatch	GO:0050914	sensory perception of salty taste	semapv:ManualMappingCuration
+HTO:0000114	bitterness	skos:relatedMatch	GO:0050913	sensory perception of bitter taste	semapv:ManualMappingCuration
+HTO:0000115	umami	skos:relatedMatch	GO:0050917	sensory perception of umami taste	semapv:ManualMappingCuration

@@ -1,0 +1,10 @@
+# mapping_set_id: https://w3id.org/hto/mappings/hto-pato
+# mapping_set_title: HTO to PATO
+# license: https://creativecommons.org/licenses/by/4.0/
+# creator_id: "orcid:0000-0000-0000-0000"
+# mapping_date: "2026-09-17"
+subject_id	subject_label	predicate_id	object_id	object_label	mapping_justification	comment
+HTO:0000114	bitterness	skos:exactMatch	PATO:0002474	bitter	semapv:ManualMappingCuration	The only basic taste quality PATO defines.
+HTO:0000100	perceptual taste quality	skos:broadMatch	PATO:0001241	physical object quality	semapv:ManualMappingCuration	Asserted as the parent in the ontology as well.
+HTO:0000151	taste onset latency	skos:relatedMatch	PATO:0002325	onset quality	semapv:ManualMappingCuration
+HTO:0000152	aftertaste	skos:relatedMatch	PATO:0001309	duration	semapv:ManualMappingCuration
