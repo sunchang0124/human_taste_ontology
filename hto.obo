@@ -8,12 +8,290 @@ property_value: dc:description "An ontology of human taste perception: the quali
 property_value: dc:license https://creativecommons.org/licenses/by/4.0/
 property_value: dc:title "Human Taste Ontology" xsd:string
 property_value: dcterms:creator "Chang Sun" xsd:string
-owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\nDeclaration(Class(<http://purl.obolibrary.org/obo/OBI_0000070>))\n############################\n#   Classes\n############################\n\n# Class: <http://purl.obolibrary.org/obo/OBI_0000070> (<http://purl.obolibrary.org/obo/OBI_0000070>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/OBI_0000070> owl:Thing)\n\n\n)
+owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\nDeclaration(Class(<http://purl.obolibrary.org/obo/CHEBI_15854>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CHEBI_16015>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CHEBI_16226>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CHEBI_17992>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CHEBI_26710>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CHEBI_27732>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CHEBI_28775>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CHEBI_28819>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CHEBI_30769>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CHEBI_46261>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CHEBI_8502>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CL_0000209>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/FOODON_00003027>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/FOODON_00003324>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/FOODON_00003554>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/FOODON_00003555>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/FOODON_00003732>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/FOODON_03301103>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/FOODON_03305428>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/FOODON_03305742>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/GO_0001580>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/GO_0008150>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/GO_0008527>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/GO_0033038>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/GO_0050909>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/GO_0050913>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/GO_0050914>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/GO_0050915>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/GO_0050916>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/GO_0050917>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/GO_0090682>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/HP_0000223>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/HP_0000224>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/HP_0031249>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/HP_0041051>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/IAO_0000030>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/IAO_0000032>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/IAO_0000109>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/OBA_VT0001986>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/OBA_VT0004209>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/OBA_VT0004210>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/OBA_VT0004211>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/OBA_VT0004212>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/OBA_VT0004213>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/OBI_0000070>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/OBI_0001000>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PATO_0000001>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PATO_0000049>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PATO_0001241>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PATO_0001309>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PATO_0002325>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PATO_0002474>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/UBERON_0000167>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/UBERON_0001723>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/UBERON_0001727>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/UBERON_0002448>))\n############################\n#   Classes\n############################\n\n# Class: <http://purl.obolibrary.org/obo/CHEBI_15854> (<http://purl.obolibrary.org/obo/CHEBI_15854>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/CHEBI_15854> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/CHEBI_16015> (<http://purl.obolibrary.org/obo/CHEBI_16015>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/CHEBI_16015> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/CHEBI_16226> (<http://purl.obolibrary.org/obo/CHEBI_16226>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/CHEBI_16226> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/CHEBI_17992> (<http://purl.obolibrary.org/obo/CHEBI_17992>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/CHEBI_17992> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/CHEBI_26710> (<http://purl.obolibrary.org/obo/CHEBI_26710>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/CHEBI_26710> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/CHEBI_27732> (<http://purl.obolibrary.org/obo/CHEBI_27732>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/CHEBI_27732> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/CHEBI_28775> (<http://purl.obolibrary.org/obo/CHEBI_28775>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/CHEBI_28775> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/CHEBI_28819> (<http://purl.obolibrary.org/obo/CHEBI_28819>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/CHEBI_28819> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/CHEBI_30769> (<http://purl.obolibrary.org/obo/CHEBI_30769>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/CHEBI_30769> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/CHEBI_46261> (<http://purl.obolibrary.org/obo/CHEBI_46261>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/CHEBI_46261> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/CHEBI_8502> (<http://purl.obolibrary.org/obo/CHEBI_8502>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/CHEBI_8502> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/CL_0000209> (<http://purl.obolibrary.org/obo/CL_0000209>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/CL_0000209> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/FOODON_00003027> (<http://purl.obolibrary.org/obo/FOODON_00003027>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/FOODON_00003027> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/FOODON_00003324> (<http://purl.obolibrary.org/obo/FOODON_00003324>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/FOODON_00003324> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/FOODON_00003554> (<http://purl.obolibrary.org/obo/FOODON_00003554>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/FOODON_00003554> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/FOODON_00003555> (<http://purl.obolibrary.org/obo/FOODON_00003555>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/FOODON_00003555> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/FOODON_00003732> (<http://purl.obolibrary.org/obo/FOODON_00003732>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/FOODON_00003732> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/FOODON_03301103> (<http://purl.obolibrary.org/obo/FOODON_03301103>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/FOODON_03301103> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/FOODON_03305428> (<http://purl.obolibrary.org/obo/FOODON_03305428>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/FOODON_03305428> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/FOODON_03305742> (<http://purl.obolibrary.org/obo/FOODON_03305742>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/FOODON_03305742> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/GO_0001580> (<http://purl.obolibrary.org/obo/GO_0001580>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/GO_0001580> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/GO_0008150> (<http://purl.obolibrary.org/obo/GO_0008150>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/GO_0008150> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/GO_0008527> (<http://purl.obolibrary.org/obo/GO_0008527>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/GO_0008527> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/GO_0033038> (<http://purl.obolibrary.org/obo/GO_0033038>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/GO_0033038> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/GO_0050909> (<http://purl.obolibrary.org/obo/GO_0050909>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/GO_0050909> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/GO_0050913> (<http://purl.obolibrary.org/obo/GO_0050913>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/GO_0050913> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/GO_0050914> (<http://purl.obolibrary.org/obo/GO_0050914>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/GO_0050914> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/GO_0050915> (<http://purl.obolibrary.org/obo/GO_0050915>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/GO_0050915> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/GO_0050916> (<http://purl.obolibrary.org/obo/GO_0050916>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/GO_0050916> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/GO_0050917> (<http://purl.obolibrary.org/obo/GO_0050917>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/GO_0050917> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/GO_0090682> (<http://purl.obolibrary.org/obo/GO_0090682>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/GO_0090682> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/HP_0000223> (<http://purl.obolibrary.org/obo/HP_0000223>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/HP_0000223> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/HP_0000224> (<http://purl.obolibrary.org/obo/HP_0000224>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/HP_0000224> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/HP_0031249> (<http://purl.obolibrary.org/obo/HP_0031249>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/HP_0031249> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/HP_0041051> (<http://purl.obolibrary.org/obo/HP_0041051>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/HP_0041051> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/IAO_0000030> (<http://purl.obolibrary.org/obo/IAO_0000030>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/IAO_0000030> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/IAO_0000032> (<http://purl.obolibrary.org/obo/IAO_0000032>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/IAO_0000032> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/IAO_0000109> (<http://purl.obolibrary.org/obo/IAO_0000109>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/IAO_0000109> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/OBA_VT0001986> (<http://purl.obolibrary.org/obo/OBA_VT0001986>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/OBA_VT0001986> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/OBA_VT0004209> (<http://purl.obolibrary.org/obo/OBA_VT0004209>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/OBA_VT0004209> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/OBA_VT0004210> (<http://purl.obolibrary.org/obo/OBA_VT0004210>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/OBA_VT0004210> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/OBA_VT0004211> (<http://purl.obolibrary.org/obo/OBA_VT0004211>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/OBA_VT0004211> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/OBA_VT0004212> (<http://purl.obolibrary.org/obo/OBA_VT0004212>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/OBA_VT0004212> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/OBA_VT0004213> (<http://purl.obolibrary.org/obo/OBA_VT0004213>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/OBA_VT0004213> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/OBI_0000070> (<http://purl.obolibrary.org/obo/OBI_0000070>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/OBI_0000070> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/OBI_0001000> (<http://purl.obolibrary.org/obo/OBI_0001000>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/OBI_0001000> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/PATO_0000001> (<http://purl.obolibrary.org/obo/PATO_0000001>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/PATO_0000001> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/PATO_0000049> (<http://purl.obolibrary.org/obo/PATO_0000049>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/PATO_0000049> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/PATO_0001241> (<http://purl.obolibrary.org/obo/PATO_0001241>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/PATO_0001241> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/PATO_0001309> (<http://purl.obolibrary.org/obo/PATO_0001309>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/PATO_0001309> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/PATO_0002325> (<http://purl.obolibrary.org/obo/PATO_0002325>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/PATO_0002325> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/PATO_0002474> (<http://purl.obolibrary.org/obo/PATO_0002474>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/PATO_0002474> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/UBERON_0000167> (<http://purl.obolibrary.org/obo/UBERON_0000167>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/UBERON_0000167> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/UBERON_0001723> (<http://purl.obolibrary.org/obo/UBERON_0001723>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/UBERON_0001723> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/UBERON_0001727> (<http://purl.obolibrary.org/obo/UBERON_0001727>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/UBERON_0001727> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/UBERON_0002448> (<http://purl.obolibrary.org/obo/UBERON_0002448>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/UBERON_0002448> owl:Thing)\n\n\n)
+
+[Term]
+id: CHEBI:15854
+name: quinine
+def: "A cinchona alkaloid that is cinchonidine in which the hydrogen at the 6-position of the quinoline ring is substituted by methoxy." []
+
+[Term]
+id: CHEBI:16015
+name: L-glutamic acid
+def: "An optically active form of glutamic acid having <small>L</small>-configuration." []
+
+[Term]
+id: CHEBI:16226
+name: limonin
+
+[Term]
+id: CHEBI:17992
+name: sucrose
+def: "A glycosyl glycoside formed by glucose and fructose units joined by an acetal oxygen bridge from hemiacetal of glucose to the hemiketal of the fructose." []
+
+[Term]
+id: CHEBI:26710
+name: sodium chloride
+def: "An inorganic chloride salt having sodium(1+) as the counterion." []
+
+[Term]
+id: CHEBI:27732
+name: caffeine
+def: "A trimethylxanthine in which the three methyl groups are located at positions 1, 3, and 7. A purine alkaloid that occurs naturally in tea and coffee." []
+
+[Term]
+id: CHEBI:28775
+name: hesperidin
+def: "A disaccharide derivative that consists of hesperetin substituted by a 6-<em>O</em>-(α-<small>L</small>-rhamnopyranosyl)-β-<small>D</small>-glucopyranosyl moiety at position 7 via a glycosidic linkage." []
+
+[Term]
+id: CHEBI:28819
+name: naringin
+def: "A disaccharide derivative that is (<i>S</i>)-naringenin substituted by a 2-<em>O</em>-(α-<small>L</small>-rhamnopyranosyl)-β-<small>D</small>-glucopyranosyl moiety at position 7 via a glycosidic linkage." []
+
+[Term]
+id: CHEBI:30769
+name: citric acid
+def: "A tricarboxylic acid that is propane-1,2,3-tricarboxylic acid bearing a hydroxy substituent at position 2. It is an important metabolite in the pathway of all aerobic organisms." []
+
+[Term]
+id: CHEBI:46261
+name: N-phenylthiourea
+def: "A member of the class of thioureas that is thiourea in which one of the hydrogens is replaced by a phenyl group. Depending on their genetic makeup, humans find it either very bitter-tasting or tasteless. This unusual property resulted in <em>N</em>-phenylthiourea being used in paternity testing prior to the advent of DNA testing." []
+
+[Term]
+id: CHEBI:8502
+name: 6-propyl-2-thiouracil
+def: "A pyrimidinethione consisting of uracil in which the 2-oxo group is substituted by a thio group and the hydrogen at position 6 is substituted by a propyl group." []
+
+[Term]
+id: CL:0000209
+name: taste receptor cell
+def: "A specialized cell involved in gustatory sensory perception." []
+
+[Term]
+id: FOODON:00003027
+name: pomelo fruit
+def: "A whole fruit of a pomelo tree (Citrus maximus)" []
+
+[Term]
+id: FOODON:00003324
+name: citrus fruit
+def: "A hesperidium fruit of a citrus plant (Citrus)." []
+
+[Term]
+id: FOODON:00003554
+name: grapefruit
+def: "A hesperidium fruit of a grapefruit tree (Citrus x paradisi)." []
+
+[Term]
+id: FOODON:00003555
+name: mandarin orange
+def: "A hesperidium fruit of a mandarin orange tree (Citrus reticulata)." []
+
+[Term]
+id: FOODON:00003732
+name: yuzu
+def: "A hesperidium fruit of a yuzu plant (Citrus junos)" []
+
+[Term]
+id: FOODON:03301103
+name: orange juice
+def: "SIREN DB annotation: * liquid, low viscosity, with small particles FOODON:03430114 * fruit, peel removed, core, pit or seed removed FOODON:03420229" []
+
+[Term]
+id: FOODON:03305428
+name: lemon juice
+def: "SIREN DB annotation: * liquid, low viscosity FOODON:03430109 * fruit, peel present, core, pit or seed present FOODON:03420140" []
+
+[Term]
+id: FOODON:03305742
+name: citrus juice
+def: "SIREN DB annotation: * liquid, low viscosity FOODON:03430109 * fruit, peel present, core, pit or seed present FOODON:03420140" []
+
+[Term]
+id: GO:0001580
+name: detection of chemical stimulus involved in sensory perception of bitter taste
+def: "The series of events required for a bitter taste stimulus to be received and converted to a molecular signal." []
+
+[Term]
+id: GO:0008150
+name: biological_process
+def: "Note that, in addition to forming the root of the biological process ontology, this term is recommended for the annotation of gene products whose biological process is unknown. When this term is used for annotation, it indicates that no information was available about the biological process of the gene product annotated as of the date the annotation was made; the evidence code 'no data' (ND), is used to indicate this." []
+
+[Term]
+id: GO:0008527
+name: taste receptor activity
+def: "Combining with soluble compounds to initiate a change in cell activity. These receptors are responsible for the sense of taste." []
+
+[Term]
+id: GO:0033038
+name: bitter taste receptor activity
+def: "Combining with soluble bitter compounds to initiate a change in cell activity. These receptors are responsible for the sense of bitter taste." []
+
+[Term]
+id: GO:0050909
+name: sensory perception of taste
+def: "The series of events required for an organism to receive a gustatory stimulus, convert it to a molecular signal, and recognize and characterize the signal. Gustation involves the direct detection of chemical composition, usually through contact with chemoreceptor cells. This is a neurological process." []
+
+[Term]
+id: GO:0050913
+name: sensory perception of bitter taste
+def: "The series of events required to receive a bitter taste stimulus, convert it to a molecular signal, and recognize and characterize the signal. This is a neurological process." []
+
+[Term]
+id: GO:0050914
+name: sensory perception of salty taste
+def: "The series of events required to receive a salty taste stimulus, convert it to a molecular signal, and recognize and characterize the signal. This is a neurological process." []
+
+[Term]
+id: GO:0050915
+name: sensory perception of sour taste
+def: "The series of events required to receive a sour taste stimulus, convert it to a molecular signal, and recognize and characterize the signal. This is a neurological process." []
+
+[Term]
+id: GO:0050916
+name: sensory perception of sweet taste
+def: "The series of events required to receive a sweet taste stimulus, convert it to a molecular signal, and recognize and characterize the signal. This is a neurological process." []
+
+[Term]
+id: GO:0050917
+name: sensory perception of umami taste
+def: "The series of events required to receive an umami taste stimulus, convert it to a molecular signal, and recognize and characterize the signal. Umami taste is the savory taste of meats and other foods that are rich in glutamates. This is a neurological process." []
+
+[Term]
+id: GO:0090682
+name: GPCR bitter taste receptor activity
+def: "A G protein-coupled receptor activity that is responsible for the sense of bitter taste." []
+
+[Term]
+id: HP:0000223
+name: Abnormality of taste sensation
+
+[Term]
+id: HP:0000224
+name: Hypogeusia
+def: "A decreased ability to perceive flavor." []
+
+[Term]
+id: HP:0031249
+name: Parageusia
+def: "A distortion of the sense of taste, often characterized by the sensation of a metallic taste." []
+
+[Term]
+id: HP:0041051
+name: Ageusia
+def: "A rare condition that is characterized by a complete loss of taste function of the tongue." []
 
 [Term]
 id: HTO:0000001
 name: tasting event
 def: "A planned process in which a human taster orally samples a stimulus and reports one or more perceived taste qualities." []
-is_a: OBI:0000070
+is_a: OBI:0000070 ! assay
 property_value: IAO:0000119 "HTO:0000000" xsd:string
+
+[Term]
+id: IAO:0000030
+name: information content entity
+def: "A generically dependent continuant that is about some thing." []
+
+[Term]
+id: IAO:0000032
+name: scalar measurement datum
+def: "A scalar measurement datum is a measurement datum that is composed of two parts, numerals and a unit label." []
+
+[Term]
+id: IAO:0000109
+name: measurement datum
+def: "A measurement datum is an information content entity that is a recording of the output of a measurement such as produced by a device." []
+
+[Term]
+id: OBA:VT0001986
+name: taste sensitivity trait
+def: "The sensitivity toward of a sensory perception of taste." []
+
+[Term]
+id: OBA:VT0004209
+name: sweet taste sensitivity trait
+def: "The quality of a sensory perception of sweet taste." []
+
+[Term]
+id: OBA:VT0004210
+name: bitter taste sensitivity trait
+def: "The quality of a sensory perception of bitter taste." []
+
+[Term]
+id: OBA:VT0004211
+name: sour taste sensitivity trait
+def: "The quality of a sensory perception of sour taste." []
+
+[Term]
+id: OBA:VT0004212
+name: salty taste sensitivity trait
+def: "The quality of a sensory perception of salty taste." []
+
+[Term]
+id: OBA:VT0004213
+name: umami taste sensitivity trait
+def: "The quality of a sensory perception of umami taste." []
+
+[Term]
+id: OBI:0000070
+name: assay
+def: "A planned process that has the objective to produce information about a material entity (the evaluant) by examining it." []
+
+[Term]
+id: OBI:0001000
+name: questionnaire
+def: "A document with a set of printed or written questions with a choice of answers, devised for the purposes of a survey or statistical study." []
+
+[Term]
+id: PATO:0000001
+name: quality
+def: "A dependent entity that inheres in a bearer by virtue of how the bearer is related to other entities" []
+
+[Term]
+id: PATO:0000049
+name: intensity
+def: "A quality inhering in a bearer by virtue of the bearer's possessing or displaying a distinctive feature in type or degree or effect or force." []
+
+[Term]
+id: PATO:0001241
+name: physical object quality
+def: "Relational qualities are qualities that hold between multiple entities. Normal (monadic) qualities such as the shape of a eyeball exist purely as a quality of that eyeball. A relational quality such as sensitivity to light is a quality of that eyeball (and connecting nervous system) as it relates to incoming light waves/particles." []
+
+[Term]
+id: PATO:0001309
+name: duration
+def: "A process quality inhering in a bearer by virtue of the bearer's magnitude of the temporal extent between the starting and ending point." []
+
+[Term]
+id: PATO:0002325
+name: onset quality
+def: "The temporal relation between the start of the process with respect to a reference process." []
+
+[Term]
+id: PATO:0002474
+name: bitter
+def: "A flavor quality inhering in a bearer by virtue of the bearer's having an acrid, sharp, or disagreeable flavor." []
+
+[Term]
+id: UBERON:0000167
+name: oral cavity
+def: "Anatomical cavity at the start of the digestive tract that that is enclosed by the mouth. The boundaries and contents vary depending on the species. In vertebrates, the boundaries are the oral opening, the cheeks, the palate and (if present) the palatoglossal arch - if this is not present then the mouth and pharynx form the oropharyngeal cavity. The buccal cavity contains the teeth, tongue and palate (when present)." []
+
+[Term]
+id: UBERON:0001723
+name: tongue
+def: "A muscular organ in the floor of the mouth." []
+
+[Term]
+id: UBERON:0001727
+name: taste bud
+def: "A specialized receptor organ that is a collection of cells spanning the gustatory epithelium." []
+
+[Term]
+id: UBERON:0002448
+name: fungiform papilla
+def: "Any of the mushroom-shaped papillae, which have a single taste bud at the tip, located mostly on the dorsal anterior portion of the tongue." []
 

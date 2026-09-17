@@ -1,0 +1,57 @@
+curie	ontology	why
+GO:0050909	go	taste perception process
+GO:0050913	go	bitter perception
+GO:0050914	go	salty perception
+GO:0050915	go	sour perception
+GO:0050916	go	sweet perception
+GO:0050917	go	umami perception
+GO:0001580	go	detection of bitter chemical stimulus
+GO:0008527	go	taste receptor activity
+GO:0033038	go	bitter taste receptor activity
+GO:0090682	go	GPCR bitter taste receptor activity
+GO:0008150	go	biological process, range for 'perceived via'
+PATO:0000001	pato	quality
+PATO:0001241	pato	physical object quality, parent of HTO qualities
+PATO:0002474	pato	bitter, the only existing basic taste quality
+PATO:0000049	pato	intensity
+PATO:0001309	pato	duration
+PATO:0002325	pato	onset quality
+OBA:VT0001986	oba	taste sensitivity trait, parent of taster status
+OBA:VT0004209	oba	sweet taste sensitivity trait
+OBA:VT0004210	oba	bitter taste sensitivity trait
+OBA:VT0004211	oba	sour taste sensitivity trait
+OBA:VT0004212	oba	salty taste sensitivity trait
+OBA:VT0004213	oba	umami taste sensitivity trait
+UBERON:0001727	uberon	taste bud
+UBERON:0001723	uberon	tongue
+UBERON:0002448	uberon	fungiform papilla
+UBERON:0000167	uberon	oral cavity
+CL:0000209	cl	taste receptor cell
+CHEBI:8502	chebi	PROP, reference bitter stimulus
+CHEBI:46261	chebi	PTC, reference bitter stimulus
+CHEBI:15854	chebi	quinine
+CHEBI:27732	chebi	caffeine
+CHEBI:17992	chebi	sucrose
+CHEBI:30769	chebi	citric acid
+CHEBI:26710	chebi	sodium chloride
+CHEBI:16015	chebi	L-glutamic acid
+CHEBI:16226	chebi	limonin, citrus delayed bitterness
+CHEBI:28819	chebi	naringin, grapefruit bitterness
+CHEBI:28775	chebi	hesperidin
+FOODON:03301103	foodon	orange juice
+FOODON:03305742	foodon	citrus juice
+FOODON:00003324	foodon	citrus fruit
+FOODON:00003555	foodon	mandarin orange
+FOODON:00003554	foodon	grapefruit
+FOODON:00003732	foodon	yuzu
+FOODON:00003027	foodon	pomelo fruit
+FOODON:03305428	foodon	lemon juice
+HP:0041051	hp	ageusia
+HP:0000224	hp	hypogeusia
+HP:0031249	hp	parageusia
+HP:0000223	hp	abnormality of taste sensation
+OBI:0000070	obi	assay, parent of tasting event
+OBI:0001000	obi	questionnaire
+IAO:0000030	iao	information content entity
+IAO:0000032	iao	scalar measurement datum
+IAO:0000109	iao	measurement datum
