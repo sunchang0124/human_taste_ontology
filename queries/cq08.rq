@@ -1,0 +1,10 @@
+PREFIX hto:  <http://purl.obolibrary.org/obo/HTO_>
+PREFIX obo:  <http://purl.obolibrary.org/obo/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX ex:   <https://w3id.org/hto/data/>
+
+SELECT ?taste ?label WHERE {
+  ?taste rdfs:subClassOf hto:0000110 .
+  OPTIONAL { ?taste rdfs:label ?label }
+}

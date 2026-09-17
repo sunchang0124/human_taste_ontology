@@ -1,0 +1,11 @@
+PREFIX hto:  <http://purl.obolibrary.org/obo/HTO_>
+PREFIX obo:  <http://purl.obolibrary.org/obo/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX ex:   <https://w3id.org/hto/data/>
+
+SELECT ?quality ?label WHERE {
+  ?quality rdfs:subClassOf* hto:0000100 .
+  OPTIONAL { ?quality rdfs:label ?label }
+  FILTER(STRSTARTS(STR(?quality), "http://purl.obolibrary.org/obo/HTO_"))
+}

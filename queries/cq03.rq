@@ -1,0 +1,13 @@
+PREFIX hto:  <http://purl.obolibrary.org/obo/HTO_>
+PREFIX obo:  <http://purl.obolibrary.org/obo/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX ex:   <https://w3id.org/hto/data/>
+
+SELECT ?sample (MIN(?value) AS ?lowest) (MAX(?value) AS ?highest)
+       ((MAX(?value) - MIN(?value)) AS ?spread)
+WHERE {
+  ?event hto:0000051 ?sample ; hto:0000063 ?assertion .
+  ?assertion hto:0000052 hto:0000114 ; hto:0000053 ?rating .
+  ?rating hto:0000070 ?value .
+} GROUP BY ?sample HAVING (MAX(?value) - MIN(?value) > 20) ORDER BY DESC(?spread)

@@ -1,0 +1,13 @@
+PREFIX hto:  <http://purl.obolibrary.org/obo/HTO_>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+
+# Every HTO class must have at least one asserted parent. The three terms in the
+# allow-list are deliberate HTO roots: no imported term is a suitable parent for
+# a role, a material stimulus, or a palate-cleansing process.
+SELECT ?term WHERE {
+  ?term a owl:Class .
+  FILTER(STRSTARTS(STR(?term), "http://purl.obolibrary.org/obo/HTO_"))
+  FILTER NOT EXISTS { ?term rdfs:subClassOf ?parent }
+  FILTER(?term NOT IN (hto:0000002, hto:0000003, hto:0000018))
+}

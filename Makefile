@@ -29,7 +29,11 @@ build: $(MODULES) | tmp
 report: build
 	$(ROBOT) report --input hto.owl --profile src/report_profile.txt --base-iri "http://purl.obolibrary.org/obo/HTO_" --output tmp/report.tsv --fail-on ERROR
 
-test: report
+validate: build
+	python3 scripts/sheet2rdf.py data/raw/example_tasting.csv data/rdf/example.ttl --session example
+	python3 scripts/validate.py
+
+test: report validate
 	python3 -m pytest tests/ -q
 
 clean:

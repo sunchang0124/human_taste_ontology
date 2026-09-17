@@ -1,0 +1,13 @@
+PREFIX hto:  <http://purl.obolibrary.org/obo/HTO_>
+PREFIX obo:  <http://purl.obolibrary.org/obo/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX ex:   <https://w3id.org/hto/data/>
+
+SELECT ?sample ?qualityLabel (COUNT(DISTINCT ?person) AS ?tasters)
+WHERE {
+  ?event rdf:type hto:0000001 ; hto:0000051 ?sample ; hto:0000050 ?person ;
+         hto:0000063 ?assertion .
+  ?assertion hto:0000052 ?quality .
+  OPTIONAL { ?quality rdfs:label ?qualityLabel }
+} GROUP BY ?sample ?qualityLabel ORDER BY ?sample
