@@ -6,6 +6,8 @@ Verified 2026-09-17 against the OBO Foundry registry (267 ontologies) and the
 EBI Ontology Lookup Service (OLS). No ontology of human taste perception
 exists. What does exist, and what it does *not* cover:
 
+**Walkthrough page:** https://claude.ai/artifact/L5wdjXo15GqfinKaixEtPs — the gap, the three layers, a worked tasting, and what the build does and does not demonstrate.
+
 - **FoodOn** — covers foods (including citrus varieties such as satsuma,
   yuzu and pomelo), not what a person perceives when tasting them.
 - **FOBI** — food biomarkers, not perception.

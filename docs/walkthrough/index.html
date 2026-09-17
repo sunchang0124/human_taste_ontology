@@ -1,0 +1,312 @@
+<title>Human Taste Ontology</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,300;6..72,400;6..72,600&family=Public+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --paper:#fbfaf7; --panel:#ffffff; --ink:#1a1b14; --ink2:#55564a; --ink3:#83857a;
+  --rule:#e2e0d5; --rule2:#cbc9bc;
+  --peel:#c8860a;        /* perception */
+  --know:#1c5cab;        /* knowledge structure */
+  --peel-wash:#f7eed8; --know-wash:#e3ecf9;
+  --serif:"Newsreader",Georgia,"Times New Roman",serif;
+  --sans:"Public Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#14150f; --panel:#1b1d16; --ink:#f2f1e8; --ink2:#b6b7a8; --ink3:#8a8c7e;
+  --rule:#2e3026; --rule2:#43463a;
+  --peel:#c98500; --know:#3987e5;
+  --peel-wash:#2a2312; --know-wash:#152437;
+}}
+:root[data-theme="dark"]{
+  --paper:#14150f; --panel:#1b1d16; --ink:#f2f1e8; --ink2:#b6b7a8; --ink3:#8a8c7e;
+  --rule:#2e3026; --rule2:#43463a;
+  --peel:#c98500; --know:#3987e5;
+  --peel-wash:#2a2312; --know-wash:#152437;
+}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.6;margin:0}
+.wrap{max-width:860px;margin:0 auto;padding-inline:22px;padding-block:34px 72px}
+.kicker{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink3)}
+h1{font-family:var(--serif);font-weight:600;font-size:clamp(34px,6.4vw,58px);line-height:1.02;letter-spacing:-0.015em;margin:12px 0 0;text-wrap:balance}
+.standfirst{font-family:var(--serif);font-size:clamp(17px,2.2vw,21px);line-height:1.5;color:var(--ink2);margin:14px 0 0;max-width:34em}
+.byline{font-size:13px;color:var(--ink3);margin-top:18px;padding-top:14px;border-top:1px solid var(--rule)}
+h2{font-family:var(--serif);font-weight:600;font-size:clamp(23px,3.4vw,30px);line-height:1.15;margin:0 0 4px;text-wrap:balance}
+h3{font-family:var(--sans);font-weight:600;font-size:15px;margin:26px 0 6px;letter-spacing:-0.005em}
+p{margin:0 0 15px;max-width:34em}
+section{padding-block:34px;border-top:1px solid var(--rule)}
+.sec-n{font-family:var(--mono);font-size:11px;color:var(--peel);letter-spacing:.1em;margin-bottom:10px}
+code,.cur{font-family:var(--mono);font-size:.86em;background:var(--panel);border:1px solid var(--rule);border-radius:3px;padding:1px 5px;white-space:nowrap}
+a{color:var(--know)}
+.fig{background:var(--panel);border:1px solid var(--rule);border-radius:4px;padding:18px 18px 14px;margin:20px 0}
+.fig h4{margin:0 0 3px;font-size:14px;font-weight:600}
+.fig .sub{font-size:12.5px;color:var(--ink3);margin:0 0 14px;max-width:none}
+svg{display:block;max-width:100%;height:auto;overflow:visible}
+.svgtext{font-family:var(--sans);font-size:12px;fill:var(--ink2)}
+.svgnum{font-family:var(--mono);font-size:12px;fill:var(--ink);font-weight:500}
+.svglab{font-family:var(--sans);font-size:12.5px;fill:var(--ink)}
+.legend{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:12.5px;color:var(--ink2);margin-top:12px}
+.legend s{display:inline-block;width:11px;height:11px;border-radius:2px;vertical-align:-1px;margin-right:6px;text-decoration:none}
+.grid34{display:grid;grid-template-columns:repeat(auto-fill,minmax(122px,1fr));gap:5px}
+.q{border:1px solid var(--rule2);border-radius:3px;padding:6px 8px;font-size:11.5px;line-height:1.3;color:var(--ink2);background:transparent}
+.q.has{border-color:var(--peel);background:var(--peel-wash);color:var(--ink);font-weight:600}
+.q b{display:block;font-family:var(--mono);font-size:9.5px;color:var(--ink3);font-weight:400}
+.q.has b{color:var(--peel)}
+table{border-collapse:collapse;width:100%;font-size:13.5px;font-variant-numeric:tabular-nums}
+th{text-align:left;font-weight:600;color:var(--ink2);border-bottom:1px solid var(--rule2);padding:7px 9px;font-size:12px;letter-spacing:.02em}
+td{padding:7px 9px;border-bottom:1px solid var(--rule);vertical-align:top}
+td.n,th.n{text-align:right;font-family:var(--mono)}
+.scroll{overflow-x:auto}
+.note{border-left:3px solid var(--peel);background:var(--peel-wash);padding:12px 16px;border-radius:0 4px 4px 0;margin:20px 0;font-size:14.5px;color:var(--ink)}
+.note.know{border-left-color:var(--know);background:var(--know-wash)}
+.note p{margin:0;max-width:none}
+.note p+p{margin-top:9px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(108px,1fr));gap:2px;background:var(--rule);border:1px solid var(--rule);border-radius:4px;overflow:hidden;margin:22px 0}
+.stat{background:var(--paper);padding:12px 13px}
+.stat b{display:block;font-family:var(--mono);font-size:21px;font-weight:500;letter-spacing:-0.02em}
+.stat span{font-size:11.5px;color:var(--ink2);line-height:1.3;display:block;margin-top:2px}
+pre{font-family:var(--mono);font-size:12.5px;line-height:1.65;background:var(--panel);border:1px solid var(--rule);border-radius:4px;padding:14px 15px;overflow-x:auto;margin:14px 0;color:var(--ink)}
+pre .c{color:var(--ink3)}
+pre .k{color:var(--know)}
+pre .p{color:var(--peel)}
+ul{padding-left:20px;max-width:34em}li{margin-bottom:7px}
+.layers{display:grid;gap:12px;margin:20px 0}
+@media(min-width:680px){.layers{grid-template-columns:repeat(3,1fr)}}
+.layer{border:1px solid var(--rule);border-top:3px solid var(--know);border-radius:0 0 4px 4px;padding:13px 14px;background:var(--panel)}
+.layer.p{border-top-color:var(--peel)}
+.layer h5{margin:0 0 5px;font-size:13.5px;font-weight:600}
+.layer p{font-size:12.5px;color:var(--ink2);margin:0;max-width:none}
+.layer .c{font-family:var(--mono);font-size:11px;color:var(--ink3);display:block;margin-top:8px}
+footer{border-top:1px solid var(--rule);padding-top:18px;margin-top:34px;font-size:12.5px;color:var(--ink3);max-width:40em}
+</style>
+
+<div class="wrap">
+
+<header>
+  <div class="kicker">BioHackathon 2026 · Matsuyama, Ehime</div>
+  <h1>The taste words that no ontology had</h1>
+  <p class="standfirst">Every glass of citrus juice in Ehime tastes different to the person next to you. That variation has no standard way to be written down. HTO is a first attempt at one, built in two days from clinical guidelines and public knowledge bases.</p>
+  <p class="byline">Chang Sun, Maastricht University · 17 September 2026 · <span class="cur">hto.owl</span>, CC BY 4.0 · code MIT</p>
+</header>
+
+<div class="stats">
+  <div class="stat"><b>122</b><span>terms in the released ontology</span></div>
+  <div class="stat"><b>56</b><span>external terms reused, not redefined</span></div>
+  <div class="stat"><b style="color:var(--peel)">33/34</b><span>taste qualities with no PATO equivalent</span></div>
+  <div class="stat"><b>8</b><span>competency questions, all passing</span></div>
+  <div class="stat"><b>27</b><span>tests green</span></div>
+</div>
+
+<section>
+  <div class="sec-n">01 — THE GAP</div>
+  <h2>Nobody had written down what taste words mean</h2>
+  <p>Before building anything I checked whether this already existed. On 17 September 2026 I searched the OBO Foundry registry, all 267 ontologies, and the EBI Ontology Lookup Service. The answer was no, and the shape of the absence was sharper than expected.</p>
+  <p>There is plenty for the <em>things</em> you taste. FoodOn covers foods. ChEBI covers the molecules. BitterDB, FlavorDB and ChemTastesDB catalogue tastants. Gene Ontology has the perception processes. What is missing is the perception itself: the vocabulary a person uses to say what they experienced.</p>
+  <p>PATO is the ontology the biomedical world uses for qualities. It has a term for <strong>bitter</strong>. It has no term for sweet, sour, salty or umami. Astringency exists in ChEBI, but as a <em>chemical role</em>, which is a category error: it describes what a compound does, not what a mouth feels. Kokumi, oleogustus and mouthfeel appear nowhere at all. Aftertaste exists only in SNOMED.</p>
+
+  <div class="fig">
+    <h4>Taste qualities HTO defines, and whether PATO already had one</h4>
+    <p class="sub">Filled cell means an exact match exists upstream. One does.</p>
+    <div class="grid34" id="gapgrid"></div>
+    <div class="legend">
+      <span><s style="background:var(--peel-wash);border:1px solid var(--peel)"></s>exact match in PATO (1)</span>
+      <span><s style="border:1px solid var(--rule2)"></s>no equivalent anywhere in OBO (33)</span>
+    </div>
+  </div>
+
+  <div class="note">
+    <p>This is the finding, and it is checkable: <span class="cur">make build</span> regenerates <span class="cur">docs/pato-gap-report.md</span> from the mapping files, and it says 33 of 34.</p>
+  </div>
+</section>
+
+<section>
+  <div class="sec-n">02 — WHAT IT IS</div>
+  <h2>Three layers, and a rule about reuse</h2>
+  <p>HTO defines only what is genuinely missing. Everything else is imported: the perception processes from Gene Ontology, the anatomy from Uberon, the tastants from ChEBI, the foods from FoodOn, the taste disorders from the Human Phenotype Ontology, and, importantly, the per-modality <em>sensitivity traits</em> from the Ontology of Biological Attributes, which already existed and would have been wasteful to reinvent.</p>
+
+  <div class="layers">
+    <div class="layer p"><h5>Quality lexicon</h5><p>The descriptors themselves: five basic tastes, contested ones, bitterness subtypes, chemesthesis, temporal qualities, hedonics.</p><span class="c">34 classes · HTO:0000100–0000162</span></div>
+    <div class="layer"><h5>Percept core</h5><p>The tasting event, and the reified assertion that one person perceived one quality in one sample on one occasion.</p><span class="c">27 classes · HTO:0000001–0000026</span></div>
+    <div class="layer"><h5>Bridges</h5><p>Mappings out to PATO, NCIT, GO, ChEBI and OBA, with honest predicates rather than blanket equivalence.</p><span class="c">30 mappings · 5 SSSOM files</span></div>
+  </div>
+
+  <div class="fig">
+    <h4>External terms reused, by source ontology</h4>
+    <p class="sub">56 terms imported with their real labels and definitions, fetched live from the EBI service.</p>
+    <svg viewBox="0 0 560 250" role="img" aria-label="Bar chart of reused terms by source ontology"><g id="reusebars"></g></svg>
+  </div>
+
+  <p>The design decision that matters is that the <strong>tasting event</strong> is the centre, not the word list. A vocabulary alone cannot record that two people disagreed about the same glass. Reifying the perception can, and that is what makes person-level taste data shareable.</p>
+</section>
+
+<section>
+  <div class="sec-n">03 — HOW A TASTE BECOMES DATA</div>
+  <h2>One row of a score sheet, one graph of triples</h2>
+  <p>A taster fills in a line: participant code, sample, how sweet, how sour, how bitter, how astringent, how much they liked it, and how many minutes since the bottle was opened. The converter turns each rated quality into its own addressable assertion.</p>
+
+<pre><span class="c"># data/raw/example_tasting.csv — one row</span>
+P01,yes,25-39,no,no,<span class="p">strong</span>,<span class="k">C</span>,3,<span class="k">90</span>,28,58,<span class="p">74</span>,41,3,yes
+
+<span class="c"># becomes, among others:</span>
+ex:assertion/P01/C/bitterness
+    a                      <span class="k">hto:0000005</span>   <span class="c"># taste percept assertion</span>
+    <span class="k">hto:0000052</span>  <span class="p">hto:0000114</span> ;             <span class="c"># asserts quality: bitterness</span>
+    <span class="k">hto:0000053</span>  ex:rating/P01/C/bitterness .
+
+ex:rating/P01/C/bitterness
+    <span class="k">hto:0000070</span>  <span class="p">74</span> ;                      <span class="c"># rating value</span>
+    <span class="k">hto:0000054</span>  hto:0000300 .            <span class="c"># on the gLMS</span>
+
+ex:event/P01/C
+    <span class="k">hto:0000057</span>  hto:0000014 ;            <span class="c"># taster is a PROP super-taster</span>
+    <span class="k">hto:0000076</span>  <span class="k">90</span> .                      <span class="c"># minutes since opening</span></pre>
+
+  <p>Because the assertion is a thing in its own right, you can ask which people disagreed, or whether bitterness tracks taster status, without flattening anyone's rating into an average first.</p>
+</section>
+
+<section>
+  <div class="sec-n">04 — WHAT THE PIPELINE PRODUCES</div>
+  <h2>A worked example, on invented data</h2>
+  <div class="note">
+    <p><strong>These two figures use synthetic example data.</strong> <span class="cur">data/raw/example_tasting.csv</span> is invented to exercise the converter: five participants, three samples, fifteen rated rows. It is not a real tasting and must never be cited as evidence about anyone's perception. The Matsuyama tasting has not been run yet.</p>
+  </div>
+
+  <div class="fig">
+    <h4>Mean bitterness by PROP taster status</h4>
+    <p class="sub">Synthetic. Rated on the general Labelled Magnitude Scale, the instrument sensory panels actually use, with its real verbal anchors.</p>
+    <svg viewBox="0 0 560 250" role="img" aria-label="Mean bitterness by taster status on the general Labelled Magnitude Scale"><g id="propchart"></g></svg>
+    <div class="legend"><span>PROP strip result determines taster status, which HTO records as <span class="cur">hto:0000012–14</span> under the OBA sensitivity trait.</span></div>
+  </div>
+
+  <div class="fig">
+    <h4>Mean bitterness by sample and time since opening</h4>
+    <p class="sub">Synthetic. Samples A and B were rated at 5 minutes, sample C at 90 minutes.</p>
+    <svg viewBox="0 0 560 190" role="img" aria-label="Mean bitterness for three samples at two elapsed times"><g id="timechart"></g></svg>
+  </div>
+
+  <div class="note">
+    <p><strong>Read that second figure carefully.</strong> It compares three different samples that happen to have been rated at different elapsed times. It is <em>not</em> a within-sample time series: no sample is ever rated twice at two different times. Testing delayed bitterness properly, the phenomenon where limonin forms after juicing and a glass turns bitter as it stands, needs a repeated-measures sheet that pours once and tastes again later. HTO has the term for it, <span class="cur">hto:0000154 delayed bitterness</span>; the example data does not demonstrate it.</p>
+  </div>
+</section>
+
+<section>
+  <div class="sec-n">05 — LITERATURE DATA</div>
+  <h2>Where it falls short</h2>
+  <p>The second dataset re-annotates a published study, to show the schema fits literature and not only sheets we write ourselves. It cites a real, verified paper: Aoki and colleagues, 2023, in <em>Nutrients</em>, measuring PROP bitter-taste thresholds by TAS2R38 diplotype in adults in Japan.</p>
+
+  <div class="scroll"><table>
+    <thead><tr><th>TAS2R38 diplotype</th><th class="n">n</th><th>Threshold</th><th>Source</th></tr></thead>
+    <tbody>
+      <tr><td><span class="cur">PAV/PAV</span></td><td class="n">24</td><td style="color:var(--ink3)">not extractable</td><td>Table 2</td></tr>
+      <tr><td><span class="cur">PAV/AVI</span></td><td class="n">43</td><td style="color:var(--ink3)">not extractable</td><td>Table 2</td></tr>
+      <tr><td><span class="cur">AVI/AVI</span></td><td class="n">12</td><td style="color:var(--ink3)">not extractable</td><td>Table 2</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="note">
+    <p><strong>Zero threshold values are published in this dataset, and that is a failure, not a feature.</strong> The paper reports its per-genotype thresholds only inside two figures, drawn on a log scale as images. The compute node could not fetch them, and neither could I through two other routes. Rather than read numbers off an unreadable plot, the row ships empty with a note recording exactly what is known: real sample sizes, the real ANOVA result, and the paper's own statement that non-tasters separate around 0.3 to 0.6 mM.</p>
+    <p>The consequence is that <span class="cur">hto:0000009 detection threshold datum</span> is exercised by the schema but by no real value. Anyone with PDF access can fill one column and complete it.</p>
+  </div>
+</section>
+
+<section>
+  <div class="sec-n">06 — TRUST</div>
+  <h2>Ten of eleven citations were fabricated</h2>
+  <p>The implementation plan for this ontology was drafted with citations written from memory. Every one was checked against PubMed before it entered a definition. Ten of the eleven turned out to be real identifiers pointing at completely unrelated papers: soil contaminant chemistry, plant flooding physiology, lymphoma fertility, B-lymphocyte signalling.</p>
+  <p>Only one survived, and it was the right one: the 2003 <em>Science</em> paper that positionally cloned TAS2R38 as the locus behind phenylthiocarbamide sensitivity. The replacements were found by search and confirmed by title and abstract before use, including the paper that coined <em>oleogustus</em> and the study showing humans taste glucose oligomers independently of the sweet receptor.</p>
+  <div class="note know">
+    <p>Every citation now in the ontology resolves and supports the statement it is attached to. The plan document still contains the bad identifiers as historical text, which is why the repository says so in <span class="cur">docs/findings.md</span> rather than quietly deleting them.</p>
+  </div>
+</section>
+
+<section>
+  <div class="sec-n">07 — USING IT</div>
+  <h2>Build it yourself</h2>
+<pre>bash scripts/setup.sh      <span class="c"># fetch the ROBOT jar</span>
+make build                 <span class="c"># templates → reason → hto.owl / .obo / .json</span>
+make report                <span class="c"># OBO quality checks, must be 0 errors</span>
+make validate              <span class="c"># 8 competency questions + 2 QC queries</span>
+python3 -m pytest tests/   <span class="c"># 27 tests</span></pre>
+  <p>The competency questions are the real specification. They ask things like which qualities were reported for a given citrus juice, whether bitterness ratings differ by taster status, which tasters disagreed most about the same sample, and which participants carry a confounder that should exclude them from a bitterness analysis. If one returns nothing, the ontology has failed at a job it was built for, and <span class="cur">make validate</span> exits non-zero.</p>
+
+  <h3>Known limits, stated plainly</h3>
+  <ul>
+    <li>The HTO prefix is not registered with the OBO Foundry, so its PURLs do not resolve yet.</li>
+    <li>Imports carry each external term with its label and definition, not its full ancestor chain. This is MIREOT-style, not a full extraction.</li>
+    <li>Chemesthetic qualities are included because panels record them, but flagged as trigeminal rather than gustatory.</li>
+    <li>Contested tastes sit under a separate parent, so using HTO does not commit you to calling kokumi or oleogustus a basic taste.</li>
+    <li>Descriptor terms are English and culture-bound. The lexicon makes no claim to cross-cultural completeness.</li>
+    <li>Two term requests are drafted for upstream: the four missing basic tastes to PATO, and <em>iyokan</em> to FoodOn, which has satsuma, yuzu and pomelo but not the citrus this city is known for.</li>
+  </ul>
+</section>
+
+<footer>
+  Built at BioHackathon 2026, Matsuyama. Reuses CPIC and ClinPGx conventions for genotype, and terms from GO, PATO, OBA, Uberon, CL, ChEBI, FoodOn, HPO, OBI and IAO. Ontology CC BY 4.0; scripts MIT. The figures on this page are generated from the committed build artefacts; the tasting figures use clearly-labelled synthetic data.
+</footer>
+</div>
+
+<script>
+const QUAL=[["0000111","sweetness",0],["0000112","sourness",0],["0000113","saltiness",0],["0000114","bitterness",1],["0000115","umami",0],
+["0000121","fattiness",0],["0000122","kokumi",0],["0000123","metallic taste",0],["0000124","calcium taste",0],["0000125","starchy taste",0],
+["0000131","thiourea bitterness",0],["0000132","limonoid bitterness",0],["0000133","flavanone bitterness",0],["0000134","alkaloid bitterness",0],["0000135","amino acid bitterness",0],
+["0000141","astringency",0],["0000142","pungency",0],["0000143","cooling sensation",0],["0000144","tingling sensation",0],["0000145","carbonation bite",0],
+["0000151","taste onset latency",0],["0000152","aftertaste",0],["0000153","lingering bitterness",0],["0000154","delayed bitterness",0],["0000155","taste adaptation",0],
+["0000161","palatability",0],["0000162","taste aversion",0],
+["0000100","perceptual taste quality",0],["0000110","basic taste quality",0],["0000120","candidate taste quality",0],["0000130","bitterness subtype",0],["0000140","chemesthetic quality",0],["0000150","temporal taste quality",0],["0000160","hedonic taste quality",0]];
+document.getElementById('gapgrid').innerHTML=QUAL.map(([id,l,has])=>
+  `<div class="q${has?' has':''}"><b>HTO:${id}</b>${l}${has?' ✓':''}</div>`).join('');
+
+const REUSE=[["GO",11,"perception processes, receptor activities"],["ChEBI",11,"tastants and reference stimuli"],["FoodOn",8,"citrus foods and juices"],["PATO",6,"quality scaffolding"],["OBA",6,"taste sensitivity traits"],["UBERON",4,"taste bud, tongue, papillae"],["HPO",4,"taste disorders"],["IAO",3,"information and data"],["OBI",2,"assay and questionnaire"],["CL",1,"taste receptor cell"]];
+(function(){
+  const W=560,L=66,R=250,top=6,bh=17,gap=5.6,max=11;
+  let s='';
+  REUSE.forEach((r,i)=>{
+    const y=top+i*(bh+gap), w=(r[1]/max)*(W-L-R);
+    s+=`<text class="svglab" x="${L-8}" y="${y+bh-4}" text-anchor="end">${r[0]}</text>`;
+    s+=`<rect x="${L}" y="${y}" width="${w}" height="${bh}" rx="2" fill="var(--know)"><title>${r[0]}: ${r[1]} terms — ${r[2]}</title></rect>`;
+    s+=`<text class="svgnum" x="${L+w+7}" y="${y+bh-4}">${r[1]}</text>`;
+    s+=`<text class="svgtext" x="${L+w+28}" y="${y+bh-4}">${r[2]}</text>`;
+  });
+  document.getElementById('reusebars').innerHTML=s;
+})();
+
+const PROP=[["non-taster","none",13.7,3],["medium taster","medium",38.3,6],["super-taster","strong",58.8,6]];
+(function(){
+  // gLMS: 0-100 with the scale's real verbal anchors at their conventional positions
+  const ANCH=[[1.4,"barely detectable"],[6,"weak"],[17,"moderate"],[35,"strong"],[53,"very strong"],[100,"strongest imaginable"]];
+  const W=560,L=118,RIGHT=W-150,top=18,H=150;
+  const x=v=>L+(v/100)*(RIGHT-L);
+  let s='';
+  ANCH.forEach(([v,lab])=>{
+    s+=`<line x1="${x(v)}" y1="${top-6}" x2="${x(v)}" y2="${top+H-24}" stroke="var(--rule)" stroke-width="1"/>`;
+    s+=`<text class="svgtext" x="${x(v)}" y="${top-11}" text-anchor="middle" font-size="9.5">${lab}</text>`;
+  });
+  PROP.forEach((r,i)=>{
+    const y=top+8+i*40, w=x(r[2])-L;
+    s+=`<text class="svglab" x="${L-9}" y="${y+16}" text-anchor="end">${r[0]}</text>`;
+    s+=`<text class="svgtext" x="${L-9}" y="${y+29}" text-anchor="end" font-size="10.5">strip: ${r[1]} · n=${r[3]}</text>`;
+    s+=`<rect x="${L}" y="${y}" width="${w}" height="21" rx="2" fill="var(--peel)"><title>${r[0]}: mean bitterness ${r[2]} of 100 (n=${r[3]} ratings)</title></rect>`;
+    s+=`<text class="svgnum" x="${L+w+8}" y="${y+16}">${r[2]}</text>`;
+  });
+  s+=`<line x1="${L}" y1="${top+H-24}" x2="${RIGHT}" y2="${top+H-24}" stroke="var(--rule2)"/>`;
+  s+=`<text class="svgtext" x="${L}" y="${top+H-8}" font-size="10.5">0</text>`;
+  s+=`<text class="svgtext" x="${RIGHT}" y="${top+H-8}" text-anchor="end" font-size="10.5">100 — general Labelled Magnitude Scale</text>`;
+  document.getElementById('propchart').innerHTML=s;
+})();
+
+const TIME=[["sample A",5,25.8],["sample B",5,45.0],["sample C",90,54.0]];
+(function(){
+  const W=560,L=96,RIGHT=W-120,top=10;
+  const x=v=>L+(v/100)*(RIGHT-L);
+  let s='';
+  TIME.forEach((r,i)=>{
+    const y=top+i*42, w=x(r[2])-L;
+    s+=`<text class="svglab" x="${L-9}" y="${y+16}" text-anchor="end">${r[0]}</text>`;
+    s+=`<text class="svgtext" x="${L-9}" y="${y+29}" text-anchor="end" font-size="10.5">${r[1]} min open</text>`;
+    s+=`<rect x="${L}" y="${y}" width="${w}" height="21" rx="2" fill="${r[1]===90?'var(--peel)':'var(--know)'}"><title>${r[0]} at ${r[1]} minutes: mean bitterness ${r[2]}</title></rect>`;
+    s+=`<text class="svgnum" x="${L+w+8}" y="${y+16}">${r[2]}</text>`;
+  });
+  s+=`<line x1="${L}" y1="${top+130}" x2="${RIGHT}" y2="${top+130}" stroke="var(--rule2)"/>`;
+  s+=`<text class="svgtext" x="${L}" y="${top+146}" font-size="10.5">0</text>`;
+  s+=`<text class="svgtext" x="${RIGHT}" y="${top+146}" text-anchor="end" font-size="10.5">100 — mean bitterness, gLMS</text>`;
+  document.getElementById('timechart').innerHTML=s;
+})();
+</script>

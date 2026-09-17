@@ -6,6 +6,8 @@ Ontology Lookup Service, and HTO fills that gap by making a single person's
 single perception of a single tasted sample a first-class, addressable,
 FAIR thing.
 
+**Walkthrough page:** https://claude.ai/artifact/L5wdjXo15GqfinKaixEtPs — the gap, the three layers, a worked tasting, and what the build does and does not demonstrate.
+
 ## The gap
 
 | Concept | Exists today? | Where |
