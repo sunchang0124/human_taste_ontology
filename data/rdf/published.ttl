@@ -1,0 +1,28 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://w3id.org/hto/data/published/group/AVI_AVI> rdfs:label "racially and ethnically diverse children and adults, USA (Monell Chemical Senses Center cohort, total N=980), TAS2R38 AVI/AVI" ;
+    obo:HTO_0000058 <https://w3id.org/hto/data/published/diplotype/AVI_AVI> ;
+    dcterms:source "PMID:20980355" ;
+    rdfs:comment "Mennella et al. 2011, Chem Senses 36(2):161-7, doi:10.1093/chemse/bjq106 grouped subjects by TAS2R38 diplotype and compared PROP detection thresholds, but the abstract does not report numeric per-diplotype threshold means or group sample sizes, and the full text is not open access (PMC3020389, isOpenAccess=N), so no reliable numeric value can be sourced. Left unsourced rather than invented." .
+
+<https://w3id.org/hto/data/published/group/PAV_AVI> rdfs:label "racially and ethnically diverse children and adults, USA (Monell Chemical Senses Center cohort, total N=980), TAS2R38 PAV/AVI" ;
+    obo:HTO_0000058 <https://w3id.org/hto/data/published/diplotype/PAV_AVI> ;
+    dcterms:source "PMID:20980355" ;
+    rdfs:comment "Mennella et al. 2011, Chem Senses 36(2):161-7, doi:10.1093/chemse/bjq106 grouped subjects by TAS2R38 diplotype and compared PROP detection thresholds, but the abstract does not report numeric per-diplotype threshold means or group sample sizes, and the full text is not open access (PMC3020389, isOpenAccess=N), so no reliable numeric value can be sourced. Left unsourced rather than invented." .
+
+<https://w3id.org/hto/data/published/group/PAV_PAV> rdfs:label "racially and ethnically diverse children and adults, USA (Monell Chemical Senses Center cohort, total N=980), TAS2R38 PAV/PAV" ;
+    obo:HTO_0000058 <https://w3id.org/hto/data/published/diplotype/PAV_PAV> ;
+    dcterms:source "PMID:20980355" ;
+    rdfs:comment "Mennella et al. 2011, Chem Senses 36(2):161-7, doi:10.1093/chemse/bjq106 grouped subjects by TAS2R38 diplotype and compared PROP detection thresholds, but the abstract does not report numeric per-diplotype threshold means or group sample sizes, and the full text is not open access (PMC3020389, isOpenAccess=N), so no reliable numeric value can be sourced. Left unsourced rather than invented." .
+
+<https://w3id.org/hto/data/published/diplotype/AVI_AVI> a obo:HTO_0000015 ;
+    rdfs:label "AVI/AVI" .
+
+<https://w3id.org/hto/data/published/diplotype/PAV_AVI> a obo:HTO_0000015 ;
+    rdfs:label "PAV/AVI" .
+
+<https://w3id.org/hto/data/published/diplotype/PAV_PAV> a obo:HTO_0000015 ;
+    rdfs:label "PAV/PAV" .
+

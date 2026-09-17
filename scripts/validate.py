@@ -22,6 +22,10 @@ def main() -> int:
     else:
         print(f"note: {DATA} absent; competency questions over instance data will be empty")
 
+    published = ROOT / "data" / "rdf" / "published.ttl"
+    if published.exists():
+        g.parse(published, format="turtle")
+
     failures = 0
     for path in sorted((ROOT / "queries").glob("*.rq")):
         rows = list(g.query(path.read_text()))

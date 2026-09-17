@@ -31,6 +31,7 @@ report: build
 
 validate: build
 	python3 scripts/sheet2rdf.py data/raw/example_tasting.csv data/rdf/example.ttl --session example
+	python3 scripts/published2rdf.py data/raw/published_tas2r38_prop.csv data/rdf/published.ttl
 	python3 scripts/validate.py
 
 test: report validate
