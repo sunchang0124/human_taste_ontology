@@ -59,3 +59,30 @@ def test_core_classes_present_with_labels():
 def test_taster_status_is_under_oba_trait():
     text = (ROOT / "hto.owl").read_text()
     assert "OBA_VT0001986" in text, "taster status must reuse the OBA sensitivity trait"
+
+BASIC_TASTES = {
+    "HTO:0000111": "sweetness",
+    "HTO:0000112": "sourness",
+    "HTO:0000113": "saltiness",
+    "HTO:0000114": "bitterness",
+    "HTO:0000115": "umami",
+}
+
+def test_five_basic_tastes_present():
+    text = (ROOT / "hto.obo").read_text()
+    for cid, label in BASIC_TASTES.items():
+        assert f"id: {cid}" in text and f"name: {label}" in text, f"{cid} {label}"
+
+def test_basic_tastes_link_to_go_processes():
+    owl = (ROOT / "hto.owl").read_text()
+    for go in ["GO_0050916", "GO_0050915", "GO_0050914", "GO_0050913", "GO_0050917"]:
+        assert go in owl, f"no axiom referencing {go}"
+
+def test_no_owl_equivalence_asserted_on_pato_bitter():
+    owl = (ROOT / "hto.owl").read_text()
+    assert "equivalentClass" not in owl or "PATO_0002474" not in owl.split("equivalentClass")[1][:400], \
+        "bitterness must map to PATO:0002474 via SSSOM, not owl:equivalentClass"
+
+def test_chemesthetic_qualities_are_annotated_as_trigeminal():
+    obo = (ROOT / "hto.obo").read_text()
+    assert "id: HTO:0000141" in obo and "astringency" in obo

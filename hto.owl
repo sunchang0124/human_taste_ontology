@@ -80,6 +80,47 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0050913 -->
+
+    <rdfs:Datatype rdf:about="http://purl.obolibrary.org/obo/GO_0050913"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0050914 -->
+
+    <rdfs:Datatype rdf:about="http://purl.obolibrary.org/obo/GO_0050914"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0050915 -->
+
+    <rdfs:Datatype rdf:about="http://purl.obolibrary.org/obo/GO_0050915"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0050916 -->
+
+    <rdfs:Datatype rdf:about="http://purl.obolibrary.org/obo/GO_0050916"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0050917 -->
+
+    <rdfs:Datatype rdf:about="http://purl.obolibrary.org/obo/GO_0050917"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Object Properties
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -219,9 +260,6 @@
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/HTO_0000061">
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/HTO_0000100"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
-        <obo:IAO_0000115>Relates a perceptual taste quality to the biological process by which it is perceived.</obo:IAO_0000115>
-        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
-        <rdfs:label>perceived via</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -269,6 +307,12 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000061 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/HTO_0000061"/>
     
 
 
@@ -613,8 +657,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0050913">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <obo:IAO_0000115>The series of events required to receive a bitter taste stimulus, convert it to a molecular signal, and recognize and characterize the signal. This is a neurological process.</obo:IAO_0000115>
-        <rdfs:label>sensory perception of bitter taste</rdfs:label>
     </owl:Class>
     
 
@@ -623,8 +665,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0050914">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <obo:IAO_0000115>The series of events required to receive a salty taste stimulus, convert it to a molecular signal, and recognize and characterize the signal. This is a neurological process.</obo:IAO_0000115>
-        <rdfs:label>sensory perception of salty taste</rdfs:label>
     </owl:Class>
     
 
@@ -633,8 +673,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0050915">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <obo:IAO_0000115>The series of events required to receive a sour taste stimulus, convert it to a molecular signal, and recognize and characterize the signal. This is a neurological process.</obo:IAO_0000115>
-        <rdfs:label>sensory perception of sour taste</rdfs:label>
     </owl:Class>
     
 
@@ -643,8 +681,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0050916">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <obo:IAO_0000115>The series of events required to receive a sweet taste stimulus, convert it to a molecular signal, and recognize and characterize the signal. This is a neurological process.</obo:IAO_0000115>
-        <rdfs:label>sensory perception of sweet taste</rdfs:label>
     </owl:Class>
     
 
@@ -653,8 +689,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0050917">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <obo:IAO_0000115>The series of events required to receive an umami taste stimulus, convert it to a molecular signal, and recognize and characterize the signal. Umami taste is the savory taste of meats and other foods that are rich in glutamates. This is a neurological process.</obo:IAO_0000115>
-        <rdfs:label>sensory perception of umami taste</rdfs:label>
     </owl:Class>
     
 
@@ -986,7 +1020,413 @@
     <!-- http://purl.obolibrary.org/obo/HTO_0000100 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000100">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001241"/>
+        <obo:IAO_0000115>A quality of a material entity that is realised when a human perceiver tastes that entity.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:label>perceptual taste quality</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000110 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000110">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HTO_0000100"/>
+        <obo:IAO_0000115>A perceptual taste quality for which a dedicated class of human taste receptor and a dedicated transduction pathway are established.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:label>basic taste quality</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000111 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000111">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HTO_0000110"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/HTO_0000061"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0050916"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>The basic taste quality typically elicited by sucrose and other sugars, transduced by the TAS1R2 and TAS1R3 receptor pair.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:comment>PATO has no term for this quality as of 2026-09-17; proposed to PATO.</rdfs:comment>
+        <rdfs:label>sweetness</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000112 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000112">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HTO_0000110"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/HTO_0000061"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0050915"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>The basic taste quality typically elicited by citric acid and other acids, transduced by proton-sensitive channels of taste receptor cells.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:comment>PATO has no term for this quality as of 2026-09-17; proposed to PATO.</rdfs:comment>
+        <rdfs:label>sourness</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000113 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000113">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HTO_0000110"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/HTO_0000061"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0050914"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>The basic taste quality typically elicited by sodium chloride, transduced principally by the epithelial sodium channel.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:comment>PATO has no term for this quality as of 2026-09-17; proposed to PATO.</rdfs:comment>
+        <rdfs:label>saltiness</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000114 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000114">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HTO_0000110"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/HTO_0000061"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0050913"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>The basic taste quality typically elicited by quinine and by many plant alkaloids and glycosides, transduced by the TAS2R receptor family.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:comment>Mapped to PATO:0002474 by skos:exactMatch in mappings/hto-pato.sssom.tsv.</rdfs:comment>
+        <rdfs:label>bitterness</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000115 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000115">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HTO_0000110"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/HTO_0000061"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0050917"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>The basic taste quality typically elicited by L-glutamate and by certain ribonucleotides, transduced by the TAS1R1 and TAS1R3 receptor pair.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:comment>PATO has no term for this quality as of 2026-09-17; proposed to PATO.</rdfs:comment>
+        <rdfs:label>umami</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000120 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000120">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HTO_0000100"/>
+        <obo:IAO_0000115>A perceptual taste quality that has been proposed as basic but for which receptor or transduction evidence remains contested.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:comment>Grouped separately so that including these terms does not commit a user of HTO to the claim that they are basic tastes.</rdfs:comment>
+        <rdfs:label>candidate taste quality</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000121 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000121">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HTO_0000120"/>
+        <obo:IAO_0000115>The candidate taste quality elicited by non-esterified fatty acids, proposed under the name oleogustus and distinct from the texture of fat.</obo:IAO_0000115>
+        <obo:IAO_0000119>PMID:26142421</obo:IAO_0000119>
+        <rdfs:label>fattiness</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000122 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000122">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HTO_0000120"/>
+        <obo:IAO_0000115>The candidate taste quality described as mouthfulness, continuity and thickness, elicited by certain gamma-glutamyl peptides acting on the calcium-sensing receptor.</obo:IAO_0000115>
+        <obo:IAO_0000119>PMID:39890873</obo:IAO_0000119>
+        <rdfs:label>kokumi</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000123 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000123">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HTO_0000120"/>
+        <obo:IAO_0000115>The candidate taste quality elicited by certain metal salts and reported as a side effect of some medications.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:label>metallic taste</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000124 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000124">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HTO_0000120"/>
+        <obo:IAO_0000115>The candidate taste quality elicited by calcium salts, reported as chalky and somewhat bitter.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:label>calcium taste</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000125 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000125">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HTO_0000120"/>
+        <obo:IAO_0000115>The candidate taste quality elicited by oligomeric glucose polymers independently of sweetness.</obo:IAO_0000115>
+        <obo:IAO_0000119>PMID:27553043</obo:IAO_0000119>
+        <rdfs:label>starchy taste</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000130 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000130">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HTO_0000114"/>
+        <obo:IAO_0000115>A bitterness distinguished by the chemical class of the compound that elicits it and, where known, by the receptor that detects it.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:label>bitterness subtype</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000131 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000131">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HTO_0000130"/>
+        <obo:IAO_0000115>The bitterness elicited by compounds bearing a thiourea group, notably phenylthiocarbamide and propylthiouracil, detected by TAS2R38.</obo:IAO_0000115>
+        <obo:IAO_0000119>PMID:12595690</obo:IAO_0000119>
+        <rdfs:comment>The quality whose perception varies most sharply between people.</rdfs:comment>
+        <rdfs:label>thiourea bitterness</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000132 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000132">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HTO_0000130"/>
+        <obo:IAO_0000115>The bitterness elicited by limonoid triterpenoids, notably limonin, which forms from a tasteless precursor after citrus fruit is juiced.</obo:IAO_0000115>
+        <obo:IAO_0000119>PMID:25615579</obo:IAO_0000119>
+        <rdfs:label>limonoid bitterness</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000133 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000133">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HTO_0000130"/>
+        <obo:IAO_0000115>The bitterness elicited by flavanone glycosides, notably naringin, characteristic of grapefruit and pomelo.</obo:IAO_0000115>
+        <obo:IAO_0000119>PMID:9250119</obo:IAO_0000119>
+        <rdfs:label>flavanone bitterness</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000134 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000134">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HTO_0000130"/>
+        <obo:IAO_0000115>The bitterness elicited by plant alkaloids such as quinine and caffeine.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:label>alkaloid bitterness</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000135 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000135">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HTO_0000130"/>
+        <obo:IAO_0000115>The bitterness elicited by hydrophobic amino acids and by peptides rich in them, prominent in protein hydrolysates and aged cheese.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:label>amino acid bitterness</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000140 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000140">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HTO_0000100"/>
+        <obo:IAO_0000115>A quality perceived in the mouth through the trigeminal nerve rather than through taste receptor cells, recorded alongside taste by sensory panels.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:comment>Not a taste sensu stricto. Included because panels record it and because astringency is central to citrus assessment.</rdfs:comment>
+        <rdfs:label>chemesthetic quality</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000141 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000141">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HTO_0000140"/>
+        <obo:IAO_0000115>The chemesthetic quality of drying, roughening and puckering in the mouth, elicited by tannins and other polyphenols binding salivary proteins.</obo:IAO_0000115>
+        <obo:IAO_0000119>PMID:27640622</obo:IAO_0000119>
+        <rdfs:comment>CHEBI:74783 astringent exists but denotes a chemical role, not a perceptual quality.</rdfs:comment>
+        <rdfs:label>astringency</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000142 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000142">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HTO_0000140"/>
+        <obo:IAO_0000115>The chemesthetic quality of burning or stinging, elicited by capsaicinoids, piperine and allyl isothiocyanate.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:label>pungency</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000143 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000143">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HTO_0000140"/>
+        <obo:IAO_0000115>The chemesthetic quality of coolness in the absence of a temperature change, elicited by menthol and related compounds.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:label>cooling sensation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000144 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000144">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HTO_0000140"/>
+        <obo:IAO_0000115>The chemesthetic quality of vibration or numbness, elicited by alkylamides such as sanshool.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:label>tingling sensation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000145 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000145">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HTO_0000140"/>
+        <obo:IAO_0000115>The chemesthetic quality elicited by dissolved carbon dioxide, mediated in part by carbonic anhydrase on trigeminal fibres.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:label>carbonation bite</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000150 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000150">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HTO_0000100"/>
+        <obo:IAO_0000115>A perceptual taste quality defined by when it appears or how long it persists relative to the stimulus entering the mouth.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:label>temporal taste quality</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000151 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000151">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HTO_0000150"/>
+        <obo:IAO_0000115>The temporal taste quality of how long after the stimulus enters the mouth a taste is first perceived.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:label>taste onset latency</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000152 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000152">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HTO_0000150"/>
+        <obo:IAO_0000115>The temporal taste quality of a taste that persists after the stimulus has been swallowed or expectorated.</obo:IAO_0000115>
+        <obo:IAO_0000119>SNOMEDCT:110365009</obo:IAO_0000119>
+        <rdfs:label>aftertaste</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000153 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000153">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HTO_0000152"/>
+        <obo:IAO_0000115>An aftertaste that is bitter in quality.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:label>lingering bitterness</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000154 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000154">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HTO_0000152"/>
+        <obo:IAO_0000115>A bitterness that is absent or weak when the stimulus is first tasted and appears or strengthens over subsequent minutes to hours.</obo:IAO_0000115>
+        <obo:IAO_0000119>PMID:25615579</obo:IAO_0000119>
+        <rdfs:comment>Characteristic of citrus juice, where limonin forms after juicing.</rdfs:comment>
+        <rdfs:label>delayed bitterness</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000155 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000155">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HTO_0000150"/>
+        <obo:IAO_0000115>The temporal taste quality of a perceived intensity declining during continued exposure to an unchanging stimulus.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:label>taste adaptation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000160 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000160">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HTO_0000100"/>
+        <obo:IAO_0000115>A quality of a stimulus consisting in how much a perceiver likes or dislikes tasting it, as distinct from what they perceive.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:label>hedonic taste quality</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000161 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000161">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HTO_0000160"/>
+        <obo:IAO_0000115>The hedonic taste quality of being pleasant to taste for a given perceiver.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:label>palatability</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000162 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000162">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HTO_0000160"/>
+        <obo:IAO_0000115>The hedonic taste quality of being unpleasant to taste for a given perceiver, whether innately or through learning.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:label>taste aversion</rdfs:label>
     </owl:Class>
     
 
@@ -1264,6 +1704,42 @@
         <obo:IAO_0000115>Any of the mushroom-shaped papillae, which have a single taste bud at the tip, located mostly on the dorsal anterior portion of the tongue.</obo:IAO_0000115>
         <rdfs:label>fungiform papilla</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0050913">
+        <obo:IAO_0000115>The series of events required to receive a bitter taste stimulus, convert it to a molecular signal, and recognize and characterize the signal. This is a neurological process.</obo:IAO_0000115>
+        <rdfs:label>sensory perception of bitter taste</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0050914">
+        <obo:IAO_0000115>The series of events required to receive a salty taste stimulus, convert it to a molecular signal, and recognize and characterize the signal. This is a neurological process.</obo:IAO_0000115>
+        <rdfs:label>sensory perception of salty taste</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0050915">
+        <obo:IAO_0000115>The series of events required to receive a sour taste stimulus, convert it to a molecular signal, and recognize and characterize the signal. This is a neurological process.</obo:IAO_0000115>
+        <rdfs:label>sensory perception of sour taste</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0050916">
+        <obo:IAO_0000115>The series of events required to receive a sweet taste stimulus, convert it to a molecular signal, and recognize and characterize the signal. This is a neurological process.</obo:IAO_0000115>
+        <rdfs:label>sensory perception of sweet taste</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0050917">
+        <obo:IAO_0000115>The series of events required to receive an umami taste stimulus, convert it to a molecular signal, and recognize and characterize the signal. Umami taste is the savory taste of meats and other foods that are rich in glutamates. This is a neurological process.</obo:IAO_0000115>
+        <rdfs:label>sensory perception of umami taste</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/HTO_0000061">
+        <obo:IAO_0000115>Relates a perceptual taste quality to the biological process by which it is perceived.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:label>perceived via</rdfs:label>
+    </rdf:Description>
 </rdf:RDF>
 
 

@@ -652,7 +652,456 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/HTO_0000100",
-      "type" : "CLASS"
+      "lbl" : "perceptual taste quality",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A quality of a material entity that is realised when a human perceiver tastes that entity."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000110",
+      "lbl" : "basic taste quality",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A perceptual taste quality for which a dedicated class of human taste receptor and a dedicated transduction pathway are established."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000111",
+      "lbl" : "sweetness",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "The basic taste quality typically elicited by sucrose and other sugars, transduced by the TAS1R2 and TAS1R3 receptor pair."
+        },
+        "comments" : [ "PATO has no term for this quality as of 2026-09-17; proposed to PATO." ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000112",
+      "lbl" : "sourness",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "The basic taste quality typically elicited by citric acid and other acids, transduced by proton-sensitive channels of taste receptor cells."
+        },
+        "comments" : [ "PATO has no term for this quality as of 2026-09-17; proposed to PATO." ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000113",
+      "lbl" : "saltiness",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "The basic taste quality typically elicited by sodium chloride, transduced principally by the epithelial sodium channel."
+        },
+        "comments" : [ "PATO has no term for this quality as of 2026-09-17; proposed to PATO." ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000114",
+      "lbl" : "bitterness",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "The basic taste quality typically elicited by quinine and by many plant alkaloids and glycosides, transduced by the TAS2R receptor family."
+        },
+        "comments" : [ "Mapped to PATO:0002474 by skos:exactMatch in mappings/hto-pato.sssom.tsv." ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000115",
+      "lbl" : "umami",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "The basic taste quality typically elicited by L-glutamate and by certain ribonucleotides, transduced by the TAS1R1 and TAS1R3 receptor pair."
+        },
+        "comments" : [ "PATO has no term for this quality as of 2026-09-17; proposed to PATO." ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000120",
+      "lbl" : "candidate taste quality",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A perceptual taste quality that has been proposed as basic but for which receptor or transduction evidence remains contested."
+        },
+        "comments" : [ "Grouped separately so that including these terms does not commit a user of HTO to the claim that they are basic tastes." ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000121",
+      "lbl" : "fattiness",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "The candidate taste quality elicited by non-esterified fatty acids, proposed under the name oleogustus and distinct from the texture of fat."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "PMID:26142421"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000122",
+      "lbl" : "kokumi",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "The candidate taste quality described as mouthfulness, continuity and thickness, elicited by certain gamma-glutamyl peptides acting on the calcium-sensing receptor."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "PMID:39890873"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000123",
+      "lbl" : "metallic taste",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "The candidate taste quality elicited by certain metal salts and reported as a side effect of some medications."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000124",
+      "lbl" : "calcium taste",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "The candidate taste quality elicited by calcium salts, reported as chalky and somewhat bitter."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000125",
+      "lbl" : "starchy taste",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "The candidate taste quality elicited by oligomeric glucose polymers independently of sweetness."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "PMID:27553043"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000130",
+      "lbl" : "bitterness subtype",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A bitterness distinguished by the chemical class of the compound that elicits it and, where known, by the receptor that detects it."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000131",
+      "lbl" : "thiourea bitterness",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "The bitterness elicited by compounds bearing a thiourea group, notably phenylthiocarbamide and propylthiouracil, detected by TAS2R38."
+        },
+        "comments" : [ "The quality whose perception varies most sharply between people." ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "PMID:12595690"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000132",
+      "lbl" : "limonoid bitterness",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "The bitterness elicited by limonoid triterpenoids, notably limonin, which forms from a tasteless precursor after citrus fruit is juiced."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "PMID:25615579"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000133",
+      "lbl" : "flavanone bitterness",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "The bitterness elicited by flavanone glycosides, notably naringin, characteristic of grapefruit and pomelo."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "PMID:9250119"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000134",
+      "lbl" : "alkaloid bitterness",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "The bitterness elicited by plant alkaloids such as quinine and caffeine."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000135",
+      "lbl" : "amino acid bitterness",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "The bitterness elicited by hydrophobic amino acids and by peptides rich in them, prominent in protein hydrolysates and aged cheese."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000140",
+      "lbl" : "chemesthetic quality",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A quality perceived in the mouth through the trigeminal nerve rather than through taste receptor cells, recorded alongside taste by sensory panels."
+        },
+        "comments" : [ "Not a taste sensu stricto. Included because panels record it and because astringency is central to citrus assessment." ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000141",
+      "lbl" : "astringency",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "The chemesthetic quality of drying, roughening and puckering in the mouth, elicited by tannins and other polyphenols binding salivary proteins."
+        },
+        "comments" : [ "CHEBI:74783 astringent exists but denotes a chemical role, not a perceptual quality." ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "PMID:27640622"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000142",
+      "lbl" : "pungency",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "The chemesthetic quality of burning or stinging, elicited by capsaicinoids, piperine and allyl isothiocyanate."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000143",
+      "lbl" : "cooling sensation",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "The chemesthetic quality of coolness in the absence of a temperature change, elicited by menthol and related compounds."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000144",
+      "lbl" : "tingling sensation",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "The chemesthetic quality of vibration or numbness, elicited by alkylamides such as sanshool."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000145",
+      "lbl" : "carbonation bite",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "The chemesthetic quality elicited by dissolved carbon dioxide, mediated in part by carbonic anhydrase on trigeminal fibres."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000150",
+      "lbl" : "temporal taste quality",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A perceptual taste quality defined by when it appears or how long it persists relative to the stimulus entering the mouth."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000151",
+      "lbl" : "taste onset latency",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "The temporal taste quality of how long after the stimulus enters the mouth a taste is first perceived."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000152",
+      "lbl" : "aftertaste",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "The temporal taste quality of a taste that persists after the stimulus has been swallowed or expectorated."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "SNOMEDCT:110365009"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000153",
+      "lbl" : "lingering bitterness",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "An aftertaste that is bitter in quality."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000154",
+      "lbl" : "delayed bitterness",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A bitterness that is absent or weak when the stimulus is first tasted and appears or strengthens over subsequent minutes to hours."
+        },
+        "comments" : [ "Characteristic of citrus juice, where limonin forms after juicing." ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "PMID:25615579"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000155",
+      "lbl" : "taste adaptation",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "The temporal taste quality of a perceived intensity declining during continued exposure to an unchanging stimulus."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000160",
+      "lbl" : "hedonic taste quality",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A quality of a stimulus consisting in how much a perceiver likes or dislikes tasting it, as distinct from what they perceive."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000161",
+      "lbl" : "palatability",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "The hedonic taste quality of being pleasant to taste for a given perceiver."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000162",
+      "lbl" : "taste aversion",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "The hedonic taste quality of being unpleasant to taste for a given perceiver, whether innately or through learning."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
     }, {
       "id" : "http://purl.obolibrary.org/obo/HTO_0000300",
       "lbl" : "general Labelled Magnitude Scale",
@@ -1078,7 +1527,7 @@
       "id" : "http://purl.obolibrary.org/obo/HTO_0000061",
       "lbl" : "perceived via",
       "type" : "PROPERTY",
-      "propertyType" : "OBJECT",
+      "propertyType" : "DATA",
       "meta" : {
         "definition" : {
           "val" : "Relates a perceptual taste quality to the biological process by which it is perceived."
@@ -1510,7 +1959,159 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/HTO_0000100",
       "pred" : "is_a",
-      "obj" : "http://www.w3.org/2002/07/owl#Thing"
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001241"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000110",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000100"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000111",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000110"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000111",
+      "pred" : "http://purl.obolibrary.org/obo/HTO_0000061",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0050916"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000112",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000110"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000112",
+      "pred" : "http://purl.obolibrary.org/obo/HTO_0000061",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0050915"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000113",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000110"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000113",
+      "pred" : "http://purl.obolibrary.org/obo/HTO_0000061",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0050914"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000114",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000110"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000114",
+      "pred" : "http://purl.obolibrary.org/obo/HTO_0000061",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0050913"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000115",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000110"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000115",
+      "pred" : "http://purl.obolibrary.org/obo/HTO_0000061",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0050917"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000120",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000100"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000121",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000120"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000122",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000120"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000123",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000120"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000124",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000120"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000125",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000120"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000130",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000114"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000131",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000130"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000132",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000130"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000133",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000130"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000134",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000130"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000135",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000130"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000140",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000100"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000141",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000140"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000142",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000140"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000143",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000140"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000144",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000140"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000145",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000140"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000150",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000100"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000151",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000150"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000152",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000150"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000153",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000152"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000154",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000152"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000155",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000150"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000160",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000100"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000161",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000160"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000162",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000160"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/HTO_0000300",
       "pred" : "is_a",
