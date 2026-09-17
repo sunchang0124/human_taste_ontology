@@ -27,7 +27,12 @@ exists. What does exist, and what it does *not* cover:
 This is the gap HTO fills. Everything else — foods, chemistry, receptor
 genetics, anatomy, organism traits, disorders of taste — HTO imports rather
 than redefines; see `src/external_terms.tsv` (56 terms) and
-`README.md`'s "What HTO reuses" section.
+`README.md`'s "What HTO reuses" section. Most of those 56 are staged for the
+Matsuyama tasting and for the bridge axioms rather than load-bearing today:
+12 are referenced by an HTO axiom in `src/templates/*.tsv`, 3 FoodOn terms are
+referenced by the instance data through `data/raw/example_samples.csv`, 25
+appear as objects in the SSSOM bridge, and 24 are declared and imported but
+not yet referenced by anything.
 
 ## 2. The PATO gap, measured
 
@@ -187,7 +192,7 @@ more than the queries deliver:
 All eight competency questions and both QC checks pass: `0 failing`.
 `make report` (ROBOT report against `src/report_profile.txt`) returns zero
 violations at ERROR, WARN or INFO level for HTO terms.
-`python3 -m pytest tests/ -q` passes 28 tests.
+`python3 -m pytest tests/ -q` passes 30 tests.
 
 ## 7. Limitations
 
@@ -201,11 +206,15 @@ Expanded from the design spec, §11:
   should be read as such a claim.
 - **PROP filter-paper strips approximate TAS2R38 status; they are not
   genotyping.** Taster status (`HTO:0000011` and its subclasses) is recorded
-  as a *phenotype* from the strip protocol. The link to a TAS2R38 diplotype
-  is deliberately probabilistic — `HTO:0000064 typically associated with
-  diplotype`, not an equivalence — because strip response and diplotype
-  correlate but do not determine one another one-to-one. No triple in HTO
-  asserts logical equivalence between a phenotype and a genotype.
+  as a *phenotype* from the strip assay. HTO *provides a property* for
+  relating a taster status to a diplotype — `HTO:0000064 typically associated
+  with diplotype`, deliberately an association rather than an equivalence,
+  because strip response and diplotype correlate but do not determine one
+  another one-to-one. **No such link is asserted yet**: `HTO:0000064` has zero
+  uses in this release, in the ontology and in both instance graphs. The
+  property is the modelling commitment; the content behind it has not been
+  curated. No triple in HTO asserts logical equivalence between a phenotype
+  and a genotype.
 - **The published re-annotation carries no threshold numbers** (§3 above):
   it demonstrates that the schema accommodates literature data, not that it
   contains literature data yet.
@@ -216,7 +225,13 @@ Expanded from the design spec, §11:
   ones. They are included under a distinct parent
   (`HTO:0000140 chemesthetic quality`) because sensory panels routinely
   record them and because astringency is central to how citrus juice is
-  actually described, but they are never asserted to be a subclass of taste.
+  actually described. They are **not** subclasses of `HTO:0000110 basic taste
+  quality`, and each is flagged as trigeminal rather than gustatory. They are,
+  however, subclasses of `HTO:0000100 perceptual taste quality`, the root of
+  the whole quality lexicon, whose definition covers anything realised when a
+  human perceiver tastes an entity: HTO places them in the same broad
+  perceptual space it uses for taste, and withholds only the basic-taste
+  claim.
 - **Contested tastes are marked as contested.** Kokumi, oleogustus
   (fattiness), metallic taste, calcium taste and starchy taste sit under a
   separate parent (`HTO:0000120 candidate taste quality`) with the

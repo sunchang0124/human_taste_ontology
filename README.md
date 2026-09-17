@@ -48,12 +48,24 @@ Each is imported as a small MIREOT-style module under `src/imports/`, built
 by `scripts/build_imports.py` from the OLS4 API (see "Design decisions"
 below for why OLS rather than `robot extract`).
 
+Being imported is not the same as being used, and the list should not be read
+as 56 terms doing work. Most of them are staged for the Matsuyama tasting and
+for the bridge axioms: 12 are referenced by an HTO axiom in
+`src/templates/*.tsv` (the five GO perception processes, `GO:0008150`,
+`PATO:0001241`, `PATO:0002474`, `OBA:VT0001986`, `OBI:0000070`, `IAO:0000030`
+and `IAO:0000032`), 3 FoodOn terms are referenced by the instance data via
+`data/raw/example_samples.csv`, 25 appear as mapping objects in
+`mappings/*.sssom.tsv`, and 24 are declared and imported but not yet
+referenced by any HTO axiom, mapping or datum.
+
 ## Three-layer structure
 
 Measured directly from the ROBOT template TSVs and the released `hto.obo`
-(122 `[Term]` stanzas, 17 `[Typedef]` stanzas):
+(122 `[Term]` stanzas, 17 `[Typedef]` stanzas, imported terms included). HTO
+declares **66 classes** of its own: 26 core, 34 quality, 6 scale.
 
-- **Layer 1 — Percept core** (`src/templates/core.tsv`, 27 classes). Reifies
+- **Layer 1 — Percept core** (`src/templates/core.tsv`, 26 classes; the
+  27th row, `HTO:0000000`, is an annotation property, not a class). Reifies
   a perception so it can carry a rater, a scale, a value and provenance:
   tasting event, taster role, taste stimulus, taste percept assertion,
   intensity/hedonic/threshold ratings, taster status, TAS2R38 diplotype,
