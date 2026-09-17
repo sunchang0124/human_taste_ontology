@@ -1,0 +1,24 @@
+ID	LABEL	TYPE	DOMAIN	RANGE	A IAO:0000115	A IAO:0000119
+ID	LABEL	TYPE	DOMAIN	RANGE	A IAO:0000115	A IAO:0000119
+HTO:0000050	has taster	owl:ObjectProperty	HTO:0000001		Relates a tasting event to the person who performed the tasting.	HTO:0000000
+HTO:0000051	has stimulus	owl:ObjectProperty	HTO:0000001	HTO:0000003	Relates a tasting event to the material that was tasted.	HTO:0000000
+HTO:0000052	asserts quality	owl:ObjectProperty	HTO:0000005	HTO:0000100	Relates a taste percept assertion to the perceptual taste quality it reports.	HTO:0000000
+HTO:0000053	has intensity rating	owl:ObjectProperty	HTO:0000005	HTO:0000006	Relates a taste percept assertion to the intensity value reported for it.	HTO:0000000
+HTO:0000054	on scale	owl:ObjectProperty		HTO:0000008	Relates a rating to the scale on which it was recorded.	HTO:0000000
+HTO:0000055	has hedonic rating	owl:ObjectProperty	HTO:0000001	HTO:0000007	Relates a tasting event to the liking score the taster gave the sample.	HTO:0000000
+HTO:0000056	part of session	owl:ObjectProperty	HTO:0000001	HTO:0000017	Relates a tasting event to the session in which it took place.	HTO:0000000
+HTO:0000057	has taster status	owl:ObjectProperty		HTO:0000011	Relates a person to their assessed taster status.	HTO:0000000
+HTO:0000058	has genotype assertion	owl:ObjectProperty		HTO:0000016	Relates a person to a recorded assertion about their taste-related genotype.	HTO:0000000
+HTO:0000059	stimulus derived from	owl:ObjectProperty	HTO:0000003		Relates a taste stimulus to the food or beverage class it was prepared from.	HTO:0000000
+HTO:0000060	stimulus contains tastant	owl:ObjectProperty	HTO:0000003		Relates a taste stimulus to a chemical entity present in it that bears a taste quality.	HTO:0000000
+HTO:0000061	perceived via	owl:ObjectProperty	HTO:0000100	GO:0008150	Relates a perceptual taste quality to the biological process by which it is perceived.	HTO:0000000
+HTO:0000062	detected by receptor	owl:ObjectProperty	HTO:0000100		Relates a perceptual taste quality to a receptor whose activation is established to contribute to perceiving it.	HTO:0000000
+HTO:0000063	has output assertion	owl:ObjectProperty	HTO:0000001	HTO:0000005	Relates a tasting event to a taste percept assertion produced in it.	HTO:0000000
+HTO:0000064	typically associated with diplotype	owl:ObjectProperty	HTO:0000011	HTO:0000015	Relates a taster status to a diplotype that commonly but not invariably produces it. This is a statistical association and deliberately not an equivalence.	HTO:0000000
+HTO:0000070	rating value	owl:DataProperty	HTO:0000006		The numeric value of a rating on its stated scale.	HTO:0000000
+HTO:0000071	scale minimum	owl:DataProperty	HTO:0000008		The lowest value the scale admits.	HTO:0000000
+HTO:0000072	scale maximum	owl:DataProperty	HTO:0000008		The highest value the scale admits.	HTO:0000000
+HTO:0000073	sample order	owl:DataProperty	HTO:0000001		The position of this sample in the order presented to the taster, counting from one.	HTO:0000000
+HTO:0000074	is blinded	owl:DataProperty	HTO:0000001		True when the taster could not identify the sample at the time of tasting.	HTO:0000000
+HTO:0000075	collection date	owl:DataProperty	HTO:0000017		The date on which a tasting session was held.	HTO:0000000
+HTO:0000076	minutes since preparation	owl:DataProperty	HTO:0000001		Minutes elapsed between preparing the stimulus and tasting it. Relevant where a quality develops after preparation, as limonoid bitterness does in citrus juice.	HTO:0000000

@@ -339,6 +339,36 @@
         } ]
       }
     }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000003",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000005",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000006",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000007",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000008",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000011",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000015",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000016",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000017",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000100",
+      "type" : "CLASS"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/IAO_0000030",
       "lbl" : "information content entity",
       "type" : "CLASS",
@@ -528,6 +558,314 @@
         }
       }
     }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000050",
+      "lbl" : "has taster",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "Relates a tasting event to the person who performed the tasting."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000051",
+      "lbl" : "has stimulus",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "Relates a tasting event to the material that was tasted."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000052",
+      "lbl" : "asserts quality",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "Relates a taste percept assertion to the perceptual taste quality it reports."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000053",
+      "lbl" : "has intensity rating",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "Relates a taste percept assertion to the intensity value reported for it."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000054",
+      "lbl" : "on scale",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "Relates a rating to the scale on which it was recorded."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000055",
+      "lbl" : "has hedonic rating",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "Relates a tasting event to the liking score the taster gave the sample."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000056",
+      "lbl" : "part of session",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "Relates a tasting event to the session in which it took place."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000057",
+      "lbl" : "has taster status",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "Relates a person to their assessed taster status."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000058",
+      "lbl" : "has genotype assertion",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "Relates a person to a recorded assertion about their taste-related genotype."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000059",
+      "lbl" : "stimulus derived from",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "Relates a taste stimulus to the food or beverage class it was prepared from."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000060",
+      "lbl" : "stimulus contains tastant",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "Relates a taste stimulus to a chemical entity present in it that bears a taste quality."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000061",
+      "lbl" : "perceived via",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "Relates a perceptual taste quality to the biological process by which it is perceived."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000062",
+      "lbl" : "detected by receptor",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "Relates a perceptual taste quality to a receptor whose activation is established to contribute to perceiving it."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000063",
+      "lbl" : "has output assertion",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "Relates a tasting event to a taste percept assertion produced in it."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000064",
+      "lbl" : "typically associated with diplotype",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "Relates a taster status to a diplotype that commonly but not invariably produces it. This is a statistical association and deliberately not an equivalence."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000070",
+      "lbl" : "rating value",
+      "type" : "PROPERTY",
+      "propertyType" : "DATA",
+      "meta" : {
+        "definition" : {
+          "val" : "The numeric value of a rating on its stated scale."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000071",
+      "lbl" : "scale minimum",
+      "type" : "PROPERTY",
+      "propertyType" : "DATA",
+      "meta" : {
+        "definition" : {
+          "val" : "The lowest value the scale admits."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000072",
+      "lbl" : "scale maximum",
+      "type" : "PROPERTY",
+      "propertyType" : "DATA",
+      "meta" : {
+        "definition" : {
+          "val" : "The highest value the scale admits."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000073",
+      "lbl" : "sample order",
+      "type" : "PROPERTY",
+      "propertyType" : "DATA",
+      "meta" : {
+        "definition" : {
+          "val" : "The position of this sample in the order presented to the taster, counting from one."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000074",
+      "lbl" : "is blinded",
+      "type" : "PROPERTY",
+      "propertyType" : "DATA",
+      "meta" : {
+        "definition" : {
+          "val" : "True when the taster could not identify the sample at the time of tasting."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000075",
+      "lbl" : "collection date",
+      "type" : "PROPERTY",
+      "propertyType" : "DATA",
+      "meta" : {
+        "definition" : {
+          "val" : "The date on which a tasting session was held."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000076",
+      "lbl" : "minutes since preparation",
+      "type" : "PROPERTY",
+      "propertyType" : "DATA",
+      "meta" : {
+        "definition" : {
+          "val" : "Minutes elapsed between preparing the stimulus and tasting it. Relevant where a quality develops after preparation, as limonoid bitterness does in citrus juice."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
+    }, {
       "id" : "http://purl.obolibrary.org/obo/HTO_0000000",
       "lbl" : "HTO editors",
       "type" : "PROPERTY",
@@ -711,6 +1049,46 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/OBI_0000070"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000003",
+      "pred" : "is_a",
+      "obj" : "http://www.w3.org/2002/07/owl#Thing"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000005",
+      "pred" : "is_a",
+      "obj" : "http://www.w3.org/2002/07/owl#Thing"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000006",
+      "pred" : "is_a",
+      "obj" : "http://www.w3.org/2002/07/owl#Thing"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000007",
+      "pred" : "is_a",
+      "obj" : "http://www.w3.org/2002/07/owl#Thing"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000008",
+      "pred" : "is_a",
+      "obj" : "http://www.w3.org/2002/07/owl#Thing"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000011",
+      "pred" : "is_a",
+      "obj" : "http://www.w3.org/2002/07/owl#Thing"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000015",
+      "pred" : "is_a",
+      "obj" : "http://www.w3.org/2002/07/owl#Thing"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000016",
+      "pred" : "is_a",
+      "obj" : "http://www.w3.org/2002/07/owl#Thing"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000017",
+      "pred" : "is_a",
+      "obj" : "http://www.w3.org/2002/07/owl#Thing"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000100",
+      "pred" : "is_a",
+      "obj" : "http://www.w3.org/2002/07/owl#Thing"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/IAO_0000030",
       "pred" : "is_a",
       "obj" : "http://www.w3.org/2002/07/owl#Thing"
@@ -794,6 +1172,60 @@
       "sub" : "http://purl.obolibrary.org/obo/UBERON_0002448",
       "pred" : "is_a",
       "obj" : "http://www.w3.org/2002/07/owl#Thing"
+    } ],
+    "domainRangeAxioms" : [ {
+      "predicateId" : "http://purl.obolibrary.org/obo/HTO_0000050",
+      "domainClassIds" : [ "http://purl.obolibrary.org/obo/HTO_0000001" ]
+    }, {
+      "predicateId" : "http://purl.obolibrary.org/obo/HTO_0000051",
+      "domainClassIds" : [ "http://purl.obolibrary.org/obo/HTO_0000001" ],
+      "rangeClassIds" : [ "http://purl.obolibrary.org/obo/HTO_0000003" ]
+    }, {
+      "predicateId" : "http://purl.obolibrary.org/obo/HTO_0000052",
+      "domainClassIds" : [ "http://purl.obolibrary.org/obo/HTO_0000005" ],
+      "rangeClassIds" : [ "http://purl.obolibrary.org/obo/HTO_0000100" ]
+    }, {
+      "predicateId" : "http://purl.obolibrary.org/obo/HTO_0000053",
+      "domainClassIds" : [ "http://purl.obolibrary.org/obo/HTO_0000005" ],
+      "rangeClassIds" : [ "http://purl.obolibrary.org/obo/HTO_0000006" ]
+    }, {
+      "predicateId" : "http://purl.obolibrary.org/obo/HTO_0000055",
+      "domainClassIds" : [ "http://purl.obolibrary.org/obo/HTO_0000001" ],
+      "rangeClassIds" : [ "http://purl.obolibrary.org/obo/HTO_0000007" ]
+    }, {
+      "predicateId" : "http://purl.obolibrary.org/obo/HTO_0000056",
+      "domainClassIds" : [ "http://purl.obolibrary.org/obo/HTO_0000001" ],
+      "rangeClassIds" : [ "http://purl.obolibrary.org/obo/HTO_0000017" ]
+    }, {
+      "predicateId" : "http://purl.obolibrary.org/obo/HTO_0000059",
+      "domainClassIds" : [ "http://purl.obolibrary.org/obo/HTO_0000003" ]
+    }, {
+      "predicateId" : "http://purl.obolibrary.org/obo/HTO_0000060",
+      "domainClassIds" : [ "http://purl.obolibrary.org/obo/HTO_0000003" ]
+    }, {
+      "predicateId" : "http://purl.obolibrary.org/obo/HTO_0000061",
+      "domainClassIds" : [ "http://purl.obolibrary.org/obo/HTO_0000100" ],
+      "rangeClassIds" : [ "http://purl.obolibrary.org/obo/GO_0008150" ]
+    }, {
+      "predicateId" : "http://purl.obolibrary.org/obo/HTO_0000062",
+      "domainClassIds" : [ "http://purl.obolibrary.org/obo/HTO_0000100" ]
+    }, {
+      "predicateId" : "http://purl.obolibrary.org/obo/HTO_0000063",
+      "domainClassIds" : [ "http://purl.obolibrary.org/obo/HTO_0000001" ],
+      "rangeClassIds" : [ "http://purl.obolibrary.org/obo/HTO_0000005" ]
+    }, {
+      "predicateId" : "http://purl.obolibrary.org/obo/HTO_0000064",
+      "domainClassIds" : [ "http://purl.obolibrary.org/obo/HTO_0000011" ],
+      "rangeClassIds" : [ "http://purl.obolibrary.org/obo/HTO_0000015" ]
+    }, {
+      "predicateId" : "http://purl.obolibrary.org/obo/HTO_0000054",
+      "rangeClassIds" : [ "http://purl.obolibrary.org/obo/HTO_0000008" ]
+    }, {
+      "predicateId" : "http://purl.obolibrary.org/obo/HTO_0000057",
+      "rangeClassIds" : [ "http://purl.obolibrary.org/obo/HTO_0000011" ]
+    }, {
+      "predicateId" : "http://purl.obolibrary.org/obo/HTO_0000058",
+      "rangeClassIds" : [ "http://purl.obolibrary.org/obo/HTO_0000016" ]
     } ]
   } ]
 }

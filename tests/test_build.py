@@ -22,3 +22,21 @@ def test_ontology_has_required_metadata():
     text = (ROOT / "hto.owl").read_text()
     for needle in ("Human Taste Ontology", "creativecommons.org/licenses/by/4.0", "hto.owl"):
         assert needle in text, f"missing {needle}"
+
+def test_properties_present():
+    # Object properties are represented as Typedef stanzas in OBO format.
+    obo_text = (ROOT / "hto.obo").read_text()
+    for pid in ["HTO:0000050", "HTO:0000052", "HTO:0000061"]:
+        assert f"id: {pid}" in obo_text, f"{pid} missing from hto.obo"
+    # Classic OBO format (1.2) has no stanza for data properties, so
+    # ROBOT's OBO writer drops owl:DataProperty entities entirely, even
+    # though they are correctly declared in the OWL. Check those in
+    # hto.owl instead.
+    owl_text = (ROOT / "hto.owl").read_text()
+    for pid in ["HTO:0000070", "HTO:0000076"]:
+        assert pid.replace(":", "_") in owl_text, f"{pid} missing from hto.owl"
+
+def test_perceived_via_has_domain_and_range():
+    text = (ROOT / "hto.owl").read_text()
+    assert "HTO_0000061" in text
+    assert "ObjectPropertyDomain" in text or "rdfs:domain" in text

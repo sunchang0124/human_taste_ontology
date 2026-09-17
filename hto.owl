@@ -80,6 +80,278 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000050 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/HTO_0000050">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/HTO_0000001"/>
+        <obo:IAO_0000115>Relates a tasting event to the person who performed the tasting.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:label>has taster</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000051 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/HTO_0000051">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/HTO_0000001"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/HTO_0000003"/>
+        <obo:IAO_0000115>Relates a tasting event to the material that was tasted.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:label>has stimulus</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000052 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/HTO_0000052">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/HTO_0000005"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/HTO_0000100"/>
+        <obo:IAO_0000115>Relates a taste percept assertion to the perceptual taste quality it reports.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:label>asserts quality</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000053 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/HTO_0000053">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/HTO_0000005"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/HTO_0000006"/>
+        <obo:IAO_0000115>Relates a taste percept assertion to the intensity value reported for it.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:label>has intensity rating</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000054 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/HTO_0000054">
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/HTO_0000008"/>
+        <obo:IAO_0000115>Relates a rating to the scale on which it was recorded.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:label>on scale</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000055 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/HTO_0000055">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/HTO_0000001"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/HTO_0000007"/>
+        <obo:IAO_0000115>Relates a tasting event to the liking score the taster gave the sample.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:label>has hedonic rating</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000056 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/HTO_0000056">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/HTO_0000001"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/HTO_0000017"/>
+        <obo:IAO_0000115>Relates a tasting event to the session in which it took place.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:label>part of session</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000057 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/HTO_0000057">
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/HTO_0000011"/>
+        <obo:IAO_0000115>Relates a person to their assessed taster status.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:label>has taster status</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000058 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/HTO_0000058">
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/HTO_0000016"/>
+        <obo:IAO_0000115>Relates a person to a recorded assertion about their taste-related genotype.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:label>has genotype assertion</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000059 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/HTO_0000059">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/HTO_0000003"/>
+        <obo:IAO_0000115>Relates a taste stimulus to the food or beverage class it was prepared from.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:label>stimulus derived from</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000060 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/HTO_0000060">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/HTO_0000003"/>
+        <obo:IAO_0000115>Relates a taste stimulus to a chemical entity present in it that bears a taste quality.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:label>stimulus contains tastant</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000061 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/HTO_0000061">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/HTO_0000100"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
+        <obo:IAO_0000115>Relates a perceptual taste quality to the biological process by which it is perceived.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:label>perceived via</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000062 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/HTO_0000062">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/HTO_0000100"/>
+        <obo:IAO_0000115>Relates a perceptual taste quality to a receptor whose activation is established to contribute to perceiving it.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:label>detected by receptor</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000063 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/HTO_0000063">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/HTO_0000001"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/HTO_0000005"/>
+        <obo:IAO_0000115>Relates a tasting event to a taste percept assertion produced in it.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:label>has output assertion</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000064 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/HTO_0000064">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/HTO_0000011"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/HTO_0000015"/>
+        <obo:IAO_0000115>Relates a taster status to a diplotype that commonly but not invariably produces it. This is a statistical association and deliberately not an equivalence.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:label>typically associated with diplotype</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000070 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/HTO_0000070">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/HTO_0000006"/>
+        <obo:IAO_0000115>The numeric value of a rating on its stated scale.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:label>rating value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000071 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/HTO_0000071">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/HTO_0000008"/>
+        <obo:IAO_0000115>The lowest value the scale admits.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:label>scale minimum</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000072 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/HTO_0000072">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/HTO_0000008"/>
+        <obo:IAO_0000115>The highest value the scale admits.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:label>scale maximum</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000073 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/HTO_0000073">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/HTO_0000001"/>
+        <obo:IAO_0000115>The position of this sample in the order presented to the taster, counting from one.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:label>sample order</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000074 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/HTO_0000074">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/HTO_0000001"/>
+        <obo:IAO_0000115>True when the taster could not identify the sample at the time of tasting.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:label>is blinded</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000075 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/HTO_0000075">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/HTO_0000017"/>
+        <obo:IAO_0000115>The date on which a tasting session was held.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:label>collection date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000076 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/HTO_0000076">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/HTO_0000001"/>
+        <obo:IAO_0000115>Minutes elapsed between preparing the stimulus and tasting it. Relevant where a quality develops after preparation, as limonoid bitterness does in citrus juice.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:label>minutes since preparation</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Classes
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -443,6 +715,86 @@
         <obo:IAO_0000115>A planned process in which a human taster orally samples a stimulus and reports one or more perceived taste qualities.</obo:IAO_0000115>
         <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
         <rdfs:label>tasting event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000003 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000003">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000005 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000005">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000006 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000006">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000007 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000007">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000008 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000008">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000011 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000011">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000015 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000015">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000016 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000016">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000017 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000017">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000100 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000100">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
     </owl:Class>
     
 
