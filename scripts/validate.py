@@ -6,7 +6,7 @@ question it was built to answer, so this exits non-zero. The two qc_*.rq
 queries are the inverse: they must return nothing.
 """
 from __future__ import annotations
-import pathlib, sys
+import argparse, pathlib, sys
 from rdflib import Graph
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
@@ -16,14 +16,23 @@ MAPPINGS = ROOT / "mappings" / "mappings.ttl"
 
 
 def main() -> int:
+    ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument("--data", type=pathlib.Path, default=DATA,
+                    help="tasting instance graph (default data/rdf/example.ttl)")
+    ap.add_argument("--published", type=pathlib.Path,
+                    default=ROOT / "data" / "rdf" / "published.ttl",
+                    help="literature instance graph (default data/rdf/published.ttl)")
+    args = ap.parse_args()
+
     g = Graph()
     g.parse(ONTOLOGY, format="xml")
-    if DATA.exists():
-        g.parse(DATA, format="turtle")
+    data = args.data
+    if data.exists():
+        g.parse(data, format="turtle")
     else:
-        print(f"note: {DATA} absent; competency questions over instance data will be empty")
+        print(f"note: {data} absent; competency questions over instance data will be empty")
 
-    published = ROOT / "data" / "rdf" / "published.ttl"
+    published = args.published
     if published.exists():
         g.parse(published, format="turtle")
 

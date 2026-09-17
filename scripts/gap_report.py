@@ -5,7 +5,7 @@ This is the finding that motivates HTO: PATO, the ontology the OBO community
 uses for qualities, defines bitter and none of the other basic tastes.
 """
 from __future__ import annotations
-import csv, pathlib
+import csv, pathlib, sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 OUT = ROOT / "docs" / "pato-gap-report.md"
@@ -20,7 +20,7 @@ def read_tsv(path: pathlib.Path) -> list[dict]:
     return list(csv.DictReader(lines, delimiter="\t"))
 
 
-def main() -> int:
+def main(out: pathlib.Path = OUT) -> int:
     rows = read_tsv(QUALITIES)[1:]          # drop the ROBOT template-string row
     mapped = {r["subject_id"] for r in read_tsv(PATO_MAP)
               if r["predicate_id"] == "skos:exactMatch"}
@@ -50,11 +50,13 @@ def main() -> int:
         "The four basic tastes among them (sweetness, sourness, saltiness, umami) are",
         "submitted to PATO as new-term requests; see `docs/term-requests/`.",
     ]
-    OUT.parent.mkdir(parents=True, exist_ok=True)
-    OUT.write_text("\n".join(lines) + "\n")
-    print(f"wrote {OUT}: {len(absent)} unmatched of {len(rows)}")
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text("\n".join(lines) + "\n")
+    print(f"wrote {out}: {len(absent)} unmatched of {len(rows)}")
     return 0
 
 
 if __name__ == "__main__":
-    raise SystemExit(main())
+    # An optional argument names somewhere else to write, so a test can check
+    # the report without rewriting the committed one.
+    raise SystemExit(main(pathlib.Path(sys.argv[1]) if len(sys.argv) > 1 else OUT))

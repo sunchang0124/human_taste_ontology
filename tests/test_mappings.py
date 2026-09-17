@@ -19,9 +19,11 @@ def test_bitterness_maps_to_pato_bitter():
             if r["subject_id"] == "HTO:0000114" and r["object_id"] == "PATO:0002474"]
     assert hits and hits[0]["predicate_id"] == "skos:exactMatch"
 
-def test_gap_report_lists_the_four_missing_basic_tastes():
-    subprocess.run([sys.executable, "scripts/gap_report.py"], cwd=ROOT, check=True)
-    text = (ROOT / "docs" / "pato-gap-report.md").read_text()
+def test_gap_report_lists_the_four_missing_basic_tastes(tmp_path):
+    out = tmp_path / "pato-gap-report.md"
+    subprocess.run([sys.executable, "scripts/gap_report.py", str(out)],
+                   cwd=ROOT, check=True)
+    text = out.read_text()
     for label in ["sweetness", "sourness", "saltiness", "umami"]:
         assert label in text, f"{label} should be reported as absent from PATO"
     assert "bitterness" in text

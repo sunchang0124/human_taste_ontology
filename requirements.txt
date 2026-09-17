@@ -1,0 +1,4 @@
+# Python dependencies for the HTO build and test pipeline.
+# ROBOT is a Java jar and is fetched separately by scripts/setup.sh.
+rdflib>=7.0
+pytest>=7.0

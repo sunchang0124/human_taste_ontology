@@ -1,4 +1,5 @@
 import pathlib, csv, subprocess, sys
+import pytest
 import rdflib
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
@@ -26,7 +27,11 @@ def test_every_imported_term_has_a_label():
     unlabelled = [str(s) for s in set(g.subjects()) if (s, RDFS.label, None) not in g]
     assert not unlabelled, f"no label: {unlabelled[:5]}"
 
+@pytest.mark.network
 def test_script_is_idempotent():
+    # Rebuilds the import module from the live OLS4 API and overwrites
+    # src/imports/hto_imports.ttl in place, so it both needs network and
+    # touches a committed file: deselected unless `-m network` is given.
     before = IMPORTS.read_bytes()
     subprocess.run([sys.executable, "scripts/build_imports.py"], cwd=ROOT, check=True)
     assert IMPORTS.read_bytes() == before, "build_imports.py is not deterministic"

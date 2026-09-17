@@ -27,8 +27,12 @@ full prior-art search.
 
 ## Quick start
 
+**Prerequisites:** Java 21 (ROBOT 1.9.10 is built for it) and Python 3.9 or
+newer with the packages in `requirements.txt` (`pip install -r
+requirements.txt`; rdflib 7 and pytest 7 or newer).
+
 ```bash
-bash scripts/setup.sh   # downloads robot.jar
+bash scripts/setup.sh   # downloads the pinned ROBOT 1.9.10 jar
 make build               # templates -> reasoned hto.owl, hto.obo, hto.json
 make test                 # report (QC) + validate (competency questions) + pytest
 make validate             # build the instance data and run the eight competency questions

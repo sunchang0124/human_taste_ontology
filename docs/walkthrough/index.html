@@ -92,7 +92,7 @@ footer{border-top:1px solid var(--rule);padding-top:18px;margin-top:34px;font-si
   <div class="stat"><b>56</b><span>external terms reused, not redefined</span></div>
   <div class="stat"><b style="color:var(--peel)">33/34</b><span>taste qualities with no PATO equivalent</span></div>
   <div class="stat"><b>8</b><span>competency questions, all passing</span></div>
-  <div class="stat"><b>30</b><span>tests green</span></div>
+  <div class="stat"><b>29</b><span>tests green</span></div>
 </div>
 
 <section>
@@ -224,7 +224,7 @@ ex:event/P01/C
 make build                 <span class="c"># templates → reason → hto.owl / .obo / .json</span>
 make report                <span class="c"># OBO quality checks, must be 0 errors</span>
 make validate              <span class="c"># 8 competency questions + 2 QC queries</span>
-python3 -m pytest tests/   <span class="c"># 30 tests</span></pre>
+python3 -m pytest tests/   <span class="c"># 29 tests, 1 network test deselected</span></pre>
   <p>The competency questions are the real specification. They ask things like which qualities were reported for a given citrus juice, whether bitterness ratings differ by taster status, which tasters disagreed most about the same sample, and which participants carry a confounder that should exclude them from a bitterness analysis. If one returns nothing, the ontology has failed at a job it was built for, and <span class="cur">make validate</span> exits non-zero.</p>
 
   <h3>Known limits, stated plainly</h3>

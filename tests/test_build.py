@@ -73,10 +73,36 @@ def test_five_basic_tastes_present():
     for cid, label in BASIC_TASTES.items():
         assert f"id: {cid}" in text and f"name: {label}" in text, f"{cid} {label}"
 
-def test_basic_tastes_link_to_go_processes():
-    owl = (ROOT / "hto.owl").read_text()
-    for go in ["GO_0050916", "GO_0050915", "GO_0050914", "GO_0050913", "GO_0050917"]:
-        assert go in owl, f"no axiom referencing {go}"
+# Each basic taste and the GO perception process its HTO:0000061 restriction
+# must point at. Grepping for the five GO identifiers anywhere in the file, as
+# this test used to, passes even if the pairings are crossed -- sweetness
+# pointing at the bitter process would have gone unnoticed.
+GO_PAIRINGS = {
+    "HTO_0000111": "GO_0050916",   # sweetness  -> sensory perception of sweet taste
+    "HTO_0000112": "GO_0050915",   # sourness   -> sensory perception of sour taste
+    "HTO_0000113": "GO_0050914",   # saltiness  -> sensory perception of salty taste
+    "HTO_0000114": "GO_0050913",   # bitterness -> sensory perception of bitter taste
+    "HTO_0000115": "GO_0050917",   # umami      -> sensory perception of umami taste
+}
+
+def test_basic_tastes_link_to_the_right_go_processes():
+    import rdflib
+    OBO = "http://purl.obolibrary.org/obo/"
+    g = rdflib.Graph(); g.parse(ROOT / "hto.owl", format="xml")
+    perceived_via = rdflib.URIRef(OBO + "HTO_0000061")
+
+    found = {}
+    for taste, restriction in g.subject_objects(rdflib.RDFS.subClassOf):
+        if (restriction, rdflib.OWL.onProperty, perceived_via) not in g:
+            continue
+        for filler in g.objects(restriction, rdflib.OWL.someValuesFrom):
+            found.setdefault(str(taste).replace(OBO, ""), set()).add(
+                str(filler).replace(OBO, ""))
+
+    for taste, go in GO_PAIRINGS.items():
+        assert taste in found, f"{taste} has no HTO:0000061 restriction at all"
+        assert found[taste] == {go}, \
+            f"{taste} perceived-via should be exactly {{{go}}}, found {found[taste]}"
 
 def test_no_owl_equivalence_asserted_on_pato_bitter():
     owl = (ROOT / "hto.owl").read_text()
