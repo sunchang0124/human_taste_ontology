@@ -1540,7 +1540,7 @@
       "id" : "http://purl.obolibrary.org/obo/HTO_0000061",
       "lbl" : "perceived via",
       "type" : "PROPERTY",
-      "propertyType" : "DATA",
+      "propertyType" : "OBJECT",
       "meta" : {
         "definition" : {
           "val" : "Relates a perceptual taste quality to the biological process by which it is perceived."

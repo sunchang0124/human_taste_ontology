@@ -192,7 +192,7 @@ more than the queries deliver:
 All eight competency questions and both QC checks pass: `0 failing`.
 `make report` (ROBOT report against `src/report_profile.txt`) returns zero
 violations at ERROR, WARN or INFO level for HTO terms.
-`python3 -m pytest tests/ -q` passes 29 tests with 1 deselected: the
+`python3 -m pytest tests/ -q` passes 30 tests with 1 deselected: the
 deselected one is `tests/test_imports.py::test_script_is_idempotent`, marked
 `network` because it rebuilds the import module from the live OLS4 API, so the
 default suite runs offline. `python3 -m pytest -m network` runs it.

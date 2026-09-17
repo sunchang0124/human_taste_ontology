@@ -13,6 +13,17 @@ tmp:
 tmp/%.owl: src/templates/%.tsv | tmp
 	$(ROBOT) template --template $< $(PREFIX) --output $@
 
+# The qualities module is the exception: its `SC HTO:0000061 some %` column
+# references an object property declared in properties.tsv. Templated in
+# isolation, ROBOT cannot know HTO:0000061 is an object property and emits a
+# bare owl:DatatypeProperty declaration for it, which survives the merge and
+# makes the released ontology OWL 2 DL invalid through punning. Passing the
+# already-built properties module as --input gives ROBOT that context; it is
+# used for typing only and none of its axioms are copied into the output. This
+# explicit rule takes precedence over the pattern rule above.
+tmp/qualities.owl: src/templates/qualities.tsv tmp/properties.owl | tmp
+	$(ROBOT) template --input tmp/properties.owl --template $< $(PREFIX) --output $@
+
 MODULES = $(patsubst src/templates/%.tsv,tmp/%.owl,$(TEMPLATES))
 
 build: $(MODULES) | tmp

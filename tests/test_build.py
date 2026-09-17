@@ -130,3 +130,25 @@ def test_intensity_and_hedonic_rating_share_a_common_rating_superclass():
         "HTO:0000006 intensity rating must be a subclass of HTO:0000026 rating"
     assert "is_a: HTO:0000026" in stanza("HTO:0000007"), \
         "HTO:0000007 hedonic rating must be a subclass of HTO:0000026 rating"
+
+
+def test_no_hto_iri_is_both_an_object_and_a_data_property():
+    """Punning an IRI as both an object property and a data property makes the
+    ontology OWL 2 DL invalid. HTO:0000061 was punned this way because
+    qualities.tsv's `SC HTO:0000061 some %` column was templated without the
+    properties module for context, so ROBOT emitted a bare datatype
+    declaration; the Makefile now passes tmp/properties.owl as --input.
+    Computed by parsing so the whole class of defect is guarded, not one IRI."""
+    import rdflib
+    HTO = "http://purl.obolibrary.org/obo/HTO_"
+    g = rdflib.Graph(); g.parse(ROOT / "hto.owl", format="xml")
+
+    def declared_as(kind):
+        return {str(s) for s in g.subjects(rdflib.RDF.type, kind)
+                if str(s).startswith(HTO)}
+
+    object_props = declared_as(rdflib.OWL.ObjectProperty)
+    data_props = declared_as(rdflib.OWL.DatatypeProperty)
+    assert object_props and data_props, "expected HTO to declare both kinds"
+    assert not (object_props & data_props), \
+        f"declared as both an object and a data property: {sorted(object_props & data_props)}"
