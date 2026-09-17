@@ -15,6 +15,8 @@ HTO:0000061	perceived via	owl:ObjectProperty	HTO:0000100	GO:0008150	Relates a pe
 HTO:0000062	detected by receptor	owl:ObjectProperty	HTO:0000100		Relates a perceptual taste quality to a receptor whose activation is established to contribute to perceiving it.	HTO:0000000
 HTO:0000063	has output assertion	owl:ObjectProperty	HTO:0000001	HTO:0000005	Relates a tasting event to a taste percept assertion produced in it.	HTO:0000000
 HTO:0000064	typically associated with diplotype	owl:ObjectProperty	HTO:0000011	HTO:0000015	Relates a taster status to a diplotype that commonly but not invariably produces it. This is a statistical association and deliberately not an equivalence.	HTO:0000000
+HTO:0000065	has diplotype	owl:ObjectProperty		HTO:0000015	Relates a person or a study group to the diplotype they carry, or that characterises them.	HTO:0000000
+HTO:0000066	threshold for quality	owl:ObjectProperty	HTO:0000009	HTO:0000100	Relates a threshold datum to the perceptual taste quality whose detection or recognition it measures.	HTO:0000000
 HTO:0000070	rating value	owl:DataProperty	HTO:0000006		The numeric value of a rating on its stated scale.	HTO:0000000
 HTO:0000071	scale minimum	owl:DataProperty	HTO:0000008		The lowest value the scale admits.	HTO:0000000
 HTO:0000072	scale maximum	owl:DataProperty	HTO:0000008		The highest value the scale admits.	HTO:0000000

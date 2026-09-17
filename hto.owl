@@ -299,6 +299,29 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/HTO_0000065 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/HTO_0000065">
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/HTO_0000015"/>
+        <obo:IAO_0000115>Relates a person or a study group to the diplotype they carry, or that characterises them.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:label>has diplotype</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000066 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/HTO_0000066">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/HTO_0000009"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/HTO_0000100"/>
+        <obo:IAO_0000115>Relates a threshold datum to the perceptual taste quality whose detection or recognition it measures.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:label>threshold for quality</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //

@@ -1580,6 +1580,34 @@
         } ]
       }
     }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000065",
+      "lbl" : "has diplotype",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "Relates a person or a study group to the diplotype they carry, or that characterises them."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000066",
+      "lbl" : "threshold for quality",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "Relates a threshold datum to the perceptual taste quality whose detection or recognition it measures."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        } ]
+      }
+    }, {
       "id" : "http://purl.obolibrary.org/obo/HTO_0000070",
       "lbl" : "rating value",
       "type" : "PROPERTY",
@@ -2266,6 +2294,10 @@
       "domainClassIds" : [ "http://purl.obolibrary.org/obo/HTO_0000011" ],
       "rangeClassIds" : [ "http://purl.obolibrary.org/obo/HTO_0000015" ]
     }, {
+      "predicateId" : "http://purl.obolibrary.org/obo/HTO_0000066",
+      "domainClassIds" : [ "http://purl.obolibrary.org/obo/HTO_0000009" ],
+      "rangeClassIds" : [ "http://purl.obolibrary.org/obo/HTO_0000100" ]
+    }, {
       "predicateId" : "http://purl.obolibrary.org/obo/HTO_0000054",
       "rangeClassIds" : [ "http://purl.obolibrary.org/obo/HTO_0000008" ]
     }, {
@@ -2274,6 +2306,9 @@
     }, {
       "predicateId" : "http://purl.obolibrary.org/obo/HTO_0000058",
       "rangeClassIds" : [ "http://purl.obolibrary.org/obo/HTO_0000016" ]
+    }, {
+      "predicateId" : "http://purl.obolibrary.org/obo/HTO_0000065",
+      "rangeClassIds" : [ "http://purl.obolibrary.org/obo/HTO_0000015" ]
     } ]
   } ]
 }

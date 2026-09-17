@@ -40,16 +40,16 @@ def convert(csv_path: pathlib.Path, out_path: pathlib.Path) -> int:
         if group_n:
             group_label += f' (n={group_n})'
         g.add((group, RDFS.label, Literal(group_label)))
-        g.add((group, OBO["HTO_0000058"], diplotype))
+        g.add((group, OBO["HTO_0000065"], diplotype))   # has diplotype
         g.add((group, DCTERMS.source, Literal(row["citation"])))
 
         value = (row.get("threshold_mmol_per_l") or "").strip()
         if value:
             g.add((datum, RDF.type, OBO["HTO_0000009"]))
-            g.add((datum, OBO["HTO_0000052"], OBO["HTO_0000131"]))   # thiourea bitterness
+            g.add((datum, OBO["HTO_0000066"], OBO["HTO_0000131"]))   # threshold for quality: thiourea bitterness
             g.add((datum, OBO["HTO_0000070"],
                    Literal(float(value), datatype=XSD.decimal)))
-            g.add((datum, OBO["HTO_0000058"], diplotype))
+            g.add((datum, OBO["HTO_0000065"], diplotype))   # has diplotype
             g.add((datum, DCTERMS.source, Literal(row["citation"])))
             note = (row.get("scale_note") or row.get("note") or "").strip()
             if note:

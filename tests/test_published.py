@@ -42,6 +42,26 @@ HTO = "http://purl.obolibrary.org/obo/HTO_"
 # fabricated 37432335 or the less-precisely-matched 20980355 used in the
 # first draft), and the per-diplotype n values (24/43/12) are now the real
 # ones from the paper's Table 2 rather than left blank.
+#
+# Fix round 2: independent review found that the brief's original script
+# linked each literature group (and, in the unexercised `if value:` branch,
+# each threshold datum) to its TAS2R38 diplotype with HTO:0000058 "has
+# genotype assertion". That property's declared range is HTO:0000016 "taste
+# genotype assertion" and its declared meaning is "relates a PERSON to a
+# recorded assertion about their genotype" -- but the object emitted is
+# typed HTO:0000015 "TAS2R38 diplotype" (not HTO:0000016), and the subject
+# is a cohort group (or a threshold datum), not a person. That triple was
+# live and semantically wrong in every published.ttl this script produced.
+# The related issue in the `if value:` branch (HTO:0000052 "asserts
+# quality", domain HTO:0000005 "taste percept assertion", applied to a
+# HTO:0000009 "detection threshold datum") was latent because no threshold
+# is currently emitted, but would have been wrong the moment real numbers
+# were filled in. Per controller ruling, fixed both by adding two new
+# properties (HTO:0000065 "has diplotype", no domain restriction, range
+# HTO:0000015; HTO:0000066 "threshold for quality", domain HTO:0000009,
+# range HTO:0000100) rather than bending the existing ones, and switched
+# scripts/published2rdf.py to use them. This test asserts the fix: the
+# graph uses HTO:0000065 and never emits HTO:0000058.
 
 
 def test_published_graph_has_diplotype_groups_and_citation(tmp_path):
@@ -56,6 +76,25 @@ def test_published_graph_has_diplotype_groups_and_citation(tmp_path):
     ttl = g.serialize(format="turtle")
     assert "PAV/PAV" in ttl and "AVI/AVI" in ttl
     assert "PMID:37242298" in ttl, "provenance citation must be the real, verified PMID"
+
+
+def test_published_graph_links_diplotype_with_the_correct_property(tmp_path):
+    """HTO:0000058 'has genotype assertion' relates a person to a taste
+    genotype assertion (range HTO:0000016); it must not be used to relate a
+    literature cohort group to a diplotype (HTO:0000015). The converter must
+    use HTO:0000065 'has diplotype' instead."""
+    out = tmp_path / "published.ttl"
+    subprocess.run([sys.executable, "scripts/published2rdf.py",
+                    "data/raw/published_tas2r38_prop.csv", str(out)],
+                   cwd=ROOT, check=True)
+    g = rdflib.Graph(); g.parse(out, format="turtle")
+    has_diplotype = rdflib.URIRef(HTO + "0000065")
+    has_genotype_assertion = rdflib.URIRef(HTO + "0000058")
+    assert list(g.triples((None, has_diplotype, None))), \
+        "expected at least one HTO:0000065 has-diplotype triple"
+    assert list(g.triples((None, None, has_genotype_assertion))) == [] and \
+        list(g.triples((None, has_genotype_assertion, None))) == [], \
+        "HTO:0000058 has genotype assertion must not be used to link a group or datum to a diplotype"
 
 
 def test_published_graph_does_not_fabricate_threshold_values(tmp_path):

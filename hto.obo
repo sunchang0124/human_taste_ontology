@@ -868,3 +868,18 @@ property_value: IAO:0000119 "HTO:0000000" xsd:string
 domain: HTO:0000011 ! taster status
 range: HTO:0000015 ! TAS2R38 diplotype
 
+[Typedef]
+id: HTO:0000065
+name: has diplotype
+def: "Relates a person or a study group to the diplotype they carry, or that characterises them." []
+property_value: IAO:0000119 "HTO:0000000" xsd:string
+range: HTO:0000015 ! TAS2R38 diplotype
+
+[Typedef]
+id: HTO:0000066
+name: threshold for quality
+def: "Relates a threshold datum to the perceptual taste quality whose detection or recognition it measures." []
+property_value: IAO:0000119 "HTO:0000000" xsd:string
+domain: HTO:0000009 ! detection threshold datum
+range: HTO:0000100 ! perceptual taste quality
+
