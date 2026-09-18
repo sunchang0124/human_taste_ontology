@@ -2784,6 +2784,10 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/HTO_0000131",
       "pred" : "http://purl.obolibrary.org/obo/HTO_0000085",
+      "obj" : "http://purl.obolibrary.org/obo/CHEBI_46261"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000131",
+      "pred" : "http://purl.obolibrary.org/obo/HTO_0000085",
       "obj" : "http://purl.obolibrary.org/obo/CHEBI_8502"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/HTO_0000132",

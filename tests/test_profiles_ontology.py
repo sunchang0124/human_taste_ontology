@@ -152,32 +152,36 @@ def test_the_two_reified_classes_exist():
 
 
 ELICITATION = {
-    "0000111": "CHEBI_17992",  # sweetness      <- sucrose
-    "0000112": "CHEBI_30769",  # sourness       <- citric acid
-    "0000113": "CHEBI_26710",  # saltiness      <- sodium chloride
-    "0000115": "CHEBI_16015",  # umami          <- L-glutamic acid
-    "0000131": "CHEBI_8502",   # thiourea bitterness  <- PROP
-    "0000132": "CHEBI_16226",  # limonoid bitterness  <- limonin
-    "0000133": "CHEBI_28819",  # flavanone bitterness <- naringin
-    "0000134": "CHEBI_27732",  # alkaloid bitterness  <- caffeine
+    "0000111": {"CHEBI_17992"},              # sweetness      <- sucrose
+    "0000112": {"CHEBI_30769"},              # sourness       <- citric acid
+    "0000113": {"CHEBI_26710"},              # saltiness      <- sodium chloride
+    "0000115": {"CHEBI_16015"},              # umami          <- L-glutamic acid
+    "0000131": {"CHEBI_8502", "CHEBI_46261"},  # thiourea bitterness  <- PROP, PTC
+    "0000132": {"CHEBI_16226"},              # limonoid bitterness  <- limonin
+    "0000133": {"CHEBI_28819"},              # flavanone bitterness <- naringin
+    "0000134": {"CHEBI_27732"},              # alkaloid bitterness  <- caffeine
 }
 
 
 def test_qualities_are_linked_to_the_tastants_that_elicit_them():
     """Each link is an existential restriction, not an annotation: cq13 walks it
-    to find foods containing a tastant whose quality nobody has annotated."""
+    to find foods containing a tastant whose quality nobody has annotated. Every
+    CHEBI term listed for a quality must have its own restriction - a quality
+    with two elicitors (thiourea bitterness) is missing the point if only one
+    of them made it into the built ontology."""
     g = graph()
     elicited_by = term("0000085")
-    for quality, chebi in ELICITATION.items():
-        found = False
+    for quality, chebis in ELICITATION.items():
+        found = set()
         for restriction in g.objects(term(quality), RDFS.subClassOf):
-            if (restriction, OWL.onProperty, elicited_by) in g and (
-                restriction,
-                OWL.someValuesFrom,
-                rdflib.URIRef("http://purl.obolibrary.org/obo/" + chebi),
-            ) in g:
-                found = True
-        assert found, f"HTO:{quality} is not linked to {chebi}"
+            if (restriction, OWL.onProperty, elicited_by) not in g:
+                continue
+            for value in g.objects(restriction, OWL.someValuesFrom):
+                local = str(value).replace("http://purl.obolibrary.org/obo/", "")
+                if local in chebis:
+                    found.add(local)
+        missing = chebis - found
+        assert not missing, f"HTO:{quality} is not linked to {sorted(missing)}"
 
 
 def test_the_two_precoordinated_temporal_terms_name_their_preferred_form():

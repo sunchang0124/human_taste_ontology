@@ -1,5 +1,5 @@
 ID	LABEL	TYPE	SC %	SC HTO:0000061 some %	SC HTO:0000085 some %	A IAO:0000115	A IAO:0000119	A rdfs:comment
-ID	LABEL	TYPE	SC %	SC HTO:0000061 some %	SC HTO:0000085 some %	A IAO:0000115	A IAO:0000119	A rdfs:comment
+ID	LABEL	TYPE	SC %	SC HTO:0000061 some %	SC HTO:0000085 some % SPLIT=|	A IAO:0000115	A IAO:0000119	A rdfs:comment
 HTO:0000100	perceptual taste quality	owl:Class	PATO:0001241			A quality of a material entity that is realised when a human perceiver tastes that entity.	HTO:0000000	
 HTO:0000110	basic taste quality	owl:Class	HTO:0000100			A perceptual taste quality for which a dedicated class of human taste receptor and a dedicated transduction pathway are established.	HTO:0000000	
 HTO:0000111	sweetness	owl:Class	HTO:0000110	GO:0050916	CHEBI:17992	The basic taste quality typically elicited by sucrose and other sugars, transduced by the TAS1R2 and TAS1R3 receptor pair.	HTO:0000000	PATO has no term for this quality as of 2026-09-17; proposed to PATO.
@@ -14,7 +14,7 @@ HTO:0000123	metallic taste	owl:Class	HTO:0000120			The candidate taste quality e
 HTO:0000124	calcium taste	owl:Class	HTO:0000120			The candidate taste quality elicited by calcium salts, reported as chalky and somewhat bitter.	HTO:0000000	
 HTO:0000125	starchy taste	owl:Class	HTO:0000120			The candidate taste quality elicited by oligomeric glucose polymers independently of sweetness.	PMID:27553043	
 HTO:0000130	bitterness subtype	owl:Class	HTO:0000114			A bitterness distinguished by the chemical class of the compound that elicits it and, where known, by the receptor that detects it.	HTO:0000000	
-HTO:0000131	thiourea bitterness	owl:Class	HTO:0000130		CHEBI:8502	The bitterness elicited by compounds bearing a thiourea group, notably phenylthiocarbamide and propylthiouracil, detected by TAS2R38.	PMID:12595690	The quality whose perception varies most sharply between people.
+HTO:0000131	thiourea bitterness	owl:Class	HTO:0000130		CHEBI:8502|CHEBI:46261	The bitterness elicited by compounds bearing a thiourea group, notably phenylthiocarbamide and propylthiouracil, detected by TAS2R38.	PMID:12595690	The quality whose perception varies most sharply between people.
 HTO:0000132	limonoid bitterness	owl:Class	HTO:0000130		CHEBI:16226	The bitterness elicited by limonoid triterpenoids, notably limonin, which forms from a tasteless precursor after citrus fruit is juiced.	PMID:25615579	
 HTO:0000133	flavanone bitterness	owl:Class	HTO:0000130		CHEBI:28819	The bitterness elicited by flavanone glycosides, notably naringin, characteristic of grapefruit and pomelo.	PMID:9250119	
 HTO:0000134	alkaloid bitterness	owl:Class	HTO:0000130		CHEBI:27732	The bitterness elicited by plant alkaloids such as quinine and caffeine.	HTO:0000000	
