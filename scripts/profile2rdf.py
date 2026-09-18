@@ -70,6 +70,48 @@ def slug(text: str) -> str:
     return re.sub(r"[^a-z0-9]+", "-", text.strip().lower()).strip("-")
 
 
+class _CommentStrippingReader:
+    """Feed ``csv.DictReader`` while remembering where each record really began.
+
+    The ``#`` comment lines are dropped here rather than by a generator wrapped
+    around the file, so that the line numbers in error messages are the ones a
+    person sees in their editor. ``data/profile_sheet.csv`` ships with thirteen
+    comment lines, so numbering the post-filter stream would misdirect every
+    error a newcomer filling in the shipped template ever gets.
+    """
+
+    def __init__(self, handle):
+        self._handle = handle
+        self._pending: list[int] = []
+
+    def __iter__(self):
+        for number, line in enumerate(self._handle, start=1):
+            if line.lstrip().startswith("#"):
+                continue
+            self._pending.append(number)
+            yield line
+
+    def take(self) -> int:
+        """The physical file line on which the record just parsed began."""
+        number = self._pending[0] if self._pending else 0
+        self._pending.clear()
+        return number
+
+
+def sheet_rows(handle):
+    """Return (fieldnames, iterator of (physical line number, row dict))."""
+    tracker = _CommentStrippingReader(handle)
+    reader = csv.DictReader(tracker)
+    fieldnames = list(reader.fieldnames or ())
+    tracker.take()                     # discard the header's own line number
+
+    def rows():
+        for row in reader:
+            yield tracker.take(), row
+
+    return fieldnames, rows()
+
+
 def template_rows(name: str) -> list[dict]:
     path = ROOT / "src" / "templates" / name
     if not path.exists():
@@ -106,7 +148,15 @@ def convert(profiles_csv: pathlib.Path, out_path: pathlib.Path,
     unmapped: dict[str, str] = {}
     written = 0
 
-    def food_node(row: dict, line: int) -> URIRef | None:
+    def food_node(row: dict, line: int) -> tuple[URIRef, str] | None:
+        """The food's IRI, and the key any IRI derived from that food must use.
+
+        V9 keys an entry's identity on the food *node*, so anything else keying
+        the entry IRI can collapse two foods onto one entry: two rows labelled
+        "pear juice", one carrying a FoodOn id and one not, resolve to different
+        nodes, pass V9, and then meet again on a label-derived IRI. The key
+        therefore comes from the same node V9 keys on.
+        """
         label = (row.get("food_label") or "").strip()
         if not label:
             errors.append(f"line {line}: food_label is empty")
@@ -116,18 +166,20 @@ def convert(profiles_csv: pathlib.Path, out_path: pathlib.Path,
             if not FOODON_RE.match(food_id):
                 errors.append(f"line {line}: food_id {food_id!r} is not a FOODON CURIE")
                 return None
-            return curie_to_iri(food_id)
+            prefix, local = food_id.split(":", 1)
+            return curie_to_iri(food_id), f"{prefix.lower()}-{local}"
         unmapped[slug(label)] = label
-        return EX[f"food/{slug(label)}"]
+        return EX[f"food/{slug(label)}"], slug(label)
 
     with open(profiles_csv) as fh:
-        reader = csv.DictReader(l for l in fh if not l.lstrip().startswith("#"))
-        missing = [c for c in COLUMNS if c not in (reader.fieldnames or ())]
+        fieldnames, rows = sheet_rows(fh)
+        missing = [c for c in COLUMNS if c not in fieldnames]
         if missing:
             raise ProfileError(f"{profiles_csv}: missing column(s): {', '.join(missing)}")
 
-        for line, row in enumerate(reader, start=2):
-            food = food_node(row, line)
+        for line, row in rows:
+            resolved = food_node(row, line)
+            food, food_key = resolved if resolved is not None else (None, None)
 
             raw_quality = (row.get("quality") or "").strip()
             phase_text = (row.get("phase") or "").strip().lower() or "overall"
@@ -187,7 +239,7 @@ def convert(profiles_csv: pathlib.Path, out_path: pathlib.Path,
                 continue
             seen.add(identity)
 
-            entry = EX[f"profile/{slug(row['food_label'])}/{quality_local}/"
+            entry = EX[f"profile/{food_key}/{quality_local}/"
                        f"{phase_local}/{group_local}"]
             graph.add((food, RDFS.label, Literal(row["food_label"].strip())))
             graph.add((food, hto("0000080"), entry))
@@ -204,9 +256,10 @@ def convert(profiles_csv: pathlib.Path, out_path: pathlib.Path,
 
     if tastants_csv is not None:
         with open(tastants_csv) as fh:
-            reader = csv.DictReader(l for l in fh if not l.lstrip().startswith("#"))
-            for line, row in enumerate(reader, start=2):
-                food = food_node(row, line)
+            _, rows = sheet_rows(fh)
+            for line, row in rows:
+                resolved = food_node(row, line)
+                food = resolved[0] if resolved is not None else None
                 tastant = (row.get("tastant") or "").strip()
                 if not CHEBI_RE.match(tastant):
                     errors.append(f"{tastants_csv.name} line {line}: tastant {tastant!r} "

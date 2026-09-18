@@ -124,3 +124,37 @@ def test_full_ontology_label_taster_group_is_accepted(tmp_path):
     g = rdflib.Graph(); g.parse(out, format="turtle")
     groups = set(g.objects(None, rdflib.URIRef(HTO + "0000084")))
     assert rdflib.URIRef(HTO + "0000229") in groups
+
+
+def test_two_foods_sharing_a_label_stay_two_entries(tmp_path):
+    """V9 keys identity on the food node, so the entry IRI must too.
+
+    One row with a FoodOn id and one without are two different foods that
+    happen to share a label. Keying the entry IRI on the label let them pass
+    V9 and then merge, producing a single entry carrying both levels and both
+    sources -- V9 bypassed by the very rows it exists to catch.
+    """
+    sheet = HEADER + (
+        ",pear juice,sweetness,strong,,,personal tasting,X,\n"
+        "FOODON:03301710,pear juice,sweetness,slight,,,personal tasting,Y,\n"
+    )
+    result, out = run(tmp_path, sheet)
+    assert result.returncode == 0, result.stdout + result.stderr
+    g = rdflib.Graph(); g.parse(out, format="turtle")
+    entries = list(g.subjects(RDF.type, rdflib.URIRef(HTO + "0000400")))
+    assert len(entries) == 2, "two foods collapsed onto one profile entry"
+    for entry in entries:
+        assert len(list(g.objects(entry, rdflib.URIRef(HTO + "0000082")))) == 1
+        assert len(list(g.objects(entry, rdflib.URIRef(HTO + "0000093")))) == 1
+
+
+def test_error_line_numbers_are_physical_file_lines(tmp_path):
+    """The shipped template carries thirteen `#` comment lines, so numbering
+    the comment-stripped stream would misdirect every error a newcomer gets.
+    Here the bad row sits on physical line 6."""
+    sheet = ("# one\n# two\n# three\n" + HEADER
+             + ",iyokan juice,bitterness,slight,,,personal tasting,C. Sun,\n"
+             + ",iyokan juice,zestiness,slight,,,personal tasting,C. Sun,\n")
+    result, _ = run(tmp_path, sheet)
+    assert result.returncode == 1
+    assert "line 6:" in result.stderr, result.stderr
