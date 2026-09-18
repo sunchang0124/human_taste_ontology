@@ -1220,7 +1220,7 @@ food_id,food_label,tastant,source_type,source
 ,PROP test strip,CHEBI:8502,expert assertion,the strip is impregnated with PROP
 ```
 
-`PMID:12595690` is the one citation v1 verified and kept (`docs/findings.md` §4). Re-check it with `make verify-citations` before relying on it, and if it does not support limonin in citrus, change `source_type` to `expert assertion` with a plain-language justification rather than hunting for a replacement PMID.
+Correction (ruling R7, after Task 6): this plan originally misattributed `PMID:12595690` as "the one citation v1 verified and kept (`docs/findings.md` §4)" and implied it supports limonin in citrus. Neither is true — `docs/findings.md` does not cite `PMID:12595690` anywhere, and the PMID itself is Kim et al. 2003, *Science*, "Positional cloning of the human quantitative trait locus underlying taste sensitivity to phenylthiocarbamide," on TAS2R38/PTC genetics, with no mention of limonin or citrus. Task 6 re-checked it via `make verify-citations` and direct reading, found it does not support the claim, and recorded the limonin row as `expert assertion` with a plain-language justification instead of a citation. Anyone re-running this plan should not restore `literature`/`PMID:12595690` for that row.
 
 - [ ] **Step 4: Wire up the Makefile**
 

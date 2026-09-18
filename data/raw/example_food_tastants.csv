@@ -1,14 +1,22 @@
 # What each food contains that can elicit a taste. CHEBI CURIEs only.
 #
-# The limonin row was drafted as `literature, PMID:12595690`, the one citation
-# HTO v1 verified and kept (docs/findings.md section 4). Re-checked here via
-# NCBI eutils on 2026-09-18: PMID:12595690 is Kim et al. 2003, Science,
+# The limonin row was drafted as `literature, PMID:12595690`. The plan text
+# describing it as "the one citation HTO v1 verified and kept
+# (docs/findings.md section 4)" was itself a misattribution: docs/findings.md
+# does not cite PMID:12595690 anywhere (ruling R7). Re-checked here via NCBI
+# eutils on 2026-09-18: PMID:12595690 is Kim et al. 2003, Science,
 # "Positional cloning of the human quantitative trait locus underlying taste
 # sensitivity to phenylthiocarbamide" -- TAS2R38 genetics and PROP/PTC bitter
 # taste sensitivity. It says nothing about limonin, citrus, or juice, so it
 # cannot support this row. Rather than hunt for a replacement PMID, the row is
 # recorded as expert assertion with its reasoning stated in plain language.
+# PMID:25615579 (already cited on HTO:0000132 in the ontology) was considered
+# as a substitute citation and rejected too: its abstract discusses "bitter
+# limonoids" as a class in stored citrus juice and never names limonin
+# specifically, so citing it for a limonin-specific claim would repeat the
+# same resolves-but-doesn't-support failure. No PMID is cited on this row.
 food_id,food_label,tastant,source_type,source
-,iyokan juice,CHEBI:16226,expert assertion,"limonin is the limonoid responsible for citrus juice's characteristic delayed bitterness (see HTO:0000132, PMID:25615579); PMID:12595690 does not support this and is not cited here"
+,iyokan juice,CHEBI:16226,expert assertion,limonin is the limonoid responsible for citrus juice's characteristic delayed bitterness; no PMID is cited here because PMID:12595690 is unrelated (TAS2R38/PTC genetics) and PMID:25615579 discusses bitter limonoids as a class without naming limonin specifically
 ,iyokan juice,CHEBI:30769,expert assertion,citrus juice contains citric acid
 ,PROP test strip,CHEBI:8502,expert assertion,the strip is impregnated with PROP
+FOODON:03306174,grapefruit juice,CHEBI:28819,expert assertion,naringin is the flavanone glycoside responsible for grapefruit juice's characteristic bitterness

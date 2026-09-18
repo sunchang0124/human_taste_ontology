@@ -1,6 +1,9 @@
 @prefix hto: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
+hto:FOODON_03306174 rdfs:label "grapefruit juice" ;
+    hto:HTO_0000086 hto:CHEBI_28819 .
+
 <https://w3id.org/hto/data/food/iyokan-juice> rdfs:label "iyokan juice" ;
     hto:HTO_0000080 <https://w3id.org/hto/data/profile/iyokan-juice/0000111/0000214/0000221>,
         <https://w3id.org/hto/data/profile/iyokan-juice/0000112/0000214/0000221>,
