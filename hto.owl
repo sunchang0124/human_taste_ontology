@@ -573,7 +573,12 @@
 
     <!-- http://purl.obolibrary.org/obo/HTO_0000093 -->
 
-    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/HTO_0000093"/>
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/HTO_0000093">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/HTO_0000400"/>
+        <obo:IAO_0000115>The free-text statement of where a taste profile entry&apos;s claim comes from.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:label>source statement</rdfs:label>
+    </owl:DatatypeProperty>
     
 
 
@@ -2009,14 +2014,6 @@
     
 
 
-    <!-- http://www.w3.org/2002/07/owl#DatatypeProperty -->
-
-    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#DatatypeProperty">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-    </owl:Class>
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -2049,12 +2046,6 @@
     <!-- http://purl.obolibrary.org/obo/HTO_0000015 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTO_0000015"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/HTO_0000093 -->
-
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTO_0000093"/>
     
 
 
@@ -2338,11 +2329,6 @@
         <obo:IAO_0000115>An information content entity recording the pair of TAS2R38 haplotypes carried by a person, each haplotype being the combination of the amino acid states at positions 49, 262 and 296.</obo:IAO_0000115>
         <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
         <rdfs:label>TAS2R38 diplotype</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/HTO_0000093">
-        <obo:IAO_0000115>The free-text statement of where a taste profile entry&apos;s claim comes from.</obo:IAO_0000115>
-        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
-        <rdfs:label>source statement</rdfs:label>
     </rdf:Description>
 </rdf:RDF>
 

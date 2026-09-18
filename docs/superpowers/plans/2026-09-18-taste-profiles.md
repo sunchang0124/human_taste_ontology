@@ -111,6 +111,14 @@ def term(local):
     return rdflib.URIRef(HTO + local)
 
 
+# Expected rdflib/OWL types, as rdflib sees them in the parsed, serialised graph.
+# NOTE: the ROBOT template keyword for a data property is `owl:DataProperty`
+# (see properties.tsv's TYPE column); OWL serialises it as `owl:DatatypeProperty`,
+# which is why this dict correctly reads OWL.DatatypeProperty for HTO:0000093
+# below. Writing `owl:DatatypeProperty` in the TEMPLATE ITSELF is a different,
+# silent bug: ROBOT does not recognise it as a keyword, CURIE-resolves it, and
+# types the subject as a named individual of it instead - property/individual
+# punning that OWL 2 DL does not permit, and that dropped the term from hto.obo.
 NEW_PROPERTIES = {
     "0000080": ("has profile entry", OWL.ObjectProperty),
     "0000081": ("entry quality", OWL.ObjectProperty),
@@ -182,7 +190,7 @@ Append these rows to `src/templates/properties.tsv`. Columns, in order, are `ID`
 | HTO:0000090 | demonstrated with | owl:ObjectProperty | HTO:0000410 | CHEBI:24431 | Relates a taste interaction to a chemical entity used as a stimulus in the study that established it. |
 | HTO:0000091 | explained by interaction | owl:ObjectProperty | HTO:0000400 | HTO:0000410 | Relates a taste profile entry to a taste interaction that accounts for the level reported. |
 | HTO:0000092 | level rank | owl:AnnotationProperty | | | The position of an ordinal intensity level in the ordering from absent to intense, as an integer from zero to four. |
-| HTO:0000093 | source statement | owl:DatatypeProperty | HTO:0000400 | | The free-text statement of where a taste profile entry's claim comes from. |
+| HTO:0000093 | source statement | owl:DataProperty | HTO:0000400 | | The free-text statement of where a taste profile entry's claim comes from. |
 | HTO:0000094 | has evidence type | owl:ObjectProperty | HTO:0000400 | HTO:0000240 | Relates a taste profile entry to the kind of evidence its claim rests on. |
 | HTO:0000095 | interaction condition | owl:AnnotationProperty | | | The concentrations, matched intensities or reversals under which a taste interaction was observed. |
 | HTO:0000096 | group defined by status | owl:ObjectProperty | HTO:0000223 | HTO:0000011 | Relates a phenotype-defined taster group to the taster status that defines its membership. |

@@ -1509,9 +1509,6 @@
         }
       }
     }, {
-      "id" : "http://www.w3.org/2002/07/owl#DatatypeProperty",
-      "type" : "CLASS"
-    }, {
       "id" : "http://purl.obolibrary.org/obo/HTO_0000050",
       "lbl" : "has taster",
       "type" : "PROPERTY",
@@ -2060,7 +2057,8 @@
     }, {
       "id" : "http://purl.obolibrary.org/obo/HTO_0000093",
       "lbl" : "source statement",
-      "type" : "INDIVIDUAL",
+      "type" : "PROPERTY",
+      "propertyType" : "DATA",
       "meta" : {
         "definition" : {
           "val" : "The free-text statement of where a taste profile entry's claim comes from."
@@ -2984,10 +2982,6 @@
       "obj" : "http://www.w3.org/2002/07/owl#Thing"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/UBERON_0002448",
-      "pred" : "is_a",
-      "obj" : "http://www.w3.org/2002/07/owl#Thing"
-    }, {
-      "sub" : "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "pred" : "is_a",
       "obj" : "http://www.w3.org/2002/07/owl#Thing"
     }, {

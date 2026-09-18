@@ -37,7 +37,7 @@ HTO:0000089	interaction effect	owl:ObjectProperty	HTO:0000410	HTO:0000230	Relate
 HTO:0000090	demonstrated with	owl:ObjectProperty	HTO:0000410	CHEBI:24431	Relates a taste interaction to a chemical entity used as a stimulus in the study that established it.	HTO:0000000
 HTO:0000091	explained by interaction	owl:ObjectProperty	HTO:0000400	HTO:0000410	Relates a taste profile entry to a taste interaction that accounts for the level reported.	HTO:0000000
 HTO:0000092	level rank	owl:AnnotationProperty			The position of an ordinal intensity level in the ordering from absent to intense, as an integer from zero to four.	HTO:0000000
-HTO:0000093	source statement	owl:DatatypeProperty	HTO:0000400		The free-text statement of where a taste profile entry's claim comes from.	HTO:0000000
+HTO:0000093	source statement	owl:DataProperty	HTO:0000400		The free-text statement of where a taste profile entry's claim comes from.	HTO:0000000
 HTO:0000094	has evidence type	owl:ObjectProperty	HTO:0000400	HTO:0000240	Relates a taste profile entry to the kind of evidence its claim rests on.	HTO:0000000
 HTO:0000095	interaction condition	owl:AnnotationProperty			The concentrations, matched intensities or reversals under which a taste interaction was observed.	HTO:0000000
 HTO:0000096	group defined by status	owl:ObjectProperty	HTO:0000223	HTO:0000011	Relates a phenotype-defined taster group to the taster status that defines its membership.	HTO:0000000
