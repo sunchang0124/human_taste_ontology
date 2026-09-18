@@ -46,27 +46,28 @@ failures (see `docs/findings.md` for the exact competency-question output and
 
 HTO never redefines a term it can import. The authoritative list of every
 external term reused, with the ontology it comes from and why it was pulled
-in, is `src/external_terms.tsv` — currently 56 terms: GO (11), ChEBI (11),
+in, is `src/external_terms.tsv` — currently 57 terms: ChEBI (12), GO (11),
 FoodOn (8), PATO (6), OBA (6), UBERON (4), HP (4), IAO (3), OBI (2), CL (1).
 Each is imported as a small MIREOT-style module under `src/imports/`, built
 by `scripts/build_imports.py` from the OLS4 API (see "Design decisions"
 below for why OLS rather than `robot extract`).
 
 Being imported is not the same as being used, and the list should not be read
-as 56 terms doing work. Most of them are staged for the Matsuyama tasting and
-for the bridge axioms: 12 are referenced by an HTO axiom in
-`src/templates/*.tsv` (the five GO perception processes, `GO:0008150`,
-`PATO:0001241`, `PATO:0002474`, `OBA:VT0001986`, `OBI:0000070`, `IAO:0000030`
-and `IAO:0000032`), 3 FoodOn terms are referenced by the instance data via
-`data/raw/example_samples.csv`, 25 appear as mapping objects in
-`mappings/*.sssom.tsv`, and 24 are declared and imported but not yet
-referenced by any HTO axiom, mapping or datum.
+as 57 terms doing work. Of the 57: 23 are referenced by an HTO axiom in
+`src/templates/*.tsv` (a set that grew in this branch, because the
+interaction rules' `demonstrated_with` column and the food→tastant links both
+cite ChEBI compounds directly), 3 FoodOn terms are referenced by the instance
+data via `data/raw/example_samples.csv` (disjoint from the template-referenced
+set), 25 appear as mapping objects in `mappings/*.sssom.tsv` (18 of which
+overlap with the template-referenced set), and 24 are declared and imported
+but not yet referenced by any HTO axiom, mapping or datum.
 
-## Three-layer structure
+## Four-layer structure
 
 Measured directly from the ROBOT template TSVs and the released `hto.obo`
-(122 `[Term]` stanzas, 17 `[Typedef]` stanzas, imported terms included). HTO
-declares **66 classes** of its own: 26 core, 34 quality, 6 scale.
+(132 `[Term]` stanzas, 32 `[Typedef]` stanzas, 0 `[Instance]` stanzas,
+imported terms included). HTO declares **75 classes** of its own: 26 core,
+34 quality, 6 scale, 9 profile/interaction vocabulary.
 
 - **Layer 1 — Percept core** (`src/templates/core.tsv`, 26 classes; the
   27th row, `HTO:0000000`, is an annotation property, not a class). Reifies
@@ -83,14 +84,20 @@ declares **66 classes** of its own: 26 core, 34 quality, 6 scale.
   total). SSSOM mappings from HTO terms to NCIT, GO, ChEBI, OBA and PATO,
   each with `mapping_justification` and an honestly chosen predicate (see
   below).
+- **Layer 4 — Taste profiles, interactions and taster groups**
+  (`src/templates/profiles.tsv`, 9 classes plus 22 named individuals; and
+  `src/templates/interactions.tsv`, 9 named individuals). Lets a kind of
+  food or drink carry its own taste profile, independent of any tasting
+  event, and lets qualities interact with each other. See
+  "Taste profiles" below.
 
-Supporting modules: `src/templates/properties.tsv` (24 object/data
-properties) and `src/templates/scales.tsv` (6 classes: five rating scales —
-general LMS, LMS, 9-point hedonic scale, visual analogue scale and
-just-about-right scale — plus `HTO:0000305 PROP filter paper strip protocol`,
-which is not a rating scale at all and is parented at `OBI:0000070 assay`: a
-procedure for eliciting a response is not a specification of permitted values
-and anchors).
+Supporting modules: `src/templates/properties.tsv` (42 object/data/annotation
+properties: 32 object, 8 data, 2 annotation) and `src/templates/scales.tsv`
+(6 classes: five rating scales — general LMS, LMS, 9-point hedonic scale,
+visual analogue scale and just-about-right scale — plus `HTO:0000305 PROP
+filter paper strip protocol`, which is not a rating scale at all and is
+parented at `OBI:0000070 assay`: a procedure for eliciting a response is not
+a specification of permitted values and anchors).
 
 ## The tasting sheet
 
@@ -113,6 +120,98 @@ The sheet has a `consent` column, and `sheet2rdf.py` refuses to emit any row
 for a participant unless that column reads `yes`: `data/raw/example_tasting.csv`
 includes one participant (`P99`) who declined consent precisely to exercise
 this gate, and no assertions are produced for them.
+
+## Taste profiles
+
+Everything above this section is about a **percept**: one tasting event, one
+taster, one moment. A **taste profile entry** is a different kind of claim: it
+says that a *kind* of food or drink — satsuma juice in general, not the glass
+someone drank on 18 September — carries a quality at some level, without
+needing a taster to have been in the room. You use a profile entry when you
+want to say "iyokan juice is slightly bitter in the finish" as a fact about
+iyokan juice, the way a tasting note or a spec sheet would, rather than as a
+report of what one person perceived on one occasion.
+
+**The profile sheet**, `data/profile_sheet.csv` (seeded example at
+`data/raw/example_profiles.csv`), has one row per claim:
+
+| Column | Required | Content |
+|---|---|---|
+| `food_id` | no | A FoodOn CURIE, e.g. `FOODON:03301710`. Left blank, the food gets a local identifier instead and is listed in the FoodOn gap report (below). |
+| `food_label` | yes | The name people would actually use, e.g. `iyokan juice`. |
+| `quality` | yes | An HTO taste quality, by label or CURIE, e.g. `bitterness`. |
+| `level` | yes | One of five ordinal levels: `absent`, `slight`, `moderate`, `strong`, `intense`. |
+| `phase` | no | One of `attack`, `mid-palate`, `finish`, `overall`. **Blank means `overall`** — the whole tasting taken together, not any one stage of it. |
+| `taster_group` | no | A named taster group (see below). **Blank means `general population`** — no genotype or phenotype qualifier. |
+| `source_type` | yes | Where the claim comes from: `literature`, `panel data`, `expert assertion`, or `personal tasting`. |
+| `source` | yes | Free text, or a `PMID:…`/`doi:…` when `source_type` is `literature`. |
+| `explained_by` | no | An interaction rule CURIE (see below) that accounts for the level reported. |
+
+The two blank-means-something-specific defaults are the ones easy to miss when
+filling the sheet by hand: an entry with no `phase` is not "unspecified," it
+is asserted to hold across the whole tasting, and an entry with no
+`taster_group` is asserted to hold for tasters generally, not just for
+whoever happened to write the row.
+
+**Recording a group-specific claim.** Not every claim holds for everyone. To
+say something is true only for people with a particular genotype or measured
+phenotype, fill `taster_group` with a seeded group instead of leaving it
+blank — for example `TAS2R38 PAV/PAV taster group`, `TAS2R38 AVI/AVI taster
+group`, `PROP non-taster group`, `PROP medium-taster group`, or `PROP
+super-taster group`. The seed data does exactly this for PROP bitterness: the
+same quality, at three different levels, filed as three rows that differ only
+in `taster_group`. A `personal tasting` row from one named source is a
+first-class claim too — it just has to say so honestly as its `source_type`.
+
+**Interactions.** Some qualities change how strongly another quality reads —
+sweetness commonly suppresses bitterness, for instance. HTO ships nine such
+rules as `HTO:0000410 taste interaction` individuals, each citing a real
+psychophysics paper, naming the actual compounds it was tested with, and
+stating a direction (never "sweet and bitter interact," always "sweetness
+suppresses bitterness"). A profile entry can point at one of these rules
+through `explained_by`, to say *why* a level reads the way it does rather
+than just asserting that it does. The full table, generated from
+`src/templates/interactions.tsv`, is `docs/interactions.md`.
+
+**What a food contains**, as opposed to what it tastes like, is recorded
+separately, in a sheet of its own: `food_id, food_label, tastant,
+source_type, source` (seed data at `data/raw/example_food_tastants.csv`; no
+blank template ships yet, only the seed). This is a fact about the food's
+chemistry, not one more line of its taste profile.
+
+**The FoodOn gap report.** Many real foods — iyokan is the case that started
+this project — have no FoodOn term. Rather than force a profile entry onto
+the wrong FoodOn class, a blank `food_id` gets a local IRI and is listed in
+the generated `docs/needs-foodon.md`, which feeds the upstream new-term
+requests in `docs/term-requests/`.
+
+**Building it:** `make profiles` runs `scripts/profile2rdf.py` over the seed
+profile and tastant sheets and writes `data/rdf/profiles.ttl` plus
+`docs/needs-foodon.md`. It is also run automatically as part of `make
+validate`. Every validation failure is a rejection with a line number, and a
+sheet with even one bad row produces no graph at all — partial output would
+be worse than none.
+
+**Two things this layer does not give you, said plainly rather than left for
+you to discover:**
+
+- **Named individuals — the four vocabularies above (levels, phases, taster
+  groups, evidence types) and all nine interaction rules — do not reach the
+  OBO release.** `hto.obo` contains zero `[Instance]` stanzas; the classes
+  (`HTO:0000400 taste profile entry`, `HTO:0000410 taste interaction`, and
+  so on) are there, but none of the individuals asserted on them are. This
+  is not a bug in this branch — it is how ROBOT's OBO conversion treats
+  named individuals in general, and it affects the pre-existing slot
+  vocabularies exactly as it affects the interactions table. If you download
+  `hto.obo` and go looking for the interaction table or the level
+  vocabulary, you will not find it there. Use `hto.owl` or `hto.json`
+  instead; both carry every individual.
+- **A profile entry is a claim, not a measurement**, and levels are not
+  comparable across sources — one person's *strong* is another's *moderate*,
+  and a `personal tasting` level is not commensurate with a `literature`
+  level from a different study. A profile row does not require any tasters
+  at all, so this layer is not evidence about what any population perceives.
+  See `docs/findings.md` for the full statement of this limitation.
 
 ## Design decisions and deviations
 
@@ -176,5 +275,9 @@ this gate, and no assertions are produced for them.
   data does and does not demonstrate, the competency-question results, and
   the full limitations section.
 - `docs/pato-gap-report.md` — generated gap table (`scripts/gap_report.py`).
+- `docs/interactions.md` — the full taste interaction table, generated by
+  `scripts/interactions_md.py` from `src/templates/interactions.tsv`.
+- `docs/needs-foodon.md` — generated report of foods with no FoodOn term,
+  written by `scripts/profile2rdf.py`.
 - `docs/term-requests/` — ready-to-paste upstream new-term requests for PATO
   and FoodOn.

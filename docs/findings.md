@@ -330,3 +330,89 @@ Expanded from the design spec, §11:
 - **The PURL will not resolve.** `http://purl.obolibrary.org/obo/HTO_*`
   IRIs are minted and used throughout, but OBO Foundry registration has not
   happened; the PURL redirect will not work until it does.
+- **A taste profile entry is a claim, not a measurement (spec §11 R2, R4).**
+  Ordinal levels are not comparable across sources: one person's *strong* is
+  another's *moderate*, and a level recorded from panel data is not
+  commensurate with one recorded from a juice stand. `source_type` is
+  mandatory precisely so this can be triaged rather than silently averaged.
+  More fundamentally, a profile row needs no tasters at all — a food's
+  profile can be entered from a single person's own tasting, from an expert's
+  unaccompanied judgement, or from a paper's reported levels, without any
+  claim about how many people were involved or how they were sampled.
+  Nothing in this layer is evidence about what a population perceives. The
+  existing limitation above, that twenty tasters is a demonstration and not a
+  study, applies to this layer with more force, because this layer does not
+  even promise twenty.
+
+## 8. The taste profile layer: three things worth stating plainly
+
+### 8.1 Named individuals do not reach `hto.obo`
+
+`hto.obo` contains **zero `[Instance]` stanzas** (`grep -c "^\[Instance\]"
+hto.obo` → `0`). The four slot vocabularies introduced in Task 2
+(`HTO:0000200` taste intensity level and its five levels, `HTO:0000210`
+tasting phase and its four phases, `HTO:0000220` taster group and its eight
+seeded groups, `HTO:0000240` evidence type and its four types, plus
+`HTO:0000230` taste interaction effect and its two effects — 22 named
+individuals in `src/templates/profiles.tsv`) and all nine interaction rules
+from Task 4 (`HTO:0000411`–`HTO:0000419`, individuals of `HTO:0000410 taste
+interaction`) are consequently **entirely absent from the OBO release**. The
+classes that hold them (`HTO:0000400`, `HTO:0000410`, `HTO:0000200`,
+`HTO:0000210`, `HTO:0000220`, `HTO:0000230`, `HTO:0000240`, and their
+subclasses) do appear as ordinary `[Term]` stanzas — only the individuals
+asserted on those classes vanish. Verified directly: `HTO:0000411` and
+`HTO:0000221` each occur multiple times in `hto.owl` and `hto.json`, and zero
+times anywhere in `hto.obo`.
+
+This was discovered while building Task 4's interaction table and confirmed
+to affect Task 2's vocabularies equally, so it is a property of how ROBOT's
+OBO conversion handles named individuals in general, not a defect introduced
+by either task. Anyone who downloads only `hto.obo` and looks for the
+interaction table, the level vocabulary or the taster groups will not find
+them there; `hto.owl` and `hto.json` carry every individual and are the
+formats to use for this layer. See the README's "Taste profiles" section for
+the same statement aimed at a first-time reader.
+
+### 8.2 `food_tastants.csv` carries provenance the RDF does not
+
+The food→tastant sheet (spec §5's `food_tastants.csv`; seed data at
+`data/raw/example_food_tastants.csv`, no blank template ships yet) has
+`source_type` and `source` columns, and `scripts/profile2rdf.py` validates
+that both are present (and, when `source_type` is empty, rejects the row) —
+but the emitted RDF asserts only the plain triple `food contains tastant
+tastant` (`HTO:0000086`). Neither `source_type` nor `source` is written to
+`data/rdf/profiles.ttl`; the provenance is checked at conversion time and
+then discarded. This is deliberate, not an oversight: a plain triple has
+nowhere to hang provenance without reifying it, the way `HTO:0000400 taste
+profile entry` reifies a profile claim, and adding a third reified class
+purely to carry two provenance strings for a food-composition fact was
+judged not worth it for v1. The provenance stays readable in the CSV; anyone
+who needs it must read the sheet, not the graph. If this is ever
+unacceptable, the fix is a reified "tastant claim" class analogous to
+`HTO:0000400`, and it belongs in a follow-up release, not a patch to this
+one.
+
+### 8.3 A citation discrepancy on `HTO:0000132`, recorded for triage
+
+`src/templates/qualities.tsv` row `HTO:0000132 limonoid bitterness` (v1
+content, predating this branch) cites `PMID:25615579` and its `rdfs:comment`
+reads "the bitterness elicited by limonoid triterpenoids, **notably
+limonin**, which forms from a tasteless precursor after citrus fruit is
+juiced." Fetched and read directly (NCBI eutils, 2026-09-18): PMID:25615579
+is Raithore et al. 2015, *J Sci Food Agric* 96(2):422-9, "Development of
+delayed bitterness and effect of harvest date in stored juice from two
+complex citrus hybrids." The paper is genuinely about delayed bitterness in
+stored citrus juice and does discuss "bitter limonoids" throughout — but as a
+class. Neither its title nor its abstract names limonin specifically; the
+compound is never singled out. The comment's "notably limonin" is therefore
+not supported by this citation as written.
+
+This was noticed independently while writing `data/raw/example_food_tastants.csv`
+in Task 6, whose header comment already documents rejecting `PMID:25615579`
+as a substitute citation for a limonin-specific claim in that CSV, for
+exactly this reason. That comment covers the CSV row it sits next to; it does
+not cover `HTO:0000132` in the ontology proper, which is why the discrepancy
+is recorded here as well. This is v1 content and this task does not change
+the term — the fix (either drop "notably limonin" from the comment, or find a
+citation that names limonin specifically) is left for triage rather than
+made unilaterally here.
