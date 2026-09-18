@@ -419,27 +419,57 @@ unacceptable, the fix is a reified "tastant claim" class analogous to
 `HTO:0000400`, and it belongs in a follow-up release, not a patch to this
 one.
 
-### 8.3 A citation discrepancy on `HTO:0000132`, recorded for triage
+### 8.3 Two terms asserted more than `PMID:25615579` carries, and what was done
 
-`src/templates/qualities.tsv` row `HTO:0000132 limonoid bitterness` (v1
-content, predating this branch) cites `PMID:25615579` and its `rdfs:comment`
-reads "the bitterness elicited by limonoid triterpenoids, **notably
-limonin**, which forms from a tasteless precursor after citrus fruit is
-juiced." Fetched and read directly (NCBI eutils, 2026-09-18): PMID:25615579
-is Raithore et al. 2015, *J Sci Food Agric* 96(2):422-9, "Development of
-delayed bitterness and effect of harvest date in stored juice from two
-complex citrus hybrids." The paper is genuinely about delayed bitterness in
-stored citrus juice and does discuss "bitter limonoids" throughout — but as a
-class. Neither its title nor its abstract names limonin specifically; the
-compound is never singled out. The comment's "notably limonin" is therefore
-not supported by this citation as written.
+Both `HTO:0000132 limonoid bitterness` and `HTO:0000154 delayed bitterness`
+in `src/templates/qualities.tsv` cite `PMID:25615579`, and both asserted more
+than that citation supports. Fetched and read directly (NCBI eutils,
+2026-09-18, and again before this fix): `PMID:25615579` is Raithore et al.
+2015, *J Sci Food Agric* 96(2):422-9, "Development of delayed bitterness and
+effect of harvest date in stored juice from two complex citrus hybrids." The
+paper is genuinely about delayed bitterness in stored citrus juice, and does
+discuss "bitter limonoids" throughout — but only as a class. Neither its title
+nor its abstract names limonin, and neither states the tasteless-precursor
+mechanism.
 
-This was noticed independently while writing `data/raw/example_food_tastants.csv`
-in Task 6, whose header comment already documents rejecting `PMID:25615579`
-as a substitute citation for a limonin-specific claim in that CSV, for
-exactly this reason. That comment covers the CSV row it sits next to; it does
-not cover `HTO:0000132` in the ontology proper, which is why the discrepancy
-is recorded here as well. This is v1 content and this task does not change
-the term — the fix (either drop "notably limonin" from the comment, or find a
-citation that names limonin specifically) is left for triage rather than
-made unilaterally here.
+The annotations at issue were:
+
+- **`HTO:0000132`, `IAO:0000115` (the *definition*, not the `rdfs:comment`,
+  which was empty):** "The bitterness elicited by limonoid triterpenoids,
+  **notably limonin**, **which forms from a tasteless precursor** after citrus
+  fruit is juiced." Two claims — a named compound and a mechanism — neither of
+  them in the abstract.
+- **`HTO:0000154`, `rdfs:comment`:** "Characteristic of citrus juice, **where
+  limonin forms after juicing**." Same two claims, same citation.
+
+An earlier version of this section named `rdfs:comment` as the property
+carrying the `HTO:0000132` text (it is the definition), and did not mention
+`HTO:0000154` at all. Both are corrected here.
+
+**What was done.** The claims are very likely true in the world; the standard
+this repository set is abstract-level support for what a citation is made to
+carry, and shipping a release that refuses `PMID:25615579` for a limonin
+claim in `data/raw/example_food_tastants.csv` while asserting one from it in
+the OWL is an internal inconsistency. So:
+
+- `HTO:0000132`'s definition now reads "The bitterness elicited by limonoid
+  triterpenoids, the compound class whose bitterness develops in citrus juice
+  after juicing and storage" — the class-level claim the abstract does make.
+- The limonin and precursor statements move into `HTO:0000132`'s
+  `rdfs:comment`, where they are explicitly labelled editorial and explicitly
+  said not to be carried by the citation. The comment also flags the term's
+  `HTO:0000085 elicited by tastant` axiom to `CHEBI:16226 limonin` as a
+  curatorial modelling choice on the same footing, since that axiom names the
+  compound too.
+- `HTO:0000154`'s comment now says what the cited study observed — delayed
+  bitterness developing in mandarin-hybrid juice stored for more than four
+  hours — instead of asserting the limonin mechanism.
+
+The `rdfs:comment` route rather than an `IAO:0000119 HTO:0000000` source was
+forced by the template's shape: `src/templates/qualities.tsv` has a single
+`A IAO:0000119` column, which annotates the term rather than any one
+annotation on it, so a per-annotation "curator asserted" source is not
+expressible without restructuring the template. The comment therefore states
+its own editorial status in prose, which is unambiguous to a reader even
+though it is not machine-readable. Restructuring the template to carry
+per-annotation sources is a follow-up, not a patch to this release.
