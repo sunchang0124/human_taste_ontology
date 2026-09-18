@@ -1257,6 +1257,12 @@
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0050916"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/HTO_0000085"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_17992"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115>The basic taste quality typically elicited by sucrose and other sugars, transduced by the TAS1R2 and TAS1R3 receptor pair.</obo:IAO_0000115>
         <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
         <rdfs:comment>PATO has no term for this quality as of 2026-09-17; proposed to PATO.</rdfs:comment>
@@ -1275,6 +1281,12 @@
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0050915"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/HTO_0000085"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_30769"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115>The basic taste quality typically elicited by citric acid and other acids, transduced by proton-sensitive channels of taste receptor cells.</obo:IAO_0000115>
         <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
         <rdfs:comment>PATO has no term for this quality as of 2026-09-17; proposed to PATO.</rdfs:comment>
@@ -1291,6 +1303,12 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/HTO_0000061"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0050914"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/HTO_0000085"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_26710"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>The basic taste quality typically elicited by sodium chloride. The epithelial sodium channel is implicated in its transduction, and is well supported in rodents, but a substantial part of human salt taste is amiloride-insensitive and the channel&apos;s role in humans remains contested.</obo:IAO_0000115>
@@ -1327,6 +1345,12 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/HTO_0000061"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0050917"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/HTO_0000085"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_16015"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>The basic taste quality typically elicited by L-glutamate and by certain ribonucleotides, transduced by the TAS1R1 and TAS1R3 receptor pair.</obo:IAO_0000115>
@@ -1419,6 +1443,12 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000131">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HTO_0000130"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/HTO_0000085"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_8502"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115>The bitterness elicited by compounds bearing a thiourea group, notably phenylthiocarbamide and propylthiouracil, detected by TAS2R38.</obo:IAO_0000115>
         <obo:IAO_0000119>PMID:12595690</obo:IAO_0000119>
         <rdfs:comment>The quality whose perception varies most sharply between people.</rdfs:comment>
@@ -1431,6 +1461,12 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000132">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HTO_0000130"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/HTO_0000085"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_16226"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115>The bitterness elicited by limonoid triterpenoids, notably limonin, which forms from a tasteless precursor after citrus fruit is juiced.</obo:IAO_0000115>
         <obo:IAO_0000119>PMID:25615579</obo:IAO_0000119>
         <rdfs:label>limonoid bitterness</rdfs:label>
@@ -1442,6 +1478,12 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000133">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HTO_0000130"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/HTO_0000085"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_28819"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115>The bitterness elicited by flavanone glycosides, notably naringin, characteristic of grapefruit and pomelo.</obo:IAO_0000115>
         <obo:IAO_0000119>PMID:9250119</obo:IAO_0000119>
         <rdfs:label>flavanone bitterness</rdfs:label>
@@ -1453,6 +1495,12 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HTO_0000134">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HTO_0000130"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/HTO_0000085"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_27732"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115>The bitterness elicited by plant alkaloids such as quinine and caffeine.</obo:IAO_0000115>
         <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
         <rdfs:label>alkaloid bitterness</rdfs:label>
@@ -1578,6 +1626,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HTO_0000152"/>
         <obo:IAO_0000115>An aftertaste that is bitter in quality.</obo:IAO_0000115>
         <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:comment>Prefer the post-coordinated form for new data: a taste profile entry with entry quality bitterness and entry phase finish. This term is retained for continuity and is accepted by scripts/profile2rdf.py, which normalises it to that form.</rdfs:comment>
         <rdfs:label>lingering bitterness</rdfs:label>
     </owl:Class>
     
@@ -1589,7 +1638,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HTO_0000152"/>
         <obo:IAO_0000115>A bitterness that is absent or weak when the stimulus is first tasted and appears or strengthens over subsequent minutes to hours.</obo:IAO_0000115>
         <obo:IAO_0000119>PMID:25615579</obo:IAO_0000119>
-        <rdfs:comment>Characteristic of citrus juice, where limonin forms after juicing.</rdfs:comment>
+        <rdfs:comment>Characteristic of citrus juice, where limonin forms after juicing. Prefer the post-coordinated form for new data: a taste profile entry with entry quality bitterness and entry phase finish. This term is retained for continuity — the published walkthrough cites it — and is accepted by scripts/profile2rdf.py, which normalises it to that form.</rdfs:comment>
         <rdfs:label>delayed bitterness</rdfs:label>
     </owl:Class>
     

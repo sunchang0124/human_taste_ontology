@@ -149,3 +149,39 @@ def test_the_two_reified_classes_exist():
     g = graph()
     for local in ("0000400", "0000410"):
         assert (term(local), RDF.type, OWL.Class) in g
+
+
+ELICITATION = {
+    "0000111": "CHEBI_17992",  # sweetness      <- sucrose
+    "0000112": "CHEBI_30769",  # sourness       <- citric acid
+    "0000113": "CHEBI_26710",  # saltiness      <- sodium chloride
+    "0000115": "CHEBI_16015",  # umami          <- L-glutamic acid
+    "0000131": "CHEBI_8502",   # thiourea bitterness  <- PROP
+    "0000132": "CHEBI_16226",  # limonoid bitterness  <- limonin
+    "0000133": "CHEBI_28819",  # flavanone bitterness <- naringin
+    "0000134": "CHEBI_27732",  # alkaloid bitterness  <- caffeine
+}
+
+
+def test_qualities_are_linked_to_the_tastants_that_elicit_them():
+    """Each link is an existential restriction, not an annotation: cq13 walks it
+    to find foods containing a tastant whose quality nobody has annotated."""
+    g = graph()
+    elicited_by = term("0000085")
+    for quality, chebi in ELICITATION.items():
+        found = False
+        for restriction in g.objects(term(quality), RDFS.subClassOf):
+            if (restriction, OWL.onProperty, elicited_by) in g and (
+                restriction,
+                OWL.someValuesFrom,
+                rdflib.URIRef("http://purl.obolibrary.org/obo/" + chebi),
+            ) in g:
+                found = True
+        assert found, f"HTO:{quality} is not linked to {chebi}"
+
+
+def test_the_two_precoordinated_temporal_terms_name_their_preferred_form():
+    g = graph()
+    for local in ("0000153", "0000154"):
+        comments = " ".join(str(c) for c in g.objects(term(local), RDFS.comment))
+        assert "finish" in comments.lower(), f"HTO:{local} does not name the preferred form"

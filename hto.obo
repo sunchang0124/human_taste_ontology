@@ -388,6 +388,7 @@ def: "The basic taste quality typically elicited by sucrose and other sugars, tr
 comment: PATO has no term for this quality as of 2026-09-17; proposed to PATO.
 is_a: HTO:0000110 ! basic taste quality
 relationship: HTO:0000061 GO:0050916 ! perceived via sensory perception of sweet taste
+relationship: HTO:0000085 CHEBI:17992 ! elicited by tastant sucrose
 property_value: IAO:0000119 "HTO:0000000" xsd:string
 
 [Term]
@@ -397,6 +398,7 @@ def: "The basic taste quality typically elicited by citric acid and other acids,
 comment: PATO has no term for this quality as of 2026-09-17; proposed to PATO.
 is_a: HTO:0000110 ! basic taste quality
 relationship: HTO:0000061 GO:0050915 ! perceived via sensory perception of sour taste
+relationship: HTO:0000085 CHEBI:30769 ! elicited by tastant citric acid
 property_value: IAO:0000119 "HTO:0000000" xsd:string
 
 [Term]
@@ -406,6 +408,7 @@ def: "The basic taste quality typically elicited by sodium chloride. The epithel
 comment: PATO has no term for this quality as of 2026-09-17; proposed to PATO.
 is_a: HTO:0000110 ! basic taste quality
 relationship: HTO:0000061 GO:0050914 ! perceived via sensory perception of salty taste
+relationship: HTO:0000085 CHEBI:26710 ! elicited by tastant sodium chloride
 property_value: IAO:0000119 "HTO:0000000" xsd:string
 
 [Term]
@@ -424,6 +427,7 @@ def: "The basic taste quality typically elicited by L-glutamate and by certain r
 comment: PATO has no term for this quality as of 2026-09-17; proposed to PATO.
 is_a: HTO:0000110 ! basic taste quality
 relationship: HTO:0000061 GO:0050917 ! perceived via sensory perception of umami taste
+relationship: HTO:0000085 CHEBI:16015 ! elicited by tastant L-glutamic acid
 property_value: IAO:0000119 "HTO:0000000" xsd:string
 
 [Term]
@@ -482,6 +486,7 @@ name: thiourea bitterness
 def: "The bitterness elicited by compounds bearing a thiourea group, notably phenylthiocarbamide and propylthiouracil, detected by TAS2R38." []
 comment: The quality whose perception varies most sharply between people.
 is_a: HTO:0000130 ! bitterness subtype
+relationship: HTO:0000085 CHEBI:8502 ! elicited by tastant 6-propyl-2-thiouracil
 property_value: IAO:0000119 "PMID:12595690" xsd:string
 
 [Term]
@@ -489,6 +494,7 @@ id: HTO:0000132
 name: limonoid bitterness
 def: "The bitterness elicited by limonoid triterpenoids, notably limonin, which forms from a tasteless precursor after citrus fruit is juiced." []
 is_a: HTO:0000130 ! bitterness subtype
+relationship: HTO:0000085 CHEBI:16226 ! elicited by tastant limonin
 property_value: IAO:0000119 "PMID:25615579" xsd:string
 
 [Term]
@@ -496,6 +502,7 @@ id: HTO:0000133
 name: flavanone bitterness
 def: "The bitterness elicited by flavanone glycosides, notably naringin, characteristic of grapefruit and pomelo." []
 is_a: HTO:0000130 ! bitterness subtype
+relationship: HTO:0000085 CHEBI:28819 ! elicited by tastant naringin
 property_value: IAO:0000119 "PMID:9250119" xsd:string
 
 [Term]
@@ -503,6 +510,7 @@ id: HTO:0000134
 name: alkaloid bitterness
 def: "The bitterness elicited by plant alkaloids such as quinine and caffeine." []
 is_a: HTO:0000130 ! bitterness subtype
+relationship: HTO:0000085 CHEBI:27732 ! elicited by tastant caffeine
 property_value: IAO:0000119 "HTO:0000000" xsd:string
 
 [Term]
@@ -581,6 +589,7 @@ property_value: IAO:0000119 "SNOMEDCT:110365009" xsd:string
 id: HTO:0000153
 name: lingering bitterness
 def: "An aftertaste that is bitter in quality." []
+comment: Prefer the post-coordinated form for new data: a taste profile entry with entry quality bitterness and entry phase finish. This term is retained for continuity and is accepted by scripts/profile2rdf.py, which normalises it to that form.
 is_a: HTO:0000152 ! aftertaste
 property_value: IAO:0000119 "HTO:0000000" xsd:string
 
@@ -588,7 +597,7 @@ property_value: IAO:0000119 "HTO:0000000" xsd:string
 id: HTO:0000154
 name: delayed bitterness
 def: "A bitterness that is absent or weak when the stimulus is first tasted and appears or strengthens over subsequent minutes to hours." []
-comment: Characteristic of citrus juice, where limonin forms after juicing.
+comment: Characteristic of citrus juice, where limonin forms after juicing. Prefer the post-coordinated form for new data: a taste profile entry with entry quality bitterness and entry phase finish. This term is retained for continuity — the published walkthrough cites it — and is accepted by scripts/profile2rdf.py, which normalises it to that form.
 is_a: HTO:0000152 ! aftertaste
 property_value: IAO:0000119 "PMID:25615579" xsd:string
 
