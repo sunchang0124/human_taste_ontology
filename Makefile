@@ -24,6 +24,13 @@ tmp/%.owl: src/templates/%.tsv | tmp
 tmp/qualities.owl: src/templates/qualities.tsv tmp/properties.owl | tmp
 	$(ROBOT) template --input tmp/properties.owl --template $< $(PREFIX) --output $@
 
+# profiles.tsv asserts I HTO:0000096 / I HTO:0000097 and AT HTO:0000092 on named
+# individuals. As with qualities.tsv, templating it in isolation leaves ROBOT
+# guessing at those properties' types; passing the built properties module as
+# --input supplies them. None of its axioms are copied into the output.
+tmp/profiles.owl: src/templates/profiles.tsv tmp/properties.owl | tmp
+	$(ROBOT) template --input tmp/properties.owl --template $< $(PREFIX) --output $@
+
 MODULES = $(patsubst src/templates/%.tsv,tmp/%.owl,$(TEMPLATES))
 
 build: $(MODULES) | tmp

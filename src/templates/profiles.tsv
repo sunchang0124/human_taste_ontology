@@ -1,0 +1,33 @@
+ID	LABEL	TYPE	SC %	group defined by status	group defined by diplotype	level rank	definition	definition source
+ID	LABEL	TYPE	SC %	I HTO:0000096	I HTO:0000097	AT HTO:0000092^^xsd:integer	A IAO:0000115	A IAO:0000119
+HTO:0000200	taste intensity level	owl:Class					An ordinal degree at which a perceptual taste quality is reported to be present in a kind of food or drink.	HTO:0000000
+HTO:0000210	tasting phase	owl:Class					A stage of a single tasting, from the first contact of the sample with the tongue to the sensation remaining after swallowing.	HTO:0000000
+HTO:0000220	taster group	owl:Class					A group of human tasters sharing a characteristic relevant to how they perceive taste.	HTO:0000000
+HTO:0000222	genotype-defined taster group	owl:Class	HTO:0000220				A taster group whose membership is defined by a genotype at a taste receptor locus.	HTO:0000000
+HTO:0000223	phenotype-defined taster group	owl:Class	HTO:0000220				A taster group whose membership is defined by a measured taste phenotype rather than by genotype.	HTO:0000000
+HTO:0000230	taste interaction effect	owl:Class					The direction in which one perceptual taste quality alters the perceived intensity of another.	HTO:0000000
+HTO:0000240	evidence type	owl:Class					The kind of evidence on which a taste profile entry's claim rests.	HTO:0000000
+HTO:0000400	taste profile entry	owl:Class					One line of the taste profile of a kind of food or drink: a single quality, at a single ordinal level, at a single phase of the tasting, holding for a single group of tasters, from a single source.	HTO:0000000
+HTO:0000410	taste interaction	owl:Class					An asserted relation in which the presence of one perceptual taste quality alters the perceived intensity of another, as established by a cited study using named chemical stimuli.	HTO:0000000
+HTO:0000201	absent	HTO:0000200				0	The intensity level at which a quality is reported not to be perceptible at all.	HTO:0000000
+HTO:0000202	slight	HTO:0000200				1	The intensity level at which a quality is reported as just perceptible.	HTO:0000000
+HTO:0000203	moderate	HTO:0000200				2	The intensity level at which a quality is reported as clearly present without dominating.	HTO:0000000
+HTO:0000204	strong	HTO:0000200				3	The intensity level at which a quality is reported as dominating the taste.	HTO:0000000
+HTO:0000205	intense	HTO:0000200				4	The intensity level at which a quality is reported as close to the strongest the taster can imagine.	HTO:0000000
+HTO:0000211	attack	HTO:0000210					The phase of a tasting from first contact of the sample with the tongue to the first clear perception.	HTO:0000000
+HTO:0000212	mid-palate	HTO:0000210					The phase of a tasting while the sample is held in the mouth, after the first perception and before swallowing or expectoration.	HTO:0000000
+HTO:0000213	finish	HTO:0000210					The phase of a tasting after the sample leaves the mouth, in which remaining and newly emerging sensations are perceived.	HTO:0000000
+HTO:0000214	overall	HTO:0000210					The whole of a tasting taken together, used when a report does not distinguish phases.	HTO:0000000
+HTO:0000221	general population	HTO:0000220					The taster group comprising human tasters generally, used when a claim is not qualified by genotype or phenotype.	HTO:0000000
+HTO:0000231	suppression	HTO:0000230					The effect in which the presence of the agent quality lowers the perceived intensity of the target quality.	HTO:0000000
+HTO:0000232	enhancement	HTO:0000230					The effect in which the presence of the agent quality raises the perceived intensity of the target quality.	HTO:0000000
+HTO:0000241	literature	HTO:0000240					Evidence consisting of a published study identified by a persistent identifier.	HTO:0000000
+HTO:0000242	panel data	HTO:0000240					Evidence consisting of ratings collected from a trained or untrained sensory panel.	HTO:0000000
+HTO:0000243	expert assertion	HTO:0000240					Evidence consisting of the judgement of a person with domain expertise, unaccompanied by data.	HTO:0000000
+HTO:0000244	personal tasting	HTO:0000240					Evidence consisting of one person's own tasting, recorded without a panel or a published source.	HTO:0000000
+HTO:0000224	TAS2R38 PAV/PAV taster group	HTO:0000222			HTO:0000015		The genotype-defined taster group whose members carry the PAV haplotype of TAS2R38 on both chromosomes.	HTO:0000000
+HTO:0000225	TAS2R38 PAV/AVI taster group	HTO:0000222			HTO:0000015		The genotype-defined taster group whose members carry one PAV and one AVI haplotype of TAS2R38.	HTO:0000000
+HTO:0000226	TAS2R38 AVI/AVI taster group	HTO:0000222			HTO:0000015		The genotype-defined taster group whose members carry the AVI haplotype of TAS2R38 on both chromosomes.	HTO:0000000
+HTO:0000227	PROP non-taster group	HTO:0000223		HTO:0000012			The phenotype-defined taster group whose members report no bitterness from a propylthiouracil filter-paper strip.	HTO:0000000
+HTO:0000228	PROP medium-taster group	HTO:0000223		HTO:0000013			The phenotype-defined taster group whose members report moderate bitterness from a propylthiouracil filter-paper strip.	HTO:0000000
+HTO:0000229	PROP super-taster group	HTO:0000223		HTO:0000014			The phenotype-defined taster group whose members report intense bitterness from a propylthiouracil filter-paper strip.	HTO:0000000
