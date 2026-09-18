@@ -1,0 +1,21 @@
+# Seed profiles. Citrus rows are one person's tasting, recorded as such.
+# The PROP rows are the only literature-sourced ones, and they are about the
+# strip, not about any juice: PMID:37242298 measured PROP thresholds by TAS2R38
+# diplotype and says nothing about citrus.
+#
+# FoodOn coverage checked against https://www.ebi.ac.uk/ols4/api/search on
+# 2026-09-18: FoodOn has terms for the satsuma fruit (e.g. FOODON:03541462,
+# FOODON:03401510) and for a generic "mandarin orange juice" (FOODON:00002019,
+# parent of tangerine juice), but none names satsuma juice specifically, and
+# none names iyokan at all (see docs/term-requests/foodon-iyokan.md). Rather
+# than round a specific juice up to a broader or unrelated FoodOn class, all
+# three food_id cells below are left blank; see docs/needs-foodon.md.
+food_id,food_label,quality,level,phase,taster_group,source_type,source,explained_by
+,satsuma juice,sweetness,strong,,,personal tasting,C. Sun 2026-09-18,
+,satsuma juice,sourness,moderate,,,personal tasting,C. Sun 2026-09-18,
+,iyokan juice,sourness,strong,,,personal tasting,C. Sun 2026-09-18,
+,iyokan juice,sweetness,moderate,,,personal tasting,C. Sun 2026-09-18,
+,iyokan juice,bitterness,slight,finish,,personal tasting,C. Sun 2026-09-18,HTO:0000411
+,PROP test strip,bitterness,intense,overall,TAS2R38 PAV/PAV,literature,PMID:37242298,
+,PROP test strip,bitterness,moderate,overall,TAS2R38 PAV/AVI,literature,PMID:37242298,
+,PROP test strip,bitterness,absent,overall,TAS2R38 AVI/AVI,literature,PMID:37242298,

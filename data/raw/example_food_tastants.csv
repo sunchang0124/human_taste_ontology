@@ -1,0 +1,14 @@
+# What each food contains that can elicit a taste. CHEBI CURIEs only.
+#
+# The limonin row was drafted as `literature, PMID:12595690`, the one citation
+# HTO v1 verified and kept (docs/findings.md section 4). Re-checked here via
+# NCBI eutils on 2026-09-18: PMID:12595690 is Kim et al. 2003, Science,
+# "Positional cloning of the human quantitative trait locus underlying taste
+# sensitivity to phenylthiocarbamide" -- TAS2R38 genetics and PROP/PTC bitter
+# taste sensitivity. It says nothing about limonin, citrus, or juice, so it
+# cannot support this row. Rather than hunt for a replacement PMID, the row is
+# recorded as expert assertion with its reasoning stated in plain language.
+food_id,food_label,tastant,source_type,source
+,iyokan juice,CHEBI:16226,expert assertion,"limonin is the limonoid responsible for citrus juice's characteristic delayed bitterness (see HTO:0000132, PMID:25615579); PMID:12595690 does not support this and is not cited here"
+,iyokan juice,CHEBI:30769,expert assertion,citrus juice contains citric acid
+,PROP test strip,CHEBI:8502,expert assertion,the strip is impregnated with PROP

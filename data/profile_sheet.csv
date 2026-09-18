@@ -1,0 +1,14 @@
+# HTO taste profile sheet. One row per quality you want to record about one food or drink.
+# food_id      a FoodOn CURIE such as FOODON:03301710; leave blank if you do not know one
+# food_label   what the thing is called, e.g. "iyokan juice"
+# quality      an HTO quality: sweetness, sourness, saltiness, bitterness, umami,
+#              astringency, kokumi, fattiness, ... (see docs or hto.obo for the full list)
+# level        absent | slight | moderate | strong | intense
+# phase        attack | mid-palate | finish | overall   (blank means overall)
+# taster_group blank means the general population; otherwise e.g. TAS2R38 PAV/PAV,
+#              PROP super-taster
+# source_type  literature | panel data | expert assertion | personal tasting
+# source       a PMID: or doi: when source_type is literature; otherwise who says so, and when
+# explained_by optional HTO interaction id, e.g. HTO:0000411, when a known interaction
+#              accounts for the level you recorded
+food_id,food_label,quality,level,phase,taster_group,source_type,source,explained_by

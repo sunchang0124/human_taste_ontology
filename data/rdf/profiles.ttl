@@ -1,0 +1,85 @@
+@prefix hto: <http://purl.obolibrary.org/obo/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://w3id.org/hto/data/food/iyokan-juice> rdfs:label "iyokan juice" ;
+    hto:HTO_0000080 <https://w3id.org/hto/data/profile/iyokan-juice/0000111/0000214/0000221>,
+        <https://w3id.org/hto/data/profile/iyokan-juice/0000112/0000214/0000221>,
+        <https://w3id.org/hto/data/profile/iyokan-juice/0000114/0000213/0000221> ;
+    hto:HTO_0000086 hto:CHEBI_16226,
+        hto:CHEBI_30769 .
+
+<https://w3id.org/hto/data/food/prop-test-strip> rdfs:label "PROP test strip" ;
+    hto:HTO_0000080 <https://w3id.org/hto/data/profile/prop-test-strip/0000114/0000214/0000224>,
+        <https://w3id.org/hto/data/profile/prop-test-strip/0000114/0000214/0000225>,
+        <https://w3id.org/hto/data/profile/prop-test-strip/0000114/0000214/0000226> ;
+    hto:HTO_0000086 hto:CHEBI_8502 .
+
+<https://w3id.org/hto/data/food/satsuma-juice> rdfs:label "satsuma juice" ;
+    hto:HTO_0000080 <https://w3id.org/hto/data/profile/satsuma-juice/0000111/0000214/0000221>,
+        <https://w3id.org/hto/data/profile/satsuma-juice/0000112/0000214/0000221> .
+
+<https://w3id.org/hto/data/profile/iyokan-juice/0000111/0000214/0000221> a hto:HTO_0000400 ;
+    hto:HTO_0000081 hto:HTO_0000111 ;
+    hto:HTO_0000082 hto:HTO_0000203 ;
+    hto:HTO_0000083 hto:HTO_0000214 ;
+    hto:HTO_0000084 hto:HTO_0000221 ;
+    hto:HTO_0000093 "C. Sun 2026-09-18" ;
+    hto:HTO_0000094 hto:HTO_0000244 .
+
+<https://w3id.org/hto/data/profile/iyokan-juice/0000112/0000214/0000221> a hto:HTO_0000400 ;
+    hto:HTO_0000081 hto:HTO_0000112 ;
+    hto:HTO_0000082 hto:HTO_0000204 ;
+    hto:HTO_0000083 hto:HTO_0000214 ;
+    hto:HTO_0000084 hto:HTO_0000221 ;
+    hto:HTO_0000093 "C. Sun 2026-09-18" ;
+    hto:HTO_0000094 hto:HTO_0000244 .
+
+<https://w3id.org/hto/data/profile/iyokan-juice/0000114/0000213/0000221> a hto:HTO_0000400 ;
+    hto:HTO_0000081 hto:HTO_0000114 ;
+    hto:HTO_0000082 hto:HTO_0000202 ;
+    hto:HTO_0000083 hto:HTO_0000213 ;
+    hto:HTO_0000084 hto:HTO_0000221 ;
+    hto:HTO_0000091 hto:HTO_0000411 ;
+    hto:HTO_0000093 "C. Sun 2026-09-18" ;
+    hto:HTO_0000094 hto:HTO_0000244 .
+
+<https://w3id.org/hto/data/profile/prop-test-strip/0000114/0000214/0000224> a hto:HTO_0000400 ;
+    hto:HTO_0000081 hto:HTO_0000114 ;
+    hto:HTO_0000082 hto:HTO_0000205 ;
+    hto:HTO_0000083 hto:HTO_0000214 ;
+    hto:HTO_0000084 hto:HTO_0000224 ;
+    hto:HTO_0000093 "PMID:37242298" ;
+    hto:HTO_0000094 hto:HTO_0000241 .
+
+<https://w3id.org/hto/data/profile/prop-test-strip/0000114/0000214/0000225> a hto:HTO_0000400 ;
+    hto:HTO_0000081 hto:HTO_0000114 ;
+    hto:HTO_0000082 hto:HTO_0000203 ;
+    hto:HTO_0000083 hto:HTO_0000214 ;
+    hto:HTO_0000084 hto:HTO_0000225 ;
+    hto:HTO_0000093 "PMID:37242298" ;
+    hto:HTO_0000094 hto:HTO_0000241 .
+
+<https://w3id.org/hto/data/profile/prop-test-strip/0000114/0000214/0000226> a hto:HTO_0000400 ;
+    hto:HTO_0000081 hto:HTO_0000114 ;
+    hto:HTO_0000082 hto:HTO_0000201 ;
+    hto:HTO_0000083 hto:HTO_0000214 ;
+    hto:HTO_0000084 hto:HTO_0000226 ;
+    hto:HTO_0000093 "PMID:37242298" ;
+    hto:HTO_0000094 hto:HTO_0000241 .
+
+<https://w3id.org/hto/data/profile/satsuma-juice/0000111/0000214/0000221> a hto:HTO_0000400 ;
+    hto:HTO_0000081 hto:HTO_0000111 ;
+    hto:HTO_0000082 hto:HTO_0000204 ;
+    hto:HTO_0000083 hto:HTO_0000214 ;
+    hto:HTO_0000084 hto:HTO_0000221 ;
+    hto:HTO_0000093 "C. Sun 2026-09-18" ;
+    hto:HTO_0000094 hto:HTO_0000244 .
+
+<https://w3id.org/hto/data/profile/satsuma-juice/0000112/0000214/0000221> a hto:HTO_0000400 ;
+    hto:HTO_0000081 hto:HTO_0000112 ;
+    hto:HTO_0000082 hto:HTO_0000203 ;
+    hto:HTO_0000083 hto:HTO_0000214 ;
+    hto:HTO_0000084 hto:HTO_0000221 ;
+    hto:HTO_0000093 "C. Sun 2026-09-18" ;
+    hto:HTO_0000094 hto:HTO_0000244 .
+
