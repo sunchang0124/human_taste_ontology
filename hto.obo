@@ -493,7 +493,8 @@ property_value: IAO:0000119 "PMID:12595690" xsd:string
 [Term]
 id: HTO:0000132
 name: limonoid bitterness
-def: "The bitterness elicited by limonoid triterpenoids, notably limonin, which forms from a tasteless precursor after citrus fruit is juiced." []
+def: "The bitterness elicited by limonoid triterpenoids, the compound class whose bitterness develops in citrus juice after juicing and storage." []
+comment: Limonin (CHEBI:16226) is the limonoid usually named for this bitterness, and is commonly described as forming from a tasteless precursor after juicing. Both statements are editorial: PMID:25615579, the citation on this term, discusses bitter limonoids only as a class and names no individual compound, so neither is asserted here as cited fact. The elicited by tastant axiom to limonin is a curatorial modelling choice on the same footing.
 is_a: HTO:0000130 ! bitterness subtype
 relationship: HTO:0000085 CHEBI:16226 ! elicited by tastant limonin
 property_value: IAO:0000119 "PMID:25615579" xsd:string
@@ -598,7 +599,7 @@ property_value: IAO:0000119 "HTO:0000000" xsd:string
 id: HTO:0000154
 name: delayed bitterness
 def: "A bitterness that is absent or weak when the stimulus is first tasted and appears or strengthens over subsequent minutes to hours." []
-comment: Characteristic of citrus juice, where limonin forms after juicing. Prefer the post-coordinated form for new data: a taste profile entry with entry quality bitterness and entry phase finish. This term is retained for continuity — the published walkthrough cites it — and is accepted by scripts/profile2rdf.py, which normalises it to that form.
+comment: Characteristic of citrus juice: the cited study found it developing in mandarin-hybrid juice stored for more than four hours. Prefer the post-coordinated form for new data: a taste profile entry with entry quality bitterness and entry phase finish. This term is retained for continuity — the published walkthrough cites it — and is accepted by scripts/profile2rdf.py, which normalises it to that form.
 is_a: HTO:0000152 ! aftertaste
 property_value: IAO:0000119 "PMID:25615579" xsd:string
 

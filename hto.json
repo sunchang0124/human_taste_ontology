@@ -880,8 +880,9 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "The bitterness elicited by limonoid triterpenoids, notably limonin, which forms from a tasteless precursor after citrus fruit is juiced."
+          "val" : "The bitterness elicited by limonoid triterpenoids, the compound class whose bitterness develops in citrus juice after juicing and storage."
         },
+        "comments" : [ "Limonin (CHEBI:16226) is the limonoid usually named for this bitterness, and is commonly described as forming from a tasteless precursor after juicing. Both statements are editorial: PMID:25615579, the citation on this term, discusses bitter limonoids only as a class and names no individual compound, so neither is asserted here as cited fact. The elicited by tastant axiom to limonin is a curatorial modelling choice on the same footing." ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
           "val" : "PMID:25615579"
@@ -1067,7 +1068,7 @@
         "definition" : {
           "val" : "A bitterness that is absent or weak when the stimulus is first tasted and appears or strengthens over subsequent minutes to hours."
         },
-        "comments" : [ "Characteristic of citrus juice, where limonin forms after juicing. Prefer the post-coordinated form for new data: a taste profile entry with entry quality bitterness and entry phase finish. This term is retained for continuity — the published walkthrough cites it — and is accepted by scripts/profile2rdf.py, which normalises it to that form." ],
+        "comments" : [ "Characteristic of citrus juice: the cited study found it developing in mandarin-hybrid juice stored for more than four hours. Prefer the post-coordinated form for new data: a taste profile entry with entry quality bitterness and entry phase finish. This term is retained for continuity — the published walkthrough cites it — and is accepted by scripts/profile2rdf.py, which normalises it to that form." ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
           "val" : "PMID:25615579"
@@ -2380,7 +2381,7 @@
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/HTO_0000095",
-          "val" : "Sucrose added to quinine and rated by children and adults, using forced-choice paired comparison and the general Labeled Magnitude Scale; bitterness fell from moderate to weak, and adults carrying the sensitive form of TAS1R3 reported the larger reduction."
+          "val" : "Sucrose added to quinine and rated by children and adults using forced-choice paired comparison; adults additionally rated each solution on the general Labeled Magnitude Scale and were genotyped. In adults, sucrose reduced bitterness ratings from moderate to weak, and those adults carrying the sensitive form of TAS1R3 reported the larger reduction."
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
           "val" : "PMID:25381313"
@@ -2396,7 +2397,7 @@
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/HTO_0000095",
-          "val" : "Sucrose added to caffeine and rated by children and adults, using forced-choice paired comparison and the general Labeled Magnitude Scale; adults carrying the sensitive form of TAS1R3 reported the greater reduction for caffeine."
+          "val" : "Sucrose added to caffeine and rated by children and adults using forced-choice paired comparison; adults additionally rated each solution on the general Labeled Magnitude Scale and were genotyped, and among those adults the ones carrying the sensitive form of TAS1R3 reported the greater reduction for caffeine."
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
           "val" : "PMID:25381313"
@@ -2460,7 +2461,7 @@
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/HTO_0000095",
-          "val" : "Citric acid mixed with sucrose in aqueous solution and rated by consumers in China and in Denmark; the suppression of sucrose sweetness did not differ between the two cultures, and consumer clusters differed in how strongly they showed it."
+          "val" : "Citric acid mixed with sucrose in aqueous solution and rated by consumers in China and in Denmark; the suppression of sucrose sweetness did not differ between the two cultures, and consumer clusters differed significantly in sweetness and sourness intensity ratings, from which the authors infer only that individual differences might affect how sweet–sour interactions are perceived."
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
           "val" : "PMID:33050242"

@@ -1439,8 +1439,9 @@
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_16226"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115>The bitterness elicited by limonoid triterpenoids, notably limonin, which forms from a tasteless precursor after citrus fruit is juiced.</obo:IAO_0000115>
+        <obo:IAO_0000115>The bitterness elicited by limonoid triterpenoids, the compound class whose bitterness develops in citrus juice after juicing and storage.</obo:IAO_0000115>
         <obo:IAO_0000119>PMID:25615579</obo:IAO_0000119>
+        <rdfs:comment>Limonin (CHEBI:16226) is the limonoid usually named for this bitterness, and is commonly described as forming from a tasteless precursor after juicing. Both statements are editorial: PMID:25615579, the citation on this term, discusses bitter limonoids only as a class and names no individual compound, so neither is asserted here as cited fact. The elicited by tastant axiom to limonin is a curatorial modelling choice on the same footing.</rdfs:comment>
         <rdfs:label>limonoid bitterness</rdfs:label>
     </owl:Class>
     
@@ -1607,7 +1608,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HTO_0000152"/>
         <obo:IAO_0000115>A bitterness that is absent or weak when the stimulus is first tasted and appears or strengthens over subsequent minutes to hours.</obo:IAO_0000115>
         <obo:IAO_0000119>PMID:25615579</obo:IAO_0000119>
-        <rdfs:comment>Characteristic of citrus juice, where limonin forms after juicing. Prefer the post-coordinated form for new data: a taste profile entry with entry quality bitterness and entry phase finish. This term is retained for continuity — the published walkthrough cites it — and is accepted by scripts/profile2rdf.py, which normalises it to that form.</rdfs:comment>
+        <rdfs:comment>Characteristic of citrus juice: the cited study found it developing in mandarin-hybrid juice stored for more than four hours. Prefer the post-coordinated form for new data: a taste profile entry with entry quality bitterness and entry phase finish. This term is retained for continuity — the published walkthrough cites it — and is accepted by scripts/profile2rdf.py, which normalises it to that form.</rdfs:comment>
         <rdfs:label>delayed bitterness</rdfs:label>
     </owl:Class>
     
@@ -2407,7 +2408,7 @@
         <obo:HTO_0000089 rdf:resource="http://purl.obolibrary.org/obo/HTO_0000231"/>
         <obo:HTO_0000090 rdf:resource="http://purl.obolibrary.org/obo/CHEBI_15854"/>
         <obo:HTO_0000090 rdf:resource="http://purl.obolibrary.org/obo/CHEBI_17992"/>
-        <obo:HTO_0000095>Sucrose added to quinine and rated by children and adults, using forced-choice paired comparison and the general Labeled Magnitude Scale; bitterness fell from moderate to weak, and adults carrying the sensitive form of TAS1R3 reported the larger reduction.</obo:HTO_0000095>
+        <obo:HTO_0000095>Sucrose added to quinine and rated by children and adults using forced-choice paired comparison; adults additionally rated each solution on the general Labeled Magnitude Scale and were genotyped. In adults, sucrose reduced bitterness ratings from moderate to weak, and those adults carrying the sensitive form of TAS1R3 reported the larger reduction.</obo:HTO_0000095>
         <obo:IAO_0000115>Interaction in which the presence of sweetness lowers the perceived intensity of bitterness.</obo:IAO_0000115>
         <obo:IAO_0000119>PMID:25381313</obo:IAO_0000119>
         <rdfs:label>sweetness suppresses bitterness</rdfs:label>
@@ -2424,7 +2425,7 @@
         <obo:HTO_0000089 rdf:resource="http://purl.obolibrary.org/obo/HTO_0000231"/>
         <obo:HTO_0000090 rdf:resource="http://purl.obolibrary.org/obo/CHEBI_17992"/>
         <obo:HTO_0000090 rdf:resource="http://purl.obolibrary.org/obo/CHEBI_27732"/>
-        <obo:HTO_0000095>Sucrose added to caffeine and rated by children and adults, using forced-choice paired comparison and the general Labeled Magnitude Scale; adults carrying the sensitive form of TAS1R3 reported the greater reduction for caffeine.</obo:HTO_0000095>
+        <obo:HTO_0000095>Sucrose added to caffeine and rated by children and adults using forced-choice paired comparison; adults additionally rated each solution on the general Labeled Magnitude Scale and were genotyped, and among those adults the ones carrying the sensitive form of TAS1R3 reported the greater reduction for caffeine.</obo:HTO_0000095>
         <obo:IAO_0000115>Interaction in which the presence of sweetness lowers the perceived intensity of alkaloid bitterness.</obo:IAO_0000115>
         <obo:IAO_0000119>PMID:25381313</obo:IAO_0000119>
         <rdfs:label>sweetness suppresses alkaloid bitterness</rdfs:label>
@@ -2492,7 +2493,7 @@
         <obo:HTO_0000089 rdf:resource="http://purl.obolibrary.org/obo/HTO_0000231"/>
         <obo:HTO_0000090 rdf:resource="http://purl.obolibrary.org/obo/CHEBI_17992"/>
         <obo:HTO_0000090 rdf:resource="http://purl.obolibrary.org/obo/CHEBI_30769"/>
-        <obo:HTO_0000095>Citric acid mixed with sucrose in aqueous solution and rated by consumers in China and in Denmark; the suppression of sucrose sweetness did not differ between the two cultures, and consumer clusters differed in how strongly they showed it.</obo:HTO_0000095>
+        <obo:HTO_0000095>Citric acid mixed with sucrose in aqueous solution and rated by consumers in China and in Denmark; the suppression of sucrose sweetness did not differ between the two cultures, and consumer clusters differed significantly in sweetness and sourness intensity ratings, from which the authors infer only that individual differences might affect how sweet–sour interactions are perceived.</obo:HTO_0000095>
         <obo:IAO_0000115>Interaction in which the presence of sourness lowers the perceived intensity of sweetness.</obo:IAO_0000115>
         <obo:IAO_0000119>PMID:33050242</obo:IAO_0000119>
         <rdfs:label>sourness suppresses sweetness</rdfs:label>
