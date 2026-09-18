@@ -109,7 +109,12 @@ term count from 56 to 57.
 `HTO:0000092` and `HTO:0000095` are annotation properties rather than data properties because both
 are asserted from ROBOT templates, where the only working typed-literal directive (`AT prop^^type`)
 emits an annotation assertion. Declaring them as data properties and then annotating with them would
-pun, which is the same OWL 2 DL breakage the Makefile's `tmp/qualities.owl` rule exists to avoid.
+make one IRI both an annotation property and a data property, and *that* is what OWL 2 DL forbids —
+the same property punning the Makefile's `tmp/qualities.owl` rule exists to avoid, where the risk is
+one IRI arriving as both an object and a data property. Punning as such is not the breakage: OWL 2 DL
+permits an IRI to be both a class and a named individual, and the release contains 17 entities that
+are exactly that (see the README's design decisions). It is punning *within* the property types that
+is illegal.
 `HTO:0000093 source statement` remains a data property: it is only ever emitted by rdflib from
 instance data.
 

@@ -272,6 +272,21 @@ you to discover:**
   property `rating value` (`HTO:0000070`) has one domain that legitimately
   covers both, instead of being declared twice or given a domain wider than
   it should have.
+- **The release puns 17 entities as both class and individual.** Seven ChEBI
+  compounds (`CHEBI:8502`, `CHEBI:15854`, `CHEBI:17992`, `CHEBI:26710`,
+  `CHEBI:27732`, `CHEBI:30769`, `CHEBI:46261`) and ten HTO qualities and
+  taster statuses (`HTO:0000012`–`HTO:0000015`, `HTO:0000111`–`HTO:0000114`,
+  `HTO:0000131`, `HTO:0000134`) are declared both `owl:Class` and
+  `owl:NamedIndividual` in `hto.owl`. This is forced by the design decision to
+  state interactions *between qualities*: an interaction rule is a named
+  individual pointing at the qualities it relates, which makes those qualities
+  individuals, while they remain classes in the quality hierarchy. Class/
+  individual punning is legal OWL 2 DL, ELK reasons over the release and
+  `robot report` is clean — it is named here so that a consumer meets it in
+  the documentation rather than in their own tooling. Punning *within* the
+  property types (one IRI as both an annotation and a data property, or both
+  an object and a data property) is a different matter: that is not legal, and
+  the Makefile's `tmp/qualities.owl` rule exists to prevent it.
 - **`HTO:0000065 has diplotype` and `HTO:0000066 threshold for quality`
   were added** during the published re-annotation work because the existing
   properties' declared domains and ranges did not fit the triples that
