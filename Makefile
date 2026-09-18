@@ -59,7 +59,9 @@ validate: build
 	python3 scripts/mappings2rdf.py
 	python3 scripts/sheet2rdf.py data/raw/example_tasting.csv data/rdf/example.ttl --session example
 	python3 scripts/published2rdf.py data/raw/published_tas2r38_prop.csv data/rdf/published.ttl
-	python3 scripts/profile2rdf.py data/raw/example_profiles.csv data/rdf/profiles.ttl --tastants data/raw/example_food_tastants.csv
+	python3 scripts/profile2rdf.py data/raw/example_profiles.csv data/rdf/profiles.ttl \
+	    --tastants data/raw/example_food_tastants.csv \
+	    --gap-report docs/needs-foodon.md
 	python3 scripts/validate.py
 
 test: report validate
@@ -74,6 +76,11 @@ interactions-doc:
 verify-citations:
 	python3 scripts/verify_citations.py
 
+# Converts the *example* sheets only, and writes the committed gap report. To
+# convert your own sheet, call the script directly with your own paths (see the
+# README): --gap-report is passed explicitly here because docs/needs-foodon.md
+# is a committed file rather than the script's default output location.
 profiles:
 	python3 scripts/profile2rdf.py data/raw/example_profiles.csv data/rdf/profiles.ttl \
-	    --tastants data/raw/example_food_tastants.csv
+	    --tastants data/raw/example_food_tastants.csv \
+	    --gap-report docs/needs-foodon.md

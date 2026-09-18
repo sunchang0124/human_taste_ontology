@@ -189,12 +189,31 @@ the wrong FoodOn class, a blank `food_id` gets a local IRI and is listed in
 the generated `docs/needs-foodon.md`, which feeds the upstream new-term
 requests in `docs/term-requests/`.
 
-**Building it:** `make profiles` runs `scripts/profile2rdf.py` over the seed
-profile and tastant sheets and writes `data/rdf/profiles.ttl` plus
-`docs/needs-foodon.md`. It is also run automatically as part of `make
-validate`. Every validation failure is a rejection with a line number, and a
-sheet with even one bad row produces no graph at all — partial output would
-be worse than none.
+**Building the seed data:** `make profiles` runs `scripts/profile2rdf.py` over
+the two *example* sheets — `data/raw/example_profiles.csv` and
+`data/raw/example_food_tastants.csv` — writing `data/rdf/profiles.ttl` and
+regenerating the committed `docs/needs-foodon.md`. It is also run as part of
+`make validate`.
+
+**Converting your own sheet is a direct call, not `make profiles`.** That
+target's inputs are hardcoded to the examples, so running it after filling in
+`data/profile_sheet.csv` would convert the example data and hand you a graph
+full of satsuma juice. Call the script with your own paths instead:
+
+```bash
+python3 scripts/profile2rdf.py data/profile_sheet.csv my-profiles.ttl \
+    --tastants data/food_tastants.csv \
+    --gap-report my-needs-foodon.md
+```
+
+`--tastants` and `--gap-report` are both optional. The gap report defaults to
+`needs-foodon.md` **beside the output `.ttl`**, never inside `docs/`, so
+converting a sheet of your own cannot overwrite the repository's committed
+report.
+
+Every validation failure is a rejection naming the physical line in your file,
+and a sheet with even one bad row produces no graph at all — partial output
+would be worse than none.
 
 **Two things this layer does not give you, said plainly rather than left for
 you to discover:**

@@ -316,11 +316,18 @@ def main() -> int:
     parser.add_argument("profiles_csv", type=pathlib.Path)
     parser.add_argument("out_path", type=pathlib.Path)
     parser.add_argument("--tastants", type=pathlib.Path, default=None)
-    parser.add_argument("--gap-report", type=pathlib.Path,
-                        default=ROOT / "docs" / "needs-foodon.md")
+    # Defaulting this to docs/needs-foodon.md inside the repo meant that anyone
+    # converting their own sheet silently overwrote a committed report about
+    # somebody else's foods. The gap report is about the sheet that produced it,
+    # so it belongs beside that sheet's output; the Makefile passes the repo path
+    # explicitly for the one sheet whose report is committed.
+    parser.add_argument("--gap-report", type=pathlib.Path, default=None,
+                        help="where to write the FoodOn gap report "
+                             "(default: needs-foodon.md beside the output .ttl)")
     args = parser.parse_args()
+    gap_report = args.gap_report or args.out_path.parent / "needs-foodon.md"
     try:
-        n = convert(args.profiles_csv, args.out_path, args.tastants, args.gap_report)
+        n = convert(args.profiles_csv, args.out_path, args.tastants, gap_report)
     except ProfileError as exc:
         print(f"error: {exc}", file=sys.stderr)
         return 1
