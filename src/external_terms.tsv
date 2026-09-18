@@ -55,3 +55,4 @@ OBI:0001000	obi	questionnaire
 IAO:0000030	iao	information content entity
 IAO:0000032	iao	scalar measurement datum
 IAO:0000109	iao	measurement datum
+CHEBI:24431	chebi	chemical entity, range for 'elicited by tastant' and 'contains tastant'

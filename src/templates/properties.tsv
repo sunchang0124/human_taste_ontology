@@ -24,3 +24,21 @@ HTO:0000073	sample order	owl:DataProperty	HTO:0000001		The position of this samp
 HTO:0000074	is blinded	owl:DataProperty	HTO:0000001		True when the taster could not identify the sample at the time of tasting.	HTO:0000000
 HTO:0000075	collection date	owl:DataProperty	HTO:0000017		The date on which a tasting session was held.	HTO:0000000
 HTO:0000076	minutes since preparation	owl:DataProperty	HTO:0000001		Minutes elapsed between preparing the stimulus and tasting it. Relevant where a quality develops after preparation, as limonoid bitterness does in citrus juice.	HTO:0000000
+HTO:0000080	has profile entry	owl:ObjectProperty		HTO:0000400	Relates a kind of food or drink to one line of its taste profile.	HTO:0000000
+HTO:0000081	entry quality	owl:ObjectProperty	HTO:0000400	HTO:0000100	Relates a taste profile entry to the perceptual taste quality it reports.	HTO:0000000
+HTO:0000082	entry level	owl:ObjectProperty	HTO:0000400	HTO:0000200	Relates a taste profile entry to the ordinal intensity level at which the quality is reported.	HTO:0000000
+HTO:0000083	entry phase	owl:ObjectProperty	HTO:0000400	HTO:0000210	Relates a taste profile entry to the phase of the tasting at which the quality is reported.	HTO:0000000
+HTO:0000084	holds for group	owl:ObjectProperty	HTO:0000400	HTO:0000220	Relates a taste profile entry to the group of tasters for whom it is asserted to hold.	HTO:0000000
+HTO:0000085	elicited by tastant	owl:ObjectProperty	HTO:0000100	CHEBI:24431	Relates a perceptual taste quality to a chemical entity whose presence elicits it.	HTO:0000000
+HTO:0000086	contains tastant	owl:ObjectProperty		CHEBI:24431	Relates a kind of food or drink to a chemical entity it contains that is capable of eliciting a taste quality.	HTO:0000000
+HTO:0000087	interaction agent	owl:ObjectProperty	HTO:0000410	HTO:0000100	Relates a taste interaction to the quality whose presence produces the effect.	HTO:0000000
+HTO:0000088	interaction target	owl:ObjectProperty	HTO:0000410	HTO:0000100	Relates a taste interaction to the quality whose perceived intensity is altered.	HTO:0000000
+HTO:0000089	interaction effect	owl:ObjectProperty	HTO:0000410	HTO:0000230	Relates a taste interaction to the direction of the effect the agent has on the target.	HTO:0000000
+HTO:0000090	demonstrated with	owl:ObjectProperty	HTO:0000410	CHEBI:24431	Relates a taste interaction to a chemical entity used as a stimulus in the study that established it.	HTO:0000000
+HTO:0000091	explained by interaction	owl:ObjectProperty	HTO:0000400	HTO:0000410	Relates a taste profile entry to a taste interaction that accounts for the level reported.	HTO:0000000
+HTO:0000092	level rank	owl:AnnotationProperty			The position of an ordinal intensity level in the ordering from absent to intense, as an integer from zero to four.	HTO:0000000
+HTO:0000093	source statement	owl:DatatypeProperty	HTO:0000400		The free-text statement of where a taste profile entry's claim comes from.	HTO:0000000
+HTO:0000094	has evidence type	owl:ObjectProperty	HTO:0000400	HTO:0000240	Relates a taste profile entry to the kind of evidence its claim rests on.	HTO:0000000
+HTO:0000095	interaction condition	owl:AnnotationProperty			The concentrations, matched intensities or reversals under which a taste interaction was observed.	HTO:0000000
+HTO:0000096	group defined by status	owl:ObjectProperty	HTO:0000223	HTO:0000011	Relates a phenotype-defined taster group to the taster status that defines its membership.	HTO:0000000
+HTO:0000097	group defined by diplotype	owl:ObjectProperty	HTO:0000222	HTO:0000015	Relates a genotype-defined taster group to the diplotype that defines its membership.	HTO:0000000

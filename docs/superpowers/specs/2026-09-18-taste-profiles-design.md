@@ -95,16 +95,23 @@ Existing blocks are untouched: core `0000000`–`0000026`, properties `0000050`�
 | `HTO:0000089` | interaction effect | object | `HTO:0000410` | `HTO:0000230` |
 | `HTO:0000090` | demonstrated with | object | `HTO:0000410` | `CHEBI:24431` |
 | `HTO:0000091` | explained by interaction | object | `HTO:0000400` | `HTO:0000410` |
-| `HTO:0000092` | level rank | data (integer) | `HTO:0000200` | — |
+| `HTO:0000092` | level rank | annotation (integer) | `HTO:0000200` | — |
 | `HTO:0000093` | source statement | data (string) | `HTO:0000400` | — |
 | `HTO:0000094` | has evidence type | object | `HTO:0000400` | `HTO:0000240` |
-| `HTO:0000095` | interaction condition | data (string) | `HTO:0000410` | — |
+| `HTO:0000095` | interaction condition | annotation (string) | `HTO:0000410` | — |
 | `HTO:0000096` | group defined by status | object | `HTO:0000223` | `HTO:0000011` |
 | `HTO:0000097` | group defined by diplotype | object | `HTO:0000222` | `HTO:0000015` |
 
 Range `CHEBI:24431` (chemical entity) is **not currently imported**: it is one new row in
 `src/external_terms.tsv`, fetched by the existing `scripts/build_imports.py`, taking the external
 term count from 56 to 57.
+
+`HTO:0000092` and `HTO:0000095` are annotation properties rather than data properties because both
+are asserted from ROBOT templates, where the only working typed-literal directive (`AT prop^^type`)
+emits an annotation assertion. Declaring them as data properties and then annotating with them would
+pun, which is the same OWL 2 DL breakage the Makefile's `tmp/qualities.owl` rule exists to avoid.
+`HTO:0000093 source statement` remains a data property: it is only ever emitted by rdflib from
+instance data.
 
 `HTO:0000086 contains tastant` is a new property rather than a reuse of `HTO:0000060 stimulus
 contains tastant`: the existing property's domain is `HTO:0000003 taste stimulus`, an instance

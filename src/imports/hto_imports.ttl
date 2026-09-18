@@ -18,6 +18,10 @@
   rdfs:label "sucrose" ;
   obo:IAO_0000115 "A glycosyl glycoside formed by glucose and fructose units joined by an acetal oxygen bridge from hemiacetal of glucose to the hemiketal of the fructose." .
 
+<http://purl.obolibrary.org/obo/CHEBI_24431> a owl:Class ;
+  rdfs:label "chemical entity" ;
+  obo:IAO_0000115 "A chemical entity is a physical entity of interest in chemistry including molecular entities, parts thereof, and chemical substances." .
+
 <http://purl.obolibrary.org/obo/CHEBI_26710> a owl:Class ;
   rdfs:label "sodium chloride" ;
   obo:IAO_0000115 "An inorganic chloride salt having sodium(1+) as the counterion." .
