@@ -8,16 +8,6 @@ PREFIX ex:   <https://w3id.org/hto/data/>
 # What suppresses bitterness, on what evidence, demonstrated with what? A rule
 # without its compound pair and citation is an unsupported claim, so all three
 # are returned together.
-#
-# Deviation from the task-7 brief: the interactions.tsv template (Task 4)
-# stamps obo:IAO_0000119 twice per rule -- once for the row's own citation
-# (a PMID) and once, on every row, for HTO:0000000, the curator placeholder
-# that ordinarily marks a self-authored IAO:0000115 definition elsewhere in
-# this ontology. A plain `OPTIONAL { ?rule obo:IAO_0000119 ?citation }`, as
-# given in the brief, binds both values and doubles every row with a bogus
-# "citation" of HTO:0000000 -- worse than returning nothing, because it looks
-# like evidence and isn't. The FILTER below keeps only the real citation. The
-# template itself is out of scope for this task and is not changed.
 SELECT ?agentLabel ?targetLabel ?compoundLabel ?condition ?citation
 WHERE {
   ?rule rdf:type hto:0000410 ;
@@ -26,5 +16,5 @@ WHERE {
   ?agent rdfs:label ?agentLabel .
   OPTIONAL { ?rule hto:0000090 ?compound . ?compound rdfs:label ?compoundLabel }
   OPTIONAL { ?rule hto:0000095 ?condition }
-  OPTIONAL { ?rule obo:IAO_0000119 ?citation . FILTER(?citation != "HTO:0000000") }
+  OPTIONAL { ?rule obo:IAO_0000119 ?citation }
 } ORDER BY ?agentLabel

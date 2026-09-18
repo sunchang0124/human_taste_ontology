@@ -2409,7 +2409,6 @@
         <obo:HTO_0000090 rdf:resource="http://purl.obolibrary.org/obo/CHEBI_17992"/>
         <obo:HTO_0000095>Sucrose added to quinine and rated by children and adults, using forced-choice paired comparison and the general Labeled Magnitude Scale; bitterness fell from moderate to weak, and adults carrying the sensitive form of TAS1R3 reported the larger reduction.</obo:HTO_0000095>
         <obo:IAO_0000115>Interaction in which the presence of sweetness lowers the perceived intensity of bitterness.</obo:IAO_0000115>
-        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
         <obo:IAO_0000119>PMID:25381313</obo:IAO_0000119>
         <rdfs:label>sweetness suppresses bitterness</rdfs:label>
     </owl:NamedIndividual>
@@ -2427,7 +2426,6 @@
         <obo:HTO_0000090 rdf:resource="http://purl.obolibrary.org/obo/CHEBI_27732"/>
         <obo:HTO_0000095>Sucrose added to caffeine and rated by children and adults, using forced-choice paired comparison and the general Labeled Magnitude Scale; adults carrying the sensitive form of TAS1R3 reported the greater reduction for caffeine.</obo:HTO_0000095>
         <obo:IAO_0000115>Interaction in which the presence of sweetness lowers the perceived intensity of alkaloid bitterness.</obo:IAO_0000115>
-        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
         <obo:IAO_0000119>PMID:25381313</obo:IAO_0000119>
         <rdfs:label>sweetness suppresses alkaloid bitterness</rdfs:label>
     </owl:NamedIndividual>
@@ -2445,7 +2443,6 @@
         <obo:HTO_0000090 rdf:resource="http://purl.obolibrary.org/obo/CHEBI_8502"/>
         <obo:HTO_0000095>Sucrose added to 6-n-propylthiouracil and rated by children and adults, using forced-choice paired comparison; suppression held for every bitter agent tested, but the further moderation of it by TAS2R38 sensitivity did not reach statistical significance for PROP.</obo:HTO_0000095>
         <obo:IAO_0000115>Interaction in which the presence of sweetness lowers the perceived intensity of thiourea bitterness.</obo:IAO_0000115>
-        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
         <obo:IAO_0000119>PMID:25381313</obo:IAO_0000119>
         <rdfs:label>sweetness suppresses thiourea bitterness</rdfs:label>
     </owl:NamedIndividual>
@@ -2463,7 +2460,6 @@
         <obo:HTO_0000090 rdf:resource="http://purl.obolibrary.org/obo/CHEBI_26710"/>
         <obo:HTO_0000095>Sodium chloride mixed with quinine hydrochloride and rated by functional measurement with a two-stimulus procedure; the suppression is asymmetric, quinine having almost no suppressive effect on the saltiness of sodium chloride in return.</obo:HTO_0000095>
         <obo:IAO_0000115>Interaction in which the presence of saltiness lowers the perceived intensity of bitterness.</obo:IAO_0000115>
-        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
         <obo:IAO_0000119>PMID:7878097</obo:IAO_0000119>
         <rdfs:label>saltiness suppresses bitterness</rdfs:label>
     </owl:NamedIndividual>
@@ -2481,7 +2477,6 @@
         <obo:HTO_0000090 rdf:resource="http://purl.obolibrary.org/obo/CHEBI_30769"/>
         <obo:HTO_0000095>Sweeteners matched for perceived sweetness, sucrose among them, mixed with each of four citric acid concentrations and rated by functional measurement with a two-stimulus procedure; equisweet sweeteners suppressed sourness equally across the concentration range, so the suppression tracks perceived sweetness rather than sweetener concentration.</obo:HTO_0000095>
         <obo:IAO_0000115>Interaction in which the presence of sweetness lowers the perceived intensity of sourness.</obo:IAO_0000115>
-        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
         <obo:IAO_0000119>PMID:2011446</obo:IAO_0000119>
         <rdfs:label>sweetness suppresses sourness</rdfs:label>
     </owl:NamedIndividual>
@@ -2499,7 +2494,6 @@
         <obo:HTO_0000090 rdf:resource="http://purl.obolibrary.org/obo/CHEBI_30769"/>
         <obo:HTO_0000095>Citric acid mixed with sucrose in aqueous solution and rated by consumers in China and in Denmark; the suppression of sucrose sweetness did not differ between the two cultures, and consumer clusters differed in how strongly they showed it.</obo:HTO_0000095>
         <obo:IAO_0000115>Interaction in which the presence of sourness lowers the perceived intensity of sweetness.</obo:IAO_0000115>
-        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
         <obo:IAO_0000119>PMID:33050242</obo:IAO_0000119>
         <rdfs:label>sourness suppresses sweetness</rdfs:label>
     </owl:NamedIndividual>
@@ -2517,7 +2511,6 @@
         <obo:HTO_0000090 rdf:resource="http://purl.obolibrary.org/obo/CHEBI_17992"/>
         <obo:HTO_0000095>Factorial combinations of four sucrose and four quinine hydrochloride concentrations; the suppression of sweetness appeared at the highest quinine concentration in PROP super-tasters and medium-tasters, and was absent in non-tasters.</obo:HTO_0000095>
         <obo:IAO_0000115>Interaction in which the presence of bitterness lowers the perceived intensity of sweetness.</obo:IAO_0000115>
-        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
         <obo:IAO_0000119>PMID:11595676</obo:IAO_0000119>
         <rdfs:label>bitterness suppresses sweetness</rdfs:label>
     </owl:NamedIndividual>
@@ -2535,7 +2528,6 @@
         <obo:HTO_0000090 rdf:resource="http://purl.obolibrary.org/obo/CHEBI_46261"/>
         <obo:HTO_0000095>Mixtures of phenylthiocarbamide and sucrose; suppression of sweetness was stronger in PTC tasters than in non-tasters and tracked perceived bitterness rather than PTC concentration, which the authors read as evidence for neural inhibition rather than a chemical or receptor-level interaction.</obo:HTO_0000095>
         <obo:IAO_0000115>Interaction in which the presence of thiourea bitterness lowers the perceived intensity of sweetness.</obo:IAO_0000115>
-        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
         <obo:IAO_0000119>PMID:479396</obo:IAO_0000119>
         <rdfs:label>thiourea bitterness suppresses sweetness</rdfs:label>
     </owl:NamedIndividual>
@@ -2553,7 +2545,6 @@
         <obo:HTO_0000090 rdf:resource="http://purl.obolibrary.org/obo/CHEBI_30769"/>
         <obo:HTO_0000095>3 mM citric acid added to 75 mM and to 100 mM sodium chloride in a sensory evaluation; salty taste intensity rose for the 100 mM solution, and the authors conclude the addition may enhance saltiness rather than reporting the rise at both concentrations.</obo:HTO_0000095>
         <obo:IAO_0000115>Interaction in which the presence of sourness raises the perceived intensity of saltiness.</obo:IAO_0000115>
-        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
         <obo:IAO_0000119>PMID:37648516</obo:IAO_0000119>
         <rdfs:label>sourness enhances saltiness</rdfs:label>
     </owl:NamedIndividual>
