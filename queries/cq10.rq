@@ -1,0 +1,18 @@
+PREFIX hto:  <http://purl.obolibrary.org/obo/HTO_>
+PREFIX obo:  <http://purl.obolibrary.org/obo/>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX ex:   <https://w3id.org/hto/data/>
+
+# Which foods are bitter at the finish, and how bitter? Phase is a slot, not a
+# term, so this catches every bitterness subtype at that phase without needing
+# a pre-coordinated "lingering bitterness" term per quality.
+SELECT DISTINCT ?foodLabel ?qualityLabel ?levelLabel
+WHERE {
+  ?food hto:0000080 ?entry ; rdfs:label ?foodLabel .
+  ?entry hto:0000081 ?quality ; hto:0000082 ?level ; hto:0000083 hto:0000213 .
+  ?quality rdfs:subClassOf* hto:0000114 ; rdfs:label ?qualityLabel .
+  ?level rdfs:label ?levelLabel ; hto:0000092 ?rank .
+  FILTER(?rank > 0)
+} ORDER BY DESC(?rank) ?foodLabel

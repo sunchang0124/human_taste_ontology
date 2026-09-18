@@ -22,6 +22,9 @@ def main() -> int:
     ap.add_argument("--published", type=pathlib.Path,
                     default=ROOT / "data" / "rdf" / "published.ttl",
                     help="literature instance graph (default data/rdf/published.ttl)")
+    ap.add_argument("--profiles", type=pathlib.Path,
+                    default=ROOT / "data" / "rdf" / "profiles.ttl",
+                    help="taste profile instance graph (default data/rdf/profiles.ttl)")
     args = ap.parse_args()
 
     g = Graph()
@@ -35,6 +38,12 @@ def main() -> int:
     published = args.published
     if published.exists():
         g.parse(published, format="turtle")
+
+    profiles = args.profiles
+    if profiles.exists():
+        g.parse(profiles, format="turtle")
+    else:
+        print(f"note: {profiles} absent; cq09-cq14 will be empty")
 
     # The SSSOM bridge layer, converted by scripts/mappings2rdf.py. cq04, cq05
     # and cq08 join against it; without it they answer a different question.

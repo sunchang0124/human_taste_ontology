@@ -1,0 +1,18 @@
+PREFIX hto:  <http://purl.obolibrary.org/obo/HTO_>
+PREFIX obo:  <http://purl.obolibrary.org/obo/>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX ex:   <https://w3id.org/hto/data/>
+
+# Which claims rest only on one person's tasting? Personal tasting is a
+# first-class source in HTO, but a reader must be able to separate it from
+# published evidence without reading the CSV.
+SELECT ?foodLabel ?qualityLabel ?levelLabel ?source
+WHERE {
+  ?food hto:0000080 ?entry ; rdfs:label ?foodLabel .
+  ?entry hto:0000081 ?quality ; hto:0000082 ?level ;
+         hto:0000094 hto:0000244 ; hto:0000093 ?source .
+  ?quality rdfs:label ?qualityLabel .
+  ?level rdfs:label ?levelLabel .
+} ORDER BY ?foodLabel

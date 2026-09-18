@@ -1,0 +1,18 @@
+PREFIX hto:  <http://purl.obolibrary.org/obo/HTO_>
+PREFIX obo:  <http://purl.obolibrary.org/obo/>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX ex:   <https://w3id.org/hto/data/>
+
+# Which foods contain a tastant that elicits a quality nobody has annotated on
+# that food? This is what makes the compound layer useful rather than
+# decorative: it proposes the next row for the profile sheet.
+SELECT DISTINCT ?foodLabel ?qualityLabel ?tastantLabel
+WHERE {
+  ?food hto:0000086 ?tastant ; rdfs:label ?foodLabel .
+  ?quality rdfs:subClassOf ?restriction ; rdfs:label ?qualityLabel .
+  ?restriction owl:onProperty hto:0000085 ; owl:someValuesFrom ?tastant .
+  OPTIONAL { ?tastant rdfs:label ?tastantLabel }
+  FILTER NOT EXISTS { ?food hto:0000080 ?entry . ?entry hto:0000081 ?quality }
+} ORDER BY ?foodLabel ?qualityLabel

@@ -1,0 +1,20 @@
+PREFIX hto:  <http://purl.obolibrary.org/obo/HTO_>
+PREFIX obo:  <http://purl.obolibrary.org/obo/>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX ex:   <https://w3id.org/hto/data/>
+
+# The whole taste profile of every described food, strongest quality first.
+# This is the question v1 could not answer: it could only list other people's
+# ratings, never the taste of the thing itself.
+SELECT ?foodLabel ?qualityLabel ?levelLabel ?phaseLabel ?groupLabel
+WHERE {
+  ?food hto:0000080 ?entry ; rdfs:label ?foodLabel .
+  ?entry hto:0000081 ?quality ; hto:0000082 ?level ;
+         hto:0000083 ?phase ; hto:0000084 ?group .
+  ?quality rdfs:label ?qualityLabel .
+  ?level   rdfs:label ?levelLabel ; hto:0000092 ?rank .
+  ?phase   rdfs:label ?phaseLabel .
+  ?group   rdfs:label ?groupLabel .
+} ORDER BY ?foodLabel DESC(?rank)

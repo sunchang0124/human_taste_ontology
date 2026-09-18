@@ -1,0 +1,20 @@
+PREFIX hto:  <http://purl.obolibrary.org/obo/HTO_>
+PREFIX obo:  <http://purl.obolibrary.org/obo/>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX ex:   <https://w3id.org/hto/data/>
+
+# Where does one thing taste different to different groups? Two entries on the
+# same food, same quality and same phase, differing in taster group and level.
+SELECT ?foodLabel ?qualityLabel ?groupA ?levelA ?groupB ?levelB
+WHERE {
+  ?food hto:0000080 ?e1, ?e2 ; rdfs:label ?foodLabel .
+  ?e1 hto:0000081 ?quality ; hto:0000082 ?l1 ; hto:0000083 ?phase ; hto:0000084 ?g1 .
+  ?e2 hto:0000081 ?quality ; hto:0000082 ?l2 ; hto:0000083 ?phase ; hto:0000084 ?g2 .
+  FILTER(STR(?g1) < STR(?g2))
+  FILTER(?l1 != ?l2)
+  ?quality rdfs:label ?qualityLabel .
+  ?g1 rdfs:label ?groupA . ?g2 rdfs:label ?groupB .
+  ?l1 rdfs:label ?levelA . ?l2 rdfs:label ?levelB .
+} ORDER BY ?foodLabel ?qualityLabel
