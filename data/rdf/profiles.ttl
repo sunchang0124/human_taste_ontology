@@ -21,6 +21,9 @@ hto:FOODON_03306174 rdfs:label "grapefruit juice" ;
     hto:HTO_0000080 <https://w3id.org/hto/data/profile/satsuma-juice/0000111/0000214/0000221>,
         <https://w3id.org/hto/data/profile/satsuma-juice/0000112/0000214/0000221> .
 
+<https://w3id.org/hto/data/food/setoka-juice> rdfs:label "setoka juice" ;
+    hto:HTO_0000086 hto:CHEBI_16226 .
+
 <https://w3id.org/hto/data/profile/iyokan-juice/0000111/0000214/0000221> a hto:HTO_0000400 ;
     hto:HTO_0000081 hto:HTO_0000111 ;
     hto:HTO_0000082 hto:HTO_0000203 ;

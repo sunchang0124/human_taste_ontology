@@ -25,6 +25,58 @@ a person perceives when they taste something. HTO fills exactly the gaps
 above and reuses everything else it can find. See `docs/findings.md` for the
 full prior-art search.
 
+## One example, end to end
+
+Setoka is a tangor grown in Ehime. Here is what HTO can say about a glass of
+its juice, and what it can work out for itself.
+
+**The mechanism.** Setoka is a complex citrus hybrid, and complex citrus
+hybrids develop limonoid bitterness in stored juice. That chain is three
+statements, each a separate, queryable fact:
+
+```
+setoka juice  --contains tastant-->     limonin (CHEBI:16226)
+limonin       --elicits-->              limonoid bitterness (HTO:0000132)
+limonoid bitterness --is a-->           bitterness (HTO:0000114)
+bitterness    --perceived via-->        bitter perception (GO:0050913)
+```
+
+**The ontology then tells you what to go and taste.** Nobody has recorded what
+setoka juice actually tastes like, but HTO knows it contains a compound that
+elicits a quality no one has annotated on it. Competency question `cq13` says
+so, unprompted:
+
+```
+$ make validate
+setoka juice      | limonoid bitterness | limonin
+iyokan juice      | limonoid bitterness | limonin
+grapefruit juice  | flavanone bitterness | naringin
+PROP test strip   | thiourea bitterness  | 6-propyl-2-thiouracil
+```
+
+**Recording the answer takes one line.** Add this to a copy of
+`data/profile_sheet.csv` and run the converter — the blank `phase` column would
+mean *overall*, so naming `finish` is what says the bitterness arrives late,
+after the glass has been poured:
+
+```csv
+food_id,food_label,quality,level,phase,taster_group,source_type,source,explained_by
+,setoka juice,bitterness,slight,finish,,personal tasting,your name 2026-09-18,
+```
+
+**And it can differ by who is tasting.** Adding a `taster_group` turns one
+claim into a claim about a population: `TAS2R38 PAV/PAV` and `TAS2R38 AVI/AVI`
+can carry different levels for the same juice, the same quality and the same
+phase — which is the thing a spreadsheet column called `bitter_1_9` cannot say.
+
+Two honest notes, because they are the point of the design rather than
+footnotes to it. FoodOn has no term for setoka juice, so it carries a local
+identifier and appears in `docs/needs-foodon.md` as a candidate for a new-term
+request — as does iyokan. And "setoka juice contains limonin" is recorded as an
+`expert assertion`, not as `literature`: limonoid bitterness in complex citrus
+hybrids is well documented, but nobody has measured limonin in setoka juice
+specifically, and the sheet has a column that makes the difference visible.
+
 ## Quick start
 
 **Prerequisites:** Java 21 (ROBOT 1.9.10 is built for it) and Python 3.9 or

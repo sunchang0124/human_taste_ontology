@@ -8,3 +8,4 @@ new-term request; see `docs/term-requests/`.
 - iyokan juice (`iyokan-juice`)
 - PROP test strip (`prop-test-strip`)
 - satsuma juice (`satsuma-juice`)
+- setoka juice (`setoka-juice`)

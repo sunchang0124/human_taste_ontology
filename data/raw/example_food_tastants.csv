@@ -20,3 +20,4 @@ food_id,food_label,tastant,source_type,source
 ,iyokan juice,CHEBI:30769,expert assertion,citrus juice contains citric acid
 ,PROP test strip,CHEBI:8502,expert assertion,the strip is impregnated with PROP
 FOODON:03306174,grapefruit juice,CHEBI:28819,expert assertion,naringin is the flavanone glycoside responsible for grapefruit juice's characteristic bitterness
+,setoka juice,CHEBI:16226,expert assertion,"setoka is a tangor, a complex citrus hybrid; complex citrus hybrids develop limonoid delayed bitterness in stored juice (see HTO:0000132). Limonin has not been measured in setoka juice specifically, which is why this is an expert assertion and not literature"
