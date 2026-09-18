@@ -597,8 +597,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_15854">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <obo:IAO_0000115>A cinchona alkaloid that is cinchonidine in which the hydrogen at the 6-position of the quinoline ring is substituted by methoxy.</obo:IAO_0000115>
-        <rdfs:label>quinine</rdfs:label>
     </owl:Class>
     
 
@@ -626,8 +624,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_17992">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <obo:IAO_0000115>A glycosyl glycoside formed by glucose and fructose units joined by an acetal oxygen bridge from hemiacetal of glucose to the hemiketal of the fructose.</obo:IAO_0000115>
-        <rdfs:label>sucrose</rdfs:label>
     </owl:Class>
     
 
@@ -646,8 +642,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_26710">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <obo:IAO_0000115>An inorganic chloride salt having sodium(1+) as the counterion.</obo:IAO_0000115>
-        <rdfs:label>sodium chloride</rdfs:label>
     </owl:Class>
     
 
@@ -656,8 +650,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_27732">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <obo:IAO_0000115>A trimethylxanthine in which the three methyl groups are located at positions 1, 3, and 7. A purine alkaloid that occurs naturally in tea and coffee.</obo:IAO_0000115>
-        <rdfs:label>caffeine</rdfs:label>
     </owl:Class>
     
 
@@ -686,8 +678,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_30769">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <obo:IAO_0000115>A tricarboxylic acid that is propane-1,2,3-tricarboxylic acid bearing a hydroxy substituent at position 2. It is an important metabolite in the pathway of all aerobic organisms.</obo:IAO_0000115>
-        <rdfs:label>citric acid</rdfs:label>
     </owl:Class>
     
 
@@ -696,8 +686,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_46261">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <obo:IAO_0000115>A member of the class of thioureas that is thiourea in which one of the hydrogens is replaced by a phenyl group. Depending on their genetic makeup, humans find it either very bitter-tasting or tasteless. This unusual property resulted in &lt;em&gt;N&lt;/em&gt;-phenylthiourea being used in paternity testing prior to the advent of DNA testing.</obo:IAO_0000115>
-        <rdfs:label>N-phenylthiourea</rdfs:label>
     </owl:Class>
     
 
@@ -706,8 +694,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_8502">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <obo:IAO_0000115>A pyrimidinethione consisting of uracil in which the 2-oxo group is substituted by a thio group and the hydrogen at position 6 is substituted by a propyl group.</obo:IAO_0000115>
-        <rdfs:label>6-propyl-2-thiouracil</rdfs:label>
     </owl:Class>
     
 
@@ -1263,10 +1249,6 @@
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_17992"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115>The basic taste quality typically elicited by sucrose and other sugars, transduced by the TAS1R2 and TAS1R3 receptor pair.</obo:IAO_0000115>
-        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
-        <rdfs:comment>PATO has no term for this quality as of 2026-09-17; proposed to PATO.</rdfs:comment>
-        <rdfs:label>sweetness</rdfs:label>
     </owl:Class>
     
 
@@ -1287,10 +1269,6 @@
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_30769"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115>The basic taste quality typically elicited by citric acid and other acids, transduced by proton-sensitive channels of taste receptor cells.</obo:IAO_0000115>
-        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
-        <rdfs:comment>PATO has no term for this quality as of 2026-09-17; proposed to PATO.</rdfs:comment>
-        <rdfs:label>sourness</rdfs:label>
     </owl:Class>
     
 
@@ -1311,10 +1289,6 @@
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_26710"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115>The basic taste quality typically elicited by sodium chloride. The epithelial sodium channel is implicated in its transduction, and is well supported in rodents, but a substantial part of human salt taste is amiloride-insensitive and the channel&apos;s role in humans remains contested.</obo:IAO_0000115>
-        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
-        <rdfs:comment>PATO has no term for this quality as of 2026-09-17; proposed to PATO.</rdfs:comment>
-        <rdfs:label>saltiness</rdfs:label>
     </owl:Class>
     
 
@@ -1329,10 +1303,6 @@
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0050913"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115>The basic taste quality typically elicited by quinine and by many plant alkaloids and glycosides, transduced by the TAS2R receptor family.</obo:IAO_0000115>
-        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
-        <rdfs:comment>Mapped to PATO:0002474 by skos:exactMatch in mappings/hto-pato.sssom.tsv.</rdfs:comment>
-        <rdfs:label>bitterness</rdfs:label>
     </owl:Class>
     
 
@@ -1455,10 +1425,6 @@
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_8502"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115>The bitterness elicited by compounds bearing a thiourea group, notably phenylthiocarbamide and propylthiouracil, detected by TAS2R38.</obo:IAO_0000115>
-        <obo:IAO_0000119>PMID:12595690</obo:IAO_0000119>
-        <rdfs:comment>The quality whose perception varies most sharply between people.</rdfs:comment>
-        <rdfs:label>thiourea bitterness</rdfs:label>
     </owl:Class>
     
 
@@ -1507,9 +1473,6 @@
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_27732"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115>The bitterness elicited by plant alkaloids such as quinine and caffeine.</obo:IAO_0000115>
-        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
-        <rdfs:label>alkaloid bitterness</rdfs:label>
     </owl:Class>
     
 
@@ -2080,6 +2043,48 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/CHEBI_15854 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/CHEBI_15854"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_17992 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/CHEBI_17992"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_26710 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/CHEBI_26710"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_27732 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/CHEBI_27732"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_30769 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/CHEBI_30769"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_46261 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/CHEBI_46261"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_8502 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/CHEBI_8502"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/HTO_0000012 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTO_0000012"/>
@@ -2101,6 +2106,42 @@
     <!-- http://purl.obolibrary.org/obo/HTO_0000015 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTO_0000015"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000111 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTO_0000111"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000112 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTO_0000112"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000113 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTO_0000113"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000114 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTO_0000114"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000131 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTO_0000131"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000134 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTO_0000134"/>
     
 
 
@@ -2357,6 +2398,168 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/HTO_0000411 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTO_0000411">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/HTO_0000410"/>
+        <obo:HTO_0000087 rdf:resource="http://purl.obolibrary.org/obo/HTO_0000111"/>
+        <obo:HTO_0000088 rdf:resource="http://purl.obolibrary.org/obo/HTO_0000114"/>
+        <obo:HTO_0000089 rdf:resource="http://purl.obolibrary.org/obo/HTO_0000231"/>
+        <obo:HTO_0000090 rdf:resource="http://purl.obolibrary.org/obo/CHEBI_15854"/>
+        <obo:HTO_0000090 rdf:resource="http://purl.obolibrary.org/obo/CHEBI_17992"/>
+        <obo:HTO_0000095>Sucrose added to quinine and rated by children and adults, using forced-choice paired comparison and the general Labeled Magnitude Scale; bitterness fell from moderate to weak, and adults carrying the sensitive form of TAS1R3 reported the larger reduction.</obo:HTO_0000095>
+        <obo:IAO_0000115>Interaction in which the presence of sweetness lowers the perceived intensity of bitterness.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <obo:IAO_0000119>PMID:25381313</obo:IAO_0000119>
+        <rdfs:label>sweetness suppresses bitterness</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000412 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTO_0000412">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/HTO_0000410"/>
+        <obo:HTO_0000087 rdf:resource="http://purl.obolibrary.org/obo/HTO_0000111"/>
+        <obo:HTO_0000088 rdf:resource="http://purl.obolibrary.org/obo/HTO_0000134"/>
+        <obo:HTO_0000089 rdf:resource="http://purl.obolibrary.org/obo/HTO_0000231"/>
+        <obo:HTO_0000090 rdf:resource="http://purl.obolibrary.org/obo/CHEBI_17992"/>
+        <obo:HTO_0000090 rdf:resource="http://purl.obolibrary.org/obo/CHEBI_27732"/>
+        <obo:HTO_0000095>Sucrose added to caffeine and rated by children and adults, using forced-choice paired comparison and the general Labeled Magnitude Scale; adults carrying the sensitive form of TAS1R3 reported the greater reduction for caffeine.</obo:HTO_0000095>
+        <obo:IAO_0000115>Interaction in which the presence of sweetness lowers the perceived intensity of alkaloid bitterness.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <obo:IAO_0000119>PMID:25381313</obo:IAO_0000119>
+        <rdfs:label>sweetness suppresses alkaloid bitterness</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000413 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTO_0000413">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/HTO_0000410"/>
+        <obo:HTO_0000087 rdf:resource="http://purl.obolibrary.org/obo/HTO_0000111"/>
+        <obo:HTO_0000088 rdf:resource="http://purl.obolibrary.org/obo/HTO_0000131"/>
+        <obo:HTO_0000089 rdf:resource="http://purl.obolibrary.org/obo/HTO_0000231"/>
+        <obo:HTO_0000090 rdf:resource="http://purl.obolibrary.org/obo/CHEBI_17992"/>
+        <obo:HTO_0000090 rdf:resource="http://purl.obolibrary.org/obo/CHEBI_8502"/>
+        <obo:HTO_0000095>Sucrose added to 6-n-propylthiouracil and rated by children and adults, using forced-choice paired comparison; suppression held for every bitter agent tested, but the further moderation of it by TAS2R38 sensitivity did not reach statistical significance for PROP.</obo:HTO_0000095>
+        <obo:IAO_0000115>Interaction in which the presence of sweetness lowers the perceived intensity of thiourea bitterness.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <obo:IAO_0000119>PMID:25381313</obo:IAO_0000119>
+        <rdfs:label>sweetness suppresses thiourea bitterness</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000414 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTO_0000414">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/HTO_0000410"/>
+        <obo:HTO_0000087 rdf:resource="http://purl.obolibrary.org/obo/HTO_0000113"/>
+        <obo:HTO_0000088 rdf:resource="http://purl.obolibrary.org/obo/HTO_0000114"/>
+        <obo:HTO_0000089 rdf:resource="http://purl.obolibrary.org/obo/HTO_0000231"/>
+        <obo:HTO_0000090 rdf:resource="http://purl.obolibrary.org/obo/CHEBI_15854"/>
+        <obo:HTO_0000090 rdf:resource="http://purl.obolibrary.org/obo/CHEBI_26710"/>
+        <obo:HTO_0000095>Sodium chloride mixed with quinine hydrochloride and rated by functional measurement with a two-stimulus procedure; the suppression is asymmetric, quinine having almost no suppressive effect on the saltiness of sodium chloride in return.</obo:HTO_0000095>
+        <obo:IAO_0000115>Interaction in which the presence of saltiness lowers the perceived intensity of bitterness.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <obo:IAO_0000119>PMID:7878097</obo:IAO_0000119>
+        <rdfs:label>saltiness suppresses bitterness</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000415 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTO_0000415">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/HTO_0000410"/>
+        <obo:HTO_0000087 rdf:resource="http://purl.obolibrary.org/obo/HTO_0000111"/>
+        <obo:HTO_0000088 rdf:resource="http://purl.obolibrary.org/obo/HTO_0000112"/>
+        <obo:HTO_0000089 rdf:resource="http://purl.obolibrary.org/obo/HTO_0000231"/>
+        <obo:HTO_0000090 rdf:resource="http://purl.obolibrary.org/obo/CHEBI_17992"/>
+        <obo:HTO_0000090 rdf:resource="http://purl.obolibrary.org/obo/CHEBI_30769"/>
+        <obo:HTO_0000095>Sweeteners matched for perceived sweetness, sucrose among them, mixed with each of four citric acid concentrations and rated by functional measurement with a two-stimulus procedure; equisweet sweeteners suppressed sourness equally across the concentration range, so the suppression tracks perceived sweetness rather than sweetener concentration.</obo:HTO_0000095>
+        <obo:IAO_0000115>Interaction in which the presence of sweetness lowers the perceived intensity of sourness.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <obo:IAO_0000119>PMID:2011446</obo:IAO_0000119>
+        <rdfs:label>sweetness suppresses sourness</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000416 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTO_0000416">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/HTO_0000410"/>
+        <obo:HTO_0000087 rdf:resource="http://purl.obolibrary.org/obo/HTO_0000112"/>
+        <obo:HTO_0000088 rdf:resource="http://purl.obolibrary.org/obo/HTO_0000111"/>
+        <obo:HTO_0000089 rdf:resource="http://purl.obolibrary.org/obo/HTO_0000231"/>
+        <obo:HTO_0000090 rdf:resource="http://purl.obolibrary.org/obo/CHEBI_17992"/>
+        <obo:HTO_0000090 rdf:resource="http://purl.obolibrary.org/obo/CHEBI_30769"/>
+        <obo:HTO_0000095>Citric acid mixed with sucrose in aqueous solution and rated by consumers in China and in Denmark; the suppression of sucrose sweetness did not differ between the two cultures, and consumer clusters differed in how strongly they showed it.</obo:HTO_0000095>
+        <obo:IAO_0000115>Interaction in which the presence of sourness lowers the perceived intensity of sweetness.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <obo:IAO_0000119>PMID:33050242</obo:IAO_0000119>
+        <rdfs:label>sourness suppresses sweetness</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000417 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTO_0000417">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/HTO_0000410"/>
+        <obo:HTO_0000087 rdf:resource="http://purl.obolibrary.org/obo/HTO_0000114"/>
+        <obo:HTO_0000088 rdf:resource="http://purl.obolibrary.org/obo/HTO_0000111"/>
+        <obo:HTO_0000089 rdf:resource="http://purl.obolibrary.org/obo/HTO_0000231"/>
+        <obo:HTO_0000090 rdf:resource="http://purl.obolibrary.org/obo/CHEBI_15854"/>
+        <obo:HTO_0000090 rdf:resource="http://purl.obolibrary.org/obo/CHEBI_17992"/>
+        <obo:HTO_0000095>Factorial combinations of four sucrose and four quinine hydrochloride concentrations; the suppression of sweetness appeared at the highest quinine concentration in PROP super-tasters and medium-tasters, and was absent in non-tasters.</obo:HTO_0000095>
+        <obo:IAO_0000115>Interaction in which the presence of bitterness lowers the perceived intensity of sweetness.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <obo:IAO_0000119>PMID:11595676</obo:IAO_0000119>
+        <rdfs:label>bitterness suppresses sweetness</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000418 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTO_0000418">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/HTO_0000410"/>
+        <obo:HTO_0000087 rdf:resource="http://purl.obolibrary.org/obo/HTO_0000131"/>
+        <obo:HTO_0000088 rdf:resource="http://purl.obolibrary.org/obo/HTO_0000111"/>
+        <obo:HTO_0000089 rdf:resource="http://purl.obolibrary.org/obo/HTO_0000231"/>
+        <obo:HTO_0000090 rdf:resource="http://purl.obolibrary.org/obo/CHEBI_17992"/>
+        <obo:HTO_0000090 rdf:resource="http://purl.obolibrary.org/obo/CHEBI_46261"/>
+        <obo:HTO_0000095>Mixtures of phenylthiocarbamide and sucrose; suppression of sweetness was stronger in PTC tasters than in non-tasters and tracked perceived bitterness rather than PTC concentration, which the authors read as evidence for neural inhibition rather than a chemical or receptor-level interaction.</obo:HTO_0000095>
+        <obo:IAO_0000115>Interaction in which the presence of thiourea bitterness lowers the perceived intensity of sweetness.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <obo:IAO_0000119>PMID:479396</obo:IAO_0000119>
+        <rdfs:label>thiourea bitterness suppresses sweetness</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HTO_0000419 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/HTO_0000419">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/HTO_0000410"/>
+        <obo:HTO_0000087 rdf:resource="http://purl.obolibrary.org/obo/HTO_0000112"/>
+        <obo:HTO_0000088 rdf:resource="http://purl.obolibrary.org/obo/HTO_0000113"/>
+        <obo:HTO_0000089 rdf:resource="http://purl.obolibrary.org/obo/HTO_0000232"/>
+        <obo:HTO_0000090 rdf:resource="http://purl.obolibrary.org/obo/CHEBI_26710"/>
+        <obo:HTO_0000090 rdf:resource="http://purl.obolibrary.org/obo/CHEBI_30769"/>
+        <obo:HTO_0000095>3 mM citric acid added to 75 mM and to 100 mM sodium chloride in a sensory evaluation; salty taste intensity rose for the 100 mM solution, and the authors conclude the addition may enhance saltiness rather than reporting the rise at both concentrations.</obo:HTO_0000095>
+        <obo:IAO_0000115>Interaction in which the presence of sourness raises the perceived intensity of saltiness.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <obo:IAO_0000119>PMID:37648516</obo:IAO_0000119>
+        <rdfs:label>sourness enhances saltiness</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -2365,6 +2568,34 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_15854">
+        <obo:IAO_0000115>A cinchona alkaloid that is cinchonidine in which the hydrogen at the 6-position of the quinoline ring is substituted by methoxy.</obo:IAO_0000115>
+        <rdfs:label>quinine</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_17992">
+        <obo:IAO_0000115>A glycosyl glycoside formed by glucose and fructose units joined by an acetal oxygen bridge from hemiacetal of glucose to the hemiketal of the fructose.</obo:IAO_0000115>
+        <rdfs:label>sucrose</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_26710">
+        <obo:IAO_0000115>An inorganic chloride salt having sodium(1+) as the counterion.</obo:IAO_0000115>
+        <rdfs:label>sodium chloride</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_27732">
+        <obo:IAO_0000115>A trimethylxanthine in which the three methyl groups are located at positions 1, 3, and 7. A purine alkaloid that occurs naturally in tea and coffee.</obo:IAO_0000115>
+        <rdfs:label>caffeine</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_30769">
+        <obo:IAO_0000115>A tricarboxylic acid that is propane-1,2,3-tricarboxylic acid bearing a hydroxy substituent at position 2. It is an important metabolite in the pathway of all aerobic organisms.</obo:IAO_0000115>
+        <rdfs:label>citric acid</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_46261">
+        <obo:IAO_0000115>A member of the class of thioureas that is thiourea in which one of the hydrogens is replaced by a phenyl group. Depending on their genetic makeup, humans find it either very bitter-tasting or tasteless. This unusual property resulted in &lt;em&gt;N&lt;/em&gt;-phenylthiourea being used in paternity testing prior to the advent of DNA testing.</obo:IAO_0000115>
+        <rdfs:label>N-phenylthiourea</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_8502">
+        <obo:IAO_0000115>A pyrimidinethione consisting of uracil in which the 2-oxo group is substituted by a thio group and the hydrogen at position 6 is substituted by a propyl group.</obo:IAO_0000115>
+        <rdfs:label>6-propyl-2-thiouracil</rdfs:label>
+    </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/HTO_0000012">
         <obo:IAO_0000115>A taster status in which the person reports no bitterness from a propylthiouracil test strip.</obo:IAO_0000115>
         <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
@@ -2384,6 +2615,41 @@
         <obo:IAO_0000115>An information content entity recording the pair of TAS2R38 haplotypes carried by a person, each haplotype being the combination of the amino acid states at positions 49, 262 and 296.</obo:IAO_0000115>
         <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
         <rdfs:label>TAS2R38 diplotype</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/HTO_0000111">
+        <obo:IAO_0000115>The basic taste quality typically elicited by sucrose and other sugars, transduced by the TAS1R2 and TAS1R3 receptor pair.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:comment>PATO has no term for this quality as of 2026-09-17; proposed to PATO.</rdfs:comment>
+        <rdfs:label>sweetness</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/HTO_0000112">
+        <obo:IAO_0000115>The basic taste quality typically elicited by citric acid and other acids, transduced by proton-sensitive channels of taste receptor cells.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:comment>PATO has no term for this quality as of 2026-09-17; proposed to PATO.</rdfs:comment>
+        <rdfs:label>sourness</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/HTO_0000113">
+        <obo:IAO_0000115>The basic taste quality typically elicited by sodium chloride. The epithelial sodium channel is implicated in its transduction, and is well supported in rodents, but a substantial part of human salt taste is amiloride-insensitive and the channel&apos;s role in humans remains contested.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:comment>PATO has no term for this quality as of 2026-09-17; proposed to PATO.</rdfs:comment>
+        <rdfs:label>saltiness</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/HTO_0000114">
+        <obo:IAO_0000115>The basic taste quality typically elicited by quinine and by many plant alkaloids and glycosides, transduced by the TAS2R receptor family.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:comment>Mapped to PATO:0002474 by skos:exactMatch in mappings/hto-pato.sssom.tsv.</rdfs:comment>
+        <rdfs:label>bitterness</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/HTO_0000131">
+        <obo:IAO_0000115>The bitterness elicited by compounds bearing a thiourea group, notably phenylthiocarbamide and propylthiouracil, detected by TAS2R38.</obo:IAO_0000115>
+        <obo:IAO_0000119>PMID:12595690</obo:IAO_0000119>
+        <rdfs:comment>The quality whose perception varies most sharply between people.</rdfs:comment>
+        <rdfs:label>thiourea bitterness</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/HTO_0000134">
+        <obo:IAO_0000115>The bitterness elicited by plant alkaloids such as quinine and caffeine.</obo:IAO_0000115>
+        <obo:IAO_0000119>HTO:0000000</obo:IAO_0000119>
+        <rdfs:label>alkaloid bitterness</rdfs:label>
     </rdf:Description>
 </rdf:RDF>
 

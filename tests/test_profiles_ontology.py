@@ -189,3 +189,39 @@ def test_the_two_precoordinated_temporal_terms_name_their_preferred_form():
     for local in ("0000153", "0000154"):
         comments = " ".join(str(c) for c in g.objects(term(local), RDFS.comment))
         assert "finish" in comments.lower(), f"HTO:{local} does not name the preferred form"
+
+
+import csv
+
+INTERACTIONS_TSV = ROOT / "src" / "templates" / "interactions.tsv"
+
+
+def interaction_rows():
+    with open(INTERACTIONS_TSV) as fh:
+        rows = list(csv.DictReader(fh, delimiter="\t"))
+    return rows[1:]  # row 0 is ROBOT's template-string row
+
+
+def test_at_least_one_interaction_rule_ships():
+    assert interaction_rows(), "no interaction rules: the layer's contribution is empty"
+
+
+def test_every_interaction_row_is_complete():
+    """A rule missing its compound pair or its citation is an unsupported claim.
+    Every psychophysics result is about sucrose versus quinine, not sweet versus
+    bitter, so demonstrated_with is mandatory."""
+    for row in interaction_rows():
+        rule = row["ID"]
+        for column in ("LABEL", "agent", "target", "effect", "demonstrated_with",
+                       "condition", "citation"):
+            assert (row.get(column) or "").strip(), f"{rule}: {column} is empty"
+        assert row["effect"] in ("HTO:0000231", "HTO:0000232"), f"{rule}: bad effect"
+        assert len([c for c in row["demonstrated_with"].split("|") if c.strip()]) >= 2, \
+            f"{rule}: demonstrated_with needs at least two compounds"
+        assert row["citation"].startswith(("PMID:", "doi:")), f"{rule}: unsourced"
+
+
+def test_interaction_individuals_reach_the_release():
+    g = graph()
+    built = set(g.subjects(RDF.type, term("0000410")))
+    assert len(built) == len(interaction_rows())

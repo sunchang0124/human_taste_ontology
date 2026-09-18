@@ -2371,6 +2371,177 @@
         } ]
       }
     }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000411",
+      "lbl" : "sweetness suppresses bitterness",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "definition" : {
+          "val" : "Interaction in which the presence of sweetness lowers the perceived intensity of bitterness."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/HTO_0000095",
+          "val" : "Sucrose added to quinine and rated by children and adults, using forced-choice paired comparison and the general Labeled Magnitude Scale; bitterness fell from moderate to weak, and adults carrying the sensitive form of TAS1R3 reported the larger reduction."
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "PMID:25381313"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000412",
+      "lbl" : "sweetness suppresses alkaloid bitterness",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "definition" : {
+          "val" : "Interaction in which the presence of sweetness lowers the perceived intensity of alkaloid bitterness."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/HTO_0000095",
+          "val" : "Sucrose added to caffeine and rated by children and adults, using forced-choice paired comparison and the general Labeled Magnitude Scale; adults carrying the sensitive form of TAS1R3 reported the greater reduction for caffeine."
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "PMID:25381313"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000413",
+      "lbl" : "sweetness suppresses thiourea bitterness",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "definition" : {
+          "val" : "Interaction in which the presence of sweetness lowers the perceived intensity of thiourea bitterness."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/HTO_0000095",
+          "val" : "Sucrose added to 6-n-propylthiouracil and rated by children and adults, using forced-choice paired comparison; suppression held for every bitter agent tested, but the further moderation of it by TAS2R38 sensitivity did not reach statistical significance for PROP."
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "PMID:25381313"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000414",
+      "lbl" : "saltiness suppresses bitterness",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "definition" : {
+          "val" : "Interaction in which the presence of saltiness lowers the perceived intensity of bitterness."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/HTO_0000095",
+          "val" : "Sodium chloride mixed with quinine hydrochloride and rated by functional measurement with a two-stimulus procedure; the suppression is asymmetric, quinine having almost no suppressive effect on the saltiness of sodium chloride in return."
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "PMID:7878097"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000415",
+      "lbl" : "sweetness suppresses sourness",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "definition" : {
+          "val" : "Interaction in which the presence of sweetness lowers the perceived intensity of sourness."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/HTO_0000095",
+          "val" : "Sweeteners matched for perceived sweetness, sucrose among them, mixed with each of four citric acid concentrations and rated by functional measurement with a two-stimulus procedure; equisweet sweeteners suppressed sourness equally across the concentration range, so the suppression tracks perceived sweetness rather than sweetener concentration."
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "PMID:2011446"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000416",
+      "lbl" : "sourness suppresses sweetness",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "definition" : {
+          "val" : "Interaction in which the presence of sourness lowers the perceived intensity of sweetness."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/HTO_0000095",
+          "val" : "Citric acid mixed with sucrose in aqueous solution and rated by consumers in China and in Denmark; the suppression of sucrose sweetness did not differ between the two cultures, and consumer clusters differed in how strongly they showed it."
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "PMID:33050242"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000417",
+      "lbl" : "bitterness suppresses sweetness",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "definition" : {
+          "val" : "Interaction in which the presence of bitterness lowers the perceived intensity of sweetness."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/HTO_0000095",
+          "val" : "Factorial combinations of four sucrose and four quinine hydrochloride concentrations; the suppression of sweetness appeared at the highest quinine concentration in PROP super-tasters and medium-tasters, and was absent in non-tasters."
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "PMID:11595676"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000418",
+      "lbl" : "thiourea bitterness suppresses sweetness",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "definition" : {
+          "val" : "Interaction in which the presence of thiourea bitterness lowers the perceived intensity of sweetness."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/HTO_0000095",
+          "val" : "Mixtures of phenylthiocarbamide and sucrose; suppression of sweetness was stronger in PTC tasters than in non-tasters and tracked perceived bitterness rather than PTC concentration, which the authors read as evidence for neural inhibition rather than a chemical or receptor-level interaction."
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "PMID:479396"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/HTO_0000419",
+      "lbl" : "sourness enhances saltiness",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "definition" : {
+          "val" : "Interaction in which the presence of sourness raises the perceived intensity of saltiness."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/HTO_0000095",
+          "val" : "3 mM citric acid added to 75 mM and to 100 mM sodium chloride in a sensory evaluation; salty taste intensity rose for the 100 mM solution, and the authors conclude the addition may enhance saltiness rather than reporting the rise at both concentrations."
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "HTO:0000000"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "PMID:37648516"
+        } ]
+      }
+    }, {
       "id" : "http://purl.obolibrary.org/obo/HTO_0000000",
       "lbl" : "HTO editors",
       "type" : "PROPERTY",
@@ -3110,6 +3281,42 @@
       "pred" : "type",
       "obj" : "http://purl.obolibrary.org/obo/HTO_0000240"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000411",
+      "pred" : "type",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000410"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000412",
+      "pred" : "type",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000410"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000413",
+      "pred" : "type",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000410"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000414",
+      "pred" : "type",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000410"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000415",
+      "pred" : "type",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000410"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000416",
+      "pred" : "type",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000410"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000417",
+      "pred" : "type",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000410"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000418",
+      "pred" : "type",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000410"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000419",
+      "pred" : "type",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000410"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/HTO_0000224",
       "pred" : "http://purl.obolibrary.org/obo/HTO_0000097",
       "obj" : "http://purl.obolibrary.org/obo/HTO_0000015"
@@ -3133,6 +3340,186 @@
       "sub" : "http://purl.obolibrary.org/obo/HTO_0000229",
       "pred" : "http://purl.obolibrary.org/obo/HTO_0000096",
       "obj" : "http://purl.obolibrary.org/obo/HTO_0000014"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000411",
+      "pred" : "http://purl.obolibrary.org/obo/HTO_0000087",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000111"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000411",
+      "pred" : "http://purl.obolibrary.org/obo/HTO_0000088",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000114"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000411",
+      "pred" : "http://purl.obolibrary.org/obo/HTO_0000089",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000231"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000411",
+      "pred" : "http://purl.obolibrary.org/obo/HTO_0000090",
+      "obj" : "http://purl.obolibrary.org/obo/CHEBI_15854"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000411",
+      "pred" : "http://purl.obolibrary.org/obo/HTO_0000090",
+      "obj" : "http://purl.obolibrary.org/obo/CHEBI_17992"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000412",
+      "pred" : "http://purl.obolibrary.org/obo/HTO_0000087",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000111"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000412",
+      "pred" : "http://purl.obolibrary.org/obo/HTO_0000088",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000134"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000412",
+      "pred" : "http://purl.obolibrary.org/obo/HTO_0000089",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000231"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000412",
+      "pred" : "http://purl.obolibrary.org/obo/HTO_0000090",
+      "obj" : "http://purl.obolibrary.org/obo/CHEBI_17992"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000412",
+      "pred" : "http://purl.obolibrary.org/obo/HTO_0000090",
+      "obj" : "http://purl.obolibrary.org/obo/CHEBI_27732"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000413",
+      "pred" : "http://purl.obolibrary.org/obo/HTO_0000087",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000111"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000413",
+      "pred" : "http://purl.obolibrary.org/obo/HTO_0000088",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000131"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000413",
+      "pred" : "http://purl.obolibrary.org/obo/HTO_0000089",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000231"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000413",
+      "pred" : "http://purl.obolibrary.org/obo/HTO_0000090",
+      "obj" : "http://purl.obolibrary.org/obo/CHEBI_17992"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000413",
+      "pred" : "http://purl.obolibrary.org/obo/HTO_0000090",
+      "obj" : "http://purl.obolibrary.org/obo/CHEBI_8502"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000414",
+      "pred" : "http://purl.obolibrary.org/obo/HTO_0000087",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000113"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000414",
+      "pred" : "http://purl.obolibrary.org/obo/HTO_0000088",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000114"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000414",
+      "pred" : "http://purl.obolibrary.org/obo/HTO_0000089",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000231"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000414",
+      "pred" : "http://purl.obolibrary.org/obo/HTO_0000090",
+      "obj" : "http://purl.obolibrary.org/obo/CHEBI_15854"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000414",
+      "pred" : "http://purl.obolibrary.org/obo/HTO_0000090",
+      "obj" : "http://purl.obolibrary.org/obo/CHEBI_26710"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000415",
+      "pred" : "http://purl.obolibrary.org/obo/HTO_0000087",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000111"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000415",
+      "pred" : "http://purl.obolibrary.org/obo/HTO_0000088",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000112"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000415",
+      "pred" : "http://purl.obolibrary.org/obo/HTO_0000089",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000231"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000415",
+      "pred" : "http://purl.obolibrary.org/obo/HTO_0000090",
+      "obj" : "http://purl.obolibrary.org/obo/CHEBI_17992"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000415",
+      "pred" : "http://purl.obolibrary.org/obo/HTO_0000090",
+      "obj" : "http://purl.obolibrary.org/obo/CHEBI_30769"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000416",
+      "pred" : "http://purl.obolibrary.org/obo/HTO_0000087",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000112"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000416",
+      "pred" : "http://purl.obolibrary.org/obo/HTO_0000088",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000111"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000416",
+      "pred" : "http://purl.obolibrary.org/obo/HTO_0000089",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000231"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000416",
+      "pred" : "http://purl.obolibrary.org/obo/HTO_0000090",
+      "obj" : "http://purl.obolibrary.org/obo/CHEBI_17992"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000416",
+      "pred" : "http://purl.obolibrary.org/obo/HTO_0000090",
+      "obj" : "http://purl.obolibrary.org/obo/CHEBI_30769"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000417",
+      "pred" : "http://purl.obolibrary.org/obo/HTO_0000087",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000114"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000417",
+      "pred" : "http://purl.obolibrary.org/obo/HTO_0000088",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000111"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000417",
+      "pred" : "http://purl.obolibrary.org/obo/HTO_0000089",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000231"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000417",
+      "pred" : "http://purl.obolibrary.org/obo/HTO_0000090",
+      "obj" : "http://purl.obolibrary.org/obo/CHEBI_15854"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000417",
+      "pred" : "http://purl.obolibrary.org/obo/HTO_0000090",
+      "obj" : "http://purl.obolibrary.org/obo/CHEBI_17992"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000418",
+      "pred" : "http://purl.obolibrary.org/obo/HTO_0000087",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000131"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000418",
+      "pred" : "http://purl.obolibrary.org/obo/HTO_0000088",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000111"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000418",
+      "pred" : "http://purl.obolibrary.org/obo/HTO_0000089",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000231"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000418",
+      "pred" : "http://purl.obolibrary.org/obo/HTO_0000090",
+      "obj" : "http://purl.obolibrary.org/obo/CHEBI_17992"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000418",
+      "pred" : "http://purl.obolibrary.org/obo/HTO_0000090",
+      "obj" : "http://purl.obolibrary.org/obo/CHEBI_46261"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000419",
+      "pred" : "http://purl.obolibrary.org/obo/HTO_0000087",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000112"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000419",
+      "pred" : "http://purl.obolibrary.org/obo/HTO_0000088",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000113"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000419",
+      "pred" : "http://purl.obolibrary.org/obo/HTO_0000089",
+      "obj" : "http://purl.obolibrary.org/obo/HTO_0000232"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000419",
+      "pred" : "http://purl.obolibrary.org/obo/HTO_0000090",
+      "obj" : "http://purl.obolibrary.org/obo/CHEBI_26710"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/HTO_0000419",
+      "pred" : "http://purl.obolibrary.org/obo/HTO_0000090",
+      "obj" : "http://purl.obolibrary.org/obo/CHEBI_30769"
     } ],
     "domainRangeAxioms" : [ {
       "predicateId" : "http://purl.obolibrary.org/obo/HTO_0000050",

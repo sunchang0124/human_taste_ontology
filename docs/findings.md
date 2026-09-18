@@ -107,6 +107,88 @@ contains the unverified, largely fabricated identifiers. Do not cite
 anything from the plan document directly; cite the verified templates and
 mappings instead.
 
+### 4.1 Interaction candidates that did not survive verification
+
+The design spec (section 7) listed six candidate interaction rules "to be
+verified before any is committed" and promised no count. Every PMID behind
+`src/templates/interactions.tsv` was resolved through NCBI eutils and its
+abstract read before the row was written. Nine rules shipped. The candidates
+below were considered and dropped, and are recorded here so the next person
+does not re-propose them:
+
+- **Sodium chloride enhances sweetness at low concentration.** Dropped: no
+  primary human psychophysics paper could be found reporting that NaCl raises
+  the perceived sweetness of sucrose. The review that surveys exactly this
+  literature (`PMID:25069085`, *Heterogeneous binary interactions of taste
+  primaries*) lists the interactions that proved consistent across tastants
+  and methods — sour acids enhancing saltiness, salts and sweeteners
+  suppressing bitterness, sweeteners suppressing sourness, sour acids
+  enhancing bitterness — and salt enhancing sweetness is not among them. The
+  claim is common in food-industry writing; we could not source it.
+
+- **Glutamate enhances saltiness.** Dropped on a confound the literature
+  itself names. The candidate papers (`PMID:33572364`, monosodium glutamate
+  added to 0.3–0.9% NaCl solutions; `PMID:37648516`, MSG with IMP added to
+  NaCl) do report enhanced saltiness, but the agent in both is *monosodium*
+  glutamate, which contributes sodium of its own, and in `PMID:37648516` it is
+  given only in combination with inosine monophosphate. `PMID:25069085` states
+  the problem directly: "Drawing conclusions about interactions with umami is
+  currently not possible due to the low number of primary source studies
+  investigating it and the confounding sodium ions in monosodium glutamate."
+  HTO's imported umami tastant is L-glutamic acid (`CHEBI:16015`), not MSG, so
+  a row here would also have failed the requirement that the paper name the
+  compound it is demonstrated with.
+
+- **Astringency accumulates over repeated sips.** Dropped as out of model, not
+  as false. It is a temporal self-effect of one quality, not a binary
+  interaction between an agent quality and a distinct target quality, so it
+  cannot be stated with `HTO:0000087`/`HTO:0000088` without abusing them, and
+  it would fail the requirement that `demonstrated_with` name at least two
+  compounds. The phenomenon itself is real: `PMID:25640034` reports that during
+  sequential sipping of ferulic and vanillic acid solutions, "astringency and
+  bitterness intensity increased with each sip", while sourness plateaued after
+  the third sip. But both it and the other paper found (`PMID:34655570`, which
+  in fact reports the *opposite* direction over a longer timescale — two weeks
+  of daily epigallocatechin gallate consumption lowered later bitterness
+  ratings) use tastants that are not in HTO's ChEBI import. The phenomenon
+  belongs to a temporal-dynamics layer that HTO does not yet have.
+
+- **Sucrose suppresses the metallic sensation of ferrous sulfate**
+  (`PMID:38147162`). Verified as a real, directional finding — sucrose, citric
+  acid and sodium chloride all lowered metallic ratings, sucrose most
+  effectively at 0.3 mM FeSO4 — and HTO has `HTO:0000123 metallic taste` to
+  receive it. Dropped only because ferrous sulfate is not among the eleven
+  ChEBI tastants imported in `src/imports/hto_imports.ttl`, and
+  `demonstrated_with` may not name an entity the ontology has not imported.
+  This is the strongest candidate for the next release: import the compound
+  and the row can be written from a paper already read.
+
+- **Sodium salts and sucrose suppress the bitterness of bitter mixtures**
+  (`PMID:15201210`). Dropped for insufficient specificity: the abstract names
+  only tetralone among its five bitter compounds, so the compound pair a row
+  would have to assert cannot be read off it.
+
+- **Sweetness is the strongest suppressor in multi-component mixtures**
+  (`PMID:20800076`). Verified and interesting — sucrose sweetness was both the
+  least suppressed quality and the strongest suppressor across binary, ternary
+  and quaternary mixtures of sucrose, NaCl, citric acid and quinine sulfate —
+  but it is a claim about a ranking rather than about one directed pair, and
+  the model has no slot for it. The pairwise rows it supports are already in
+  the table with primary citations of their own.
+
+Two further notes on what *did* ship. First, `HTO:0000414 saltiness suppresses
+bitterness` is cited to `PMID:7878097`, which states the direction and the
+asymmetry cleanly for NaCl and quinine HCl. The companion study
+`PMID:8788095` finds that the effect is carried by the sodium ion and is
+*independent of perceived saltiness* — sodium gluconate, which tastes much
+less salty than NaCl, suppresses urea bitterness comparably. The HTO model can
+only name a quality as the agent, so the row says "saltiness"; readers who
+need the mechanism should read `PMID:8788095`. Second, only one of the nine
+rules is an enhancement (`HTO:0000419`, and its source hedges to "may enhance
+saltiness"). `HTO:0000232 enhancement` is therefore nearly unused. That is the
+state of the evidence, not an oversight: suppression in binary taste mixtures
+is far better documented than enhancement.
+
 ## 5. What the example tasting data demonstrates
 
 `data/raw/example_tasting.csv` is **invented, synthetic example data**,

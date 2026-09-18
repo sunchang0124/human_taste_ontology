@@ -2,7 +2,7 @@ ROBOT = java -jar bin/robot.jar
 PREFIX = --prefix "HTO: http://purl.obolibrary.org/obo/HTO_"
 TEMPLATES = $(wildcard src/templates/*.tsv)
 
-.PHONY: all build reason report test clean imports
+.PHONY: all build reason report test clean imports interactions-doc verify-citations
 
 all: build
 
@@ -29,6 +29,14 @@ tmp/qualities.owl: src/templates/qualities.tsv tmp/properties.owl | tmp
 # guessing at those properties' types; passing the built properties module as
 # --input supplies them. None of its axioms are copied into the output.
 tmp/profiles.owl: src/templates/profiles.tsv tmp/properties.owl | tmp
+	$(ROBOT) template --input tmp/properties.owl --template $< $(PREFIX) --output $@
+
+# interactions.tsv asserts I HTO:0000087 - I HTO:0000090 on named individuals,
+# exactly as profiles.tsv does. Templated in isolation ROBOT cannot know those
+# are object properties and would emit bare declarations that survive the merge;
+# passing the built properties module as --input supplies the typing. None of
+# its axioms are copied into the output.
+tmp/interactions.owl: src/templates/interactions.tsv tmp/properties.owl | tmp
 	$(ROBOT) template --input tmp/properties.owl --template $< $(PREFIX) --output $@
 
 MODULES = $(patsubst src/templates/%.tsv,tmp/%.owl,$(TEMPLATES))
@@ -58,3 +66,9 @@ test: report validate
 
 clean:
 	rm -rf tmp hto.owl hto.obo hto.json
+
+interactions-doc:
+	python3 scripts/interactions_md.py
+
+verify-citations:
+	python3 scripts/verify_citations.py
