@@ -6,7 +6,7 @@ Verified 2026-09-17 against the OBO Foundry registry (267 ontologies) and the
 EBI Ontology Lookup Service (OLS). No ontology of human taste perception
 exists. What does exist, and what it does *not* cover:
 
-**Walkthrough page:** https://claude.ai/artifact/L5wdjXo15GqfinKaixEtPs — the gap, the three layers, a worked tasting, and what the build does and does not demonstrate.
+**Walkthrough page:** https://claude.ai/artifact/L5wdjXo15GqfinKaixEtPs — the gap, the ontology's layers, a worked tasting, and what the build does and does not demonstrate.
 
 - **FoodOn** — covers foods (including citrus varieties such as satsuma,
   yuzu and pomelo), not what a person perceives when tasting them.
@@ -218,7 +218,10 @@ participant (A, B, C), which is enough to exercise:
   again after a delay;
 - confounders (a current smoker, a participant with recent smell loss);
   and
-- all eight competency questions and the two QC queries.
+- `cq01`–`cq08`, the original eight competency questions, and the two QC
+  queries. (`cq09`–`cq14`, added for the taste profile layer, run against
+  `data/rdf/profiles.ttl` instead — seeded from `data/raw/example_profiles.csv`
+  and `data/raw/example_food_tastants.csv` — not against this file; see §6.)
 
 `scripts/sheet2rdf.py data/raw/example_tasting.csv` produces 70 taste
 percept assertions from this file: 60 rated qualities (four per consenting
@@ -253,8 +256,24 @@ leaves every TBox-only row passing with exactly the same count. Only the
 | `cq06.rq` | Retrieve every assertion of a temporal taste quality (under `HTO:0000150`), with the sample and the minutes elapsed since preparation. | ABox | PASS — 10 rows |
 | `cq07.rq` | Which participants are typed with a taste confounder that would exclude them from a bitterness analysis? | ABox | PASS — 2 rows |
 | `cq08.rq` | For each basic taste, which GO perception process (from the `HTO:0000061` restriction) and which OBA sensitivity trait (from the mappings) does it link to? Both are `OPTIONAL`, so a missing link shows as an unbound column rather than dropping the taste from the answer. | TBox only | PASS — 5 rows |
+| `cq09.rq` | For every food with a taste profile, its whole profile — quality, level, phase and taster group — strongest quality first. The question v1 could not answer at all: it could only report other people's ratings, never the taste of the food itself. | ABox | PASS — 8 rows |
+| `cq10.rq` | Which foods are bitter (any bitterness subtype) at the finish, and how bitter? | ABox | PASS — 1 row |
+| `cq11.rq` | Where does the same food, same quality and same phase read at a different level for two different taster groups? | ABox | PASS — 3 rows |
+| `cq12.rq` | What suppresses bitterness, on what evidence, demonstrated with what compounds? Reads the nine interaction-rule individuals baked into `hto.owl` by `src/templates/interactions.tsv`; needs no instance data at all (confirmed: still returns all 8 rows with `data/rdf/profiles.ttl` deleted). | **TBox only** | PASS — 8 rows |
+| `cq13.rq` | Which foods contain a tastant that elicits a quality nobody has yet annotated on that food — i.e. what should the next profile-sheet row be? | ABox | PASS — 3 rows |
+| `cq14.rq` | Which profile claims rest on `personal tasting` alone, so a reader can separate them from published or panel evidence without opening the CSV? | ABox | PASS — 5 rows |
 | `qc_label_def.rq` | QC: every HTO term carries an `rdfs:label`. **Labels only** — despite the file name, it does not check definitions; those are enforced by `robot report`'s `missing_definition` rule. | TBox only | PASS — 0 rows (expected none) |
 | `qc_orphan.rq` | QC: every HTO class has at least one *asserted* parent, with three allow-listed roots (`HTO:0000002` taster role, `HTO:0000003` taste stimulus, `HTO:0000018` palate cleansing process). | TBox only | PASS — 0 rows (expected none) |
+
+`cq09`–`cq14` were added in Task 7 for the taste profile layer, over
+`data/rdf/profiles.ttl` (seeded from `data/raw/example_profiles.csv` and
+`data/raw/example_food_tastants.csv`), not over the tasting-sheet data `cq01`–`cq08`
+use. `cq12` is the one exception to "ABox row = evidence the pipeline ingested
+something" in the other direction from the TBox-only rows above: it is
+TBox-only despite living among the profile-layer queries, because the nine
+interaction rules are named individuals declared directly in
+`src/templates/interactions.tsv` and reasoned into `hto.owl` itself, not
+instance data produced by a converter.
 
 Two caveats on the QC queries, stated plainly because the file names promise
 more than the queries deliver:
@@ -271,10 +290,10 @@ more than the queries deliver:
   report, so it says nothing about their quality; it says that HTO's own terms
   are clean.
 
-All eight competency questions and both QC checks pass: `0 failing`.
-`make report` (ROBOT report against `src/report_profile.txt`) returns zero
-violations at ERROR, WARN or INFO level for HTO terms.
-`python3 -m pytest tests/ -q` passes 30 tests with 1 deselected: the
+All fourteen competency questions (`cq01`–`cq14`) and both QC checks pass:
+`0 failing`. `make report` (ROBOT report against `src/report_profile.txt`)
+returns zero violations at ERROR, WARN or INFO level for HTO terms.
+`python3 -m pytest tests/ -q` passes 59 tests with 1 deselected: the
 deselected one is `tests/test_imports.py::test_script_is_idempotent`, marked
 `network` because it rebuilds the import module from the live OLS4 API, so the
 default suite runs offline. `python3 -m pytest -m network` runs it.
@@ -351,11 +370,14 @@ Expanded from the design spec, §11:
 `hto.obo` contains **zero `[Instance]` stanzas** (`grep -c "^\[Instance\]"
 hto.obo` → `0`). The four slot vocabularies introduced in Task 2
 (`HTO:0000200` taste intensity level and its five levels, `HTO:0000210`
-tasting phase and its four phases, `HTO:0000220` taster group and its eight
-seeded groups, `HTO:0000240` evidence type and its four types, plus
-`HTO:0000230` taste interaction effect and its two effects — 22 named
-individuals in `src/templates/profiles.tsv`) and all nine interaction rules
-from Task 4 (`HTO:0000411`–`HTO:0000419`, individuals of `HTO:0000410 taste
+tasting phase and its four phases, `HTO:0000220` taster group and its seven
+seeded groups — one (`HTO:0000221` general population) typed directly on
+`HTO:0000220`, three (`HTO:0000224`–`HTO:0000226`) on its genotype-defined
+subclass `HTO:0000222`, and three (`HTO:0000227`–`HTO:0000229`) on its
+phenotype-defined subclass `HTO:0000223` — `HTO:0000240` evidence type and
+its four types, plus `HTO:0000230` taste interaction effect and its two
+effects — 22 named individuals in `src/templates/profiles.tsv`) and all nine
+interaction rules from Task 4 (`HTO:0000411`–`HTO:0000419`, individuals of `HTO:0000410 taste
 interaction`) are consequently **entirely absent from the OBO release**. The
 classes that hold them (`HTO:0000400`, `HTO:0000410`, `HTO:0000200`,
 `HTO:0000210`, `HTO:0000220`, `HTO:0000230`, `HTO:0000240`, and their

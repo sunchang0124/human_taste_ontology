@@ -6,7 +6,7 @@ Ontology Lookup Service, and HTO fills that gap by making a single person's
 single perception of a single tasted sample a first-class, addressable,
 FAIR thing.
 
-**Walkthrough page:** https://claude.ai/artifact/L5wdjXo15GqfinKaixEtPs — the gap, the three layers, a worked tasting, and what the build does and does not demonstrate.
+**Walkthrough page:** https://claude.ai/artifact/L5wdjXo15GqfinKaixEtPs — the gap, the ontology's layers, a worked tasting, and what the build does and does not demonstrate.
 
 ## The gap
 
@@ -35,7 +35,7 @@ requirements.txt`; rdflib 7 and pytest 7 or newer).
 bash scripts/setup.sh   # downloads the pinned ROBOT 1.9.10 jar
 make build               # templates -> reasoned hto.owl, hto.obo, hto.json
 make test                 # report (QC) + validate (competency questions) + pytest
-make validate             # build the instance data and run the eight competency questions
+make validate             # build the instance data and run the fourteen competency questions
 ```
 
 `make build && make validate` and `make test` both currently succeed with zero
