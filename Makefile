@@ -24,18 +24,24 @@ tmp/%.owl: src/templates/%.tsv | tmp
 tmp/qualities.owl: src/templates/qualities.tsv tmp/properties.owl | tmp
 	$(ROBOT) template --input tmp/properties.owl --template $< $(PREFIX) --output $@
 
-# profiles.tsv asserts I HTO:0000096 / I HTO:0000097 and AT HTO:0000092 on named
-# individuals. As with qualities.tsv, templating it in isolation leaves ROBOT
-# guessing at those properties' types; passing the built properties module as
-# --input supplies them. None of its axioms are copied into the output.
+# profiles.tsv (I HTO:0000096 / I HTO:0000097, AT HTO:0000092) and
+# interactions.tsv (I HTO:0000087 - I HTO:0000090) assert properties on named
+# individuals, and both rules used to claim that templating them in isolation
+# left ROBOT guessing at those properties' types, as it does for qualities.tsv.
+# That was never true, and it was measured: for both templates the output is
+# byte-identical with and without --input, because ROBOT types the property
+# from the `I ` and `A ` column prefixes and needs no external declaration.
+# The qualities.tsv rule above is the real case precisely because its
+# `SC HTO:0000061 some %` column carries no such prefix: built without --input
+# it emits HTO:0000061 and HTO:0000085 as owl:DatatypeProperty.
+#
+# The --input is kept on both rules as a guard against a future column that
+# would need the typing, not because either template needs it today. A build
+# comment asserting a mechanism that does not exist is the same failure class
+# as a citation that does not support its claim, so this one says what is true.
 tmp/profiles.owl: src/templates/profiles.tsv tmp/properties.owl | tmp
 	$(ROBOT) template --input tmp/properties.owl --template $< $(PREFIX) --output $@
 
-# interactions.tsv asserts I HTO:0000087 - I HTO:0000090 on named individuals,
-# exactly as profiles.tsv does. Templated in isolation ROBOT cannot know those
-# are object properties and would emit bare declarations that survive the merge;
-# passing the built properties module as --input supplies the typing. None of
-# its axioms are copied into the output.
 tmp/interactions.owl: src/templates/interactions.tsv tmp/properties.owl | tmp
 	$(ROBOT) template --input tmp/properties.owl --template $< $(PREFIX) --output $@
 
