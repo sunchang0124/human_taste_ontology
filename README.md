@@ -174,10 +174,14 @@ than just asserting that it does. The full table, generated from
 `src/templates/interactions.tsv`, is `docs/interactions.md`.
 
 **What a food contains**, as opposed to what it tastes like, is recorded
-separately, in a sheet of its own: `food_id, food_label, tastant,
-source_type, source` (seed data at `data/raw/example_food_tastants.csv`; no
-blank template ships yet, only the seed). This is a fact about the food's
-chemistry, not one more line of its taste profile.
+separately, in a sheet of its own: `data/food_tastants.csv` is the blank
+template (`food_id, food_label, tastant, source_type, source`, with the same
+`#` comment header as the profile sheet), and `data/raw/example_food_tastants.csv`
+is the seeded example. This is a fact about the food's chemistry, not one more
+line of its taste profile. Its `source_type` and `source` columns are held to
+exactly the rule the profile sheet's are: one of the four evidence types, a
+non-empty source, and a `PMID:`/`doi:` rather than free text whenever
+`source_type` is `literature`.
 
 **The FoodOn gap report.** Many real foods — iyokan is the case that started
 this project — have no FoodOn term. Rather than force a profile entry onto

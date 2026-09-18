@@ -397,11 +397,16 @@ the same statement aimed at a first-time reader.
 
 ### 8.2 `food_tastants.csv` carries provenance the RDF does not
 
-The food→tastant sheet (spec §5's `food_tastants.csv`; seed data at
-`data/raw/example_food_tastants.csv`, no blank template ships yet) has
-`source_type` and `source` columns, and `scripts/profile2rdf.py` validates
-that both are present (and, when `source_type` is empty, rejects the row) —
-but the emitted RDF asserts only the plain triple `food contains tastant
+The food→tastant sheet (spec §5's `food_tastants.csv`; blank template at
+`data/food_tastants.csv`, seed data at `data/raw/example_food_tastants.csv`)
+has `source_type` and `source` columns, and `scripts/profile2rdf.py` holds
+them to the same rule the profile sheet's V5 and V6 impose: `source_type`
+must be one of the four evidence types, `source` must be non-empty, and a row
+declaring itself `literature` must carry a `PMID:` or a `doi:` rather than
+free text. (This paragraph previously described that check as already
+implemented when only the CHEBI CURIE and a non-empty `source` were in fact
+checked; the check was written to match the claim rather than the claim
+weakened.) The emitted RDF, however, asserts only the plain triple `food contains tastant
 tastant` (`HTO:0000086`). Neither `source_type` nor `source` is written to
 `data/rdf/profiles.ttl`; the provenance is checked at conversion time and
 then discarded. This is deliberate, not an oversight: a plain triple has

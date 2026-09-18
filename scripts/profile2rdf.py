@@ -148,7 +148,7 @@ def convert(profiles_csv: pathlib.Path, out_path: pathlib.Path,
     unmapped: dict[str, str] = {}
     written = 0
 
-    def food_node(row: dict, line: int) -> tuple[URIRef, str] | None:
+    def food_node(row: dict, where: str) -> tuple[URIRef, str] | None:
         """The food's IRI, and the key any IRI derived from that food must use.
 
         V9 keys an entry's identity on the food *node*, so anything else keying
@@ -159,12 +159,12 @@ def convert(profiles_csv: pathlib.Path, out_path: pathlib.Path,
         """
         label = (row.get("food_label") or "").strip()
         if not label:
-            errors.append(f"line {line}: food_label is empty")
+            errors.append(f"{where}: food_label is empty")
             return None
         food_id = (row.get("food_id") or "").strip()
         if food_id:
             if not FOODON_RE.match(food_id):
-                errors.append(f"line {line}: food_id {food_id!r} is not a FOODON CURIE")
+                errors.append(f"{where}: food_id {food_id!r} is not a FOODON CURIE")
                 return None
             prefix, local = food_id.split(":", 1)
             return curie_to_iri(food_id), f"{prefix.lower()}-{local}"
@@ -178,7 +178,7 @@ def convert(profiles_csv: pathlib.Path, out_path: pathlib.Path,
             raise ProfileError(f"{profiles_csv}: missing column(s): {', '.join(missing)}")
 
         for line, row in rows:
-            resolved = food_node(row, line)
+            resolved = food_node(row, f"line {line}")
             food, food_key = resolved if resolved is not None else (None, None)
 
             raw_quality = (row.get("quality") or "").strip()
@@ -258,17 +258,36 @@ def convert(profiles_csv: pathlib.Path, out_path: pathlib.Path,
         with open(tastants_csv) as fh:
             _, rows = sheet_rows(fh)
             for line, row in rows:
-                resolved = food_node(row, line)
+                where = f"{tastants_csv.name} line {line}"
+                resolved = food_node(row, where)
                 food = resolved[0] if resolved is not None else None
+                bad = food is None
                 tastant = (row.get("tastant") or "").strip()
                 if not CHEBI_RE.match(tastant):
-                    errors.append(f"{tastants_csv.name} line {line}: tastant {tastant!r} "
-                                  f"is not a CHEBI CURIE")
-                    continue
-                if not (row.get("source") or "").strip():
-                    errors.append(f"{tastants_csv.name} line {line}: source is empty")
-                    continue
-                if food is None:
+                    errors.append(f"{where}: tastant {tastant!r} is not a CHEBI CURIE")
+                    bad = True
+                # The same provenance discipline the profile sheet gets from V5
+                # and V6. Without it a food-composition claim could name an
+                # evidence type that does not exist, or -- worse -- declare
+                # itself literature and then carry free text, which V6 forbids
+                # one sheet over. Two sheets describing the same foods should
+                # not hold their sources to two different standards.
+                evidence_text = (row.get("source_type") or "").strip().lower()
+                if evidence_text not in EVIDENCE:
+                    errors.append(f"{where}: source_type {evidence_text!r} is not one of "
+                                  f"{', '.join(EVIDENCE)}")
+                    bad = True
+                source = (row.get("source") or "").strip()
+                if not source:
+                    errors.append(f"{where}: source is empty; every claim names where "
+                                  f"it came from")
+                    bad = True
+                elif evidence_text == "literature" and not (PMID_RE.match(source)
+                                                            or DOI_RE.match(source)):
+                    errors.append(f"{where}: source {source!r} claims to be literature "
+                                  f"but is neither a PMID: nor a doi:")
+                    bad = True
+                if bad:
                     continue
                 graph.add((food, RDFS.label, Literal(row["food_label"].strip())))
                 graph.add((food, hto("0000086"), curie_to_iri(tastant)))

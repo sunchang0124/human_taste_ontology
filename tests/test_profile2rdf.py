@@ -158,3 +158,31 @@ def test_error_line_numbers_are_physical_file_lines(tmp_path):
     result, _ = run(tmp_path, sheet)
     assert result.returncode == 1
     assert "line 6:" in result.stderr, result.stderr
+
+
+TASTANT_HEADER = "food_id,food_label,tastant,source_type,source\n"
+
+
+@pytest.mark.parametrize("row,fragment", [
+    (",iyokan juice,CHEBI:16226,,limonin is in citrus juice", "source_type"),
+    (",iyokan juice,CHEBI:16226,hearsay,limonin is in citrus juice", "hearsay"),
+    (",iyokan juice,CHEBI:16226,literature,Raithore et al. 2015", "neither a PMID"),
+    (",iyokan juice,CHEBI:16226,expert assertion,", "source is empty"),
+])
+def test_tastant_rows_are_held_to_the_profile_sheets_provenance_rule(tmp_path, row,
+                                                                     fragment):
+    """Both sheets describe the same foods; holding their sources to two
+    different standards is how `source_type: literature` with free text got in
+    one sheet while V6 forbade it in the other."""
+    tastants = write(tmp_path, TASTANT_HEADER + row + "\n", name="tastants.csv")
+    result, out = run(tmp_path, GOOD, extra=("--tastants", str(tastants)))
+    assert result.returncode == 1, "a tastant row with bad provenance was accepted"
+    assert fragment in result.stderr, result.stderr
+    assert not out.exists(), "a rejected run must write no graph at all"
+
+
+def test_the_shipped_tastant_template_has_the_columns_the_converter_reads():
+    lines = [l for l in (ROOT / "data" / "food_tastants.csv").read_text().splitlines()
+             if not l.lstrip().startswith("#")]
+    assert lines[0] == TASTANT_HEADER.strip()
+    assert len(lines) == 1, "the shipped template is blank apart from its header"

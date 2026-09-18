@@ -1,0 +1,9 @@
+# HTO food -> tastant sheet. One row per compound a food contains that can elicit
+# a taste. This sheet records what a food *contains*; what it tastes *like* goes
+# in data/profile_sheet.csv, and the two are kept apart on purpose.
+# food_id      a FoodOn CURIE such as FOODON:03306174; leave blank if you do not know one
+# food_label   what the thing is called, e.g. "grapefruit juice"
+# tastant      a ChEBI CURIE and nothing else, e.g. CHEBI:28819 (naringin)
+# source_type  literature | panel data | expert assertion | personal tasting
+# source       a PMID: or doi: when source_type is literature; otherwise who says so, and when
+food_id,food_label,tastant,source_type,source
