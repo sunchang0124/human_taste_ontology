@@ -6,7 +6,7 @@ question it was built to answer, so this exits non-zero. The two qc_*.rq
 queries are the inverse: they must return nothing.
 """
 from __future__ import annotations
-import argparse, pathlib, sys
+import argparse, pathlib
 from rdflib import Graph
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent

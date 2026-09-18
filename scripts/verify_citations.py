@@ -7,7 +7,7 @@ script exists so that failure mode is caught by a command rather than by a
 reader. It touches the network and is therefore excluded from `make test`.
 """
 from __future__ import annotations
-import json, pathlib, re, sys, urllib.parse, urllib.request
+import json, pathlib, re, urllib.parse, urllib.request
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 PMID = re.compile(r"PMID:(\d+)")
